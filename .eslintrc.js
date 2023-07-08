@@ -8,5 +8,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'eslint-config-semistandard'
   ],
-  ignorePatterns: ['src/**/__tests__/']
+  ignorePatterns: ['src/**/__tests__/'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': 0,
+    'space-before-function-paren': 0
+  }
 };

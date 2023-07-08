@@ -9,7 +9,7 @@ export interface DocumentSection {
 export class Document {
   private sections: DocumentSection[] = [];
 
-  public h1 (value: string | ((text: Text) => string)) {
+  public h1(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -18,7 +18,7 @@ export class Document {
     return this;
   }
 
-  public h2 (value: string | ((text: Text) => string)) {
+  public h2(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -27,7 +27,7 @@ export class Document {
     return this;
   }
 
-  public h3 (value: string | ((text: Text) => string)) {
+  public h3(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -36,7 +36,7 @@ export class Document {
     return this;
   }
 
-  public h4 (value: string | ((text: Text) => string)) {
+  public h4(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -45,7 +45,7 @@ export class Document {
     return this;
   }
 
-  public h5 (value: string | ((text: Text) => string)) {
+  public h5(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -54,7 +54,7 @@ export class Document {
     return this;
   }
 
-  public h6 (value: string | ((text: Text) => string)) {
+  public h6(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -63,7 +63,7 @@ export class Document {
     return this;
   }
 
-  public text (value: string | ((text: Text) => string)) {
+  public text(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -72,7 +72,7 @@ export class Document {
     return this;
   }
 
-  public codeBlock (value: string, language?: string) {
+  public codeBlock(value: string, language?: string) {
     this.sections.push({
       value,
       computedValue: md.codeBlock(value, language)
@@ -80,7 +80,7 @@ export class Document {
     return this;
   }
 
-  public blockQuote (value: string | ((text: Text) => string)) {
+  public blockQuote(value: string | ((text: Text) => string)) {
     const val = this.parseText(value);
     this.sections.push({
       value: val,
@@ -89,7 +89,7 @@ export class Document {
     return this;
   }
 
-  public image (value: string, src: string) {
+  public image(value: string, src: string) {
     this.sections.push({
       value,
       computedValue: md.image(value, src)
@@ -97,7 +97,7 @@ export class Document {
     return this;
   }
 
-  public hr () {
+  public hr() {
     this.sections.push({
       value: md.hr(),
       computedValue: md.hr()
@@ -105,7 +105,7 @@ export class Document {
     return this;
   }
 
-  public numberList (value: string[]) {
+  public numberList(value: string[]) {
     this.sections.push({
       value,
       computedValue: md.ol(value)
@@ -113,7 +113,7 @@ export class Document {
     return this;
   }
 
-  public bulletList (value: string[]) {
+  public bulletList(value: string[]) {
     this.sections.push({
       value,
       computedValue: md.ul(value)
@@ -121,7 +121,7 @@ export class Document {
     return this;
   }
 
-  public table (rows: string[][]) {
+  public table(rows: string[][]) {
     this.sections.push({
       value: rows,
       computedValue: md.table(rows)
@@ -129,11 +129,11 @@ export class Document {
     return this;
   }
 
-  public build () {
+  public build() {
     return this.sections.map(section => section.computedValue).join('\n\n');
   }
 
-  private parseText (value: string | ((text: Text) => string)) {
+  private parseText(value: string | ((text: Text) => string)) {
     return typeof value === 'string' ? value : value(new Text());
   }
 }
