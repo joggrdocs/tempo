@@ -1,20 +1,20 @@
-name: 'Publish'
+name: 'Publish to npm'
 
 on:
   release:
     types: [created, published]
-    
+
 jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Use Node.js v18
+        uses: actions/setup-node@v1
         with:
           node-version: 18
-          registry-url: https://registry.npmjs.org/
-      - run: yarn install --frozen-lockfile
       - name: Check if package.json Version matches tag
         uses: actions/github-script@v6
         env:
@@ -29,6 +29,9 @@ jobs:
             if (pjv !== tagVersion) {
               throw new Error('The tagged release doesn\'t match the package.json version, please update, delete the tag & release and try again.')
             }
-      - run: npm publish
+      - name: Install Packages
+        run: yarn install
+      - name: Publish
+        run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH}}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
