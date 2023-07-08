@@ -30,8 +30,8 @@ jobs:
               throw new Error('The tagged release doesn\'t match the package.json version, please update, delete the tag & release and try again.')
             }
       - name: Install Packages
-        run: yarn install
+        run: npm ci
       - name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}

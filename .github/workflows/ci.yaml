@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 18
       - name: Install Packages
-        run: yarn install
+        run: npm install
 # @todo add in Linting & Formatting
 #       - name: Format
 #         run: yarn format:check
@@ -29,5 +29,5 @@ jobs:
 #       - name: Type Check
 #         run: yarn type:check
       - name: Test
-        run: yarn test --ci
+        run: npm test --ci
         
