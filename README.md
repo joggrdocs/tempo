@@ -3,18 +3,33 @@
         <img src="/logo.png" align="center" width="240" />
     </p>
     <hr>
+    <blockquote align="center">
+        "The wise speak only of what they know." - J.R.R Tolkien
+    </blockquote>
 </div>
 
-> The wise speak only of what they know.
+<br>
+
+<p align="center">
+  <a href="https://github.com/joggrdocs/tolkien/actions/workflows/github-code-scanning/codeql">
+    <img alt="CodeQL" src="https://github.com/joggrdocs/tolkien/actions/workflows/github-code-scanning/codeql/badge.svg">
+  </a>
+  <a href="https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml">
+    <img alt="Publish to npm" src="https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml/badge.svg">
+  </a>
+  <a href="https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml">
+    <img alt="CI" src="https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml/badge.svg">
+  </a>
+  <br/>
+  <a href="https://github.com/standard/semistandard">
+    <img alt="JS Semi-standard Style" src="https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg">
+  </a>
+  <a href="https://github.com/prettier/prettier">
+    <img alt="Prettier Style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+  </a>
+</p>
 
 ## Overview
-
-[![CodeQL](https://github.com/joggrdocs/tolkien/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/github-code-scanning/codeql)
-[![Publish to npm](https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml)
-[![CI](https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml)
-
-[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 Library used to programmatically build markdown documents, with a heavy tilt toward [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/).
 
