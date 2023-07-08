@@ -14,6 +14,20 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: yarn install --frozen-lockfile
+      - name: Check if package.json Version matches tag
+        uses: actions/github-script@v6
+        env:
+          TAG: ${{ github.ref_name }}
+        with:
+          script: |
+            const fs = require('fs')
+            const packageJson = JSON.parse(fs.readFileSync('${{ github.workspace }}/package.json'))
+            const pjv = packageJson.version.split('.')[0]
+            const tagVersion = process.env.TAG.replace('v', '').split('.')[0] 
+
+            if (pjv !== tagVersion) {
+              throw new Error('The tagged release doesn\'t match the package.json version, please update, delete the tag & release and try again.')
+            }
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH}}
