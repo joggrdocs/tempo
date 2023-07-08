@@ -107,7 +107,7 @@ export class Document {
 
   public numberList(value: string[]) {
     this.sections.push({
-      value: value,
+      value,
       computedValue: md.ol(value)
     });
     return this;
@@ -115,7 +115,7 @@ export class Document {
 
   public bulletList(value: string[]) {
     this.sections.push({
-      value: value,
+      value,
       computedValue: md.ul(value)
     });
     return this;
@@ -130,9 +130,7 @@ export class Document {
   }
 
   public build() {
-    return this.sections
-      .map(section => section.computedValue)
-      .join('\n\n');
+    return this.sections.map(section => section.computedValue).join('\n\n');
   }
 
   private parseText(value: string | ((text: Text) => string)) {

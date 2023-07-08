@@ -65,7 +65,7 @@ export function h6(value: string) {
 */
 
 export function hr() {
-  return `---`;
+  return '---';
 }
 
 export function blockQuote(value: string) {
@@ -87,7 +87,7 @@ export function codeBlock(value: string, language?: string) {
 */
 
 export function ul(value: string[]) {
-  return value.map((item) => `- ${item}`).join('\n');
+  return value.map(item => `- ${item}`).join('\n');
 }
 
 export function ol(value: string[]) {
@@ -103,7 +103,7 @@ export function ol(value: string[]) {
 function tableHeader(value: string[]) {
   return [
     `| ${value.join(' | ')} |`,
-    `| ${value.map((headerItem) => '-'.repeat(headerItem.length)).join(' | ')} |`
+    `| ${value.map(headerItem => '-'.repeat(headerItem.length)).join(' | ')} |`
   ].join('\n');
 }
 
@@ -113,8 +113,5 @@ function tableRow(value: string[]) {
 
 export function table(value: string[][]) {
   const [header, ...rows] = value;
-  return [
-    tableHeader(header),
-    ...rows.map((row) => tableRow(row))
-  ].join('\n');
+  return [tableHeader(header), ...rows.map(row => tableRow(row))].join('\n');
 }
