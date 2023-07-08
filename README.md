@@ -13,6 +13,9 @@
 [![Publish to npm](https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml)
 [![CI](https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml)
 
+[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Library used to programmatically build markdown documents, with a heavy tilt toward [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/).
 
 ## Getting Started
