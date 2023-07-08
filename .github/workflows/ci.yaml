@@ -21,13 +21,12 @@ jobs:
           node-version: 18
       - name: Install Packages
         run: npm install
-# @todo add in Linting & Formatting
-#       - name: Format
-#         run: yarn format:check
-#       - name: Lint
-#         run: yarn lint:check
-#       - name: Type Check
-#         run: yarn type:check
+      # @todo add in Linting & Formatting
+      #       - name: Format
+      #         run: yarn format:check
+      #       - name: Lint
+      #         run: yarn lint:check
+      #       - name: Type Check
+      #         run: yarn type:check
       - name: Test
         run: npm test --ci
-        

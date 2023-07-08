@@ -2,7 +2,9 @@ import * as md from '../markdown';
 
 describe('Text Elements', () => {
   it('should return a code block', () => {
-    expect(md.code('console.log("Hello World!")')).toBe('`console.log("Hello World!")`');
+    expect(md.code('console.log("Hello World!")')).toBe(
+      '`console.log("Hello World!")`'
+    );
   });
 
   it('should return a bold text', () => {
@@ -22,7 +24,9 @@ describe('Text Elements', () => {
   });
 
   it('should return a link', () => {
-    expect(md.link('Google', 'https://google.com')).toBe('[Google](https://google.com)');
+    expect(md.link('Google', 'https://google.com')).toBe(
+      '[Google](https://google.com)'
+    );
   });
 });
 
@@ -72,25 +76,33 @@ describe('Special Elements', () => {
   });
 
   it('should return a code block', () => {
-    expect(md.codeBlock('console.log("Hello World!")')).toBe('```\nconsole.log("Hello World!")\n```');
+    expect(md.codeBlock('console.log("Hello World!")')).toBe(
+      '```\nconsole.log("Hello World!")\n```'
+    );
   });
 
   it('should return a code block with a language', () => {
-    expect(md.codeBlock('console.log("Hello World!")', 'javascript')).toBe('```javascript\nconsole.log("Hello World!")\n```');
+    expect(md.codeBlock('console.log("Hello World!")', 'javascript')).toBe(
+      '```javascript\nconsole.log("Hello World!")\n```'
+    );
   });
 });
 
 describe('Tables', () => {
   it('should return a table', () => {
-    expect(md.table([
-      ['Name', 'Age'],
-      ['John', '20'],
-      ['Jane', '19'],
-    ])).toBe(`
+    expect(
+      md.table([
+        ['Name', 'Age'],
+        ['John', '20'],
+        ['Jane', '19']
+      ])
+    ).toBe(
+      `
 | Name | Age |
 | ---- | --- |
 | John | 20 |
 | Jane | 19 |
-`.trim());
+`.trim()
+    );
   });
 });
