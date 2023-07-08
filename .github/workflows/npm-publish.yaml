@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18
+          registry-url: 'https://registry.npmjs.org'
       - name: Check if package.json Version matches tag
         uses: actions/github-script@v6
         env:
@@ -34,4 +35,4 @@ jobs:
       - name: Publish
         run: npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
