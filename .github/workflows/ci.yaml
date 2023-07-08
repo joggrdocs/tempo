@@ -22,10 +22,10 @@ jobs:
       - name: Install Packages
         run: npm install
       - name: Format
-        run: yarn format:check
+        run: npm run format:check
       - name: Lint
-        run: yarn lint:check
+        run: npm run lint:check
       - name: Type Check
-        run: yarn type:check
+        run: npm run type:check
       - name: Test
         run: npm test --ci
