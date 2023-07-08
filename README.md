@@ -7,6 +7,10 @@
 
 > The wise speak only of what they know.
 
+[![CodeQL](https://github.com/joggrdocs/tolkien/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/github-code-scanning/codeql)
+[![Publish to npm](https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/npm-publish.yaml)
+[![CI](https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml/badge.svg)](https://github.com/joggrdocs/tolkien/actions/workflows/ci.yaml)
+
 ## Overview
 
 Library used to programmatically build markdown documents, with a heavy tilt toward [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/).
