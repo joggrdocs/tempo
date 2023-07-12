@@ -1,0 +1,26 @@
+{
+  "cSpell.words": [
+    "Flaticon",
+    "Freepik"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#cdf2e2",
+    "activityBar.background": "#cdf2e2",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#b681de",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#cdf2e2",
+    "statusBar.background": "#a4e8ca",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#7bdeb2",
+    "statusBarItem.remoteBackground": "#a4e8ca",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#a4e8ca",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#a4e8ca99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#a4e8ca"
+}
