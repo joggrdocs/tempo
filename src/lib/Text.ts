@@ -39,7 +39,10 @@ export class Text {
   }
 
   public emoji(value: md.EmojiAlias | md.EmojiUnicode) {
-    this.value.push({ value: value.toString(), computedValue: value.toString() });
+    this.value.push({
+      value: value.toString(),
+      computedValue: value.toString()
+    });
     return this;
   }
 
