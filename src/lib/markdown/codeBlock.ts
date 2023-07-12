@@ -76,7 +76,7 @@ export const supportedLanguages = [
 export type SupportedLanguage = (typeof supportedLanguages)[number];
 
 /**
- * @throws if the string is not a valid (supported) language by Github-Linguist which is used to provide 
+ * @throws if the string is not a valid (supported) language by Github-Linguist which is used to provide
  *  syntax highlighting for Github markdown files.
  */
 export function assertSupportedLanguage(language: SupportedLanguage) {

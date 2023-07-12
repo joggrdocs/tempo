@@ -9101,14 +9101,19 @@ const supportedEmojis = [
     category: 'Symbol'
   }
 ] as const;
-export type EmojiAlias = typeof supportedEmojis[number]['alias'];
-export type EmojiUnicode = Exclude<typeof supportedEmojis[number]['unicode'], boolean>;
+export type EmojiAlias = (typeof supportedEmojis)[number]['alias'];
+export type EmojiUnicode = Exclude<
+  (typeof supportedEmojis)[number]['unicode'],
+  boolean
+>;
 
 /**
  * @param emoji A unicode emoji
  * @returns indicates whether the given emoji is a supported unicode emoji
  */
-export function isSupportedUnicode(emoji: EmojiAlias | EmojiUnicode): emoji is EmojiUnicode {
+export function isSupportedUnicode(
+  emoji: EmojiAlias | EmojiUnicode
+): emoji is EmojiUnicode {
   return supportedEmojis.some(({ unicode }) => unicode === emoji);
 }
 
@@ -9116,15 +9121,22 @@ export function isSupportedUnicode(emoji: EmojiAlias | EmojiUnicode): emoji is E
  * @param emoji An alias for an emoji (without the colons)
  * @returns indicates whether the given emoji is an alias for a supported emoji
  */
-export function isSupportedAlias(emoji: EmojiAlias | EmojiUnicode): emoji is EmojiAlias {
+export function isSupportedAlias(
+  emoji: EmojiAlias | EmojiUnicode
+): emoji is EmojiAlias {
   return supportedEmojis.some(({ alias }) => alias === emoji);
 }
 
 /**
  * @throws if the given emoji is not valid
  */
-export function assertSupportedEmoji(emoji: EmojiAlias | EmojiUnicode): asserts emoji is EmojiAlias | EmojiUnicode {
-  if (!isSupportedAlias(emoji as EmojiAlias) && !isSupportedUnicode(emoji as EmojiUnicode)) {
+export function assertSupportedEmoji(
+  emoji: EmojiAlias | EmojiUnicode
+): asserts emoji is EmojiAlias | EmojiUnicode {
+  if (
+    !isSupportedAlias(emoji as EmojiAlias) &&
+    !isSupportedUnicode(emoji as EmojiUnicode)
+  ) {
     throw new Error(`Invalid emoji: ${emoji}`);
   }
 }
