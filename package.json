@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "main": "dist/index.js",
-  "repository": "git@github.com:joggrdocs/tolkien.git",
-  "author": "Joggr Team <engineering@joggr.io>",
-  "license": "MIT",
   "scripts": {
     "test": "jest",
     "build": "tsc",
@@ -17,6 +14,16 @@
     "type:check": "tsc --noEmit",
     "prepublish": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joggrdocs/tempo.git"
+  },
+  "author": "Joggr Team <engineering@joggr.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joggrdocs/tempo/issues"
+  },
+  "homepage": "https://github.com/joggrdocs/tempo#readme",
   "devDependencies": {
     "@types/jest": "^29.5.2",
     "@types/node": "^20.4.1",
