@@ -1,6 +1,10 @@
 import * as md from '../markdown';
 
 describe('Text Elements', () => {
+  it('should return a paragraph', () => {
+    expect(md.paragraph('Hello World!')).toBe('Hello World!');
+  });
+
   it('should return a code block', () => {
     expect(md.code('console.log("Hello World!")')).toBe(
       '`console.log("Hello World!")`'
@@ -68,7 +72,7 @@ describe('Special Elements', () => {
   });
 
   it('should return a horizontal rule', () => {
-    expect(md.hr()).toBe('---');
+    expect(md.thematicBreak()).toBe('---');
   });
 
   it('should return a code block', () => {
@@ -80,6 +84,12 @@ describe('Special Elements', () => {
   it('should return a code block with a language', () => {
     expect(md.codeBlock('console.log("Hello World!")', 'javascript')).toBe(
       '```javascript\nconsole.log("Hello World!")\n```'
+    );
+  });
+
+  it('should return an image', () => {
+    expect(md.image('Google', 'https://google.com')).toBe(
+      '![Google](https://google.com)'
     );
   });
 

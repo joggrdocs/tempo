@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "build": "tsc",
     "build:examples": "ts-node examples/index.ts",
     "format:check": "prettier --check .",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",
+    "@types/mdast": "^4.0.0",
     "@types/node": "^20.4.1",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "eslint": "^8.44.0",
