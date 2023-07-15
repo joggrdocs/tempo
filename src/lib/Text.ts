@@ -51,7 +51,8 @@ export interface StrikeThroughTextNode extends BaseTextNode<string> {
   type: 'strikeThrough';
 }
 
-export interface LinkTextNode extends BaseTextNode<{ alt: string; src: string }> {
+export interface LinkTextNode
+  extends BaseTextNode<{ alt: string; src: string }> {
   type: 'link';
 }
 

@@ -118,7 +118,7 @@ export function li(value: string, order?: number) {
 }
 
 export function ul(value: string[]) {
-  return value.map((txt) => li(txt)).join('\n');
+  return value.map(txt => li(txt)).join('\n');
 }
 
 export function ol(value: string[]) {

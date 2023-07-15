@@ -4,9 +4,7 @@ const config: JestConfigWithTsJest = {
   roots: ['<rootDir>/src'],
   testMatch: ['**/__tests__/**/*.test.ts'],
   testPathIgnorePatterns: ['dist', '/node_modules/'],
-  collectCoverageFrom: [
-    'src/**/*.ts'
-  ],
+  collectCoverageFrom: ['src/**/*.ts'],
   coverageThreshold: {
     global: {
       branches: 100,

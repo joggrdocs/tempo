@@ -1,5 +1,10 @@
 import exp from 'constants';
-import createDocument, { computeNodes, computeText, Document, DocumentNode } from '../Document';
+import createDocument, {
+  computeNodes,
+  computeText,
+  Document,
+  DocumentNode
+} from '../Document';
 import createText from '../Text';
 
 describe('initialization', () => {
@@ -13,21 +18,25 @@ describe('initialization', () => {
         type: 'heading',
         data: {
           level: 1,
-          data: [{
-            type: 'plaintext',
-            data: 'Hello World!',
-            computed: 'Hello World!'
-          }]
+          data: [
+            {
+              type: 'plaintext',
+              data: 'Hello World!',
+              computed: 'Hello World!'
+            }
+          ]
         },
         computed: '# Hello World!'
       },
       {
         type: 'paragraph',
-        data: [{
-          type: 'plaintext',
-          data: 'Hello World!',
-          computed: 'Hello World!'
-        }],
+        data: [
+          {
+            type: 'plaintext',
+            data: 'Hello World!',
+            computed: 'Hello World!'
+          }
+        ],
         computed: 'Hello World!'
       }
     ];
@@ -42,19 +51,20 @@ describe('initialization', () => {
 });
 
 describe('computeText', () => {
-  it('should compute text from \`string\`', () => {
+  it('should compute text from `string`', () => {
     expect(computeText('Hello World!')).toEqual('Hello World!');
   });
 
-  it('should compute text from \`Text\`', () => {
-    expect(computeText(
-      createText()
-        .plainText('Hello World!')
-    )).toEqual('Hello World!');
+  it('should compute text from `Text`', () => {
+    expect(computeText(createText().plainText('Hello World!'))).toEqual(
+      'Hello World!'
+    );
   });
 
-  it('should compute text from \`(Text) => Text | string\`', () => {
-    expect(computeText((text) => text.plainText('Hello World!'))).toEqual('Hello World!');
+  it('should compute text from `(Text) => Text | string`', () => {
+    expect(computeText(text => text.plainText('Hello World!'))).toEqual(
+      'Hello World!'
+    );
   });
 
   it('should throw for invalid text type', () => {
@@ -65,7 +75,7 @@ describe('computeText', () => {
 });
 
 describe('computeNodes', () => {
-  it('should compute nodes from \`string\`', () => {
+  it('should compute nodes from `string`', () => {
     expect(computeNodes('Hello World!')).toEqual([
       {
         type: 'plaintext',
@@ -75,11 +85,8 @@ describe('computeNodes', () => {
     ]);
   });
 
-  it('should compute nodes from \`Text\`', () => {
-    expect(computeNodes(
-      createText()
-        .plainText('Hello World!')
-    )).toEqual([
+  it('should compute nodes from `Text`', () => {
+    expect(computeNodes(createText().plainText('Hello World!'))).toEqual([
       {
         type: 'plaintext',
         data: 'Hello World!',
@@ -88,10 +95,8 @@ describe('computeNodes', () => {
     ]);
   });
 
-  it('should compute nodes from \`(Text) => Text | string\`', () => {
-    expect(computeNodes(
-      (text) => text.plainText('Hello World!')
-    )).toEqual([
+  it('should compute nodes from `(Text) => Text | string`', () => {
+    expect(computeNodes(text => text.plainText('Hello World!'))).toEqual([
       {
         type: 'plaintext',
         data: 'Hello World!',
@@ -114,11 +119,13 @@ describe('Headings', () => {
         type: 'heading',
         data: {
           level,
-          data: [{
-            type: 'plaintext',
-            data: text,
-            computed: text
-          }]
+          data: [
+            {
+              type: 'plaintext',
+              data: text,
+              computed: text
+            }
+          ]
         },
         computed: `#`.repeat(level).concat(' ', text)
       }
@@ -162,11 +169,13 @@ describe('Text Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'paragraph',
-        data: [{
-          type: 'plaintext',
-          data: 'Hello World!',
-          computed: 'Hello World!'
-        }],
+        data: [
+          {
+            type: 'plaintext',
+            data: 'Hello World!',
+            computed: 'Hello World!'
+          }
+        ],
         computed: 'Hello World!'
       }
     ]);
@@ -250,7 +259,10 @@ describe('Special Elements', () => {
   });
 
   it('should add a codeBlock', () => {
-    const document = createDocument().codeBlock('console.log("Hello World!");', 'javascript');
+    const document = createDocument().codeBlock(
+      'console.log("Hello World!");',
+      'javascript'
+    );
     expect(document.toJSON()).toEqual([
       {
         type: 'codeBlock',
@@ -258,11 +270,9 @@ describe('Special Elements', () => {
           language: 'javascript',
           code: 'console.log("Hello World!");'
         },
-        computed: [
-          '```javascript',
-          'console.log("Hello World!");',
-          '```'
-        ].join('\n')
+        computed: ['```javascript', 'console.log("Hello World!");', '```'].join(
+          '\n'
+        )
       }
     ]);
   });
@@ -272,19 +282,23 @@ describe('Special Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'blockQuote',
-        data: [{
-          type: 'plaintext',
-          data: 'Hello World!',
-          computed: 'Hello World!'
-        }],
+        data: [
+          {
+            type: 'plaintext',
+            data: 'Hello World!',
+            computed: 'Hello World!'
+          }
+        ],
         computed: '> Hello World!'
       }
     ]);
   });
 
   it('should add an image', () => {
-    const document = createDocument()
-      .image('example', 'https://example.com/image.png');
+    const document = createDocument().image(
+      'example',
+      'https://example.com/image.png'
+    );
 
     expect(document.toJSON()).toEqual([
       {
@@ -322,20 +336,24 @@ describe('Lists', () => {
         data: [
           {
             type: 'listItem',
-            data: [{
-              type: 'plaintext',
-              data: 'Hello World!',
-              computed: 'Hello World!'
-            }],
+            data: [
+              {
+                type: 'plaintext',
+                data: 'Hello World!',
+                computed: 'Hello World!'
+              }
+            ],
             computed: '- Hello World!'
           },
           {
             type: 'listItem',
-            data: [{
-              type: 'plaintext',
-              data: 'Hello 2 World!',
-              computed: 'Hello 2 World!'
-            }],
+            data: [
+              {
+                type: 'plaintext',
+                data: 'Hello 2 World!',
+                computed: 'Hello 2 World!'
+              }
+            ],
             computed: '- Hello 2 World!'
           }
         ],
@@ -356,21 +374,25 @@ describe('Lists', () => {
           {
             type: 'listItem',
             order: 0,
-            data: [{
-              type: 'plaintext',
-              data: 'Hello World!',
-              computed: 'Hello World!'
-            }],
+            data: [
+              {
+                type: 'plaintext',
+                data: 'Hello World!',
+                computed: 'Hello World!'
+              }
+            ],
             computed: '1. Hello World!'
           },
           {
             type: 'listItem',
             order: 1,
-            data: [{
-              type: 'plaintext',
-              data: 'Hello 2 World!',
-              computed: 'Hello 2 World!'
-            }],
+            data: [
+              {
+                type: 'plaintext',
+                data: 'Hello 2 World!',
+                computed: 'Hello 2 World!'
+              }
+            ],
             computed: '2. Hello 2 World!'
           }
         ],
@@ -386,11 +408,15 @@ describe('Outputs', () => {
       const document = createDocument()
         .h1('Hello World!')
         .paragraph('Hello there!');
-      expect(document.toString()).toEqual(`
+      expect(document.toString()).toEqual(
+        `
 # Hello World!
 
 Hello there!
-      `.trim().concat('\n'));
+      `
+          .trim()
+          .concat('\n')
+      );
     });
   });
   describe('toJSON', () => {
@@ -402,21 +428,25 @@ Hello there!
         type: 'heading',
         data: {
           level: 1,
-          data: [{
-            type: 'plaintext',
-            data: 'Hello World!',
-            computed: 'Hello World!'
-          }]
+          data: [
+            {
+              type: 'plaintext',
+              data: 'Hello World!',
+              computed: 'Hello World!'
+            }
+          ]
         },
         computed: '# Hello World!'
       },
       {
         type: 'paragraph',
-        data: [{
-          type: 'plaintext',
-          data: 'Hello there!',
-          computed: 'Hello there!'
-        }],
+        data: [
+          {
+            type: 'plaintext',
+            data: 'Hello there!',
+            computed: 'Hello there!'
+          }
+        ],
         computed: 'Hello there!'
       }
     ]);

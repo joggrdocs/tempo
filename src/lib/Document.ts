@@ -43,10 +43,11 @@ interface BaseDocumentNode<T> {
   computed: string;
 }
 
-export interface HeadingNode extends BaseDocumentNode<{
-  level: 1 | 2 | 3 | 4 | 5 | 6;
-  data: TextNode[];
-}> {
+export interface HeadingNode
+  extends BaseDocumentNode<{
+    level: 1 | 2 | 3 | 4 | 5 | 6;
+    data: TextNode[];
+  }> {
   type: 'heading';
 }
 
@@ -61,10 +62,8 @@ interface TableRow<T extends 'row' | 'header'> {
   computed: string;
 }
 
-export interface TableNode extends BaseDocumentNode<[
-  TableRow<'header'>,
-  ...TableRow<'row'>[]
-]> {
+export interface TableNode
+  extends BaseDocumentNode<[TableRow<'header'>, ...TableRow<'row'>[]]> {
   type: 'table';
 }
 
@@ -104,11 +103,13 @@ interface ListItem<T extends 'numberList' | 'bulletList'> {
   computed: string;
 }
 
-export interface BulletListNode extends BaseDocumentNode<ListItem<'bulletList'>[]> {
+export interface BulletListNode
+  extends BaseDocumentNode<ListItem<'bulletList'>[]> {
   type: 'bulletList';
 }
 
-export interface NumberListNode extends BaseDocumentNode<ListItem<'numberList'>[]> {
+export interface NumberListNode
+  extends BaseDocumentNode<ListItem<'numberList'>[]> {
   type: 'numberList';
 }
 
@@ -295,18 +296,14 @@ export class Document {
           data: header.map(computeNodes),
           computed: md.tableHeader(header.map(computeText))
         },
-        ...rows.map((row, i) => ({
+        ...(rows.map((row, i) => ({
           type: 'row',
           order: i,
           data: row.map(computeNodes),
           computed: md.tableRow(row.map(computeText))
-        })) as TableRow<'row'>[]
+        })) as TableRow<'row'>[])
       ],
-      computed: md.table(
-        tableRows.map(row =>
-          row.map(computeText)
-        )
-      )
+      computed: md.table(tableRows.map(row => row.map(computeText)))
     });
     return this;
   }
@@ -385,7 +382,7 @@ export class Document {
   public bulletList(text: TextInput[]) {
     this.nodes.push({
       type: 'bulletList',
-      data: text.map((t) => ({
+      data: text.map(t => ({
         type: 'listItem',
         order: undefined,
         data: computeNodes(t),
@@ -420,7 +417,7 @@ export class Document {
 | Public API
 |----------------------------------
 |
-| The public API for creating a document. It is a wrapper around the Document class 
+| The public API for creating a document. It is a wrapper around the Document class
 | and provides a chaining API for building a document.
 |
 | NOTE:
@@ -429,5 +426,6 @@ export class Document {
 |
 */
 
-const createDocument = (documentNodes?: DocumentNode[]) => new Document(documentNodes);
+const createDocument = (documentNodes?: DocumentNode[]) =>
+  new Document(documentNodes);
 export default createDocument;
