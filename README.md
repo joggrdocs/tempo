@@ -1,6 +1,6 @@
 <div>
     <p align="center">
-        <img src="/logo.png" align="center" width="240" />
+        <img src="./logo.png" align="center" width="240" />
     </p>
     <hr>
     <blockquote align="center">
@@ -84,6 +84,32 @@ fs.writeFile('myFile.md', result)
   .then(() => {
     console.log('DONE');
   });
+```
+
+## Serialized Data (⚠️ Unstable API ⚠️)
+
+Tempo creates a syntax tree that can be serialized and stored in a data base.
+
+```typescript
+import db from 'db/orm';
+import tempo from '@joggrdocs/tempo';
+
+const result = tempo()
+  .h1('Hello World')
+  .paragraph('Some things')
+  .paragraph((txt) => 
+    txt
+      .text('A sentence with')
+      .bold('bolded words')
+      .text('and')
+      .italic('italicized words')
+      .text('.')
+      .build()
+  )
+  .toJSON();
+
+// Example of storing a serializable data object to the DB
+await db.collection('tempoDoc').findAndSave(1, result);
 ```
 
 ### Credits

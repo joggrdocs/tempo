@@ -79,7 +79,7 @@ export function h6(value: string) {
 |------------------
 */
 
-export function hr() {
+export function thematicBreak() {
   return '---';
 }
 
@@ -113,12 +113,16 @@ export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
 |------------------
 */
 
+export function li(value: string, order?: number) {
+  return order === undefined ? `- ${value}` : `${order + 1}. ${value}`;
+}
+
 export function ul(value: string[]) {
-  return value.map(item => `- ${item}`).join('\n');
+  return value.map(txt => li(txt)).join('\n');
 }
 
 export function ol(value: string[]) {
-  return value.map((item, index) => `${index + 1}. ${item}`).join('\n');
+  return value.map(li).join('\n');
 }
 
 /*
@@ -127,14 +131,14 @@ export function ol(value: string[]) {
 |------------------
 */
 
-function tableHeader(value: string[]) {
+export function tableHeader(value: string[]) {
   return [
     `| ${value.join(' | ')} |`,
     `| ${value.map(headerItem => '-'.repeat(headerItem.length)).join(' | ')} |`
   ].join('\n');
 }
 
-function tableRow(value: string[]) {
+export function tableRow(value: string[]) {
   return `| ${value.join(' | ')} |`;
 }
 

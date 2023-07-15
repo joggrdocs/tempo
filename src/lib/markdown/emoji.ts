@@ -9,7 +9,7 @@
  *
  * @link https://github.com/ricealexander/emoji-list/blob/main/emojis.json
  */
-const supportedEmojis = [
+export const supportedEmojis = [
   {
     alias: ['+1', 'thumbsup'],
     unicode: '👍',
