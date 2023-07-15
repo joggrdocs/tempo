@@ -4,8 +4,7 @@
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "jest --coverage",
     "build": "tsc",
     "build:examples": "ts-node examples/index.ts",
     "format:check": "prettier --check .",
