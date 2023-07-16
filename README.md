@@ -62,11 +62,11 @@ const result = tempo()
   .paragraph('Some things')
   .paragraph((txt) => 
     txt
-      .text('A sentence with')
+      .plainText('A sentence with')
       .bold('bolded words')
       .plainText('and')
       .italic('italicized words')
-      .append('.')
+      .plainText('.', { append: true })
       .build()
   )
   .h2((txt) => 
@@ -103,7 +103,7 @@ const result = tempo()
       .bold('bolded words')
       .plainText('and')
       .italic('italicized words')
-      .append('.')
+      .plainText('.', { append: true })
       .build()
   )
   .toJSON();

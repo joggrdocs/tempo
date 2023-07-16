@@ -34,6 +34,9 @@ interface BaseTextNode<T> {
 
 export interface PlainTextNode extends BaseTextNode<string> {
   type: 'plaintext';
+  options?: {
+    append?: boolean;
+  };
 }
 
 export interface AppendTextNode extends BaseTextNode<string> {
@@ -88,20 +91,12 @@ export type TextNode =
 export class Text {
   private nodes: TextNode[] = [];
 
-  public plainText(value: string) {
+  public plainText(value: string, options?: { append?: boolean }) {
     this.nodes.push({
       type: 'plaintext',
       data: value,
-      computed: value
-    });
-    return this;
-  }
-
-  public append(value: string) {
-    this.nodes.push({
-      type: 'append',
-      data: value,
-      computed: value
+      computed: value,
+      options
     });
     return this;
   }
@@ -177,12 +172,14 @@ export class Text {
     let output = '';
 
     for (const node of this.nodes) {
-      if (node.type === 'append') {
-        output += node.computed;
-        continue;
-      } else {
-        output += ` ${node.computed}`;
+      if (node.type === 'plaintext') {
+        if (node.options && node.options.append) {
+          output += node.computed;
+          continue;
+        }
       }
+
+      output += ` ${node.computed}`;
     }
 
     return output.trim();
