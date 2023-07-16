@@ -92,13 +92,15 @@ describe('outputs', () => {
       const value = 'Hello World';
       const txtReal = createText()
         .plainText(value)
+        .append(';')
         .bold(value)
+        .append('/')
         .italic(value)
         .strikeThrough(value)
         .link(value, value);
 
       expect(txtReal.toString()).toEqual(
-        `${value} **${value}** _${value}_ ~~${value}~~ [${value}](${value})`
+        `${value}; **${value}**/ _${value}_ ~~${value}~~ [${value}](${value})`
       );
     });
   });
