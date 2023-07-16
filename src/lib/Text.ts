@@ -101,15 +101,6 @@ export class Text {
     return this;
   }
 
-  public append(value: string) {
-    this.nodes.push({
-      type: 'append',
-      data: value,
-      computed: value
-    });
-    return this;
-  }
-
   public code(value: string) {
     this.nodes.push({
       type: 'code',
