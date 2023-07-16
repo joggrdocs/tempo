@@ -2,13 +2,13 @@
 
 This is a paragraph
 
-## This is a heading with  **bold text**
+## **bold text**
 
 **This is bold text**
 
 This is inline text _with italic text_
 
-Foobar is a thing **that is bold**
+**that is bold**
 
 ## Lists
 

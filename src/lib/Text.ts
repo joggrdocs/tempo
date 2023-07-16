@@ -19,7 +19,6 @@ import * as md from './markdown/markdown';
 export type TextNodeType =
   | 'plaintext'
   | 'code'
-  | 'append'
   | 'bold'
   | 'italic'
   | 'strikeThrough'
@@ -34,10 +33,9 @@ interface BaseTextNode<T> {
 
 export interface PlainTextNode extends BaseTextNode<string> {
   type: 'plaintext';
-}
-
-export interface AppendTextNode extends BaseTextNode<string> {
-  type: 'append';
+  options?: {
+    append?: boolean;
+  };
 }
 
 export interface CodeTextNode extends BaseTextNode<string> {
@@ -68,7 +66,6 @@ export interface EmojiTextNode extends BaseTextNode<string> {
 export type TextNode =
   | PlainTextNode
   | CodeTextNode
-  | AppendTextNode
   | BoldTextNode
   | ItalicTextNode
   | StrikeThroughTextNode
@@ -88,20 +85,12 @@ export type TextNode =
 export class Text {
   private nodes: TextNode[] = [];
 
-  public plainText(value: string) {
+  public plainText(value: string, options?: { append?: boolean }) {
     this.nodes.push({
       type: 'plaintext',
       data: value,
-      computed: value
-    });
-    return this;
-  }
-
-  public append(value: string) {
-    this.nodes.push({
-      type: 'append',
-      data: value,
-      computed: value
+      computed: value,
+      options
     });
     return this;
   }
@@ -177,12 +166,14 @@ export class Text {
     let output = '';
 
     for (const node of this.nodes) {
-      if (node.type === 'append') {
-        output += node.computed;
-        continue;
-      } else {
-        output += ` ${node.computed}`;
+      if (node.type === 'plaintext') {
+        if (node.options && node.options.append) {
+          output += node.computed;
+          continue;
+        }
       }
+
+      output += ` ${node.computed}`;
     }
 
     return output.trim();

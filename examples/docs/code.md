@@ -1,8 +1,8 @@
 # Code Examples
 
-This includes examples of code blocks and `inline code`.
+`inline code`.
 
-## This is a heading with  `code`
+## `code`
 
 ```javascript
 import foobar from 'foobar';
