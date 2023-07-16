@@ -4,6 +4,7 @@ const config: JestConfigWithTsJest = {
   roots: ['<rootDir>/src'],
   testMatch: ['**/__tests__/**/*.test.ts'],
   testPathIgnorePatterns: ['dist', '/node_modules/'],
+  coveragePathIgnorePatterns: ['src/index.ts', 'src/lib/markdown/index.ts'],
   collectCoverageFrom: ['src/**/*.ts'],
   coverageThreshold: {
     global: {
