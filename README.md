@@ -66,7 +66,11 @@ const result = tempo()
       .bold('bolded words')
       .plainText('and')
       .italic('italicized words')
+<<<<<<< HEAD
       .plainText('.', { append: true })
+=======
+      .append('.')
+>>>>>>> 895173ef02fd193a9c32c30a216ebb8990faee4f
       .build()
   )
   .h2((txt) => 

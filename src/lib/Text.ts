@@ -19,6 +19,7 @@ import * as md from './markdown/markdown';
 export type TextNodeType =
   | 'plaintext'
   | 'code'
+  | 'append'
   | 'bold'
   | 'italic'
   | 'strikeThrough'
@@ -36,6 +37,10 @@ export interface PlainTextNode extends BaseTextNode<string> {
   options?: {
     append?: boolean;
   };
+}
+
+export interface AppendTextNode extends BaseTextNode<string> {
+  type: 'append';
 }
 
 export interface CodeTextNode extends BaseTextNode<string> {
@@ -66,6 +71,7 @@ export interface EmojiTextNode extends BaseTextNode<string> {
 export type TextNode =
   | PlainTextNode
   | CodeTextNode
+  | AppendTextNode
   | BoldTextNode
   | ItalicTextNode
   | StrikeThroughTextNode
@@ -91,6 +97,15 @@ export class Text {
       data: value,
       computed: value,
       options
+    });
+    return this;
+  }
+
+  public append(value: string) {
+    this.nodes.push({
+      type: 'append',
+      data: value,
+      computed: value
     });
     return this;
   }
