@@ -7,7 +7,7 @@ function run() {
       txt
         .plainText('This includes examples of code blocks and')
         .code('inline code')
-        .plainText('.')
+        .append('.')
     )
     .h2(txt => txt.plainText('This is a heading with ').code('code'))
     .codeBlock(
