@@ -64,14 +64,14 @@ const result = tempo()
     txt
       .text('A sentence with')
       .bold('bolded words')
-      .text('and')
+      .plainText('and')
       .italic('italicized words')
-      .text('.')
+      .append('.')
       .build()
   )
   .h2((txt) => 
     txt 
-      .text('A')
+      .plainText('A')
       .italic('table')
   )
   .table([
@@ -99,11 +99,11 @@ const result = tempo()
   .paragraph('Some things')
   .paragraph((txt) => 
     txt
-      .text('A sentence with')
+      .plainText('A sentence with')
       .bold('bolded words')
-      .text('and')
+      .plainText('and')
       .italic('italicized words')
-      .text('.')
+      .append('.')
       .build()
   )
   .toJSON();
