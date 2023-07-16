@@ -5,11 +5,11 @@ function run() {
     .h1('Code Examples')
     .paragraph(txt =>
       txt
-        .text('This includes examples of code blocks and')
+        .plainText('This includes examples of code blocks and')
         .code('inline code')
-        .text('.')
+        .append('.')
     )
-    .h2(txt => txt.text('This is a heading with ').code('code'))
+    .h2(txt => txt.plainText('This is a heading with ').code('code'))
     .codeBlock(
       `
 import foobar from 'foobar';

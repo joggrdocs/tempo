@@ -19,6 +19,7 @@ import * as md from './markdown/markdown';
 export type TextNodeType =
   | 'plaintext'
   | 'code'
+  | 'append'
   | 'bold'
   | 'italic'
   | 'strikeThrough'
@@ -33,6 +34,10 @@ interface BaseTextNode<T> {
 
 export interface PlainTextNode extends BaseTextNode<string> {
   type: 'plaintext';
+}
+
+export interface AppendTextNode extends BaseTextNode<string> {
+  type: 'append';
 }
 
 export interface CodeTextNode extends BaseTextNode<string> {
@@ -63,6 +68,7 @@ export interface EmojiTextNode extends BaseTextNode<string> {
 export type TextNode =
   | PlainTextNode
   | CodeTextNode
+  | AppendTextNode
   | BoldTextNode
   | ItalicTextNode
   | StrikeThroughTextNode
@@ -85,6 +91,15 @@ export class Text {
   public plainText(value: string) {
     this.nodes.push({
       type: 'plaintext',
+      data: value,
+      computed: value
+    });
+    return this;
+  }
+
+  public append(value: string) {
+    this.nodes.push({
+      type: 'append',
       data: value,
       computed: value
     });
@@ -159,7 +174,18 @@ export class Text {
   }
 
   public toString() {
-    return this.nodes.map(section => section.computed).join(' ');
+    let output = '';
+
+    for (const node of this.nodes) {
+      if (node.type === 'append') {
+        output += node.computed;
+        continue;
+      } else {
+        output += ` ${node.computed}`;
+      }
+    }
+
+    return output.trim();
   }
 }
 

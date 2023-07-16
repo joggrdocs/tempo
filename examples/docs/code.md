@@ -1,6 +1,6 @@
 # Code Examples
 
-This includes examples of code blocks and `inline code` .
+This includes examples of code blocks and `inline code`.
 
 ## This is a heading with  `code`
 
