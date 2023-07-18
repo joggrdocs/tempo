@@ -11,6 +11,9 @@
 <br>
 
 <p align="center">
+  <a href="https://badge.fury.io/js/@joggr%2Ftempo">
+    <img src="https://badge.fury.io/js/@joggr%2Ftempo.svg" alt="npm version">
+  </a>
   <a href="https://github.com/joggrdocs/tempo/actions/workflows/github-code-scanning/codeql">
     <img alt="CodeQL" src="https://github.com/joggrdocs/tempo/actions/workflows/github-code-scanning/codeql/badge.svg">
   </a>
