@@ -56,7 +56,6 @@ export const supportedLanguages = [
   'shell',
   'sh',
   'zsh',
-  'bash',
   'scss',
   'sql',
   'svg',
