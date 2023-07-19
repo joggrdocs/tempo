@@ -356,7 +356,8 @@ describe('Lists', () => {
               }
             ],
             computed: '- Hello 2 World!'
-          }, {
+          },
+          {
             type: 'listItem',
             data: [
               {
