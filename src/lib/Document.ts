@@ -152,7 +152,7 @@ export function computeNodes(textInput: TextInput): TextNode[] {
     const result = textInput(new Text());
     return computeNodes(result);
   } else {
-    throw new Error('Invalid text type');
+    throw new TypeError(`Invalid text type: ${typeof textInput}`);
   }
 }
 
@@ -165,7 +165,7 @@ export function computeText(textInput: TextInput): string {
     const result = textInput(new Text());
     return computeText(result);
   } else {
-    throw new Error('Invalid text type');
+    throw new TypeError(`Invalid text type: ${typeof textInput}`);
   }
 }
 
