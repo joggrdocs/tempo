@@ -60,6 +60,8 @@ export const supportedLanguages = [
   'sql',
   'svg',
   'swift',
+  'typescript',
+  'tsx',
   'rb',
   'jruby',
   'ruby',
