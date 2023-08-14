@@ -328,7 +328,8 @@ describe('Lists', () => {
   it('should add an bullet (unordered) list', () => {
     const document = createDocument().bulletList([
       'Hello World!',
-      'Hello 2 World!'
+      'Hello 2 World!',
+      txt => txt.bold('Hello 3 World!')
     ]);
     expect(document.toJSON()).toEqual([
       {
@@ -355,9 +356,20 @@ describe('Lists', () => {
               }
             ],
             computed: '- Hello 2 World!'
+          },
+          {
+            type: 'listItem',
+            data: [
+              {
+                type: 'bold',
+                data: 'Hello 3 World!',
+                computed: '**Hello 3 World!**'
+              }
+            ],
+            computed: '- **Hello 3 World!**'
           }
         ],
-        computed: '- Hello World!\n- Hello 2 World!'
+        computed: '- Hello World!\n- Hello 2 World!\n- **Hello 3 World!**'
       }
     ]);
   });
