@@ -45,13 +45,13 @@ _This is a Github Package and your application must support installing internal 
 **npm**
 
 ```shell
-npm install @joggrdocs/tempo
+npm install @joggr/tempo
 ```
 
 **yarn**
 
 ```shell
-yarn add @joggrdocs/tempo
+yarn add @joggr/tempo
 ```
 
 ## Usage
