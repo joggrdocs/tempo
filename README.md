@@ -40,7 +40,7 @@ Library used to programmatically build markdown documents, with a heavy tilt tow
 
 Install the library and you can begin to use it in your application(s).
 
-_This is a Github Package and your application must support installing internal Github packages before you can use this package._
+_This is a GitHub Package and your application must support installing internal GitHub packages before you can use this package._
 
 **npm**
 
