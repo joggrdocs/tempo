@@ -24,11 +24,11 @@ jobs:
           script: |
             const fs = require('fs')
             const packageJson = JSON.parse(fs.readFileSync('${{ github.workspace }}/package.json'))
-            const pjv = packageJson.version.split('.')[0]
-            const tagVersion = process.env.TAG.replace('v', '').split('.')[0] 
+            const pjv = packageJson.version
+            const tv = process.env.TAG.replace('v', '')
 
-            if (pjv !== tagVersion) {
-              throw new Error('The tagged release doesn\'t match the package.json version, please update, delete the tag & release and try again.')
+            if (pjv !== tv) {
+              throw new Error(`The tagged release, ${tv}, doesn't match the package.json version, ${pjv}. Please fix the issue, delete the tag & release and try again.`)
             }
       - name: Install Packages
         run: npm ci
