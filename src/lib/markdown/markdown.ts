@@ -23,6 +23,10 @@ export function paragraph(value: string) {
   return value;
 }
 
+export function bulletList(value: string) {
+  return `- ${value}`;
+}
+
 export function code(value: string) {
   return `\`${value}\``;
 }
