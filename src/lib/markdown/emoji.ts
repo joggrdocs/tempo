@@ -9102,7 +9102,6 @@ export const supportedEmojis = [
   }
 ] as const;
 
-
 /**
  * Alias for emojis, primarily for use with colons, i.e. `:smile:`
  */

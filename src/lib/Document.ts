@@ -197,7 +197,7 @@ export class Document {
 
   /**
    * Append a heading (h1) to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -205,7 +205,7 @@ export class Document {
    *   .toString();
    * // Output: # Hello, World!
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
@@ -223,7 +223,7 @@ export class Document {
 
   /**
    * Append a heading (h2) to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -231,7 +231,7 @@ export class Document {
    *   .toString();
    * // Output: ## Hello, World!
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
@@ -249,7 +249,7 @@ export class Document {
 
   /**
    * Append a heading (h3) to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -257,7 +257,7 @@ export class Document {
    *   .toString();
    * // Output: ### Hello, World!
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
@@ -275,7 +275,7 @@ export class Document {
 
   /**
    * Append a heading (h4) to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -283,7 +283,7 @@ export class Document {
    *   .toString();
    * // Output: #### Hello, World!
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
@@ -301,7 +301,7 @@ export class Document {
 
   /**
    * Append a heading (h5) to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -309,7 +309,7 @@ export class Document {
    *   .toString();
    * // Output: ##### Hello, World!
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
@@ -327,7 +327,7 @@ export class Document {
 
   /**
    * Append a heading (h6) to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -335,7 +335,7 @@ export class Document {
    *   .toString();
    * // Output: ##### Hello, World!
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
@@ -359,7 +359,7 @@ export class Document {
 
   /**
    * Append a paragraph to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -367,7 +367,7 @@ export class Document {
    *  .toString();
    * // Output: This is a paragraph of text.
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the paragraph appended.
    */
@@ -388,7 +388,7 @@ export class Document {
 
   /**
    * Append a table to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -404,7 +404,7 @@ export class Document {
    * // | John Doe | jdoe@gmail.com |
    * // | Jane Doe | jane@gmail.com |
    * ```
-   * 
+   *
    * @param tableDefinition An array of arrays of the TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance. With the first array being the header row.
    * @returns A new Document instance with the table appended.
    */
@@ -433,7 +433,7 @@ export class Document {
 
   /**
    * Append a raw HTML string to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -441,7 +441,7 @@ export class Document {
    *  .toString();
    * // Output: <p align="center">Hello, World!</p>
    * ```
-   * 
+   *
    * @param html A string of raw HTML.
    * @returns A new Document instance with the HTML appended.
    */
@@ -456,15 +456,15 @@ export class Document {
 
   /**
    * Append a code block to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
    *  .codeBlock(`
    * const x = 10;
-   * 
+   *
    * console.log(x);
-   *   `.trim(), 
+   *   `.trim(),
    *   'javascript'
    *  )
    *  .toString();
@@ -475,7 +475,7 @@ export class Document {
    * // console.log(x);
    * // ```
    * ```
-   * 
+   *
    * @param code A string of code.
    * @param language A supported language for the code block.
    * @returns A new Document instance with the code block appended.
@@ -494,7 +494,7 @@ export class Document {
 
   /**
    * Append a block quote to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -502,7 +502,7 @@ export class Document {
    *   .toString();
    * // Output: > This is a block quote.
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the block quote appended.
    */
@@ -517,7 +517,7 @@ export class Document {
 
   /**
    * Append an image to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -525,7 +525,7 @@ export class Document {
    *   .toString();
    * // Output: ![Alt text](https://example.com/image.png)
    * ```
-   * 
+   *
    * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @param src A string of the image source.
    * @returns A new Document instance with the image appended.
@@ -544,7 +544,7 @@ export class Document {
 
   /**
    * Append a thematic break to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -552,7 +552,7 @@ export class Document {
    *  .toString();
    * // Output: ---
    * ```
-   * 
+   *
    * @returns A new Document instance with the thematic break appended.
    */
   public break(): this {
@@ -572,7 +572,7 @@ export class Document {
 
   /**
    * Append a number list to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -587,7 +587,7 @@ export class Document {
    * // 2. Item 2
    * // 3. Item 3
    * ```
-   * 
+   *
    * @param text An array of TextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the number list appended.
    */
@@ -607,7 +607,7 @@ export class Document {
 
   /**
    * Append a bullet list to the document.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -622,7 +622,7 @@ export class Document {
    * // - Item 2
    * // - Item 3
    * ```
-   * 
+   *
    * @param text An array of TextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the bullet list appended.
    */
@@ -648,7 +648,7 @@ export class Document {
 
   /**
    * Convert the document to string representation, that can be used for rendering.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -660,7 +660,7 @@ export class Document {
    * //
    * // This is a paragraph of text.
    * ```
-   * 
+   *
    * @returns A string representation of the document, that can be used for rendering.
    */
   public toString(): string {
@@ -673,7 +673,7 @@ export class Document {
 
   /**
    * Convert the document to a JSON representation, that can be used for serialization.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Document()
@@ -709,7 +709,7 @@ export class Document {
    * //   }
    * // ]
    * ```
-   * 
+   *
    * @returns A JSON representation of the document, that can be used for serialization.
    */
   public toJSON(): DocumentNode[] {

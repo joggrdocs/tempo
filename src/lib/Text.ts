@@ -104,7 +104,7 @@ export class Text {
    *  .toString();
    * // Output: 'foobar'
    * ```
-   *  
+   *
    * @param value A plaintext string to append to the collection of TextNodes.
    * @param options An optional object to specify options for the append operation.
    * @returns A new instance of the Text class, with the appended plaintext string.
@@ -121,7 +121,7 @@ export class Text {
 
   /**
    * Append a code string to the collection of TextNodes.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
@@ -129,7 +129,7 @@ export class Text {
    *  .toString();
    * // Output: '`foobar`'
    * ```
-   * 
+   *
    * @param value A code string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended code string.
    */
@@ -152,7 +152,7 @@ export class Text {
    *  .toString();
    * // Output: '**foobar**'
    * ```
-   *  
+   *
    * @param value A bold string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended bold string.
    */
@@ -167,7 +167,7 @@ export class Text {
 
   /**
    * Append an italic string to the collection of TextNodes.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
@@ -175,7 +175,7 @@ export class Text {
    *  .toString();
    * // Output: '_foobar_'
    * ```
-   * 
+   *
    * @param value An italic string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended italic string.
    */
@@ -190,7 +190,7 @@ export class Text {
 
   /**
    * Append a strikethrough string to the collection of TextNodes.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
@@ -198,7 +198,7 @@ export class Text {
    *   .toString();
    * // Output: '~~foobar~~'
    * ```
-   * 
+   *
    * @param value A strikethrough string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended strikethrough string.
    */
@@ -213,14 +213,14 @@ export class Text {
 
   /**
    * Append a link to the collection of TextNodes.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
    *   .link('Google', 'https://www.google.com')
    *   .toString();
    * // Output: '[Google](https://www.google.com)'
-   * 
+   *
    * @param value The alt text for the link.
    * @param href The href for the link.
    * @returns A new instance of the Text class, with the appended link.
@@ -239,7 +239,7 @@ export class Text {
 
   /**
    * Append an emoji to the collection of TextNodes.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
@@ -247,7 +247,7 @@ export class Text {
    *  .emoji('🙂')
    *  .toString();
    * // Output: ':smile: 🙂'
-   * 
+   *
    * @param value An emoji alias or unicode string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended emoji.
    */
@@ -268,16 +268,16 @@ export class Text {
 
   /**
    * Convert the text to a JSON representation, that can be used for serialization.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
    *   .plaintext('Hello, World!')
    *   .code('console.log("foobar")')
    *   .toJSON();
-   * // Output: 
+   * // Output:
    * // [
-   * //   { type: 'plaintext', data: 'Hello, World!', computed: 'Hello, World!' }, 
+   * //   { type: 'plaintext', data: 'Hello, World!', computed: 'Hello, World!' },
    * //   { type: 'code', data: 'console.log("foobar")', computed: '`console.log("foobar")`' }
    * // ]
    * ```
@@ -289,7 +289,7 @@ export class Text {
   }
   /**
    * Convert the text to string representation, that can be used for rendering.
-   * 
+   *
    * @example
    * ```ts
    * const doc = new Text()
@@ -298,7 +298,7 @@ export class Text {
    *  .toString();
    * // Output: 'Hello, World! `console.log("foobar")`'
    * ```
-   * 
+   *
    * @returns A string representation of the document, that can be used for rendering.
    */
   public toString() {

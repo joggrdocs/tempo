@@ -16,8 +16,8 @@ import { Document, type DocumentNode } from './Document';
 
 /**
  * Create a new Document instance and build, append, or modify the DocumentNodes.
- * 
- * @example 
+ *
+ * @example
  * ```ts
  * const doc = tempo()
  *  .h1('Hello, World!')
@@ -33,7 +33,7 @@ import { Document, type DocumentNode } from './Document';
  *  ])
  *  .toString();
  * ```
- * 
+ *
  * @param documentNodes A list of DocumentNodes to initialize the Document.
  * @returns A new Document instance.
  */
