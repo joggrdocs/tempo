@@ -1,4 +1,9 @@
-import { computeNodes, computeText, TempoDocument, TempoDocumentNode } from '../TempoDocument';
+import {
+  computeNodes,
+  computeText,
+  TempoDocument,
+  TempoDocumentNode
+} from '../TempoDocument';
 import { TempoText } from '../TempoText';
 
 describe('initialization', () => {
