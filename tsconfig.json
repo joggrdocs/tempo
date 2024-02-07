@@ -17,14 +17,29 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
-    "lib": ["ES2022"],
+    "removeComments": false,
+    "lib": [
+      "ES2022"
+    ],
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
-      "@launchpad/*": ["src/*"]
+      "@launchpad/*": [
+        "src/*"
+      ]
     }
   },
-  "typeRoots": ["node_modules/@types", "types"],
-  "include": ["types/**/*", "src/**/*"],
-  "exclude": ["node_modules/**/*", "**/__tests__/**/*", "action.js"]
+  "typeRoots": [
+    "node_modules/@types",
+    "types"
+  ],
+  "include": [
+    "types/**/*",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    "**/__tests__/**/*",
+    "action.js"
+  ]
 }

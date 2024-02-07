@@ -8,4 +8,4 @@ export {
   EmojiAlias,
   EmojiUnicode,
   assertSupportedEmoji
-} from './lib/markdown';
+} from './lib/markdown/index';
