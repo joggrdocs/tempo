@@ -16,7 +16,7 @@ import * as md from './markdown/markdown';
 |------------------
 */
 
-export type TextNodeType =
+export type TempoTextNodeType =
   | 'plaintext'
   | 'code'
   | 'append'
@@ -27,7 +27,7 @@ export type TextNodeType =
   | 'emoji';
 
 interface BaseTextNode<T> {
-  type: TextNodeType;
+  type: TempoTextNodeType;
   data: T;
   computed: string;
 }
@@ -68,7 +68,7 @@ export interface EmojiTextNode extends BaseTextNode<string> {
   type: 'emoji';
 }
 
-export type TextNode =
+export type TempoTextNode =
   | PlainTextNode
   | CodeTextNode
   | AppendTextNode
@@ -91,8 +91,8 @@ export type TextNode =
 /**
  * A class for building a collection of TextNodes, using a chaining API.
  */
-export class Text {
-  private nodes: TextNode[] = [];
+export class TempoText {
+  private nodes: TempoTextNode[] = [];
 
   /**
    * Append a plaintext string to the collection of TextNodes.

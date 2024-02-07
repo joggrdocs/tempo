@@ -1,5 +1,5 @@
 import * as md from './markdown/markdown';
-import { Text, TextNode } from './Text';
+import { TempoText, TempoTextNode } from './TempoText';
 
 /*
 |==========================================================================
@@ -17,7 +17,10 @@ import { Text, TextNode } from './Text';
 |------------------
 */
 
-export type TextInput = string | Text | ((text: Text) => Text | string);
+export type TextInput =
+  | string
+  | TempoText
+  | ((text: TempoText) => TempoText | string);
 
 /*
 |------------------
@@ -46,19 +49,19 @@ interface BaseDocumentNode<T> {
 export interface HeadingNode
   extends BaseDocumentNode<{
     level: 1 | 2 | 3 | 4 | 5 | 6;
-    data: TextNode[];
+    data: TempoTextNode[];
   }> {
   type: 'heading';
 }
 
-export interface ParagraphNode extends BaseDocumentNode<TextNode[]> {
+export interface ParagraphNode extends BaseDocumentNode<TempoTextNode[]> {
   type: 'paragraph';
 }
 
 interface TableRow<T extends 'row' | 'header'> {
   type: T;
   order: T extends 'row' ? number : undefined;
-  data: TextNode[][];
+  data: TempoTextNode[][];
   computed: string;
 }
 
@@ -79,7 +82,7 @@ export interface CodeBlockNode
   type: 'codeBlock';
 }
 
-export interface BlockQuoteNode extends BaseDocumentNode<TextNode[]> {
+export interface BlockQuoteNode extends BaseDocumentNode<TempoTextNode[]> {
   type: 'blockQuote';
 }
 
@@ -99,7 +102,7 @@ export interface BreakNode extends BaseDocumentNode<null> {
 interface ListItem<T extends 'numberList' | 'bulletList'> {
   type: 'listItem';
   order: T extends 'numberList' ? number : undefined;
-  data: TextNode[];
+  data: TempoTextNode[];
   computed: string;
 }
 
@@ -113,7 +116,7 @@ export interface NumberListNode
   type: 'numberList';
 }
 
-export type DocumentNode =
+export type TempoDocumentNode =
   | HeadingNode
   | ParagraphNode
   | TableNode
@@ -135,7 +138,7 @@ export type DocumentNode =
 |
 */
 
-function formatTextNode(text: string): TextNode {
+function formatTextNode(text: string): TempoTextNode {
   return {
     type: 'plaintext',
     data: text,
@@ -143,13 +146,13 @@ function formatTextNode(text: string): TextNode {
   };
 }
 
-export function computeNodes(textInput: TextInput): TextNode[] {
+export function computeNodes(textInput: TextInput): TempoTextNode[] {
   if (typeof textInput === 'string') {
     return [formatTextNode(textInput)];
-  } else if (textInput instanceof Text) {
+  } else if (textInput instanceof TempoText) {
     return textInput.toJSON();
   } else if (typeof textInput === 'function') {
-    const result = textInput(new Text());
+    const result = textInput(new TempoText());
     return computeNodes(result);
   } else {
     throw new TypeError(`Invalid text type: ${typeof textInput}`);
@@ -159,10 +162,10 @@ export function computeNodes(textInput: TextInput): TextNode[] {
 export function computeText(textInput: TextInput): string {
   if (typeof textInput === 'string') {
     return textInput;
-  } else if (textInput instanceof Text) {
+  } else if (textInput instanceof TempoText) {
     return textInput.toString();
   } else if (typeof textInput === 'function') {
-    const result = textInput(new Text());
+    const result = textInput(new TempoText());
     return computeText(result);
   } else {
     throw new TypeError(`Invalid text type: ${typeof textInput}`);
@@ -182,10 +185,10 @@ export function computeText(textInput: TextInput): string {
 /**
  * A class for building a document, using a chaining API.
  */
-export class Document {
-  private nodes: DocumentNode[];
+export class TempoDocument {
+  private nodes: TempoDocumentNode[];
 
-  constructor(documentNodes?: DocumentNode[]) {
+  constructor(documentNodes?: TempoDocumentNode[]) {
     this.nodes = documentNodes ?? [];
   }
 
@@ -712,7 +715,7 @@ export class Document {
    *
    * @returns A JSON representation of the document, that can be used for serialization.
    */
-  public toJSON(): DocumentNode[] {
+  public toJSON(): TempoDocumentNode[] {
     return this.nodes;
   }
 }
