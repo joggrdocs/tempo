@@ -88,10 +88,28 @@ export type TextNode =
 |
 */
 
+/**
+ * A class for building a collection of TextNodes, using a chaining API.
+ */
 export class Text {
   private nodes: TextNode[] = [];
 
-  public plainText(value: string, options?: { append?: boolean }) {
+  /**
+   * Append a plaintext string to the collection of TextNodes.
+   *
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *  .plainText('foobar')
+   *  .toString();
+   * // Output: 'foobar'
+   * ```
+   *  
+   * @param value A plaintext string to append to the collection of TextNodes.
+   * @param options An optional object to specify options for the append operation.
+   * @returns A new instance of the Text class, with the appended plaintext string.
+   */
+  public plainText(value: string, options?: { append?: boolean }): this {
     this.nodes.push({
       type: 'plaintext',
       data: value,
@@ -101,6 +119,20 @@ export class Text {
     return this;
   }
 
+  /**
+   * Append a code string to the collection of TextNodes.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *  .code('foobar')
+   *  .toString();
+   * // Output: '`foobar`'
+   * ```
+   * 
+   * @param value A code string to append to the collection of TextNodes.
+   * @returns A new instance of the Text class, with the appended code string.
+   */
   public code(value: string) {
     this.nodes.push({
       type: 'code',
@@ -110,6 +142,20 @@ export class Text {
     return this;
   }
 
+  /**
+   * Append a bold string to the collection of TextNodes.
+   *
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *  .bold('foobar')
+   *  .toString();
+   * // Output: '**foobar**'
+   * ```
+   *  
+   * @param value A bold string to append to the collection of TextNodes.
+   * @returns A new instance of the Text class, with the appended bold string.
+   */
   public bold(value: string) {
     this.nodes.push({
       type: 'bold',
@@ -119,6 +165,20 @@ export class Text {
     return this;
   }
 
+  /**
+   * Append an italic string to the collection of TextNodes.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *  .italic('foobar')
+   *  .toString();
+   * // Output: '_foobar_'
+   * ```
+   * 
+   * @param value An italic string to append to the collection of TextNodes.
+   * @returns A new instance of the Text class, with the appended italic string.
+   */
   public italic(value: string) {
     this.nodes.push({
       type: 'italic',
@@ -128,6 +188,20 @@ export class Text {
     return this;
   }
 
+  /**
+   * Append a strikethrough string to the collection of TextNodes.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *   .strikeThrough('foobar')
+   *   .toString();
+   * // Output: '~~foobar~~'
+   * ```
+   * 
+   * @param value A strikethrough string to append to the collection of TextNodes.
+   * @returns A new instance of the Text class, with the appended strikethrough string.
+   */
   public strikeThrough(value: string) {
     this.nodes.push({
       type: 'strikeThrough',
@@ -137,6 +211,20 @@ export class Text {
     return this;
   }
 
+  /**
+   * Append a link to the collection of TextNodes.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *   .link('Google', 'https://www.google.com')
+   *   .toString();
+   * // Output: '[Google](https://www.google.com)'
+   * 
+   * @param value The alt text for the link.
+   * @param href The href for the link.
+   * @returns A new instance of the Text class, with the appended link.
+   */
   public link(value: string, href: string) {
     this.nodes.push({
       type: 'link',
@@ -149,6 +237,20 @@ export class Text {
     return this;
   }
 
+  /**
+   * Append an emoji to the collection of TextNodes.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *  .emoji('smile')
+   *  .emoji('🙂')
+   *  .toString();
+   * // Output: ':smile: 🙂'
+   * 
+   * @param value An emoji alias or unicode string to append to the collection of TextNodes.
+   * @returns A new instance of the Text class, with the appended emoji.
+   */
   public emoji(value: md.EmojiAlias | md.EmojiUnicode) {
     this.nodes.push({
       type: 'emoji',
@@ -164,10 +266,41 @@ export class Text {
   |------------------
   */
 
+  /**
+   * Convert the text to a JSON representation, that can be used for serialization.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *   .plaintext('Hello, World!')
+   *   .code('console.log("foobar")')
+   *   .toJSON();
+   * // Output: 
+   * // [
+   * //   { type: 'plaintext', data: 'Hello, World!', computed: 'Hello, World!' }, 
+   * //   { type: 'code', data: 'console.log("foobar")', computed: '`console.log("foobar")`' }
+   * // ]
+   * ```
+   *
+   * @returns A JSON representation of the text, that can be used for serialization.
+   */
   public toJSON() {
     return this.nodes;
   }
-
+  /**
+   * Convert the text to string representation, that can be used for rendering.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Text()
+   *  .plaintext('Hello, World!')
+   *  .code('console.log("foobar")')
+   *  .toString();
+   * // Output: 'Hello, World! `console.log("foobar")`'
+   * ```
+   * 
+   * @returns A string representation of the document, that can be used for rendering.
+   */
   public toString() {
     let output = '';
 
@@ -185,6 +318,3 @@ export class Text {
     return output.trim();
   }
 }
-
-const createText = () => new Text();
-export default createText;

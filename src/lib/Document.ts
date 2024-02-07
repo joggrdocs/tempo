@@ -179,6 +179,9 @@ export function computeText(textInput: TextInput): string {
 |
 */
 
+/**
+ * A class for building a document, using a chaining API.
+ */
 export class Document {
   private nodes: DocumentNode[];
 
@@ -192,7 +195,21 @@ export class Document {
   |------------------
   */
 
-  public h1(text: TextInput) {
+  /**
+   * Append a heading (h1) to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .h1('Hello, World!')
+   *   .toString();
+   * // Output: # Hello, World!
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the heading appended.
+   */
+  public h1(text: TextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -204,7 +221,21 @@ export class Document {
     return this;
   }
 
-  public h2(text: TextInput) {
+  /**
+   * Append a heading (h2) to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .h2('Hello, World!')
+   *   .toString();
+   * // Output: ## Hello, World!
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the heading appended.
+   */
+  public h2(text: TextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -216,7 +247,21 @@ export class Document {
     return this;
   }
 
-  public h3(text: TextInput) {
+  /**
+   * Append a heading (h3) to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .h3('Hello, World!')
+   *   .toString();
+   * // Output: ### Hello, World!
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the heading appended.
+   */
+  public h3(text: TextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -228,7 +273,21 @@ export class Document {
     return this;
   }
 
-  public h4(text: TextInput) {
+  /**
+   * Append a heading (h4) to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .h4('Hello, World!')
+   *   .toString();
+   * // Output: #### Hello, World!
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the heading appended.
+   */
+  public h4(text: TextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -240,7 +299,21 @@ export class Document {
     return this;
   }
 
-  public h5(text: TextInput) {
+  /**
+   * Append a heading (h5) to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .h5('Hello, World!')
+   *   .toString();
+   * // Output: ##### Hello, World!
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the heading appended.
+   */
+  public h5(text: TextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -252,7 +325,21 @@ export class Document {
     return this;
   }
 
-  public h6(text: TextInput) {
+  /**
+   * Append a heading (h6) to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .h6('Hello, World!')
+   *   .toString();
+   * // Output: ##### Hello, World!
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the heading appended.
+   */
+  public h6(text: TextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -270,7 +357,21 @@ export class Document {
   |------------------
   */
 
-  public paragraph(text: TextInput) {
+  /**
+   * Append a paragraph to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .paragraph('This is a paragraph of text.')
+   *  .toString();
+   * // Output: This is a paragraph of text.
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the paragraph appended.
+   */
+  public paragraph(text: TextInput): this {
     this.nodes.push({
       type: 'paragraph',
       data: computeNodes(text),
@@ -285,8 +386,30 @@ export class Document {
   |------------------
   */
 
-  public table(tableRows: TextInput[][]) {
-    const [header, ...rows] = tableRows;
+  /**
+   * Append a table to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .table([
+   *    ['Name', 'email'],
+   *    ['John Doe', 'jdoe@gmail.com'],
+   *    ['Jane Doe', 'jane@gmail.com']
+   *  ])
+   *  .toString();
+   * // Output:
+   * // | Name     | email          |
+   * // |----------|----------------|
+   * // | John Doe | jdoe@gmail.com |
+   * // | Jane Doe | jane@gmail.com |
+   * ```
+   * 
+   * @param tableDefinition An array of arrays of the TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance. With the first array being the header row.
+   * @returns A new Document instance with the table appended.
+   */
+  public table(tableDefinition: TextInput[][]): this {
+    const [header, ...rows] = tableDefinition;
     this.nodes.push({
       type: 'table',
       data: [
@@ -303,12 +426,26 @@ export class Document {
           computed: md.tableRow(row.map(computeText))
         })) as TableRow<'row'>[])
       ],
-      computed: md.table(tableRows.map(row => row.map(computeText)))
+      computed: md.table(tableDefinition.map(row => row.map(computeText)))
     });
     return this;
   }
 
-  public html(html: string) {
+  /**
+   * Append a raw HTML string to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .html('<p align="center">Hello, World!</p>')
+   *  .toString();
+   * // Output: <p align="center">Hello, World!</p>
+   * ```
+   * 
+   * @param html A string of raw HTML.
+   * @returns A new Document instance with the HTML appended.
+   */
+  public html(html: string): this {
     this.nodes.push({
       type: 'html',
       data: html,
@@ -317,7 +454,33 @@ export class Document {
     return this;
   }
 
-  public codeBlock(code: string, language?: md.SupportedLanguage) {
+  /**
+   * Append a code block to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .codeBlock(`
+   * const x = 10;
+   * 
+   * console.log(x);
+   *   `.trim(), 
+   *   'javascript'
+   *  )
+   *  .toString();
+   * // Output:
+   * // ```javascript
+   * // const x = 10;
+   * //
+   * // console.log(x);
+   * // ```
+   * ```
+   * 
+   * @param code A string of code.
+   * @param language A supported language for the code block.
+   * @returns A new Document instance with the code block appended.
+   */
+  public codeBlock(code: string, language?: md.SupportedLanguage): this {
     this.nodes.push({
       type: 'codeBlock',
       data: {
@@ -329,7 +492,21 @@ export class Document {
     return this;
   }
 
-  public blockQuote(text: TextInput) {
+  /**
+   * Append a block quote to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .blockQuote('This is a block quote.')
+   *   .toString();
+   * // Output: > This is a block quote.
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the block quote appended.
+   */
+  public blockQuote(text: TextInput): this {
     this.nodes.push({
       type: 'blockQuote',
       data: computeNodes(text),
@@ -338,7 +515,22 @@ export class Document {
     return this;
   }
 
-  public image(text: string, src: string) {
+  /**
+   * Append an image to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .image('Alt text', 'https://example.com/image.png')
+   *   .toString();
+   * // Output: ![Alt text](https://example.com/image.png)
+   * ```
+   * 
+   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param src A string of the image source.
+   * @returns A new Document instance with the image appended.
+   */
+  public image(text: string, src: string): this {
     this.nodes.push({
       type: 'image',
       data: {
@@ -350,7 +542,20 @@ export class Document {
     return this;
   }
 
-  public break() {
+  /**
+   * Append a thematic break to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .break()
+   *  .toString();
+   * // Output: ---
+   * ```
+   * 
+   * @returns A new Document instance with the thematic break appended.
+   */
+  public break(): this {
     this.nodes.push({
       type: 'break',
       data: null,
@@ -365,7 +570,28 @@ export class Document {
   |------------------
   */
 
-  public numberList(text: TextInput[]) {
+  /**
+   * Append a number list to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .numberList([
+   *     'Item 1',
+   *     'Item 2',
+   *     'Item 3'
+   *   ])
+   *   .toString();
+   * // Output:
+   * // 1. Item 1
+   * // 2. Item 2
+   * // 3. Item 3
+   * ```
+   * 
+   * @param text An array of TextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the number list appended.
+   */
+  public numberList(text: TextInput[]): this {
     this.nodes.push({
       type: 'numberList',
       data: text.map((t, i) => ({
@@ -379,7 +605,28 @@ export class Document {
     return this;
   }
 
-  public bulletList(text: TextInput[]) {
+  /**
+   * Append a bullet list to the document.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *   .bulletList([
+   *     'Item 1',
+   *     'Item 2',
+   *     'Item 3'
+   *   ])
+   *   .toString();
+   * // Output:
+   * // - Item 1
+   * // - Item 2
+   * // - Item 3
+   * ```
+   * 
+   * @param text An array of TextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns A new Document instance with the bullet list appended.
+   */
+  public bulletList(text: TextInput[]): this {
     this.nodes.push({
       type: 'bulletList',
       data: text.map(t => ({
@@ -399,7 +646,24 @@ export class Document {
   |------------------
   */
 
-  public toString() {
+  /**
+   * Convert the document to string representation, that can be used for rendering.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .h1('Hello, World!')
+   *  .paragraph('This is a paragraph of text.')
+   *  .toString();
+   * // Output:
+   * // # Hello, World!
+   * //
+   * // This is a paragraph of text.
+   * ```
+   * 
+   * @returns A string representation of the document, that can be used for rendering.
+   */
+  public toString(): string {
     return this.nodes
       .map(section => section.computed)
       .join('\n\n')
@@ -407,25 +671,48 @@ export class Document {
       .concat('\n');
   }
 
-  public toJSON() {
+  /**
+   * Convert the document to a JSON representation, that can be used for serialization.
+   * 
+   * @example
+   * ```ts
+   * const doc = new Document()
+   *  .h1('Hello, World!')
+   *  .paragraph('This is a paragraph of text.')
+   *  .toJSON();
+   * // Output:
+   * // [
+   * //   {
+   * //     "type": "heading",
+   * //     "data": {
+   * //       "level": 1,
+   * //       "data": [
+   * //         {
+   * //           "type": "plaintext",
+   * //           "data": "Hello, World!",
+   * //           "computed": "Hello, World!"
+   * //         }
+   * //       ]
+   * //     },
+   * //     "computed": "# Hello, World!"
+   * //   },
+   * //   {
+   * //     "type": "paragraph",
+   * //     "data": [
+   * //       {
+   * //         "type": "plaintext",
+   * //         "data": "This is a paragraph of text.",
+   * //         "computed": "This is a paragraph of text."
+   * //       }
+   * //     ],
+   * //     "computed": "This is a paragraph of text."
+   * //   }
+   * // ]
+   * ```
+   * 
+   * @returns A JSON representation of the document, that can be used for serialization.
+   */
+  public toJSON(): DocumentNode[] {
     return this.nodes;
   }
 }
-
-/*
-|----------------------------------
-| Public API
-|----------------------------------
-|
-| The public API for creating a document. It is a wrapper around the Document class
-| and provides a chaining API for building a document.
-|
-| NOTE:
-| We do export the Document class, types, and interfaces, as we want to allow
-| for custom implementations of the Document class.
-|
-*/
-
-const createDocument = (documentNodes?: DocumentNode[]) =>
-  new Document(documentNodes);
-export default createDocument;

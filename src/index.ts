@@ -1,4 +1,4 @@
-export { default } from './lib/Document';
+export { default } from './lib/tempo';
 export { Document } from './lib/Document';
 export { Text } from './lib/Text';
 export {
