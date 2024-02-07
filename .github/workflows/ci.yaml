@@ -15,10 +15,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
-      - name: Use Node.js v18
+      - name: Use Node.js v20
         uses: actions/setup-node@v1
         with:
-          node-version: 18
+          node-version: 20
       - name: Install Packages
         run: npm install
       - name: Format
