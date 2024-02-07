@@ -9101,7 +9101,15 @@ export const supportedEmojis = [
     category: 'Symbol'
   }
 ] as const;
+
+/**
+ * Alias for emojis, primarily for use with colons, i.e. `:smile:`
+ */
 export type EmojiAlias = (typeof supportedEmojis)[number]['alias'];
+
+/**
+ * The unicode value for emojis
+ */
 export type EmojiUnicode = Exclude<
   (typeof supportedEmojis)[number]['unicode'],
   boolean
@@ -9128,6 +9136,8 @@ export function isSupportedAlias(
 }
 
 /**
+ * Assert that the given emoji is a supported emoji
+ *
  * @throws if the given emoji is not valid
  */
 export function assertSupportedEmoji(
