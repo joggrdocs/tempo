@@ -287,6 +287,7 @@ export class Text {
   public toJSON() {
     return this.nodes;
   }
+
   /**
    * Convert the text to string representation, that can be used for rendering.
    *
