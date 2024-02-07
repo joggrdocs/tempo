@@ -1,13 +1,12 @@
-import { before } from 'node:test';
-import createText, { Text } from '../Text';
+import { TempoText } from '../TempoText';
 import md from '../markdown';
 
 jest.mock('../markdown/markdown');
 
-let txt: Text;
+let txt: TempoText;
 
 beforeEach(() => {
-  txt = createText();
+  txt = new TempoText();
 });
 
 afterEach(() => {
@@ -79,12 +78,12 @@ describe('toString', () => {
 });
 
 describe('outputs', () => {
-  let createText: () => Text;
+  let createText: () => TempoText;
   beforeEach(async () => {
     jest.unmock('../markdown/markdown');
     jest.resetModules();
-    const textImport = await import('../Text');
-    createText = textImport.default;
+    const textImport = await import('../TempoText');
+    createText = () => new textImport.TempoText();
   });
 
   describe('toString', () => {

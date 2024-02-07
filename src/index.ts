@@ -1,6 +1,14 @@
-export { default } from './lib/Document';
-export { Document } from './lib/Document';
-export { Text } from './lib/Text';
+export { default } from './lib/tempo';
+export {
+  /** @deprecated */
+  TempoDocument as Document,
+  TempoDocument
+} from './lib/TempoDocument';
+export {
+  /** @deprecated */
+  TempoText as Text,
+  TempoText
+} from './lib/TempoText';
 export {
   SupportedLanguage,
   supportedLanguages,
@@ -8,4 +16,4 @@ export {
   EmojiAlias,
   EmojiUnicode,
   assertSupportedEmoji
-} from './lib/markdown';
+} from './lib/markdown/index';
