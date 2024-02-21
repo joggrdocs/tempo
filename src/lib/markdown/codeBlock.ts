@@ -46,6 +46,7 @@ export const supportedLanguages = [
   'make',
   'markdown',
   'matlab',
+  'mermaid',
   'nginx',
   'objectivec',
   'pascal',

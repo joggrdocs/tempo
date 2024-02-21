@@ -64,7 +64,7 @@ export interface LinkTextNode
   type: 'link';
 }
 
-export interface EmojiTextNode extends BaseTextNode<string> {
+export interface EmojiTextNode extends BaseTextNode<md.EmojiAlias | md.EmojiUnicode> {
   type: 'emoji';
 }
 
@@ -254,8 +254,8 @@ export class TempoText {
   public emoji(value: md.EmojiAlias | md.EmojiUnicode) {
     this.nodes.push({
       type: 'emoji',
-      data: value.toString(),
-      computed: value.toString()
+      data: value,
+      computed: md.emoji(value)
     });
     return this;
   }
