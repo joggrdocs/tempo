@@ -64,7 +64,8 @@ export interface LinkTextNode
   type: 'link';
 }
 
-export interface EmojiTextNode extends BaseTextNode<md.EmojiAlias | md.EmojiUnicode> {
+export interface EmojiTextNode
+  extends BaseTextNode<md.EmojiAlias | md.EmojiUnicode> {
   type: 'emoji';
 }
 

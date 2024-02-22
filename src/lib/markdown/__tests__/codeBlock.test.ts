@@ -1,7 +1,6 @@
 import * as codeBlock from '../codeBlock';
 import supportedLanguages from '../data/supported-languages';
 
-
 describe('codeBlock', () => {
   supportedLanguages.forEach(language => {
     it(`should not throw an error for ${language}`, () => {

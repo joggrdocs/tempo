@@ -103,8 +103,8 @@ export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
   emo.assertSupportedEmoji(value);
   if (emo.isSupportedAlias(value)) {
     const foundEmojiDefinition = supportedEmojis.find(({ aliases }) =>
-      aliases.some((alias) => alias === value)
-    ) as unknown as (typeof supportedEmojis[number]);
+      aliases.some(alias => alias === value)
+    ) as unknown as (typeof supportedEmojis)[number];
 
     if (foundEmojiDefinition.unicode === false) {
       return `:${value}:`;
