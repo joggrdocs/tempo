@@ -1,82 +1,10 @@
+import supportedLanguages from './data/supported-languages';
+
 /*
 |==========================================================================
 | codeBlock
 |==========================================================================
 */
-
-/**
- * Supported languages by GitHub Linguist
- *
- * @link https://github.com/github-linguist/linguist/blob/master/lib/linguist/languages.yml
- */
-export const supportedLanguages = [
-  'actionscript3',
-  'apache',
-  'applescript',
-  'asp',
-  'brainfuck',
-  'c',
-  'cfm',
-  'clojure',
-  'cmake',
-  'coffee-script',
-  'coffeescript',
-  'coffee',
-  'cpp',
-  'cs',
-  'csharp',
-  'css',
-  'csv',
-  'bash',
-  'diff',
-  'elixir',
-  'erb',
-  'go',
-  'graphql',
-  'hcl',
-  'haml',
-  'html',
-  'http',
-  'java',
-  'javascript',
-  'json',
-  'jsx',
-  'less',
-  'lolcode',
-  'make',
-  'markdown',
-  'matlab',
-  'nginx',
-  'objectivec',
-  'pascal',
-  'PHP',
-  'Perl',
-  'python',
-  'profile',
-  'rust',
-  'salt',
-  'shell',
-  'sh',
-  'zsh',
-  'scss',
-  'sql',
-  'svg',
-  'swift',
-  'terraform',
-  'typescript',
-  'tsx',
-  'rb',
-  'jruby',
-  'ruby',
-  'smalltalk',
-  'vim',
-  'viml',
-  'volt',
-  'vhdl',
-  'vue',
-  'xml',
-  'yaml'
-] as const;
 
 /**
  * A language supported by GitHub Linguist

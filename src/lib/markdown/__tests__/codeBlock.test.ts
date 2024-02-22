@@ -1,7 +1,8 @@
 import * as codeBlock from '../codeBlock';
+import supportedLanguages from '../data/supported-languages';
 
 describe('codeBlock', () => {
-  codeBlock.supportedLanguages.forEach(language => {
+  supportedLanguages.forEach(language => {
     it(`should not throw an error for ${language}`, () => {
       expect(() => codeBlock.assertSupportedLanguage(language)).not.toThrow();
     });

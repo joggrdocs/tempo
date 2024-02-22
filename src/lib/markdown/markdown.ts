@@ -1,5 +1,6 @@
 import * as cb from './codeBlock';
 import * as emo from './emoji';
+import supportedEmojis from './data/emojis';
 
 /*
 |==========================================================================
@@ -99,9 +100,17 @@ export function codeBlock(value: string, language?: cb.SupportedLanguage) {
 }
 
 export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
-  emo.assertSupportedEmoji(value as emo.EmojiAlias | emo.EmojiUnicode);
+  emo.assertSupportedEmoji(value);
   if (emo.isSupportedAlias(value)) {
-    return `:${value}:`;
+    const foundEmojiDefinition = supportedEmojis.find(({ aliases }) =>
+      aliases.some(alias => alias === value)
+    ) as unknown as (typeof supportedEmojis)[number];
+
+    if (foundEmojiDefinition.unicode === false) {
+      return `:${value}:`;
+    } else {
+      return foundEmojiDefinition.unicode;
+    }
   } else {
     return value;
   }
