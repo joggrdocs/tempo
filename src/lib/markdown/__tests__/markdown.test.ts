@@ -94,11 +94,15 @@ describe('Special Elements', () => {
   });
 
   it('should return a shortcode emoji', () => {
-    expect(md.emoji('smile')).toBe(':smile:');
+    expect(md.emoji('smile')).toBe('😄');
   });
 
   it('should return a unicode emoji', () => {
     expect(md.emoji('😀')).toBe('😀');
+  });
+
+  it('should return a GitHub only emoji', () => {
+    expect(md.emoji('atom')).toBe(':atom:');
   });
 });
 

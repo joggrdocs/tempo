@@ -13,7 +13,7 @@ export {
   SupportedLanguage,
   supportedLanguages,
   assertSupportedLanguage,
-  EmojiAlias,
+  EmojiAliases,
   EmojiUnicode,
   assertSupportedEmoji
 } from './lib/markdown/index';

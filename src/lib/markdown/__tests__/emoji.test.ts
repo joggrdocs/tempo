@@ -1,16 +1,21 @@
+import supportedEmojis from '../data/emojis';
 import * as emoji from '../emoji';
 
 describe('codeBlock', () => {
-  emoji.supportedEmojis.forEach(emo => {
-    it(`should not throw an error for ${emo.alias}`, () => {
-      expect(() => emoji.assertSupportedEmoji(emo.alias)).not.toThrow();
-    });
-
-    if (emo.unicode !== false) {
-      it(`should not throw an error for ${emo.unicode}`, () => {
-        expect(() => emoji.assertSupportedEmoji(emo.unicode)).not.toThrow();
+  supportedEmojis.forEach(emo => {
+    describe(`:${emo.aliases[0]}:`, () => {
+      emo.aliases.forEach(alias => {
+        it(`should not throw an error for ":${alias}:"`, () => {
+          expect(() => emoji.assertSupportedEmoji(alias)).not.toThrow();
+        });
       });
-    }
+
+      if (emo.unicode !== false) {
+        it(`should not throw an error for ${emo.unicode}`, () => {
+          expect(() => emoji.assertSupportedEmoji(emo.unicode)).not.toThrow();
+        });
+      }
+    });
   });
 
   it('should throw an error for an unsupported emoji', () => {
