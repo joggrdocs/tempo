@@ -1,4 +1,4 @@
-import * as codeBlock from '../codeBlock';
+import * as codeBlock from '../code-block';
 import supportedLanguages from '../data/supported-languages';
 
 describe('codeBlock', () => {
