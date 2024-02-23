@@ -12,20 +12,26 @@ jobs:
   lintAndTest:
     name: Lint & Test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Use Node.js v20
-        uses: actions/setup-node@v1
+      - name: '⬇️ Checkout Code'
+        uses: actions/checkout@v4
+      - name: '💚 Use Node.js'
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Install Packages
-        run: npm install
-      - name: Format
-        run: npm run format:check
-      - name: Lint
-        run: npm run lint:check
-      - name: Type Check
-        run: npm run type:check
-      - name: Test
-        run: npm test --ci
+      - name: '📦 Install Packages'
+        run: yarn install
+      - name: '🏗️ Build'
+        run: yarn build
+      - name: '🎨 Code Formatting'
+        run: yarn analyze:fmt
+      - name: '⚙️ Code Linting'
+        run: yarn analyze:lint
+      - name: '🟦 Typecheck'
+        run: yarn analyze:types
+      - name: '⚡️ Test'
+        id: test
+        run: yarn test

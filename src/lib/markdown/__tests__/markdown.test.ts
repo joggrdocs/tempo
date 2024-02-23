@@ -94,11 +94,15 @@ describe('Special Elements', () => {
   });
 
   it('should return a shortcode emoji', () => {
-    expect(md.emoji('smile')).toBe(':smile:');
+    expect(md.emoji('smile')).toBe('😄');
   });
 
   it('should return a unicode emoji', () => {
     expect(md.emoji('😀')).toBe('😀');
+  });
+
+  it('should return a GitHub only emoji', () => {
+    expect(md.emoji('atom')).toBe(':atom:');
   });
 });
 
@@ -121,9 +125,10 @@ describe('Tables', () => {
   });
 });
 
-
 describe('Utils', () => {
   it('should return a clean text', () => {
-    expect(md.cleanText('_*~~Hello World~~**__! [Google](https://google.com) `code`')).toBe('Hello World! Googlehttps://google.com code');
+    expect(
+      md.cleanText('_*~~Hello World~~**__! [Google](https://google.com) `code`')
+    ).toBe('Hello World! Googlehttps://google.com code');
   });
 });

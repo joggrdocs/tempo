@@ -1,17 +1,18 @@
 {
   "name": "@joggr/tempo",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --coverage",
     "build": "tsc",
     "build:examples": "ts-node examples/index.ts",
-    "format:check": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "lint:check": "eslint src/**/*.ts",
-    "lint:fix": "eslint --fix src/**/*.ts",
-    "type:check": "tsc --noEmit",
+    "analyze:lint": "eslint --quiet src/**/*.ts",
+    "analyze:fmt": "prettier --check .",
+    "analyze:types": "tsc --noEmit",
+    "analyze": "yarn analyze:fmt && yarn analyze:lint && yarn analyze:types",
+    "fix:lint": "eslint src/**/*.ts --fix",
+    "fix:fmt": "prettier --write .",
     "prepublish": "tsc"
   },
   "repository": {
@@ -25,16 +26,26 @@
   },
   "homepage": "https://github.com/joggrdocs/tempo#readme",
   "devDependencies": {
-    "@types/jest": "^29.5.2",
-    "@types/node": "^20.4.1",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "eslint": "^8.44.0",
+    "@joggr/eslint-config": "^1.1.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-config-semistandard": "^17.0.0",
-    "jest": "^29.6.1",
-    "prettier": "^3.0.0",
-    "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1",
-    "type-fest": "^4.10.2",
-    "typescript": "^5.1.6"
-  }
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-filenames-simple": "^0.9.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "type-fest": "^4.10.3",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.1.0"
 }

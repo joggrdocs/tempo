@@ -63,8 +63,13 @@ describe('emoji', () => {
   it('should push the provided emoji value to the text', () => {
     const emoji = '👍';
     txt.emoji(emoji);
+    expect(md.emoji).toHaveBeenCalledWith(emoji);
+  });
 
-    expect(txt.toString()).toContain(emoji);
+  it('should push the provided emoji alias to the text', () => {
+    const emoji = 'smile';
+    txt.emoji(emoji);
+    expect(md.emoji).toHaveBeenCalledWith(emoji);
   });
 });
 

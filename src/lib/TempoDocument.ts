@@ -1,5 +1,10 @@
 import * as md from './markdown/markdown';
-import { TempoText, type TempoTextInput, type TempoTextNode } from './TempoText';
+import {
+  computeNodes,
+  computeText,
+  type TempoTextInput,
+  type TempoTextNode
+} from './TempoText';
 
 /*
 |==========================================================================
@@ -55,7 +60,7 @@ interface TableRow<T extends 'row' | 'header'> {
 }
 
 export interface TableNode
-  extends BaseDocumentNode<[TableRow<'header'>, ...TableRow<'row'>[]]> {
+  extends BaseDocumentNode<[TableRow<'header'>, ...Array<TableRow<'row'>>]> {
   type: 'table';
 }
 
@@ -96,12 +101,12 @@ interface ListItem<T extends 'numberList' | 'bulletList'> {
 }
 
 export interface BulletListNode
-  extends BaseDocumentNode<ListItem<'bulletList'>[]> {
+  extends BaseDocumentNode<Array<ListItem<'bulletList'>>> {
   type: 'bulletList';
 }
 
 export interface NumberListNode
-  extends BaseDocumentNode<ListItem<'numberList'>[]> {
+  extends BaseDocumentNode<Array<ListItem<'numberList'>>> {
   type: 'numberList';
 }
 
@@ -116,51 +121,6 @@ export type TempoDocumentNode =
   | BreakNode
   | NumberListNode
   | BulletListNode;
-
-
-/*
-|----------------------------------
-| Utils
-|----------------------------------
-|
-| Utility functions for working with DocumentNodes, Documents, TextNodes, and
-| other base types.
-|
-*/
-
-function formatTextNode(text: string): TempoTextNode {
-  return {
-    type: 'plaintext',
-    data: text,
-    computed: text
-  };
-}
-
-export function computeNodes(tempoTextInput: TempoTextInput): TempoTextNode[] {
-  if (typeof tempoTextInput === 'string') {
-    return [formatTextNode(tempoTextInput)];
-  } else if (tempoTextInput instanceof TempoText) {
-    return tempoTextInput.toJSON();
-  } else if (typeof tempoTextInput === 'function') {
-    const result = tempoTextInput(new TempoText());
-    return computeNodes(result);
-  } else {
-    throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
-  }
-}
-
-export function computeText(tempoTextInput: TempoTextInput): string {
-  if (typeof tempoTextInput === 'string') {
-    return tempoTextInput;
-  } else if (tempoTextInput instanceof TempoText) {
-    return tempoTextInput.toString();
-  } else if (typeof tempoTextInput === 'function') {
-    const result = tempoTextInput(new TempoText());
-    return computeText(result);
-  } else {
-    throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
-  }
-}
 
 /*
 |----------------------------------
@@ -178,7 +138,7 @@ export function computeText(tempoTextInput: TempoTextInput): string {
  * A class for building a document, using a chaining API.
  */
 export class TempoDocument {
-  private nodes: TempoDocumentNode[];
+  private readonly nodes: TempoDocumentNode[];
 
   constructor(documentNodes?: TempoDocumentNode[]) {
     this.nodes = documentNodes ?? [];
@@ -419,7 +379,7 @@ export class TempoDocument {
           order: i,
           data: row.map(computeNodes),
           computed: md.tableRow(row.map(computeText))
-        })) as TableRow<'row'>[])
+        })) as Array<TableRow<'row'>>)
       ],
       computed: md.table(tableDefinition.map(row => row.map(computeText)))
     });
