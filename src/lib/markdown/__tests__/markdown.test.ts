@@ -124,3 +124,15 @@ describe('Tables', () => {
     );
   });
 });
+
+describe('Utils', () => {
+  it('should return a clean text', () => {
+    expect(
+      md.cleanText('_*~~Hello World~~**__! [Google](https://google.com) `code`')
+    ).toEqual('Hello World Googlehttpsgooglecom code');
+  });
+
+  it('should return a empty string if no valid cleaned text', () => {
+    expect(md.cleanText('_*~~')).toEqual('');
+  });
+});

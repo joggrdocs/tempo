@@ -1,10 +1,4 @@
-import {
-  computeNodes,
-  computeText,
-  TempoDocument,
-  TempoDocumentNode
-} from '../TempoDocument';
-import { TempoText } from '../TempoText';
+import { TempoDocument, TempoDocumentNode } from '../TempoDocument';
 
 describe('initialization', () => {
   it('should prebuild nodes based off input', () => {
@@ -16,7 +10,9 @@ describe('initialization', () => {
           data: [
             {
               type: 'plaintext',
-              data: 'Hello World!',
+              data: {
+                text: 'Hello World!'
+              },
               computed: 'Hello World!'
             }
           ]
@@ -28,7 +24,9 @@ describe('initialization', () => {
         data: [
           {
             type: 'plaintext',
-            data: 'Hello World!',
+            data: {
+              text: 'Hello World!'
+            },
             computed: 'Hello World!'
           }
         ],
@@ -45,68 +43,6 @@ describe('initialization', () => {
   });
 });
 
-describe('computeText', () => {
-  it('should compute text from `string`', () => {
-    expect(computeText('Hello World!')).toEqual('Hello World!');
-  });
-
-  it('should compute text from `Text`', () => {
-    expect(computeText(new TempoText().plainText('Hello World!'))).toEqual(
-      'Hello World!'
-    );
-  });
-
-  it('should compute text from `(Text) => Text | string`', () => {
-    expect(computeText(text => text.plainText('Hello World!'))).toEqual(
-      'Hello World!'
-    );
-  });
-
-  it('should throw for invalid text type', () => {
-    expect(() => {
-      computeText(1 as any);
-    }).toThrow('Invalid text type');
-  });
-});
-
-describe('computeNodes', () => {
-  it('should compute nodes from `string`', () => {
-    expect(computeNodes('Hello World!')).toEqual([
-      {
-        type: 'plaintext',
-        data: 'Hello World!',
-        computed: 'Hello World!'
-      }
-    ]);
-  });
-
-  it('should compute nodes from `Text`', () => {
-    expect(computeNodes(new TempoText().plainText('Hello World!'))).toEqual([
-      {
-        type: 'plaintext',
-        data: 'Hello World!',
-        computed: 'Hello World!'
-      }
-    ]);
-  });
-
-  it('should compute nodes from `(Text) => Text | string`', () => {
-    expect(computeNodes(text => text.plainText('Hello World!'))).toEqual([
-      {
-        type: 'plaintext',
-        data: 'Hello World!',
-        computed: 'Hello World!'
-      }
-    ]);
-  });
-
-  it('should throw for invalid text type', () => {
-    expect(() => {
-      computeNodes(1 as any);
-    }).toThrow('Invalid text type');
-  });
-});
-
 describe('Headings', () => {
   const getResult = (level: number, text: string) => {
     return [
@@ -117,7 +53,9 @@ describe('Headings', () => {
           data: [
             {
               type: 'plaintext',
-              data: text,
+              data: {
+                text
+              },
               computed: text
             }
           ]
@@ -167,7 +105,9 @@ describe('Text Elements', () => {
         data: [
           {
             type: 'plaintext',
-            data: 'Hello World!',
+            data: {
+              text: 'Hello World!'
+            },
             computed: 'Hello World!'
           }
         ],
@@ -194,14 +134,18 @@ describe('Special Elements', () => {
               [
                 {
                   type: 'plaintext',
-                  data: 'Hello World!',
+                  data: {
+                    text: 'Hello World!'
+                  },
                   computed: 'Hello World!'
                 }
               ],
               [
                 {
                   type: 'plaintext',
-                  data: 'Hello 2 World!',
+                  data: {
+                    text: 'Hello 2 World!'
+                  },
                   computed: 'Hello 2 World!'
                 }
               ]
@@ -218,14 +162,18 @@ describe('Special Elements', () => {
               [
                 {
                   type: 'plaintext',
-                  data: 'Hello 3 World!',
+                  data: {
+                    text: 'Hello 3 World!'
+                  },
                   computed: 'Hello 3 World!'
                 }
               ],
               [
                 {
                   type: 'plaintext',
-                  data: 'Hello 4 World!',
+                  data: {
+                    text: 'Hello 4 World!'
+                  },
                   computed: 'Hello 4 World!'
                 }
               ]
@@ -280,7 +228,9 @@ describe('Special Elements', () => {
         data: [
           {
             type: 'plaintext',
-            data: 'Hello World!',
+            data: {
+              text: 'Hello World!'
+            },
             computed: 'Hello World!'
           }
         ],
@@ -332,10 +282,13 @@ describe('Lists', () => {
         data: [
           {
             type: 'listItem',
+            order: undefined,
             data: [
               {
                 type: 'plaintext',
-                data: 'Hello World!',
+                data: {
+                  text: 'Hello World!'
+                },
                 computed: 'Hello World!'
               }
             ],
@@ -343,10 +296,13 @@ describe('Lists', () => {
           },
           {
             type: 'listItem',
+            order: undefined,
             data: [
               {
                 type: 'plaintext',
-                data: 'Hello 2 World!',
+                data: {
+                  text: 'Hello 2 World!'
+                },
                 computed: 'Hello 2 World!'
               }
             ],
@@ -354,10 +310,19 @@ describe('Lists', () => {
           },
           {
             type: 'listItem',
+            order: undefined,
             data: [
               {
                 type: 'bold',
-                data: 'Hello 3 World!',
+                data: [
+                  {
+                    type: 'plaintext',
+                    data: {
+                      text: 'Hello 3 World!'
+                    },
+                    computed: 'Hello 3 World!'
+                  }
+                ],
                 computed: '**Hello 3 World!**'
               }
             ],
@@ -384,7 +349,9 @@ describe('Lists', () => {
             data: [
               {
                 type: 'plaintext',
-                data: 'Hello World!',
+                data: {
+                  text: 'Hello World!'
+                },
                 computed: 'Hello World!'
               }
             ],
@@ -396,7 +363,9 @@ describe('Lists', () => {
             data: [
               {
                 type: 'plaintext',
-                data: 'Hello 2 World!',
+                data: {
+                  text: 'Hello 2 World!'
+                },
                 computed: 'Hello 2 World!'
               }
             ],
@@ -438,7 +407,9 @@ Hello there!
           data: [
             {
               type: 'plaintext',
-              data: 'Hello World!',
+              data: {
+                text: 'Hello World!'
+              },
               computed: 'Hello World!'
             }
           ]
@@ -450,7 +421,9 @@ Hello there!
         data: [
           {
             type: 'plaintext',
-            data: 'Hello there!',
+            data: {
+              text: 'Hello there!'
+            },
             computed: 'Hello there!'
           }
         ],

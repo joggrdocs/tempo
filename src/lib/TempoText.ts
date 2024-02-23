@@ -26,62 +26,139 @@ export type TempoTextNodeType =
   | 'link'
   | 'emoji';
 
-interface BaseTextNode<T> {
-  type: TempoTextNodeType;
-  data: T;
+export interface PlainTextNode {
+  type: 'plaintext';
+  data: {
+    text: string;
+  };
   computed: string;
 }
 
-export interface PlainTextNode extends BaseTextNode<string> {
-  type: 'plaintext';
-  options?: {
-    append?: boolean;
-  };
-}
-
-export interface AppendTextNode extends BaseTextNode<string> {
-  type: 'append';
-}
-
-export interface CodeTextNode extends BaseTextNode<string> {
+export interface CodeTextNode {
   type: 'code';
+  data: PlainTextNode[];
+  computed: string;
 }
 
-export interface BoldTextNode extends BaseTextNode<string> {
+export interface BoldTextNode {
   type: 'bold';
+  data: Array<Exclude<TempoTextNode, BoldTextNode>>;
+  computed: string;
 }
 
-export interface ItalicTextNode extends BaseTextNode<string> {
+export interface ItalicTextNode {
   type: 'italic';
+  data: Array<Exclude<TempoTextNode, ItalicTextNode>>;
+  computed: string;
 }
 
-export interface StrikeThroughTextNode extends BaseTextNode<string> {
+export interface StrikeThroughTextNode {
   type: 'strikeThrough';
+  data: Array<Exclude<TempoTextNode, StrikeThroughTextNode>>;
+  computed: string;
 }
 
-export interface LinkTextNode
-  extends BaseTextNode<{ alt: string; src: string }> {
+export interface LinkTextNode {
   type: 'link';
+  data: {
+    alt: string;
+    src: string;
+  };
+  computed: string;
 }
 
-export interface EmojiTextNode
-  extends BaseTextNode<md.EmojiAlias | md.EmojiUnicode> {
+export interface EmojiTextNode {
   type: 'emoji';
+  data: {
+    emoji: md.EmojiAlias | md.EmojiUnicode;
+  };
+  computed: string;
 }
 
 export type TempoTextNode =
   | PlainTextNode
   | CodeTextNode
-  | AppendTextNode
   | BoldTextNode
   | ItalicTextNode
   | StrikeThroughTextNode
   | LinkTextNode
   | EmojiTextNode;
 
+export type TempoTextDataNode<T extends TempoTextNodeType = TempoTextNodeType> =
+  T extends 'plaintext'
+    ? PlainTextNode['data']
+    : T extends 'code'
+      ? CodeTextNode['data']
+      : T extends 'append'
+        ? PlainTextNode['data']
+        : T extends 'bold'
+          ? BoldTextNode['data']
+          : T extends 'italic'
+            ? ItalicTextNode['data']
+            : T extends 'strikeThrough'
+              ? StrikeThroughTextNode['data']
+              : T extends 'link'
+                ? LinkTextNode['data']
+                : T extends 'emoji'
+                  ? EmojiTextNode['data']
+                  : never;
+
+export type TempoTextInput =
+  | string
+  // eslint-disable-next-line no-use-before-define
+  | TempoText
+  // eslint-disable-next-line no-use-before-define
+  | ((text: TempoText) => TempoText | string);
+
 /*
 |----------------------------------
-| Text Class
+| Utils
+|----------------------------------
+|
+| Utility functions for working with DocumentNodes, Documents, TextNodes, and
+| other base types.
+|
+*/
+
+function formatTextNode(text: string): TempoTextNode {
+  return {
+    type: 'plaintext',
+    data: {
+      text
+    },
+    computed: text
+  };
+}
+
+export function computeNodes(tempoTextInput: TempoTextInput): TempoTextNode[] {
+  if (typeof tempoTextInput === 'string') {
+    return [formatTextNode(tempoTextInput)];
+  } else if (tempoTextInput instanceof TempoText) {
+    return tempoTextInput.toJSON();
+  } else if (typeof tempoTextInput === 'function') {
+    const result = tempoTextInput(new TempoText());
+    return computeNodes(result);
+  } else {
+    throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
+  }
+}
+
+export function computeText(tempoTextInput: TempoTextInput): string {
+  if (typeof tempoTextInput === 'string') {
+    return tempoTextInput;
+  } else if (tempoTextInput instanceof TempoText) {
+    return tempoTextInput.toString();
+  } else if (typeof tempoTextInput === 'function') {
+    const result = tempoTextInput(new TempoText());
+    return computeText(result);
+  } else {
+    throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
+  }
+}
+
+/*
+|----------------------------------
+| TempoText Class
 |----------------------------------
 |
 | The primary class for building a set of TextNodes. This is used as the basis of
@@ -90,7 +167,9 @@ export type TempoTextNode =
 */
 
 /**
- * A class for building a collection of TextNodes, using a chaining API.
+ * TempoText
+ *
+ * Build a collection of TextNodes, with a chaining API for building markdown strings.
  */
 export class TempoText {
   private readonly nodes: TempoTextNode[] = [];
@@ -107,15 +186,15 @@ export class TempoText {
    * ```
    *
    * @param value A plaintext string to append to the collection of TextNodes.
-   * @param options An optional object to specify options for the append operation.
    * @returns A new instance of the Text class, with the appended plaintext string.
    */
-  public plainText(value: string, options?: { append?: boolean }): this {
+  public plainText(value: string): this {
     this.nodes.push({
       type: 'plaintext',
-      data: value,
-      computed: value,
-      options
+      data: {
+        text: value
+      },
+      computed: computeText(value)
     });
     return this;
   }
@@ -131,14 +210,14 @@ export class TempoText {
    * // Output: '`foobar`'
    * ```
    *
-   * @param value A code string to append to the collection of TextNodes.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new instance of the Text class, with the appended code string.
    */
-  public code(value: string): this {
+  public code(text: TempoTextInput): this {
     this.nodes.push({
       type: 'code',
-      data: value,
-      computed: md.code(value)
+      data: computeNodes(text) as TempoTextDataNode<'code'>,
+      computed: md.code(computeText(text))
     });
     return this;
   }
@@ -154,14 +233,14 @@ export class TempoText {
    * // Output: '**foobar**'
    * ```
    *
-   * @param value A bold string to append to the collection of TextNodes.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new instance of the Text class, with the appended bold string.
    */
-  public bold(value: string): this {
+  public bold(text: TempoTextInput): this {
     this.nodes.push({
       type: 'bold',
-      data: value,
-      computed: md.bold(value)
+      data: computeNodes(text) as TempoTextDataNode<'bold'>,
+      computed: md.bold(computeText(text))
     });
     return this;
   }
@@ -177,14 +256,14 @@ export class TempoText {
    * // Output: '_foobar_'
    * ```
    *
-   * @param value An italic string to append to the collection of TextNodes.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new instance of the Text class, with the appended italic string.
    */
-  public italic(value: string): this {
+  public italic(text: TempoTextInput): this {
     this.nodes.push({
       type: 'italic',
-      data: value,
-      computed: md.italic(value)
+      data: computeNodes(text) as TempoTextDataNode<'italic'>,
+      computed: md.italic(computeText(text))
     });
     return this;
   }
@@ -200,14 +279,14 @@ export class TempoText {
    * // Output: '~~foobar~~'
    * ```
    *
-   * @param value A strikethrough string to append to the collection of TextNodes.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new instance of the Text class, with the appended strikethrough string.
    */
-  public strikeThrough(value: string): this {
+  public strikeThrough(text: TempoTextInput): this {
     this.nodes.push({
       type: 'strikeThrough',
-      data: value,
-      computed: md.strikeThrough(value)
+      data: computeNodes(text) as TempoTextDataNode<'strikeThrough'>,
+      computed: md.strikeThrough(computeText(text))
     });
     return this;
   }
@@ -222,15 +301,16 @@ export class TempoText {
    *   .toString();
    * // Output: '[Google](https://www.google.com)'
    *
-   * @param value The alt text for the link.
+   * @param value A plaintext string to append to the collection of TextNodes.
    * @param href The href for the link.
+   * @param alt An optional alt text for the link.
    * @returns A new instance of the Text class, with the appended link.
    */
-  public link(value: string, href: string): this {
+  public link(value: string, href: string, alt?: string): this {
     this.nodes.push({
       type: 'link',
       data: {
-        alt: value,
+        alt: alt ?? `Link for ${value}`,
         src: href
       },
       computed: md.link(value, href)
@@ -249,14 +329,16 @@ export class TempoText {
    *  .toString();
    * // Output: ':smile: 🙂'
    *
-   * @param value An emoji alias or unicode string to append to the collection of TextNodes.
+   * @param emoji An emoji alias or unicode string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended emoji.
    */
-  public emoji(value: md.EmojiAlias | md.EmojiUnicode): this {
+  public emoji(emoji: md.EmojiAlias | md.EmojiUnicode): this {
     this.nodes.push({
       type: 'emoji',
-      data: value,
-      computed: md.emoji(value)
+      data: {
+        emoji
+      },
+      computed: md.emoji(emoji)
     });
     return this;
   }
@@ -307,13 +389,6 @@ export class TempoText {
     let output = '';
 
     for (const node of this.nodes) {
-      if (node.type === 'plaintext') {
-        if (node.options && node.options.append) {
-          output += node.computed;
-          continue;
-        }
-      }
-
       output += ` ${node.computed}`;
     }
 

@@ -1,5 +1,10 @@
 import * as md from './markdown/markdown';
-import { TempoText, type TempoTextNode } from './TempoText';
+import {
+  computeNodes,
+  computeText,
+  type TempoTextInput,
+  type TempoTextNode
+} from './TempoText';
 
 /*
 |==========================================================================
@@ -10,17 +15,6 @@ import { TempoText, type TempoTextNode } from './TempoText';
 | using a chaining API.
 |
 */
-
-/*
-|------------------
-| Util
-|------------------
-*/
-
-export type TextInput =
-  | string
-  | TempoText
-  | ((text: TempoText) => TempoText | string);
 
 /*
 |------------------
@@ -130,51 +124,7 @@ export type TempoDocumentNode =
 
 /*
 |----------------------------------
-| Utils
-|----------------------------------
-|
-| Utility functions for working with DocumentNodes, Documents, TextNodes, and
-| other base types.
-|
-*/
-
-function formatTextNode(text: string): TempoTextNode {
-  return {
-    type: 'plaintext',
-    data: text,
-    computed: text
-  };
-}
-
-export function computeNodes(textInput: TextInput): TempoTextNode[] {
-  if (typeof textInput === 'string') {
-    return [formatTextNode(textInput)];
-  } else if (textInput instanceof TempoText) {
-    return textInput.toJSON();
-  } else if (typeof textInput === 'function') {
-    const result = textInput(new TempoText());
-    return computeNodes(result);
-  } else {
-    throw new TypeError(`Invalid text type: ${typeof textInput}`);
-  }
-}
-
-export function computeText(textInput: TextInput): string {
-  if (typeof textInput === 'string') {
-    return textInput;
-  } else if (textInput instanceof TempoText) {
-    return textInput.toString();
-  } else if (typeof textInput === 'function') {
-    const result = textInput(new TempoText());
-    return computeText(result);
-  } else {
-    throw new TypeError(`Invalid text type: ${typeof textInput}`);
-  }
-}
-
-/*
-|----------------------------------
-| Document Class
+| TempoDocument Class
 |----------------------------------
 |
 | The primary class for building a document. It is a wrapper around the
@@ -183,6 +133,8 @@ export function computeText(textInput: TextInput): string {
 */
 
 /**
+ * TempoDocument class.
+ *
  * A class for building a document, using a chaining API.
  */
 export class TempoDocument {
@@ -209,10 +161,10 @@ export class TempoDocument {
    * // Output: # Hello, World!
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
-  public h1(text: TextInput): this {
+  public h1(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -235,10 +187,10 @@ export class TempoDocument {
    * // Output: ## Hello, World!
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
-  public h2(text: TextInput): this {
+  public h2(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -261,10 +213,10 @@ export class TempoDocument {
    * // Output: ### Hello, World!
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
-  public h3(text: TextInput): this {
+  public h3(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -287,10 +239,10 @@ export class TempoDocument {
    * // Output: #### Hello, World!
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
-  public h4(text: TextInput): this {
+  public h4(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -313,10 +265,10 @@ export class TempoDocument {
    * // Output: ##### Hello, World!
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
-  public h5(text: TextInput): this {
+  public h5(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -339,10 +291,10 @@ export class TempoDocument {
    * // Output: ##### Hello, World!
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the heading appended.
    */
-  public h6(text: TextInput): this {
+  public h6(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
@@ -371,10 +323,10 @@ export class TempoDocument {
    * // Output: This is a paragraph of text.
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the paragraph appended.
    */
-  public paragraph(text: TextInput): this {
+  public paragraph(text: TempoTextInput): this {
     this.nodes.push({
       type: 'paragraph',
       data: computeNodes(text),
@@ -408,10 +360,10 @@ export class TempoDocument {
    * // | Jane Doe | jane@gmail.com |
    * ```
    *
-   * @param tableDefinition An array of arrays of the TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance. With the first array being the header row.
+   * @param tableDefinition An array of arrays of the TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance. With the first array being the header row.
    * @returns A new Document instance with the table appended.
    */
-  public table(tableDefinition: TextInput[][]): this {
+  public table(tableDefinition: TempoTextInput[][]): this {
     const [header, ...rows] = tableDefinition;
     this.nodes.push({
       type: 'table',
@@ -506,10 +458,10 @@ export class TempoDocument {
    * // Output: > This is a block quote.
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the block quote appended.
    */
-  public blockQuote(text: TextInput): this {
+  public blockQuote(text: TempoTextInput): this {
     this.nodes.push({
       type: 'blockQuote',
       data: computeNodes(text),
@@ -529,7 +481,7 @@ export class TempoDocument {
    * // Output: ![Alt text](https://example.com/image.png)
    * ```
    *
-   * @param text A TextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @param src A string of the image source.
    * @returns A new Document instance with the image appended.
    */
@@ -591,10 +543,10 @@ export class TempoDocument {
    * // 3. Item 3
    * ```
    *
-   * @param text An array of TextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the number list appended.
    */
-  public numberList(text: TextInput[]): this {
+  public numberList(text: TempoTextInput[]): this {
     this.nodes.push({
       type: 'numberList',
       data: text.map((t, i) => ({
@@ -626,10 +578,10 @@ export class TempoDocument {
    * // - Item 3
    * ```
    *
-   * @param text An array of TextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param text An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @returns A new Document instance with the bullet list appended.
    */
-  public bulletList(text: TextInput[]): this {
+  public bulletList(text: TempoTextInput[]): this {
     this.nodes.push({
       type: 'bulletList',
       data: text.map(t => ({

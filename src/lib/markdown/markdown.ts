@@ -158,3 +158,19 @@ export function table(value: string[][]): string {
   const [header, ...rows] = value;
   return [tableHeader(header), ...rows.map(row => tableRow(row))].join('\n');
 }
+
+/*
+|------------------
+| Utils
+|------------------
+*/
+
+export function cleanText(text: string): string {
+  const matched = text.match(/([0-9a-zA-Z ])/g);
+
+  if (matched === null) {
+    return '';
+  } else {
+    return matched.join('');
+  }
+}
