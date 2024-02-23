@@ -12,8 +12,7 @@
     "analyze:types": "tsc --noEmit",
     "analyze": "yarn analyze:fmt && yarn analyze:lint && yarn analyze:types",
     "fix:lint": "eslint src/**/*.ts --fix",
-    "fix:fmt": "prettier --write .",
-    "prepublish": "tsc"
+    "fix:fmt": "prettier --write ."
   },
   "repository": {
     "type": "git",

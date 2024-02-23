@@ -33,6 +33,6 @@ jobs:
       - name: '🏗️ Build'
         run: yarn build
       - name: '🚢 Publish'
-        run: yarn publish --access public
+        run: yarn npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
