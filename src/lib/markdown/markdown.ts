@@ -146,3 +146,13 @@ export function table(value: string[][]) {
   const [header, ...rows] = value;
   return [tableHeader(header), ...rows.map(row => tableRow(row))].join('\n');
 }
+
+/*
+|------------------
+| Utils
+|------------------
+*/
+
+export function cleanText(text: string) {
+  return text.replaceAll(/[*-_~[\]()]/g, '');
+}

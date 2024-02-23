@@ -91,9 +91,9 @@ describe('outputs', () => {
       const value = 'Hello World';
       const txtReal = createText()
         .plainText(value)
-        .plainText(';', { append: true })
+        .plainText(';')
         .bold(value)
-        .plainText('/', { append: true })
+        .plainText('/')
         .italic(value)
         .strikeThrough(value)
         .link(value, value);

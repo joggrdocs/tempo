@@ -120,3 +120,10 @@ describe('Tables', () => {
     );
   });
 });
+
+
+describe('Utils', () => {
+  it('should return a clean text', () => {
+    expect(md.cleanText('_*~~Hello World~~**__! [Google](https://google.com) `code`')).toBe('Hello World! Googlehttps://google.com code');
+  });
+});
