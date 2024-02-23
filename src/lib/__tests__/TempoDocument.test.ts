@@ -1,7 +1,4 @@
-import {
-  TempoDocument,
-  TempoDocumentNode
-} from '../TempoDocument';
+import { TempoDocument, TempoDocumentNode } from '../TempoDocument';
 
 describe('initialization', () => {
   it('should prebuild nodes based off input', () => {

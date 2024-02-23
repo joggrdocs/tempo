@@ -133,8 +133,6 @@ describe('Utils', () => {
   });
 
   it('should return a empty string if no valid cleaned text', () => {
-    expect(
-      md.cleanText('_*~~')
-    ).toEqual('');
-  })
+    expect(md.cleanText('_*~~')).toEqual('');
+  });
 });

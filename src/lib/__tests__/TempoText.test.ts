@@ -13,7 +13,6 @@ afterEach(() => {
   jest.resetAllMocks();
 });
 
-
 describe('computeText', () => {
   it('should compute text from `string`', () => {
     expect(computeText('Hello World!')).toEqual('Hello World!');
@@ -81,7 +80,6 @@ describe('computeNodes', () => {
     }).toThrow('Invalid text type');
   });
 });
-
 
 describe('code', () => {
   it('should call md.code with the provided value', () => {
@@ -155,14 +153,11 @@ describe('nested', () => {
   it('should return the computed value', () => {
     const value = 'Hello World';
     const txt = createText();
-    txt.bold(
-      t => t.link(value, 'https://example.com')
-    );
+    txt.bold(t => t.link(value, 'https://example.com'));
 
     expect(txt.toString()).toEqual(`**[${value}](https://example.com)**`);
   });
 });
-
 
 describe('toString', () => {
   it('should return the computed value', () => {
@@ -214,7 +209,7 @@ describe('outputs', () => {
         {
           type: 'plaintext',
           data: {
-            text: value,
+            text: value
           },
           computed: value
         },
@@ -224,7 +219,7 @@ describe('outputs', () => {
             {
               type: 'plaintext',
               data: {
-                text: value,
+                text: value
               },
               computed: value
             }
@@ -237,7 +232,7 @@ describe('outputs', () => {
             {
               type: 'plaintext',
               data: {
-                text: value,
+                text: value
               },
               computed: value
             }
@@ -250,7 +245,7 @@ describe('outputs', () => {
             {
               type: 'plaintext',
               data: {
-                text: value,
+                text: value
               },
               computed: value
             }
