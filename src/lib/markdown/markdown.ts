@@ -1,6 +1,6 @@
-import * as cb from './codeBlock';
-import * as emo from './emoji';
+import * as cb from './code-block';
 import supportedEmojis from './data/emojis';
+import * as emo from './emoji';
 
 /*
 |==========================================================================
@@ -11,7 +11,7 @@ import supportedEmojis from './data/emojis';
 |
 */
 
-export * from './codeBlock';
+export * from './code-block';
 export * from './emoji';
 
 /*
@@ -20,27 +20,27 @@ export * from './emoji';
 |------------------
 */
 
-export function paragraph(value: string) {
+export function paragraph(value: string): string {
   return value;
 }
 
-export function code(value: string) {
+export function code(value: string): string {
   return `\`${value}\``;
 }
 
-export function bold(value: string) {
+export function bold(value: string): string {
   return `**${value}**`;
 }
 
-export function italic(value: string) {
+export function italic(value: string): string {
   return `_${value}_`;
 }
 
-export function strikeThrough(value: string) {
+export function strikeThrough(value: string): string {
   return `~~${value}~~`;
 }
 
-export function link(value: string, href: string) {
+export function link(value: string, href: string): string {
   return `[${value}](${href})`;
 }
 
@@ -50,27 +50,27 @@ export function link(value: string, href: string) {
 |------------------
 */
 
-export function h1(value: string) {
+export function h1(value: string): string {
   return `# ${value}`;
 }
 
-export function h2(value: string) {
+export function h2(value: string): string {
   return `## ${value}`;
 }
 
-export function h3(value: string) {
+export function h3(value: string): string {
   return `### ${value}`;
 }
 
-export function h4(value: string) {
+export function h4(value: string): string {
   return `#### ${value}`;
 }
 
-export function h5(value: string) {
+export function h5(value: string): string {
   return `##### ${value}`;
 }
 
-export function h6(value: string) {
+export function h6(value: string): string {
   return `###### ${value}`;
 }
 
@@ -80,23 +80,26 @@ export function h6(value: string) {
 |------------------
 */
 
-export function thematicBreak() {
+export function thematicBreak(): string {
   return '---';
 }
 
-export function blockQuote(value: string) {
+export function blockQuote(value: string): string {
   return `> ${value}`;
 }
 
-export function image(value: string, src: string) {
+export function image(value: string, src: string): string {
   return `![${value}](${src})`;
 }
 
-export function codeBlock(value: string, language?: cb.SupportedLanguage) {
-  if (language) {
+export function codeBlock(
+  value: string,
+  language?: cb.SupportedLanguage
+): string {
+  if (language !== undefined) {
     cb.assertSupportedLanguage(language);
   }
-  return `\`\`\`${language || ''}\n${value}\n\`\`\``;
+  return `\`\`\`${language ?? ''}\n${value}\n\`\`\``;
 }
 
 export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
@@ -122,15 +125,15 @@ export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
 |------------------
 */
 
-export function li(value: string, order?: number) {
+export function li(value: string, order?: number): string {
   return order === undefined ? `- ${value}` : `${order + 1}. ${value}`;
 }
 
-export function ul(value: string[]) {
+export function ul(value: string[]): string {
   return value.map(txt => li(txt)).join('\n');
 }
 
-export function ol(value: string[]) {
+export function ol(value: string[]): string {
   return value.map(li).join('\n');
 }
 
@@ -140,18 +143,18 @@ export function ol(value: string[]) {
 |------------------
 */
 
-export function tableHeader(value: string[]) {
+export function tableHeader(value: string[]): string {
   return [
     `| ${value.join(' | ')} |`,
     `| ${value.map(headerItem => '-'.repeat(headerItem.length)).join(' | ')} |`
   ].join('\n');
 }
 
-export function tableRow(value: string[]) {
+export function tableRow(value: string[]): string {
   return `| ${value.join(' | ')} |`;
 }
 
-export function table(value: string[][]) {
+export function table(value: string[][]): string {
   const [header, ...rows] = value;
   return [tableHeader(header), ...rows.map(row => tableRow(row))].join('\n');
 }

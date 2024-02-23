@@ -93,7 +93,7 @@ export type TempoTextNode =
  * A class for building a collection of TextNodes, using a chaining API.
  */
 export class TempoText {
-  private nodes: TempoTextNode[] = [];
+  private readonly nodes: TempoTextNode[] = [];
 
   /**
    * Append a plaintext string to the collection of TextNodes.
@@ -134,7 +134,7 @@ export class TempoText {
    * @param value A code string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended code string.
    */
-  public code(value: string) {
+  public code(value: string): this {
     this.nodes.push({
       type: 'code',
       data: value,
@@ -157,7 +157,7 @@ export class TempoText {
    * @param value A bold string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended bold string.
    */
-  public bold(value: string) {
+  public bold(value: string): this {
     this.nodes.push({
       type: 'bold',
       data: value,
@@ -180,7 +180,7 @@ export class TempoText {
    * @param value An italic string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended italic string.
    */
-  public italic(value: string) {
+  public italic(value: string): this {
     this.nodes.push({
       type: 'italic',
       data: value,
@@ -203,7 +203,7 @@ export class TempoText {
    * @param value A strikethrough string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended strikethrough string.
    */
-  public strikeThrough(value: string) {
+  public strikeThrough(value: string): this {
     this.nodes.push({
       type: 'strikeThrough',
       data: value,
@@ -226,7 +226,7 @@ export class TempoText {
    * @param href The href for the link.
    * @returns A new instance of the Text class, with the appended link.
    */
-  public link(value: string, href: string) {
+  public link(value: string, href: string): this {
     this.nodes.push({
       type: 'link',
       data: {
@@ -252,7 +252,7 @@ export class TempoText {
    * @param value An emoji alias or unicode string to append to the collection of TextNodes.
    * @returns A new instance of the Text class, with the appended emoji.
    */
-  public emoji(value: md.EmojiAlias | md.EmojiUnicode) {
+  public emoji(value: md.EmojiAlias | md.EmojiUnicode): this {
     this.nodes.push({
       type: 'emoji',
       data: value,
@@ -285,7 +285,7 @@ export class TempoText {
    *
    * @returns A JSON representation of the text, that can be used for serialization.
    */
-  public toJSON() {
+  public toJSON(): TempoTextNode[] {
     return this.nodes;
   }
 
@@ -303,7 +303,7 @@ export class TempoText {
    *
    * @returns A string representation of the document, that can be used for rendering.
    */
-  public toString() {
+  public toString(): string {
     let output = '';
 
     for (const node of this.nodes) {

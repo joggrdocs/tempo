@@ -10,10 +10,10 @@ export {
   TempoText
 } from './lib/TempoText';
 export {
-  SupportedLanguage,
+  type SupportedLanguage,
   supportedLanguages,
   assertSupportedLanguage,
-  EmojiAliases,
-  EmojiUnicode,
+  type EmojiAliases,
+  type EmojiUnicode,
   assertSupportedEmoji
 } from './lib/markdown/index';

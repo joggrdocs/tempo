@@ -1,5 +1,5 @@
 import * as md from './markdown/markdown';
-import { TempoText, TempoTextNode } from './TempoText';
+import { TempoText, type TempoTextNode } from './TempoText';
 
 /*
 |==========================================================================
@@ -66,7 +66,7 @@ interface TableRow<T extends 'row' | 'header'> {
 }
 
 export interface TableNode
-  extends BaseDocumentNode<[TableRow<'header'>, ...TableRow<'row'>[]]> {
+  extends BaseDocumentNode<[TableRow<'header'>, ...Array<TableRow<'row'>>]> {
   type: 'table';
 }
 
@@ -107,12 +107,12 @@ interface ListItem<T extends 'numberList' | 'bulletList'> {
 }
 
 export interface BulletListNode
-  extends BaseDocumentNode<ListItem<'bulletList'>[]> {
+  extends BaseDocumentNode<Array<ListItem<'bulletList'>>> {
   type: 'bulletList';
 }
 
 export interface NumberListNode
-  extends BaseDocumentNode<ListItem<'numberList'>[]> {
+  extends BaseDocumentNode<Array<ListItem<'numberList'>>> {
   type: 'numberList';
 }
 
@@ -186,7 +186,7 @@ export function computeText(textInput: TextInput): string {
  * A class for building a document, using a chaining API.
  */
 export class TempoDocument {
-  private nodes: TempoDocumentNode[];
+  private readonly nodes: TempoDocumentNode[];
 
   constructor(documentNodes?: TempoDocumentNode[]) {
     this.nodes = documentNodes ?? [];
@@ -427,7 +427,7 @@ export class TempoDocument {
           order: i,
           data: row.map(computeNodes),
           computed: md.tableRow(row.map(computeText))
-        })) as TableRow<'row'>[])
+        })) as Array<TableRow<'row'>>)
       ],
       computed: md.table(tableDefinition.map(row => row.map(computeText)))
     });
