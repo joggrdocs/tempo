@@ -143,6 +143,27 @@ describe('emoji', () => {
   });
 });
 
+describe('nested', () => {
+  let createText: () => TempoText;
+  beforeEach(async () => {
+    jest.unmock('../markdown/markdown');
+    jest.resetModules();
+    const textImport = await import('../TempoText');
+    createText = () => new textImport.TempoText();
+  });
+
+  it('should return the computed value', () => {
+    const value = 'Hello World';
+    const txt = createText();
+    txt.bold(
+      t => t.link(value, 'https://example.com')
+    );
+
+    expect(txt.toString()).toEqual(`**[${value}](https://example.com)**`);
+  });
+});
+
+
 describe('toString', () => {
   it('should return the computed value', () => {
     const value = 'Hello World';
