@@ -166,5 +166,11 @@ export function table(value: string[][]): string {
 */
 
 export function cleanText(text: string): string {
-  return text.replaceAll(/[*-_~[\]()]/g, '');
+  const matched = text.match(/([0-9a-zA-Z ])/g);
+
+  if (matched === null) {
+    return '';
+  } else {
+    return matched.join('');
+  }
 }

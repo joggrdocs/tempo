@@ -1,4 +1,4 @@
-import { TempoText } from '../TempoText';
+import { TempoText, computeNodes, computeText } from '../TempoText';
 import md from '../markdown';
 
 jest.mock('../markdown/markdown');
@@ -12,6 +12,76 @@ beforeEach(() => {
 afterEach(() => {
   jest.resetAllMocks();
 });
+
+
+describe('computeText', () => {
+  it('should compute text from `string`', () => {
+    expect(computeText('Hello World!')).toEqual('Hello World!');
+  });
+
+  it('should compute text from `Text`', () => {
+    expect(computeText(new TempoText().plainText('Hello World!'))).toEqual(
+      'Hello World!'
+    );
+  });
+
+  it('should compute text from `(Text) => Text | string`', () => {
+    expect(computeText(text => text.plainText('Hello World!'))).toEqual(
+      'Hello World!'
+    );
+  });
+
+  it('should throw for invalid text type', () => {
+    expect(() => {
+      computeText(1 as any);
+    }).toThrow('Invalid text type');
+  });
+});
+
+describe('computeNodes', () => {
+  it('should compute nodes from `string`', () => {
+    expect(computeNodes('Hello World!')).toEqual([
+      {
+        type: 'plaintext',
+        data: {
+          text: 'Hello World!'
+        },
+        computed: 'Hello World!'
+      }
+    ]);
+  });
+
+  it('should compute nodes from `Text`', () => {
+    expect(computeNodes(new TempoText().plainText('Hello World!'))).toEqual([
+      {
+        type: 'plaintext',
+        data: {
+          text: 'Hello World!'
+        },
+        computed: 'Hello World!'
+      }
+    ]);
+  });
+
+  it('should compute nodes from `(Text) => Text | string`', () => {
+    expect(computeNodes(text => text.plainText('Hello World!'))).toEqual([
+      {
+        type: 'plaintext',
+        data: {
+          text: 'Hello World!'
+        },
+        computed: 'Hello World!'
+      }
+    ]);
+  });
+
+  it('should throw for invalid text type', () => {
+    expect(() => {
+      computeNodes(1 as any);
+    }).toThrow('Invalid text type');
+  });
+});
+
 
 describe('code', () => {
   it('should call md.code with the provided value', () => {
@@ -104,7 +174,7 @@ describe('outputs', () => {
         .link(value, value);
 
       expect(txtReal.toString()).toEqual(
-        `${value}; **${value}**/ _${value}_ ~~${value}~~ [${value}](${value})`
+        `${value} ; **${value}** / _${value}_ ~~${value}~~ [${value}](${value})`
       );
     });
   });
@@ -117,36 +187,62 @@ describe('outputs', () => {
         .bold(value)
         .italic(value)
         .strikeThrough(value)
-        .link(value, value);
+        .link(value, 'https://example.com');
 
       expect(txtReal.toJSON()).toEqual([
         {
           type: 'plaintext',
-          data: value,
+          data: {
+            text: value,
+          },
           computed: value
         },
         {
           type: 'bold',
-          data: value,
+          data: [
+            {
+              type: 'plaintext',
+              data: {
+                text: value,
+              },
+              computed: value
+            }
+          ],
           computed: `**${value}**`
         },
         {
           type: 'italic',
-          data: value,
+          data: [
+            {
+              type: 'plaintext',
+              data: {
+                text: value,
+              },
+              computed: value
+            }
+          ],
           computed: `_${value}_`
         },
         {
           type: 'strikeThrough',
-          data: value,
+          data: [
+            {
+              type: 'plaintext',
+              data: {
+                text: value,
+              },
+              computed: value
+            }
+          ],
           computed: `~~${value}~~`
         },
         {
           type: 'link',
           data: {
-            src: value,
-            alt: value
+            src: 'https://example.com',
+            alt: `Link for ${value}`
           },
-          computed: `[${value}](${value})`
+          computed: `[${value}](https://example.com)`
         }
       ]);
     });
