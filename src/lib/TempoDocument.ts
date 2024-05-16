@@ -2,6 +2,7 @@ import * as md from './markdown/markdown';
 import {
   computeNodes,
   computeText,
+  type PlainTextNode,
   type TempoTextInput,
   type TempoTextNode
 } from './TempoText';
@@ -32,19 +33,24 @@ export type DocumentNodeType =
   | 'image'
   | 'break'
   | 'numberList'
-  | 'bulletList';
+  | 'bulletList'
+  | 'alert';
 
-interface BaseDocumentNode<T> {
+interface BaseDocumentNode<N extends unknown[], D extends object = object> {
   type: DocumentNodeType;
-  data: T;
+  data: {
+    nodes: N;
+  } & D;
   computed: string;
 }
 
 export interface HeadingNode
-  extends BaseDocumentNode<{
-    level: 1 | 2 | 3 | 4 | 5 | 6;
-    data: TempoTextNode[];
-  }> {
+  extends BaseDocumentNode<
+    TempoTextNode[],
+    {
+      level: 1 | 2 | 3 | 4 | 5 | 6;
+    }
+  > {
   type: 'heading';
 }
 
@@ -55,7 +61,9 @@ export interface ParagraphNode extends BaseDocumentNode<TempoTextNode[]> {
 interface TableRow<T extends 'row' | 'header'> {
   type: T;
   order: T extends 'row' ? number : undefined;
-  data: TempoTextNode[][];
+  data: {
+    nodes: TempoTextNode[][];
+  };
   computed: string;
 }
 
@@ -64,12 +72,12 @@ export interface TableNode
   type: 'table';
 }
 
-export interface HtmlNode extends BaseDocumentNode<string> {
+export interface HtmlNode extends BaseDocumentNode<PlainTextNode[]> {
   type: 'html';
 }
 
 export interface CodeBlockNode
-  extends BaseDocumentNode<{
+  extends BaseDocumentNode<PlainTextNode[], {
     code: string;
     language?: md.SupportedLanguage;
   }> {
@@ -81,7 +89,7 @@ export interface BlockQuoteNode extends BaseDocumentNode<TempoTextNode[]> {
 }
 
 export interface ImageNode
-  extends BaseDocumentNode<{
+  extends BaseDocumentNode<[], {
     alt: string;
     src: string;
   }> {
@@ -89,14 +97,14 @@ export interface ImageNode
   computed: string;
 }
 
-export interface BreakNode extends BaseDocumentNode<null> {
+export interface BreakNode extends BaseDocumentNode<[]> {
   type: 'break';
 }
 
 interface ListItem<T extends 'numberList' | 'bulletList'> {
   type: 'listItem';
   order: T extends 'numberList' ? number : undefined;
-  data: TempoTextNode[];
+  nodes: TempoTextNode[];
   computed: string;
 }
 
@@ -110,6 +118,12 @@ export interface NumberListNode
   type: 'numberList';
 }
 
+export type AlertType = 'note' | 'important' | 'warning' | 'tip' | 'caution';
+
+export interface AlertNode extends BaseDocumentNode<TempoTextNode[], { type: AlertType }> {
+  type: 'alert';
+}
+
 export type TempoDocumentNode =
   | HeadingNode
   | ParagraphNode
@@ -120,7 +134,8 @@ export type TempoDocumentNode =
   | ImageNode
   | BreakNode
   | NumberListNode
-  | BulletListNode;
+  | BulletListNode
+  | AlertNode;
 
 /*
 |----------------------------------
@@ -155,21 +170,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .h1('Hello, World!')
    *   .toString();
    * // Output: # Hello, World!
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the heading appended.
+   * @returns The TempoDocument instance with the heading appended.
    */
   public h1(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
         level: 1,
-        data: computeNodes(text)
+        nodes: computeNodes(text)
       },
       computed: md.h1(computeText(text))
     });
@@ -181,21 +196,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .h2('Hello, World!')
    *   .toString();
    * // Output: ## Hello, World!
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the heading appended.
+   * @returns The TempoDocument instance with the heading appended.
    */
   public h2(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
         level: 2,
-        data: computeNodes(text)
+        nodes: computeNodes(text)
       },
       computed: md.h2(computeText(text))
     });
@@ -207,21 +222,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .h3('Hello, World!')
    *   .toString();
    * // Output: ### Hello, World!
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the heading appended.
+   * @returns The TempoDocument instance with the heading appended.
    */
   public h3(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
         level: 3,
-        data: computeNodes(text)
+        nodes: computeNodes(text)
       },
       computed: md.h3(computeText(text))
     });
@@ -233,21 +248,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .h4('Hello, World!')
    *   .toString();
    * // Output: #### Hello, World!
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the heading appended.
+   * @returns The TempoDocument instance with the heading appended.
    */
   public h4(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
         level: 4,
-        data: computeNodes(text)
+        nodes: computeNodes(text)
       },
       computed: md.h4(computeText(text))
     });
@@ -259,21 +274,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .h5('Hello, World!')
    *   .toString();
    * // Output: ##### Hello, World!
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the heading appended.
+   * @returns The TempoDocument instance with the heading appended.
    */
   public h5(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
         level: 5,
-        data: computeNodes(text)
+        nodes: computeNodes(text)
       },
       computed: md.h5(computeText(text))
     });
@@ -285,21 +300,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .h6('Hello, World!')
    *   .toString();
    * // Output: ##### Hello, World!
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the heading appended.
+   * @returns The TempoDocument instance with the heading appended.
    */
   public h6(text: TempoTextInput): this {
     this.nodes.push({
       type: 'heading',
       data: {
         level: 6,
-        data: computeNodes(text)
+        nodes: computeNodes(text)
       },
       computed: md.h6(computeText(text))
     });
@@ -317,19 +332,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .paragraph('This is a paragraph of text.')
    *  .toString();
    * // Output: This is a paragraph of text.
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the paragraph appended.
+   * @returns The TempoDocument instance with the paragraph appended.
    */
   public paragraph(text: TempoTextInput): this {
     this.nodes.push({
       type: 'paragraph',
-      data: computeNodes(text),
+      data: {
+        nodes: computeNodes(text)
+      },
       computed: md.paragraph(computeText(text))
     });
     return this;
@@ -346,7 +363,7 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .table([
    *    ['Name', 'email'],
    *    ['John Doe', 'jdoe@gmail.com'],
@@ -361,26 +378,32 @@ export class TempoDocument {
    * ```
    *
    * @param tableDefinition An array of arrays of the TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance. With the first array being the header row.
-   * @returns A new Document instance with the table appended.
+   * @returns The TempoDocument instance with the table appended.
    */
   public table(tableDefinition: TempoTextInput[][]): this {
     const [header, ...rows] = tableDefinition;
     this.nodes.push({
       type: 'table',
-      data: [
-        {
-          type: 'header',
-          order: undefined,
-          data: header.map(computeNodes),
-          computed: md.tableHeader(header.map(computeText))
-        },
-        ...(rows.map((row, i) => ({
-          type: 'row',
-          order: i,
-          data: row.map(computeNodes),
-          computed: md.tableRow(row.map(computeText))
-        })) as Array<TableRow<'row'>>)
-      ],
+      data: {
+        nodes: [
+          {
+            type: 'header',
+            order: undefined,
+            data: {
+              nodes: header.map(computeNodes)
+            },
+            computed: md.tableHeader(header.map(computeText))
+          },
+          ...(rows.map((row, i) => ({
+            type: 'row',
+            order: i,
+            data: {
+              nodes: row.map(computeNodes)
+            },
+            computed: md.tableRow(row.map(computeText))
+          })) satisfies Array<TableRow<'row'>>)
+        ]
+      },
       computed: md.table(tableDefinition.map(row => row.map(computeText)))
     });
     return this;
@@ -391,19 +414,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .html('<p align="center">Hello, World!</p>')
    *  .toString();
    * // Output: <p align="center">Hello, World!</p>
    * ```
    *
    * @param html A string of raw HTML.
-   * @returns A new Document instance with the HTML appended.
+   * @returns The TempoDocument instance with the HTML appended.
    */
   public html(html: string): this {
     this.nodes.push({
       type: 'html',
-      data: html,
+      data: {
+        nodes: computeNodes<'plaintext'>(html)
+      },
       computed: html
     });
     return this;
@@ -414,7 +439,7 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .codeBlock(`
    * const x = 10;
    *
@@ -433,14 +458,15 @@ export class TempoDocument {
    *
    * @param code A string of code.
    * @param language A supported language for the code block.
-   * @returns A new Document instance with the code block appended.
+   * @returns The TempoDocument instance with the code block appended.
    */
   public codeBlock(code: string, language?: md.SupportedLanguage): this {
     this.nodes.push({
       type: 'codeBlock',
       data: {
         code,
-        language
+        language,
+        nodes: computeNodes<'code'>(code)
       },
       computed: md.codeBlock(code, language)
     });
@@ -452,19 +478,21 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .blockQuote('This is a block quote.')
    *   .toString();
    * // Output: > This is a block quote.
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the block quote appended.
+   * @returns The TempoDocument instance with the block quote appended.
    */
   public blockQuote(text: TempoTextInput): this {
     this.nodes.push({
       type: 'blockQuote',
-      data: computeNodes(text),
+      data: {
+        nodes: computeNodes(text)
+      },
       computed: md.blockQuote(computeText(text))
     });
     return this;
@@ -475,7 +503,7 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .image('Alt text', 'https://example.com/image.png')
    *   .toString();
    * // Output: ![Alt text](https://example.com/image.png)
@@ -483,14 +511,15 @@ export class TempoDocument {
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @param src A string of the image source.
-   * @returns A new Document instance with the image appended.
+   * @returns The TempoDocument instance with the image appended.
    */
   public image(text: string, src: string): this {
     this.nodes.push({
       type: 'image',
       data: {
         alt: text,
-        src
+        src,
+        nodes: []
       },
       computed: md.image(text, src)
     });
@@ -502,18 +531,20 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .break()
    *  .toString();
    * // Output: ---
    * ```
    *
-   * @returns A new Document instance with the thematic break appended.
+   * @returns The TempoDocument instance with the thematic break appended.
    */
   public break(): this {
     this.nodes.push({
       type: 'break',
-      data: null,
+      data: {
+        nodes: []
+      },
       computed: md.thematicBreak()
     });
     return this;
@@ -530,7 +561,7 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .numberList([
    *     'Item 1',
    *     'Item 2',
@@ -544,17 +575,19 @@ export class TempoDocument {
    * ```
    *
    * @param text An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the number list appended.
+   * @returns The TempoDocument instance with the number list appended.
    */
   public numberList(text: TempoTextInput[]): this {
     this.nodes.push({
       type: 'numberList',
-      data: text.map((t, i) => ({
-        order: i,
-        type: 'listItem',
-        data: computeNodes(t),
-        computed: md.li(computeText(t), i)
-      })),
+      data: {
+        nodes: text.map((t, i) => ({
+          order: i,
+          type: 'listItem',
+          nodes: computeNodes(t),
+          computed: md.li(computeText(t), i)
+        })),
+      },
       computed: md.ol(text.map(computeText))
     });
     return this;
@@ -565,7 +598,7 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *   .bulletList([
    *     'Item 1',
    *     'Item 2',
@@ -579,18 +612,50 @@ export class TempoDocument {
    * ```
    *
    * @param text An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns A new Document instance with the bullet list appended.
+   * @returns The TempoDocument instance with the bullet list appended.
    */
   public bulletList(text: TempoTextInput[]): this {
     this.nodes.push({
       type: 'bulletList',
-      data: text.map(t => ({
-        type: 'listItem',
-        order: undefined,
-        data: computeNodes(t),
-        computed: md.li(computeText(t))
-      })),
+      data: {
+        nodes: text.map(t => ({
+          type: 'listItem',
+          order: undefined,
+          nodes: computeNodes(t),
+          computed: md.li(computeText(t))
+        }))
+      },
       computed: md.ul(text.map(computeText))
+    });
+    return this;
+  }
+
+  /**
+   * Append an [alert](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) to the document.
+   * 
+   * @example
+   *  ```ts
+   * const doc = tempo()
+   *  .alert('This is a note.')
+   *  .toString();
+   * // Output:
+   * // > [!NOTE]
+   * // This is a note.
+   * 
+   * @see https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
+   * 
+   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param type the type of alert to render, defaults to 'note'
+   * @returns The TempoDocument instance with the alert appended. 
+   */
+  public alert(text: TempoTextInput, type: AlertType = 'note'): this {
+    this.nodes.push({
+      type: 'alert',
+      data: {
+        type,
+        nodes: computeNodes(text)
+      },
+      computed: md.alert(computeText(text), type)
     });
     return this;
   }
@@ -606,7 +671,7 @@ export class TempoDocument {
    *
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .h1('Hello, World!')
    *  .paragraph('This is a paragraph of text.')
    *  .toString();
@@ -629,9 +694,10 @@ export class TempoDocument {
   /**
    * Convert the document to a JSON representation, that can be used for serialization.
    *
+   * @warning This method is experimental and may change in the future.
    * @example
    * ```ts
-   * const doc = new Document()
+   * const doc = tempo()
    *  .h1('Hello, World!')
    *  .paragraph('This is a paragraph of text.')
    *  .toJSON();
@@ -641,7 +707,7 @@ export class TempoDocument {
    * //     "type": "heading",
    * //     "data": {
    * //       "level": 1,
-   * //       "data": [
+   * //       "nodes": [
    * //         {
    * //           "type": "plaintext",
    * //           "data": "Hello, World!",
@@ -653,13 +719,9 @@ export class TempoDocument {
    * //   },
    * //   {
    * //     "type": "paragraph",
-   * //     "data": [
-   * //       {
-   * //         "type": "plaintext",
-   * //         "data": "This is a paragraph of text.",
-   * //         "computed": "This is a paragraph of text."
-   * //       }
-   * //     ],
+   * //     "data": {
+   * //       "nodes": [ ... ],
+   * //     },
    * //     "computed": "This is a paragraph of text."
    * //   }
    * // ]
