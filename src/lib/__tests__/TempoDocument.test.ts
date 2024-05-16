@@ -7,12 +7,10 @@ describe('initialization', () => {
         type: 'heading',
         data: {
           level: 1,
-          data: [
+          nodes: [
             {
               type: 'plaintext',
-              data: {
-                text: 'Hello World!'
-              },
+              data: undefined,
               computed: 'Hello World!'
             }
           ]
@@ -21,15 +19,15 @@ describe('initialization', () => {
       },
       {
         type: 'paragraph',
-        data: [
-          {
-            type: 'plaintext',
-            data: {
-              text: 'Hello World!'
-            },
-            computed: 'Hello World!'
-          }
-        ],
+        data: {
+          nodes: [
+            {
+              type: 'plaintext',
+              data: undefined,
+              computed: 'Hello World!'
+            }
+          ],
+        },
         computed: 'Hello World!'
       }
     ];
@@ -50,12 +48,10 @@ describe('Headings', () => {
         type: 'heading',
         data: {
           level,
-          data: [
+          nodes: [
             {
               type: 'plaintext',
-              data: {
-                text
-              },
+              data: undefined,
               computed: text
             }
           ]
@@ -102,15 +98,15 @@ describe('Text Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'paragraph',
-        data: [
-          {
-            type: 'plaintext',
-            data: {
-              text: 'Hello World!'
-            },
-            computed: 'Hello World!'
-          }
-        ],
+        data: {
+          nodes: [
+            {
+              type: 'plaintext',
+              data: undefined,
+              computed: 'Hello World!'
+            }
+          ]
+        },
         computed: 'Hello World!'
       }
     ]);
@@ -126,61 +122,59 @@ describe('Special Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'table',
-        data: [
-          {
-            type: 'header',
-            order: undefined,
-            data: [
-              [
-                {
-                  type: 'plaintext',
-                  data: {
-                    text: 'Hello World!'
-                  },
-                  computed: 'Hello World!'
-                }
-              ],
-              [
-                {
-                  type: 'plaintext',
-                  data: {
-                    text: 'Hello 2 World!'
-                  },
-                  computed: 'Hello 2 World!'
-                }
-              ]
-            ],
-            computed: [
-              '| Hello World! | Hello 2 World! |',
-              '| ------------ | -------------- |'
-            ].join('\n')
-          },
-          {
-            type: 'row',
-            order: 0,
-            data: [
-              [
-                {
-                  type: 'plaintext',
-                  data: {
-                    text: 'Hello 3 World!'
-                  },
-                  computed: 'Hello 3 World!'
-                }
-              ],
-              [
-                {
-                  type: 'plaintext',
-                  data: {
-                    text: 'Hello 4 World!'
-                  },
-                  computed: 'Hello 4 World!'
-                }
-              ]
-            ],
-            computed: '| Hello 3 World! | Hello 4 World! |'
-          }
-        ],
+        data: {
+          nodes: [
+            {
+              type: 'header',
+              order: undefined,
+              data: {
+                nodes: [
+                  [
+                    {
+                      type: 'plaintext',
+                      data: undefined,
+                      computed: 'Hello World!'
+                    }
+                  ],
+                  [
+                    {
+                      type: 'plaintext',
+                      data: undefined,
+                      computed: 'Hello 2 World!'
+                    }
+                  ]
+                ],
+              },
+              computed: [
+                '| Hello World! | Hello 2 World! |',
+                '| ------------ | -------------- |'
+              ].join('\n')
+            },
+            {
+              type: 'row',
+              order: 0,
+              data: {
+                nodes: [
+                  [
+                    {
+                      type: 'plaintext',
+                      data: undefined,
+                      computed: 'Hello 3 World!'
+                    }
+                  ],
+                  [
+                    {
+                      type: 'plaintext',
+                      data: undefined,
+                      computed: 'Hello 4 World!'
+                    }
+                  ]
+                ],
+              },
+              computed: '| Hello 3 World! | Hello 4 World! |'
+            }
+          ]
+        },
         computed: [
           '| Hello World! | Hello 2 World! |',
           '| ------------ | -------------- |',
@@ -195,7 +189,15 @@ describe('Special Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'html',
-        data: '<div>Hello World!</div>',
+        data: {
+          nodes: [
+            {
+              type: 'plaintext',
+              data: undefined,
+              computed: '<div>Hello World!</div>'
+            }
+          ]
+        },
         computed: '<div>Hello World!</div>'
       }
     ]);
@@ -211,7 +213,14 @@ describe('Special Elements', () => {
         type: 'codeBlock',
         data: {
           language: 'javascript',
-          code: 'console.log("Hello World!");'
+          code: 'console.log("Hello World!");',
+          nodes: [
+            {
+              type: 'plaintext',
+              data: undefined,
+              computed: 'console.log("Hello World!");'
+            }
+          ]
         },
         computed: ['```javascript', 'console.log("Hello World!");', '```'].join(
           '\n'
@@ -225,15 +234,15 @@ describe('Special Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'blockQuote',
-        data: [
-          {
-            type: 'plaintext',
-            data: {
-              text: 'Hello World!'
-            },
-            computed: 'Hello World!'
-          }
-        ],
+        data: {
+          nodes: [
+            {
+              type: 'plaintext',
+              data: undefined,
+              computed: 'Hello World!'
+            }
+          ]
+        },
         computed: '> Hello World!'
       }
     ]);
@@ -250,7 +259,8 @@ describe('Special Elements', () => {
         type: 'image',
         data: {
           alt: 'example',
-          src: 'https://example.com/image.png'
+          src: 'https://example.com/image.png',
+          nodes: [],
         },
         computed: '![example](https://example.com/image.png)'
       }
@@ -262,10 +272,41 @@ describe('Special Elements', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'break',
-        data: null,
+        data: {
+          nodes: []
+        },
         computed: '---'
       }
     ]);
+  });
+
+  ([
+    { type: 'note', expected: 'NOTE' },
+    { type: undefined, expected: 'NOTE' },
+    { type: 'tip', expected: 'TIP' },
+    { type: 'warning', expected: 'WARNING' },
+    { type: 'caution', expected: 'CAUTION' },
+    { type: 'important', expected: 'IMPORTANT' }
+  ] as const).forEach(({ type, expected }) => {
+    it(`should return a ${expected} alert`, () => {
+      const document = new TempoDocument().alert('Hello World!', type);
+      expect(document.toJSON()).toEqual([
+        {
+          type: 'alert',
+          data: {
+            type: type === undefined ? 'note' : type,
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: 'Hello World!'
+              }
+            ]
+          },
+          computed: `> [!${expected}]\n> Hello World!`
+        }
+      ]);
+    });
   });
 });
 
@@ -279,56 +320,60 @@ describe('Lists', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'bulletList',
-        data: [
-          {
-            type: 'listItem',
-            order: undefined,
-            data: [
-              {
-                type: 'plaintext',
-                data: {
-                  text: 'Hello World!'
-                },
-                computed: 'Hello World!'
-              }
-            ],
-            computed: '- Hello World!'
-          },
-          {
-            type: 'listItem',
-            order: undefined,
-            data: [
-              {
-                type: 'plaintext',
-                data: {
-                  text: 'Hello 2 World!'
-                },
-                computed: 'Hello 2 World!'
-              }
-            ],
-            computed: '- Hello 2 World!'
-          },
-          {
-            type: 'listItem',
-            order: undefined,
-            data: [
-              {
-                type: 'bold',
-                data: [
+        data: {
+          nodes: [
+            {
+              type: 'listItem',
+              order: undefined,
+              data: {
+                nodes: [
                   {
                     type: 'plaintext',
-                    data: {
-                      text: 'Hello 3 World!'
-                    },
-                    computed: 'Hello 3 World!'
+                    data: undefined,
+                    computed: 'Hello World!'
                   }
-                ],
-                computed: '**Hello 3 World!**'
-              }
-            ],
-            computed: '- **Hello 3 World!**'
-          }
-        ],
+                ]
+              },
+              computed: '- Hello World!'
+            },
+            {
+              type: 'listItem',
+              order: undefined,
+              data: {
+                nodes: [
+                  {
+                    type: 'plaintext',
+                    data: undefined,
+                    computed: 'Hello 2 World!'
+                  }
+                ]
+              },
+              computed: '- Hello 2 World!'
+            },
+            {
+              type: 'listItem',
+              order: undefined,
+              data: {
+                nodes: [
+                  {
+                    type: 'bold',
+                    data: {
+                      nodes: [
+                        {
+                          type: 'plaintext',
+                          data: undefined,
+                          computed: 'Hello 3 World!'
+                        }
+                      ]
+                    },
+                    computed: '**Hello 3 World!**'
+                  }
+                ]
+              },
+              computed: '- **Hello 3 World!**'
+            }
+          ]
+        },
         computed: '- Hello World!\n- Hello 2 World!\n- **Hello 3 World!**'
       }
     ]);
@@ -342,36 +387,38 @@ describe('Lists', () => {
     expect(document.toJSON()).toEqual([
       {
         type: 'numberList',
-        data: [
-          {
-            type: 'listItem',
-            order: 0,
-            data: [
-              {
-                type: 'plaintext',
-                data: {
-                  text: 'Hello World!'
-                },
-                computed: 'Hello World!'
-              }
-            ],
-            computed: '1. Hello World!'
-          },
-          {
-            type: 'listItem',
-            order: 1,
-            data: [
-              {
-                type: 'plaintext',
-                data: {
-                  text: 'Hello 2 World!'
-                },
-                computed: 'Hello 2 World!'
-              }
-            ],
-            computed: '2. Hello 2 World!'
-          }
-        ],
+        data: {
+          nodes: [
+            {
+              type: 'listItem',
+              order: 0,
+              data: {
+                nodes: [
+                  {
+                    type: 'plaintext',
+                    data: undefined,
+                    computed: 'Hello World!'
+                  }
+                ]
+              },
+              computed: '1. Hello World!'
+            },
+            {
+              type: 'listItem',
+              order: 1,
+              data: {
+                nodes: [
+                  {
+                    type: 'plaintext',
+                    data: undefined,
+                    computed: 'Hello 2 World!'
+                  }
+                ]
+              },
+              computed: '2. Hello 2 World!'
+            }
+          ],
+        },
         computed: '1. Hello World!\n2. Hello 2 World!'
       }
     ]);
@@ -404,12 +451,10 @@ Hello there!
         type: 'heading',
         data: {
           level: 1,
-          data: [
+          nodes: [
             {
               type: 'plaintext',
-              data: {
-                text: 'Hello World!'
-              },
+              data: undefined,
               computed: 'Hello World!'
             }
           ]
@@ -418,15 +463,15 @@ Hello there!
       },
       {
         type: 'paragraph',
-        data: [
-          {
-            type: 'plaintext',
-            data: {
-              text: 'Hello there!'
-            },
-            computed: 'Hello there!'
-          }
-        ],
+        data: {
+          nodes: [
+            {
+              type: 'plaintext',
+              data: undefined,
+              computed: 'Hello there!'
+            }
+          ]
+        },
         computed: 'Hello there!'
       }
     ]);

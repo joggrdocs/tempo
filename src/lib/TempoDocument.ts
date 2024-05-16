@@ -77,10 +77,13 @@ export interface HtmlNode extends BaseDocumentNode<PlainTextNode[]> {
 }
 
 export interface CodeBlockNode
-  extends BaseDocumentNode<PlainTextNode[], {
-    code: string;
-    language?: md.SupportedLanguage;
-  }> {
+  extends BaseDocumentNode<
+    PlainTextNode[],
+    {
+      code: string;
+      language?: md.SupportedLanguage;
+    }
+  > {
   type: 'codeBlock';
 }
 
@@ -89,10 +92,13 @@ export interface BlockQuoteNode extends BaseDocumentNode<TempoTextNode[]> {
 }
 
 export interface ImageNode
-  extends BaseDocumentNode<[], {
-    alt: string;
-    src: string;
-  }> {
+  extends BaseDocumentNode<
+    [],
+    {
+      alt: string;
+      src: string;
+    }
+  > {
   type: 'image';
   computed: string;
 }
@@ -104,7 +110,9 @@ export interface BreakNode extends BaseDocumentNode<[]> {
 interface ListItem<T extends 'numberList' | 'bulletList'> {
   type: 'listItem';
   order: T extends 'numberList' ? number : undefined;
-  nodes: TempoTextNode[];
+  data: {
+    nodes: TempoTextNode[];
+  };
   computed: string;
 }
 
@@ -120,7 +128,8 @@ export interface NumberListNode
 
 export type AlertType = 'note' | 'important' | 'warning' | 'tip' | 'caution';
 
-export interface AlertNode extends BaseDocumentNode<TempoTextNode[], { type: AlertType }> {
+export interface AlertNode
+  extends BaseDocumentNode<TempoTextNode[], { type: AlertType }> {
   type: 'alert';
 }
 
@@ -584,9 +593,11 @@ export class TempoDocument {
         nodes: text.map((t, i) => ({
           order: i,
           type: 'listItem',
-          nodes: computeNodes(t),
+          data: {
+            nodes: computeNodes(t)
+          },
           computed: md.li(computeText(t), i)
-        })),
+        }))
       },
       computed: md.ol(text.map(computeText))
     });
@@ -621,7 +632,9 @@ export class TempoDocument {
         nodes: text.map(t => ({
           type: 'listItem',
           order: undefined,
-          nodes: computeNodes(t),
+          data: {
+            nodes: computeNodes(t)
+          },
           computed: md.li(computeText(t))
         }))
       },
@@ -632,7 +645,7 @@ export class TempoDocument {
 
   /**
    * Append an [alert](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) to the document.
-   * 
+   *
    * @example
    *  ```ts
    * const doc = tempo()
@@ -641,12 +654,12 @@ export class TempoDocument {
    * // Output:
    * // > [!NOTE]
    * // This is a note.
-   * 
+   *
    * @see https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
-   * 
+   *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @param type the type of alert to render, defaults to 'note'
-   * @returns The TempoDocument instance with the alert appended. 
+   * @returns The TempoDocument instance with the alert appended.
    */
   public alert(text: TempoTextInput, type: AlertType = 'note'): this {
     this.nodes.push({

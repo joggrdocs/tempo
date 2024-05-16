@@ -42,9 +42,7 @@ describe('computeNodes', () => {
     expect(computeNodes('Hello World!')).toEqual([
       {
         type: 'plaintext',
-        data: {
-          text: 'Hello World!'
-        },
+        data: undefined,
         computed: 'Hello World!'
       }
     ]);
@@ -54,9 +52,7 @@ describe('computeNodes', () => {
     expect(computeNodes(new TempoText().plainText('Hello World!'))).toEqual([
       {
         type: 'plaintext',
-        data: {
-          text: 'Hello World!'
-        },
+        data: undefined,
         computed: 'Hello World!'
       }
     ]);
@@ -66,9 +62,7 @@ describe('computeNodes', () => {
     expect(computeNodes(text => text.plainText('Hello World!'))).toEqual([
       {
         type: 'plaintext',
-        data: {
-          text: 'Hello World!'
-        },
+        data: undefined,
         computed: 'Hello World!'
       }
     ]);
@@ -208,55 +202,59 @@ describe('outputs', () => {
       expect(txtReal.toJSON()).toEqual([
         {
           type: 'plaintext',
-          data: {
-            text: value
-          },
+          data: undefined,
           computed: value
         },
         {
           type: 'bold',
-          data: [
-            {
-              type: 'plaintext',
-              data: {
-                text: value
-              },
-              computed: value
-            }
-          ],
+          data: {
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: value
+              }
+            ]
+          },
           computed: `**${value}**`
         },
         {
           type: 'italic',
-          data: [
-            {
-              type: 'plaintext',
-              data: {
-                text: value
-              },
-              computed: value
-            }
-          ],
+          data: {
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: value
+              }
+            ]
+          },
           computed: `_${value}_`
         },
         {
           type: 'strikeThrough',
-          data: [
-            {
-              type: 'plaintext',
-              data: {
-                text: value
-              },
-              computed: value
-            }
-          ],
+          data: {
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: value
+              }
+            ]
+          },
           computed: `~~${value}~~`
         },
         {
           type: 'link',
           data: {
-            src: 'https://example.com',
-            alt: `Link for ${value}`
+            href: 'https://example.com',
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: value
+              }
+            ]
           },
           computed: `[${value}](https://example.com)`
         }

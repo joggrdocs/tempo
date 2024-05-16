@@ -92,20 +92,29 @@ export type TempoTextNode =
   | EmojiTextNode;
 
 export type TempoTextNodeByType<T extends TempoTextNodeType> =
-  T extends 'plaintext' ? PlainTextNode :
-  T extends 'code' ? CodeTextNode :
-  T extends 'bold' ? BoldTextNode :
-  T extends 'italic' ? ItalicTextNode :
-  T extends 'strikeThrough' ? StrikeThroughTextNode :
-  T extends 'link' ? LinkTextNode :
-  T extends 'emoji' ? EmojiTextNode :
-  never;
+  T extends 'plaintext'
+    ? PlainTextNode
+    : T extends 'code'
+      ? CodeTextNode
+      : T extends 'bold'
+        ? BoldTextNode
+        : T extends 'italic'
+          ? ItalicTextNode
+          : T extends 'strikeThrough'
+            ? StrikeThroughTextNode
+            : T extends 'link'
+              ? LinkTextNode
+              : T extends 'emoji'
+                ? EmojiTextNode
+                : never;
 
-export type TempoTextNodes<T extends TempoTextNode> =
-  T extends PlainTextNode ? never :
-  T extends CodeTextNode ? PlainTextNode[] :
-  T extends EmojiTextNode ? PlainTextNode[] :
-  Array<Exclude<TempoTextNode, T>>;
+export type TempoTextNodes<T extends TempoTextNode> = T extends PlainTextNode
+  ? never
+  : T extends CodeTextNode
+    ? PlainTextNode[]
+    : T extends EmojiTextNode
+      ? PlainTextNode[]
+      : Array<Exclude<TempoTextNode, T>>;
 
 export type TempoTextInput =
   | string
@@ -132,9 +141,13 @@ function formatTextNode(text: string): TempoTextNode {
   };
 }
 
-export function computeNodes<T extends TempoTextNodeType>(tempoTextInput: TempoTextInput): TempoTextNodes<TempoTextNodeByType<T>> {
+export function computeNodes<T extends TempoTextNodeType>(
+  tempoTextInput: TempoTextInput
+): TempoTextNodes<TempoTextNodeByType<T>> {
   if (typeof tempoTextInput === 'string') {
-    return [formatTextNode(tempoTextInput)] as TempoTextNodes<TempoTextNodeByType<T>>;
+    return [formatTextNode(tempoTextInput)] as TempoTextNodes<
+      TempoTextNodeByType<T>
+    >;
   } else if (tempoTextInput instanceof TempoText) {
     return tempoTextInput.toJSON() as TempoTextNodes<TempoTextNodeByType<T>>;
   } else if (typeof tempoTextInput === 'function') {
@@ -193,9 +206,7 @@ export class TempoText {
   public plainText(value: string): this {
     this.nodes.push({
       type: 'plaintext',
-      data: {
-        text: value
-      },
+      data: undefined,
       computed: computeText(value)
     });
     return this;
