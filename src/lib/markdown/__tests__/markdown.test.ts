@@ -104,6 +104,20 @@ describe('Special Elements', () => {
   it('should return a GitHub only emoji', () => {
     expect(md.emoji('atom')).toBe(':atom:');
   });
+
+  [
+    { type: 'note', expected: 'NOTE' },
+    { type: 'tip', expected: 'TIP' },
+    { type: 'warning', expected: 'WARNING' },
+    { type: 'danger', expected: 'DANGER' },
+    { type: 'important', expected: 'IMPORTANT' }
+  ].forEach(({ type, expected }) => {
+    it(`should return a ${expected} alert`, () => {
+      expect(md.alert('Hello World!', type)).toBe(
+        `> [!${expected}]\n> Hello World!`
+      );
+    });
+  });
 });
 
 describe('Tables', () => {

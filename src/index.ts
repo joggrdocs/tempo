@@ -1,14 +1,6 @@
 export { default } from './lib/tempo';
-export {
-  /** @deprecated */
-  TempoDocument as Document,
-  TempoDocument
-} from './lib/TempoDocument';
-export {
-  /** @deprecated */
-  TempoText as Text,
-  TempoText
-} from './lib/TempoText';
+export { TempoDocument } from './lib/TempoDocument';
+export { TempoText } from './lib/TempoText';
 export {
   type SupportedLanguage,
   supportedLanguages,

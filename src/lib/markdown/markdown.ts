@@ -119,6 +119,10 @@ export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
   }
 }
 
+export function alert(value: string, type: string): string {
+  return `> [!${type.toUpperCase()}]\n> ${value}`;
+}
+
 /*
 |------------------
 | Lists

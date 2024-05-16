@@ -12,6 +12,9 @@ Foobar is a thing **that is bold**
 
 ## Lists
 
+> [!CAUTION]
+> This is an alert
+
 This is a list
 
 - Item 1
