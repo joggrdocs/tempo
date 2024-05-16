@@ -113,7 +113,9 @@ describe('Special Elements', () => {
     { type: 'important', expected: 'IMPORTANT' }
   ].forEach(({ type, expected }) => {
     it(`should return a ${expected} alert`, () => {
-      expect(md.alert('Hello World!', type)).toBe(`> [!${expected}]\n> Hello World!`);
+      expect(md.alert('Hello World!', type)).toBe(
+        `> [!${expected}]\n> Hello World!`
+      );
     });
   });
 });

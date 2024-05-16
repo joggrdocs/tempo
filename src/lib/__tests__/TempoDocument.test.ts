@@ -26,7 +26,7 @@ describe('initialization', () => {
               data: undefined,
               computed: 'Hello World!'
             }
-          ],
+          ]
         },
         computed: 'Hello World!'
       }
@@ -143,7 +143,7 @@ describe('Special Elements', () => {
                       computed: 'Hello 2 World!'
                     }
                   ]
-                ],
+                ]
               },
               computed: [
                 '| Hello World! | Hello 2 World! |',
@@ -169,7 +169,7 @@ describe('Special Elements', () => {
                       computed: 'Hello 4 World!'
                     }
                   ]
-                ],
+                ]
               },
               computed: '| Hello 3 World! | Hello 4 World! |'
             }
@@ -260,7 +260,7 @@ describe('Special Elements', () => {
         data: {
           alt: 'example',
           src: 'https://example.com/image.png',
-          nodes: [],
+          nodes: []
         },
         computed: '![example](https://example.com/image.png)'
       }
@@ -280,14 +280,16 @@ describe('Special Elements', () => {
     ]);
   });
 
-  ([
-    { type: 'note', expected: 'NOTE' },
-    { type: undefined, expected: 'NOTE' },
-    { type: 'tip', expected: 'TIP' },
-    { type: 'warning', expected: 'WARNING' },
-    { type: 'caution', expected: 'CAUTION' },
-    { type: 'important', expected: 'IMPORTANT' }
-  ] as const).forEach(({ type, expected }) => {
+  (
+    [
+      { type: 'note', expected: 'NOTE' },
+      { type: undefined, expected: 'NOTE' },
+      { type: 'tip', expected: 'TIP' },
+      { type: 'warning', expected: 'WARNING' },
+      { type: 'caution', expected: 'CAUTION' },
+      { type: 'important', expected: 'IMPORTANT' }
+    ] as const
+  ).forEach(({ type, expected }) => {
     it(`should return a ${expected} alert`, () => {
       const document = new TempoDocument().alert('Hello World!', type);
       expect(document.toJSON()).toEqual([
@@ -417,7 +419,7 @@ describe('Lists', () => {
               },
               computed: '2. Hello 2 World!'
             }
-          ],
+          ]
         },
         computed: '1. Hello World!\n2. Hello 2 World!'
       }
