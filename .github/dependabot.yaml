@@ -1,6 +1,23 @@
 version: 2
 updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    labels:
+      - "dep: github-actions"
+      - "type: dependencies"
+  - package-ecosystem: 'docker'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    labels:
+      - "dep: docker"
+      - "type: dependencies"
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'weekly'
+    labels:
+      - "dep: npm"
+      - "type: dependencies"

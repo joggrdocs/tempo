@@ -1,4 +1,4 @@
-name: 'CI'
+name: 'ci: Code Standards & Testing'
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  lintAndTest:
+  ci:
     name: Lint & Test
     runs-on: ubuntu-latest
     permissions:
