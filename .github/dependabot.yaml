@@ -5,19 +5,19 @@ updates:
     schedule:
       interval: 'weekly'
     labels:
-      - "dep: github-actions"
-      - "type: dependencies"
+      - 'dep: github-actions'
+      - 'type: dependencies'
   - package-ecosystem: 'docker'
     directory: '/'
     schedule:
       interval: 'weekly'
     labels:
-      - "dep: docker"
-      - "type: dependencies"
+      - 'dep: docker'
+      - 'type: dependencies'
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'weekly'
     labels:
-      - "dep: npm"
-      - "type: dependencies"
+      - 'dep: npm'
+      - 'type: dependencies'

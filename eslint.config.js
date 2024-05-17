@@ -18,13 +18,18 @@ const config = {
       }
     }
   ],
-  ignorePatterns: ['node_modules/', 'dist/', 'build/', 'coverage/', 'eslint.config.js', 'vite.config.mts', 'jest.config.ts']
+  ignorePatterns: [
+    'node_modules/',
+    'dist/',
+    'build/',
+    'coverage/',
+    'eslint.config.js',
+    'vite.config.mts',
+    'jest.config.ts'
+  ]
 };
 
 const compat = new FlatCompat({
-  recommendedConfig: js.configs.recommended,
+  recommendedConfig: js.configs.recommended
 });
-module.exports = [
-  ...compat.config(config),
-];
-
+module.exports = [...compat.config(config)];

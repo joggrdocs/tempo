@@ -17,9 +17,9 @@ export default defineViteConfig({
     outDir: path.join(__dirname, 'dist'),
     lib: {
       entry: {
-        index: path.resolve(__dirname, 'src/index.ts'),
+        index: path.resolve(__dirname, 'src/index.ts')
       },
-      name: 'config',
-    },
-  },
+      name: 'config'
+    }
+  }
 });
