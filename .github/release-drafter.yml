@@ -1,41 +1,46 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
-  - title: ':bangbang: Breaking Changes'
+  - title: ':bangbang: Breaking Changes :bangbang:'
     labels:
-      - 'major'
-  - title: '🚀 Features'
+      - 'semver: major'
+  - title: '🦄 Enhancements'
     labels:
-      - 'enhancement'
-  - title: '🔥 Hot Fixes'
+      - 'type: enhancement'
+  - title: '🔥 Hotfixes'
     labels:
-      - 'hotfix'
-  - title: '🐛 Bug Fixes'
+      - 'type: hotfix'
+  - title: '🐛 Bugfixes'
     labels:
-      - 'bugfix'
-  - title: '🧰 Maintenance'
+      - 'type: bugfix'
+  - title: '🧰 Chore'
     labels:
-      - 'maintenance'
-      - 'chore'
-      - 'maintain'
+      - 'type: chore'
   - title: '👮 Security'
-    label: 'security'
-  - title: '🤖 Dependabot'
-    label: 'dependencies'
+    labels:
+      - 'type: security'
+  - title: '📦 Dependencies'
+    labels:
+      - 'type: dependencies'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 exclude-labels:
-  - 'skip-changelog'
+  - 'semver: skip'
 version-resolver:
   major:
     labels:
-      - 'major'
+      - 'semver: major'
   minor:
     labels:
-      - 'minor'
+      - 'semver: minor'
   patch:
     labels:
-      - 'patch'
+      - 'semver: patch'
   default: minor
+replacers:
+  - search: '/ENG-(\d{1,5})/g'
+    replace: '[ENG-$1](https://linear.app/joggr/issue/ENG-$1)'
+  - search: '/GRO-(\d{1,5})/g'
+    replace: '[GRO-$1](https://linear.app/joggr/issue/GRO-$1)'
 template: |
   ## Changes
 
