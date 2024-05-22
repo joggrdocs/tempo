@@ -35,7 +35,7 @@ jobs:
       - name: '⚡️ Test'
         id: test
         run: yarn test
-  
+
   dependabot:
     name: 'Dependabot (auto-merge)'
     needs: [ci]
