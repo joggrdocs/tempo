@@ -41,8 +41,8 @@ export function isSupportedUnicode(
 export function isSupportedAlias(
   emoji: EmojiAlias | EmojiUnicode
 ): emoji is EmojiAlias {
-  return supportedEmojis.some(supportedEmoji => {
-    return supportedEmoji.aliases.some(alias => alias === emoji);
+  return supportedEmojis.some((supportedEmoji) => {
+    return supportedEmoji.aliases.some((alias) => alias === emoji);
   });
 }
 

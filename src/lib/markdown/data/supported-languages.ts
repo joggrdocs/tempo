@@ -70,5 +70,5 @@ export default [
   'vhdl',
   'vue',
   'xml',
-  'yaml'
+  'yaml',
 ] as const;

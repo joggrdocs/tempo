@@ -7,9091 +7,9091 @@ export default [
   {
     aliases: ['+1', 'thumbsup'],
     unicode: '👍',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['-1', 'thumbsdown'],
     unicode: '👎',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['100'],
     unicode: '💯',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['1234'],
     unicode: '🔢',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['1st_place_medal'],
     unicode: '🥇',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['2nd_place_medal'],
     unicode: '🥈',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['3rd_place_medal'],
     unicode: '🥉',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['8ball'],
     unicode: '🎱',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['a'],
     unicode: '🅰️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ab'],
     unicode: '🆎',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['abacus'],
     unicode: '🧮',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['abc'],
     unicode: '🔤',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['abcd'],
     unicode: '🔡',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['accept'],
     unicode: '🉑',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['accordion'],
     unicode: '🪗',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['adhesive_bandage'],
     unicode: '🩹',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['adult'],
     unicode: '🧑',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['aerial_tramway'],
     unicode: '🚡',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['afghanistan'],
     unicode: '🇦🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['airplane'],
     unicode: '✈️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['aland_islands'],
     unicode: '🇦🇽',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['alarm_clock'],
     unicode: '⏰',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['albania'],
     unicode: '🇦🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['alembic'],
     unicode: '⚗️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['algeria'],
     unicode: '🇩🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['alien'],
     unicode: '👽',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['ambulance'],
     unicode: '🚑',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['american_samoa'],
     unicode: '🇦🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['amphora'],
     unicode: '🏺',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['anatomical_heart'],
     unicode: '🫀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['anchor'],
     unicode: '⚓️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['andorra'],
     unicode: '🇦🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['angel'],
     unicode: '👼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['anger'],
     unicode: '💢',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['angola'],
     unicode: '🇦🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['angry'],
     unicode: '😠',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['anguilla'],
     unicode: '🇦🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['anguished'],
     unicode: '😧',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['ant'],
     unicode: '🐜',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['antarctica'],
     unicode: '🇦🇶',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['antigua_barbuda'],
     unicode: '🇦🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['apple'],
     unicode: '🍎',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['aquarius'],
     unicode: '♒️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['argentina'],
     unicode: '🇦🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['aries'],
     unicode: '♈️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['armenia'],
     unicode: '🇦🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['arrow_backward'],
     unicode: '◀️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_double_down'],
     unicode: '⏬',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_double_up'],
     unicode: '⏫',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_down'],
     unicode: '⬇️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_down_small'],
     unicode: '🔽',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_forward'],
     unicode: '▶️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_heading_down'],
     unicode: '⤵️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_heading_up'],
     unicode: '⤴️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_left'],
     unicode: '⬅️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_lower_left'],
     unicode: '↙️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_lower_right'],
     unicode: '↘️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_right'],
     unicode: '➡️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_right_hook'],
     unicode: '↪️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_up'],
     unicode: '⬆️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_up_down'],
     unicode: '↕️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_up_small'],
     unicode: '🔼',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_upper_left'],
     unicode: '↖️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrow_upper_right'],
     unicode: '↗️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrows_clockwise'],
     unicode: '🔃',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['arrows_counterclockwise'],
     unicode: '🔄',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['art'],
     unicode: '🎨',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['articulated_lorry'],
     unicode: '🚛',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['artificial_satellite'],
     unicode: '🛰',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['artist'],
     unicode: '🧑‍🎨',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['aruba'],
     unicode: '🇦🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ascension_island'],
     unicode: '🇦🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['asterisk'],
     unicode: '*️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['astonished'],
     unicode: '😲',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['astronaut'],
     unicode: '🧑‍🚀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['athletic_shoe'],
     unicode: '👟',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['atm'],
     unicode: '🏧',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['atom'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['atom_symbol'],
     unicode: '⚛️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['australia'],
     unicode: '🇦🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['austria'],
     unicode: '🇦🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['auto_rickshaw'],
     unicode: '🛺',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['avocado'],
     unicode: '🥑',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['axe'],
     unicode: '🪓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['azerbaijan'],
     unicode: '🇦🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['b'],
     unicode: '🅱️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['baby'],
     unicode: '👶',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['baby_bottle'],
     unicode: '🍼',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['baby_chick'],
     unicode: '🐤',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['baby_symbol'],
     unicode: '🚼',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['back'],
     unicode: '🔙',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['bacon'],
     unicode: '🥓',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['badger'],
     unicode: '🦡',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['badminton'],
     unicode: '🏸',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['bagel'],
     unicode: '🥯',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['baggage_claim'],
     unicode: '🛄',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['baguette_bread'],
     unicode: '🥖',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bahamas'],
     unicode: '🇧🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bahrain'],
     unicode: '🇧🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['balance_scale'],
     unicode: '⚖️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bald_man'],
     unicode: '👨‍🦲',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bald_woman'],
     unicode: '👩‍🦲',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['ballet_shoes'],
     unicode: '🩰',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['balloon'],
     unicode: '🎈',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['ballot_box'],
     unicode: '🗳',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['ballot_box_with_check'],
     unicode: '☑️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['bamboo'],
     unicode: '🎍',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['banana'],
     unicode: '🍌',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bangbang'],
     unicode: '‼️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['bangladesh'],
     unicode: '🇧🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['banjo'],
     unicode: '🪕',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bank'],
     unicode: '🏦',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['bar_chart'],
     unicode: '📊',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['barbados'],
     unicode: '🇧🇧',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['barber'],
     unicode: '💈',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['baseball'],
     unicode: '⚾️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['basecamp', 'basecampy'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['basket'],
     unicode: '🧺',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['basketball'],
     unicode: '🏀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['basketball_man'],
     unicode: '⛹',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['basketball_woman'],
     unicode: '⛹️‍♀️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['bat'],
     unicode: '🦇',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['bath'],
     unicode: '🛀',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bathtub'],
     unicode: '🛁',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['battery'],
     unicode: '🔋',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['beach_umbrella'],
     unicode: '🏖',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['bear'],
     unicode: '🐻',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['bearded_person'],
     unicode: '🧔',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['beaver'],
     unicode: '🦫',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['bed'],
     unicode: '🛏',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bee', 'honeybee'],
     unicode: '🐝',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['beer'],
     unicode: '🍺',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['beers'],
     unicode: '🍻',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['beetle'],
     unicode: '🐞',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['beginner'],
     unicode: '🔰',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['belarus'],
     unicode: '🇧🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['belgium'],
     unicode: '🇧🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['belize'],
     unicode: '🇧🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bell'],
     unicode: '🔔',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bell_pepper'],
     unicode: '🫑',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bellhop_bell'],
     unicode: '🛎',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['benin'],
     unicode: '🇧🇯',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bento'],
     unicode: '🍱',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bermuda'],
     unicode: '🇧🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['beverage_box'],
     unicode: '🧃',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bhutan'],
     unicode: '🇧🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bike'],
     unicode: '🚲',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['biking_man', 'bicyclist'],
     unicode: '🚴',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['biking_woman'],
     unicode: '🚴‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['bikini'],
     unicode: '👙',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['billed_cap'],
     unicode: '🧢',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['biohazard'],
     unicode: '☣️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['bird'],
     unicode: '🐦',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['birthday'],
     unicode: '🎂',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bison'],
     unicode: '🦬',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['black_cat'],
     unicode: '🐈‍⬛',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['black_circle'],
     unicode: '⚫️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['black_flag'],
     unicode: '🏴',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['black_heart'],
     unicode: '🖤',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['black_joker'],
     unicode: '🃏',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['black_large_square'],
     unicode: '⬛️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['black_medium_small_square'],
     unicode: '◾️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['black_medium_square'],
     unicode: '◼️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['black_nib'],
     unicode: '✒️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['black_small_square'],
     unicode: '▪️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['black_square_button'],
     unicode: '🔲',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['blond_haired_man'],
     unicode: '👱‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['blond_haired_person'],
     unicode: '👱',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['blond_haired_woman'],
     unicode: '👱‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['blonde_woman'],
     unicode: '👱‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['blossom'],
     unicode: '🌼',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['blowfish'],
     unicode: '🐡',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['blue_book'],
     unicode: '📘',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['blue_car'],
     unicode: '🚙',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['blue_heart'],
     unicode: '💙',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['blue_square'],
     unicode: '🟦',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['blueberries'],
     unicode: '🫐',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['blush'],
     unicode: '😊',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['boar'],
     unicode: '🐗',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['boat', 'sailboat'],
     unicode: '⛵️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['bolivia'],
     unicode: '🇧🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bomb'],
     unicode: '💣',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bone'],
     unicode: '🦴',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['book', 'open_book'],
     unicode: '📖',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bookmark'],
     unicode: '🔖',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bookmark_tabs'],
     unicode: '📑',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['books'],
     unicode: '📚',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['boom', 'collision'],
     unicode: '💥',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['boomerang'],
     unicode: '🪃',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['boot'],
     unicode: '👢',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bosnia_herzegovina'],
     unicode: '🇧🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['botswana'],
     unicode: '🇧🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bouncing_ball_man'],
     unicode: '⛹️‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bouncing_ball_person'],
     unicode: '⛹️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bouncing_ball_woman'],
     unicode: '⛹️‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bouquet'],
     unicode: '💐',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['bouvet_island'],
     unicode: '🇧🇻',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bow_and_arrow'],
     unicode: '🏹',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['bowing_man', 'bow'],
     unicode: '🙇',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bowing_woman'],
     unicode: '🙇‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bowl_with_spoon'],
     unicode: '🥣',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bowling'],
     unicode: '🎳',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['bowtie'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['boxing_glove'],
     unicode: '🥊',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['boy'],
     unicode: '👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['brain'],
     unicode: '🧠',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['brazil'],
     unicode: '🇧🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bread'],
     unicode: '🍞',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['breast_feeding'],
     unicode: '🤱',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bricks'],
     unicode: '🧱',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bride_with_veil'],
     unicode: '👰',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['bridge_at_night'],
     unicode: '🌉',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['briefcase'],
     unicode: '💼',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['british_indian_ocean_territory'],
     unicode: '🇮🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['british_virgin_islands'],
     unicode: '🇻🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['broccoli'],
     unicode: '🥦',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['broken_heart'],
     unicode: '💔',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['broom'],
     unicode: '🧹',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['brown_circle'],
     unicode: '🟤',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['brown_heart'],
     unicode: '🤎',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['brown_square'],
     unicode: '🟫',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['brunei'],
     unicode: '🇧🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bubble_tea'],
     unicode: '🧋',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['bucket'],
     unicode: '🪣',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bug'],
     unicode: '🐛',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['building_construction'],
     unicode: '🏗',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['bulb'],
     unicode: '💡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['bulgaria'],
     unicode: '🇧🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bullettrain_front'],
     unicode: '🚅',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['bullettrain_side'],
     unicode: '🚄',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['burkina_faso'],
     unicode: '🇧🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['burrito'],
     unicode: '🌯',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['burundi'],
     unicode: '🇧🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['bus'],
     unicode: '🚌',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['business_suit_levitating'],
     unicode: '🕴',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['busstop'],
     unicode: '🚏',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['bust_in_silhouette'],
     unicode: '👤',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['busts_in_silhouette'],
     unicode: '👥',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['butter'],
     unicode: '🧈',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['butterfly'],
     unicode: '🦋',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cactus'],
     unicode: '🌵',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cake'],
     unicode: '🍰',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['calendar'],
     unicode: '📆',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['call_me_hand'],
     unicode: '🤙',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['calling'],
     unicode: '📲',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['cambodia'],
     unicode: '🇰🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['camel'],
     unicode: '🐫',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['camera'],
     unicode: '📷',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['camera_flash'],
     unicode: '📸',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['cameroon'],
     unicode: '🇨🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['camping'],
     unicode: '🏕',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['canada'],
     unicode: '🇨🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['canary_islands'],
     unicode: '🇮🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['cancer'],
     unicode: '♋️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['candle'],
     unicode: '🕯',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['candy'],
     unicode: '🍬',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['canned_food'],
     unicode: '🥫',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['canoe'],
     unicode: '🛶',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['cape_verde'],
     unicode: '🇨🇻',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['capital_abcd'],
     unicode: '🔠',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['capricorn'],
     unicode: '♑️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['car', 'red_car'],
     unicode: '🚗',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['card_file_box'],
     unicode: '🗃',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['card_index'],
     unicode: '📇',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['card_index_dividers'],
     unicode: '🗂',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['caribbean_netherlands'],
     unicode: '🇧🇶',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['carousel_horse'],
     unicode: '🎠',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['carpentry_saw'],
     unicode: '🪚',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['carrot'],
     unicode: '🥕',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cartwheeling'],
     unicode: '🤸',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['cat'],
     unicode: '🐱',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cat2'],
     unicode: '🐈',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cayman_islands'],
     unicode: '🇰🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['cd'],
     unicode: '💿',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['central_african_republic'],
     unicode: '🇨🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ceuta_melilla'],
     unicode: '🇪🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['chad'],
     unicode: '🇹🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['chains'],
     unicode: '⛓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['chair'],
     unicode: '🪑',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['champagne'],
     unicode: '🍾',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['chart'],
     unicode: '💹',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['chart_with_downwards_trend'],
     unicode: '📉',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['chart_with_upwards_trend'],
     unicode: '📈',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['checkered_flag'],
     unicode: '🏁',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['cheese'],
     unicode: '🧀',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cherries'],
     unicode: '🍒',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cherry_blossom'],
     unicode: '🌸',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['chess_pawn'],
     unicode: '♟️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['chestnut'],
     unicode: '🌰',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['chicken'],
     unicode: '🐔',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['child'],
     unicode: '🧒',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['children_crossing'],
     unicode: '🚸',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['chile'],
     unicode: '🇨🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['chipmunk'],
     unicode: '🐿',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['chocolate_bar'],
     unicode: '🍫',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['chopsticks'],
     unicode: '🥢',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['christmas_island'],
     unicode: '🇨🇽',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['christmas_tree'],
     unicode: '🎄',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['church'],
     unicode: '⛪️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['cinema'],
     unicode: '🎦',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['circus_tent'],
     unicode: '🎪',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['city_sunrise'],
     unicode: '🌇',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['city_sunset'],
     unicode: '🌆',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['cityscape'],
     unicode: '🏙',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['cl'],
     unicode: '🆑',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clamp'],
     unicode: '🗜',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['clap'],
     unicode: '👏',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['clapper'],
     unicode: '🎬',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['classical_building'],
     unicode: '🏛',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['climbing'],
     unicode: '🧗',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['climbing_man'],
     unicode: '🧗‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['climbing_woman'],
     unicode: '🧗‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['clinking_glasses'],
     unicode: '🥂',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['clipboard'],
     unicode: '📋',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['clipperton_island'],
     unicode: '🇨🇵',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['clock1'],
     unicode: '🕐',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock10'],
     unicode: '🕙',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock1030'],
     unicode: '🕥',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock11'],
     unicode: '🕚',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock1130'],
     unicode: '🕦',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock12'],
     unicode: '🕛',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock1230'],
     unicode: '🕧',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock130'],
     unicode: '🕜',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock2'],
     unicode: '🕑',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock230'],
     unicode: '🕝',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock3'],
     unicode: '🕒',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock330'],
     unicode: '🕞',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock4'],
     unicode: '🕓',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock430'],
     unicode: '🕟',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock5'],
     unicode: '🕔',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock530'],
     unicode: '🕠',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock6'],
     unicode: '🕕',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock630'],
     unicode: '🕡',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock7'],
     unicode: '🕖',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock730'],
     unicode: '🕢',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock8'],
     unicode: '🕗',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock830'],
     unicode: '🕣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock9'],
     unicode: '🕘',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['clock930'],
     unicode: '🕤',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['closed_book'],
     unicode: '📕',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['closed_lock_with_key'],
     unicode: '🔐',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['closed_umbrella'],
     unicode: '🌂',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['cloud'],
     unicode: '☁️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cloud_with_lightning'],
     unicode: '🌩',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cloud_with_lightning_and_rain'],
     unicode: '⛈',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cloud_with_rain'],
     unicode: '🌧',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cloud_with_snow'],
     unicode: '🌨',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['clown_face'],
     unicode: '🤡',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['clubs'],
     unicode: '♣️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['cn'],
     unicode: '🇨🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['coat'],
     unicode: '🧥',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['cockroach'],
     unicode: '🪳',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cocktail'],
     unicode: '🍸',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['coconut'],
     unicode: '🥥',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cocos_islands'],
     unicode: '🇨🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['coffee'],
     unicode: '☕️',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['coffin'],
     unicode: '⚰️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['coin'],
     unicode: '🪙',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['cold_face'],
     unicode: '🥶',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['cold_sweat'],
     unicode: '😰',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['colombia'],
     unicode: '🇨🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['comet'],
     unicode: '☄',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['comoros'],
     unicode: '🇰🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['compass'],
     unicode: '🧭',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['computer'],
     unicode: '💻',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['computer_mouse'],
     unicode: '🖱',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['confetti_ball'],
     unicode: '🎊',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['confounded'],
     unicode: '😖',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['confused'],
     unicode: '😕',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['congo_brazzaville'],
     unicode: '🇨🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['congo_kinshasa'],
     unicode: '🇨🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['congratulations'],
     unicode: '㊗️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['construction'],
     unicode: '🚧',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['construction_worker_man', 'construction_worker'],
     unicode: '👷',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['construction_worker_woman'],
     unicode: '👷‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['control_knobs'],
     unicode: '🎛',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['convenience_store'],
     unicode: '🏪',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['cook'],
     unicode: '🧑‍🍳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['cook_islands'],
     unicode: '🇨🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['cookie'],
     unicode: '🍪',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cool'],
     unicode: '🆒',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['copyright'],
     unicode: '©️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['corn'],
     unicode: '🌽',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['costa_rica'],
     unicode: '🇨🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['cote_divoire'],
     unicode: '🇨🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['couch_and_lamp'],
     unicode: '🛋',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['couple'],
     unicode: '👫',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couple_with_heart_man_man'],
     unicode: '👨‍❤️‍👨',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couple_with_heart_woman_man', 'couple_with_heart'],
     unicode: '💑',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couple_with_heart_woman_woman'],
     unicode: '👩‍❤️‍👩',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couplekiss'],
     unicode: '💏',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couplekiss_man_man'],
     unicode: '👨‍❤️‍💋‍👨',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couplekiss_man_woman'],
     unicode: '💏',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['couplekiss_woman_woman'],
     unicode: '👩‍❤️‍💋‍👩',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['cow'],
     unicode: '🐮',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cow2'],
     unicode: '🐄',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cowboy_hat_face'],
     unicode: '🤠',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['crab'],
     unicode: '🦀',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['crayon'],
     unicode: '🖍',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['credit_card'],
     unicode: '💳',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['crescent_moon'],
     unicode: '🌙',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cricket'],
     unicode: '🦗',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['cricket_game'],
     unicode: '🏏',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['croatia'],
     unicode: '🇭🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['crocodile'],
     unicode: '🐊',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['croissant'],
     unicode: '🥐',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['crossed_fingers'],
     unicode: '🤞',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['crossed_flags'],
     unicode: '🎌',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['crossed_swords'],
     unicode: '⚔️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['crown'],
     unicode: '👑',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['cry'],
     unicode: '😢',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['crying_cat_face'],
     unicode: '😿',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['crystal_ball'],
     unicode: '🔮',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['cuba'],
     unicode: '🇨🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['cucumber'],
     unicode: '🥒',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cup_with_straw'],
     unicode: '🥤',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cupcake'],
     unicode: '🧁',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cupid'],
     unicode: '💘',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['curacao'],
     unicode: '🇨🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['curling_stone'],
     unicode: '🥌',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['curly_haired_man'],
     unicode: '👨‍🦱',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['curly_haired_woman'],
     unicode: '👩‍🦱',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['curly_loop'],
     unicode: '➰',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['currency_exchange'],
     unicode: '💱',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['curry'],
     unicode: '🍛',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cursing_face'],
     unicode: '🤬',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['custard'],
     unicode: '🍮',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['customs'],
     unicode: '🛃',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['cut_of_meat'],
     unicode: '🥩',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['cyclone'],
     unicode: '🌀',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['cyprus'],
     unicode: '🇨🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['czech_republic'],
     unicode: '🇨🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['dagger'],
     unicode: '🗡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dancer'],
     unicode: '💃',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['dancing_men'],
     unicode: '👯‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['dancing_women', 'dancers'],
     unicode: '👯',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['dango'],
     unicode: '🍡',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['dark_sunglasses'],
     unicode: '🕶',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dart'],
     unicode: '🎯',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dash'],
     unicode: '💨',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['date'],
     unicode: '📅',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['de'],
     unicode: '🇩🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['deaf_man'],
     unicode: '🧏‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['deaf_person'],
     unicode: '🧏',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['deaf_woman'],
     unicode: '🧏‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['deciduous_tree'],
     unicode: '🌳',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['deer'],
     unicode: '🦌',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['denmark'],
     unicode: '🇩🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['department_store'],
     unicode: '🏬',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['derelict_house'],
     unicode: '🏚',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['desert'],
     unicode: '🏜',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['desert_island'],
     unicode: '🏝',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['desktop_computer'],
     unicode: '🖥',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['diamond_shape_with_a_dot_inside'],
     unicode: '💠',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['diamonds'],
     unicode: '♦️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['diego_garcia'],
     unicode: '🇩🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['disappointed'],
     unicode: '😞',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['disappointed_relieved'],
     unicode: '😥',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['disguised_face'],
     unicode: '🥸',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['diving_mask'],
     unicode: '🤿',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['diya_lamp'],
     unicode: '🪔',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dizzy'],
     unicode: '💫',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['dizzy_face'],
     unicode: '😵',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['djibouti'],
     unicode: '🇩🇯',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['dna'],
     unicode: '🧬',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['do_not_litter'],
     unicode: '🚯',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['dodo'],
     unicode: '🦤',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dog'],
     unicode: '🐶',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dog2'],
     unicode: '🐕',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dollar'],
     unicode: '💵',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dolls'],
     unicode: '🎎',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dolphin', 'flipper'],
     unicode: '🐬',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dominica'],
     unicode: '🇩🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['dominican_republic'],
     unicode: '🇩🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['door'],
     unicode: '🚪',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['doughnut'],
     unicode: '🍩',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['dove'],
     unicode: '🕊',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dragon'],
     unicode: '🐉',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dragon_face'],
     unicode: '🐲',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dress'],
     unicode: '👗',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['dromedary_camel'],
     unicode: '🐪',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['drooling_face'],
     unicode: '🤤',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['drop_of_blood'],
     unicode: '🩸',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['droplet'],
     unicode: '💧',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['drum'],
     unicode: '🥁',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['duck'],
     unicode: '🦆',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['dumpling'],
     unicode: '🥟',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['dvd'],
     unicode: '📀',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['e-mail'],
     unicode: '📧',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['eagle'],
     unicode: '🦅',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['ear'],
     unicode: '👂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['ear_of_rice'],
     unicode: '🌾',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['ear_with_hearing_aid'],
     unicode: '🦻',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['earth_africa'],
     unicode: '🌍',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['earth_americas'],
     unicode: '🌎',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['earth_asia'],
     unicode: '🌏',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['ecuador'],
     unicode: '🇪🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['egg'],
     unicode: '🥚',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['eggplant'],
     unicode: '🍆',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['egypt'],
     unicode: '🇪🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['eight'],
     unicode: '8️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['eight_pointed_black_star'],
     unicode: '✴️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['eight_spoked_asterisk'],
     unicode: '✳️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['eject_button'],
     unicode: '⏏️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['el_salvador'],
     unicode: '🇸🇻',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['electric_plug'],
     unicode: '🔌',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['electron'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['elephant'],
     unicode: '🐘',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['elevator'],
     unicode: '🛗',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['elf'],
     unicode: '🧝',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['elf_man'],
     unicode: '🧝‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['elf_woman'],
     unicode: '🧝‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['email', 'envelope'],
     unicode: '✉️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['end'],
     unicode: '🔚',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['england'],
     unicode: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['envelope_with_arrow'],
     unicode: '📩',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['equatorial_guinea'],
     unicode: '🇬🇶',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['eritrea'],
     unicode: '🇪🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['es'],
     unicode: '🇪🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['estonia'],
     unicode: '🇪🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ethiopia'],
     unicode: '🇪🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['eu', 'european_union'],
     unicode: '🇪🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['euro'],
     unicode: '💶',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['european_castle'],
     unicode: '🏰',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['european_post_office'],
     unicode: '🏤',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['evergreen_tree'],
     unicode: '🌲',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['exclamation', 'heavy_exclamation_mark'],
     unicode: '❗️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['exploding_head'],
     unicode: '🤯',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['expressionless'],
     unicode: '😑',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['eye'],
     unicode: '👁',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['eye_speech_bubble'],
     unicode: '👁‍🗨',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['eyeglasses'],
     unicode: '👓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['eyes'],
     unicode: '👀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['face_exhaling'],
     unicode: '😮‍💨',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['face_in_clouds'],
     unicode: '😶‍🌫️',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['face_with_head_bandage'],
     unicode: '🤕',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['face_with_spiral_eyes'],
     unicode: '😵‍💫',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['face_with_thermometer'],
     unicode: '🤒',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['facepalm'],
     unicode: '🤦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['factory'],
     unicode: '🏭',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['factory_worker'],
     unicode: '🧑‍🏭',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['fairy'],
     unicode: '🧚',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['fairy_man'],
     unicode: '🧚‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['fairy_woman'],
     unicode: '🧚‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['falafel'],
     unicode: '🧆',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['falkland_islands'],
     unicode: '🇫🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['fallen_leaf'],
     unicode: '🍂',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['family_man_boy'],
     unicode: '👨‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_boy_boy'],
     unicode: '👨‍👦‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_girl'],
     unicode: '👨‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_girl_boy'],
     unicode: '👨‍👧‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_girl_girl'],
     unicode: '👨‍👧‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_man_boy'],
     unicode: '👨‍👨‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_man_boy_boy'],
     unicode: '👨‍👨‍👦‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_man_girl'],
     unicode: '👨‍👨‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_man_girl_boy'],
     unicode: '👨‍👨‍👧‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_man_girl_girl'],
     unicode: '👨‍👨‍👧‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_woman_boy', 'family'],
     unicode: '👪',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_woman_boy_boy'],
     unicode: '👨‍👩‍👦‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_woman_girl'],
     unicode: '👨‍👩‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_woman_girl_boy'],
     unicode: '👨‍👩‍👧‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_man_woman_girl_girl'],
     unicode: '👨‍👩‍👧‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_boy'],
     unicode: '👩‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_boy_boy'],
     unicode: '👩‍👦‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_girl'],
     unicode: '👩‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_girl_boy'],
     unicode: '👩‍👧‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_girl_girl'],
     unicode: '👩‍👧‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_woman_boy'],
     unicode: '👩‍👩‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_woman_boy_boy'],
     unicode: '👩‍👩‍👦‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_woman_girl'],
     unicode: '👩‍👩‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_woman_girl_boy'],
     unicode: '👩‍👩‍👧‍👦',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['family_woman_woman_girl_girl'],
     unicode: '👩‍👩‍👧‍👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['farmer'],
     unicode: '🧑‍🌾',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['faroe_islands'],
     unicode: '🇫🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['fast_forward'],
     unicode: '⏩',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['fax'],
     unicode: '📠',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['fearful'],
     unicode: '😨',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['feather'],
     unicode: '🪶',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['feelsgood'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['feet', 'paw_prints'],
     unicode: '🐾',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['female_detective'],
     unicode: '🕵️‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['female_sign'],
     unicode: '♀️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ferris_wheel'],
     unicode: '🎡',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['ferry'],
     unicode: '⛴',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['field_hockey'],
     unicode: '🏑',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['fiji'],
     unicode: '🇫🇯',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['file_cabinet'],
     unicode: '🗄',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['file_folder'],
     unicode: '📁',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['film_projector'],
     unicode: '📽',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['film_strip'],
     unicode: '🎞',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['finland'],
     unicode: '🇫🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['finnadie'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['fire'],
     unicode: '🔥',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['fire_engine'],
     unicode: '🚒',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['fire_extinguisher'],
     unicode: '🧯',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['firecracker'],
     unicode: '🧨',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['firefighter'],
     unicode: '🧑‍🚒',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['fireworks'],
     unicode: '🎆',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['first_quarter_moon'],
     unicode: '🌓',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['first_quarter_moon_with_face'],
     unicode: '🌛',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['fish'],
     unicode: '🐟',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['fish_cake'],
     unicode: '🍥',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['fishing_pole_and_fish'],
     unicode: '🎣',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['fist_left'],
     unicode: '🤛',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['fist_oncoming', 'facepunch', 'punch'],
     unicode: '👊',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['fist_raised', 'fist'],
     unicode: '✊',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['fist_right'],
     unicode: '🤜',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['five'],
     unicode: '5️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['flags'],
     unicode: '🎏',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['flamingo'],
     unicode: '🦩',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['flashlight'],
     unicode: '🔦',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['flat_shoe'],
     unicode: '🥿',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['flatbread'],
     unicode: '🫓',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['fleur_de_lis'],
     unicode: '⚜️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['flight_arrival'],
     unicode: '🛬',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['flight_departure'],
     unicode: '🛫',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['floppy_disk'],
     unicode: '💾',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['flower_playing_cards'],
     unicode: '🎴',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['flushed'],
     unicode: '😳',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['fly'],
     unicode: '🪰',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['flying_disc'],
     unicode: '🥏',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['flying_saucer'],
     unicode: '🛸',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['fog'],
     unicode: '🌫',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['foggy'],
     unicode: '🌁',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['fondue'],
     unicode: '🫕',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['foot'],
     unicode: '🦶',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['football'],
     unicode: '🏈',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['footprints'],
     unicode: '👣',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['fork_and_knife'],
     unicode: '🍴',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['fortune_cookie'],
     unicode: '🥠',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['fountain'],
     unicode: '⛲️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['fountain_pen'],
     unicode: '🖋',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['four'],
     unicode: '4️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['four_leaf_clover'],
     unicode: '🍀',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['fox_face'],
     unicode: '🦊',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['fr'],
     unicode: '🇫🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['framed_picture'],
     unicode: '🖼',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['free'],
     unicode: '🆓',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['french_guiana'],
     unicode: '🇬🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['french_polynesia'],
     unicode: '🇵🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['french_southern_territories'],
     unicode: '🇹🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['fried_egg'],
     unicode: '🍳',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['fried_shrimp'],
     unicode: '🍤',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['fries'],
     unicode: '🍟',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['frog'],
     unicode: '🐸',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['frowning'],
     unicode: '😦',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['frowning_face'],
     unicode: '☹️',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['frowning_man'],
     unicode: '🙍‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['frowning_person'],
     unicode: '🙍',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['frowning_woman'],
     unicode: '🙍',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['fuelpump'],
     unicode: '⛽️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['full_moon'],
     unicode: '🌕',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['full_moon_with_face'],
     unicode: '🌝',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['funeral_urn'],
     unicode: '⚱️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['gabon'],
     unicode: '🇬🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['gambia'],
     unicode: '🇬🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['game_die'],
     unicode: '🎲',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['garlic'],
     unicode: '🧄',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['gb', 'uk'],
     unicode: '🇬🇧',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['gear'],
     unicode: '⚙️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['gem'],
     unicode: '💎',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['gemini'],
     unicode: '♊️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['genie'],
     unicode: '🧞',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['genie_man'],
     unicode: '🧞‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['genie_woman'],
     unicode: '🧞‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['georgia'],
     unicode: '🇬🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ghana'],
     unicode: '🇬🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ghost'],
     unicode: '👻',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['gibraltar'],
     unicode: '🇬🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['gift'],
     unicode: '🎁',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['gift_heart'],
     unicode: '💝',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['giraffe'],
     unicode: '🦒',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['girl'],
     unicode: '👧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['globe_with_meridians'],
     unicode: '🌐',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['gloves'],
     unicode: '🧤',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['goal_net'],
     unicode: '🥅',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['goat'],
     unicode: '🐐',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['goberserk'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['godmode'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['goggles'],
     unicode: '🥽',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['golf'],
     unicode: '⛳️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['golfing'],
     unicode: '🏌️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['golfing_man'],
     unicode: '🏌',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['golfing_woman'],
     unicode: '🏌️‍♀️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['gorilla'],
     unicode: '🦍',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['grapes'],
     unicode: '🍇',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['greece'],
     unicode: '🇬🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['green_apple'],
     unicode: '🍏',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['green_book'],
     unicode: '📗',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['green_circle'],
     unicode: '🟢',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['green_heart'],
     unicode: '💚',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['green_salad'],
     unicode: '🥗',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['green_square'],
     unicode: '🟩',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['greenland'],
     unicode: '🇬🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['grenada'],
     unicode: '🇬🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['grey_exclamation'],
     unicode: '❕',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['grey_question'],
     unicode: '❔',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['grimacing'],
     unicode: '😬',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['grin'],
     unicode: '😁',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['grinning'],
     unicode: '😀',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['guadeloupe'],
     unicode: '🇬🇵',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['guam'],
     unicode: '🇬🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['guard'],
     unicode: '💂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['guardsman'],
     unicode: '💂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['guardswoman'],
     unicode: '💂‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['guatemala'],
     unicode: '🇬🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['guernsey'],
     unicode: '🇬🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['guide_dog'],
     unicode: '🦮',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['guinea'],
     unicode: '🇬🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['guinea_bissau'],
     unicode: '🇬🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['guitar'],
     unicode: '🎸',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['gun'],
     unicode: '🔫',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['guyana'],
     unicode: '🇬🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['haircut_man'],
     unicode: '💇‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['haircut_woman', 'haircut'],
     unicode: '💇',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['haiti'],
     unicode: '🇭🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['hamburger'],
     unicode: '🍔',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['hammer'],
     unicode: '🔨',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['hammer_and_pick'],
     unicode: '⚒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['hammer_and_wrench'],
     unicode: '🛠',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['hamster'],
     unicode: '🐹',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['hand', 'raised_hand'],
     unicode: '✋',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['hand_over_mouth'],
     unicode: '🤭',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['handbag'],
     unicode: '👜',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['handball_person'],
     unicode: '🤾',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['handshake'],
     unicode: '🤝',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['hankey', 'poop', 'shit'],
     unicode: '💩',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['hash'],
     unicode: '#️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['hatched_chick'],
     unicode: '🐥',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['hatching_chick'],
     unicode: '🐣',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['headphones'],
     unicode: '🎧',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['headstone'],
     unicode: '🪦',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['health_worker'],
     unicode: '🧑‍⚕️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['hear_no_evil'],
     unicode: '🙉',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['heard_mcdonald_islands'],
     unicode: '🇭🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['heart'],
     unicode: '❤️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heart_decoration'],
     unicode: '💟',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heart_eyes'],
     unicode: '😍',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['heart_eyes_cat'],
     unicode: '😻',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['heart_on_fire'],
     unicode: '❤️‍🔥',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heartbeat'],
     unicode: '💓',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heartpulse'],
     unicode: '💗',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['hearts'],
     unicode: '♥️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_check_mark'],
     unicode: '✔️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_division_sign'],
     unicode: '➗',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_dollar_sign'],
     unicode: '💲',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_heart_exclamation'],
     unicode: '❣️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_minus_sign'],
     unicode: '➖',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_multiplication_x'],
     unicode: '✖️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['heavy_plus_sign'],
     unicode: '➕',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['hedgehog'],
     unicode: '🦔',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['helicopter'],
     unicode: '🚁',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['herb'],
     unicode: '🌿',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['hibiscus'],
     unicode: '🌺',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['high_brightness'],
     unicode: '🔆',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['high_heel'],
     unicode: '👠',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['hiking_boot'],
     unicode: '🥾',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['hindu_temple'],
     unicode: '🛕',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['hippopotamus'],
     unicode: '🦛',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['hocho', 'knife'],
     unicode: '🔪',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['hole'],
     unicode: '🕳',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['honduras'],
     unicode: '🇭🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['honey_pot'],
     unicode: '🍯',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['hong_kong'],
     unicode: '🇭🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['hook'],
     unicode: '🪝',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['horse'],
     unicode: '🐴',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['horse_racing'],
     unicode: '🏇',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['hospital'],
     unicode: '🏥',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['hot_face'],
     unicode: '🥵',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['hot_pepper'],
     unicode: '🌶',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['hotdog'],
     unicode: '🌭',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['hotel'],
     unicode: '🏨',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['hotsprings'],
     unicode: '♨️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['hourglass'],
     unicode: '⌛️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['hourglass_flowing_sand'],
     unicode: '⏳',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['house'],
     unicode: '🏠',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['house_with_garden'],
     unicode: '🏡',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['houses'],
     unicode: '🏘',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['hugs'],
     unicode: '🤗',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['hungary'],
     unicode: '🇭🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['hurtrealbad'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['hushed'],
     unicode: '😯',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['hut'],
     unicode: '🛖',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['ice_cream'],
     unicode: '🍨',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['ice_cube'],
     unicode: '🧊',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['ice_hockey'],
     unicode: '🏒',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['ice_skate'],
     unicode: '⛸',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['icecream'],
     unicode: '🍦',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['iceland'],
     unicode: '🇮🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['id'],
     unicode: '🆔',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ideograph_advantage'],
     unicode: '🉐',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['imp'],
     unicode: '👿',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['inbox_tray'],
     unicode: '📥',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['incoming_envelope'],
     unicode: '📨',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['india'],
     unicode: '🇮🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['indonesia'],
     unicode: '🇮🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['infinity'],
     unicode: '♾️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['information_source'],
     unicode: 'ℹ️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['innocent'],
     unicode: '😇',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['interrobang'],
     unicode: '⁉️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['iphone'],
     unicode: '📱',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['iran'],
     unicode: '🇮🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['iraq'],
     unicode: '🇮🇶',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ireland'],
     unicode: '🇮🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['isle_of_man'],
     unicode: '🇮🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['israel'],
     unicode: '🇮🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['it'],
     unicode: '🇮🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['jack_o_lantern'],
     unicode: '🎃',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['jamaica'],
     unicode: '🇯🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['japan'],
     unicode: '🗾',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['japanese_castle'],
     unicode: '🏯',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['japanese_goblin'],
     unicode: '👺',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['japanese_ogre'],
     unicode: '👹',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['jeans'],
     unicode: '👖',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['jersey'],
     unicode: '🇯🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['jigsaw'],
     unicode: '🧩',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['jordan'],
     unicode: '🇯🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['joy'],
     unicode: '😂',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['joy_cat'],
     unicode: '😹',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['joystick'],
     unicode: '🕹',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['jp'],
     unicode: '🇯🇵',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['judge'],
     unicode: '🧑‍⚖️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['juggling_person'],
     unicode: '🤹',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['kaaba'],
     unicode: '🕋',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['kangaroo'],
     unicode: '🦘',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['kazakhstan'],
     unicode: '🇰🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['kenya'],
     unicode: '🇰🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['key'],
     unicode: '🔑',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['keyboard'],
     unicode: '⌨️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['keycap_ten'],
     unicode: '🔟',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['kick_scooter'],
     unicode: '🛴',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['kimono'],
     unicode: '👘',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['kiribati'],
     unicode: '🇰🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['kiss'],
     unicode: '💋',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['kissing'],
     unicode: '😗',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['kissing_cat'],
     unicode: '😽',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['kissing_closed_eyes'],
     unicode: '😚',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['kissing_heart'],
     unicode: '😘',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['kissing_smiling_eyes'],
     unicode: '😙',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['kite'],
     unicode: '🪁',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['kiwi_fruit'],
     unicode: '🥝',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['kneeling_man'],
     unicode: '🧎‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['kneeling_person'],
     unicode: '🧎',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['kneeling_woman'],
     unicode: '🧎‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['knot'],
     unicode: '🪢',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['koala'],
     unicode: '🐨',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['koko'],
     unicode: '🈁',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['kosovo'],
     unicode: '🇽🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['kr'],
     unicode: '🇰🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['kuwait'],
     unicode: '🇰🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['kyrgyzstan'],
     unicode: '🇰🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['lab_coat'],
     unicode: '🥼',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['label'],
     unicode: '🏷',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lacrosse'],
     unicode: '🥍',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['ladder'],
     unicode: '🪜',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lady_beetle'],
     unicode: '🐞',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['lantern', 'izakaya_lantern'],
     unicode: '🏮',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['laos'],
     unicode: '🇱🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['large_blue_circle'],
     unicode: '🔵',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['large_blue_diamond'],
     unicode: '🔷',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['large_orange_diamond'],
     unicode: '🔶',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['last_quarter_moon'],
     unicode: '🌗',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['last_quarter_moon_with_face'],
     unicode: '🌜',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['latin_cross'],
     unicode: '✝️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['latvia'],
     unicode: '🇱🇻',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['laughing', 'satisfied'],
     unicode: '😆',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['leafy_green'],
     unicode: '🥬',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['leaves'],
     unicode: '🍃',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['lebanon'],
     unicode: '🇱🇧',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ledger'],
     unicode: '📒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['left_luggage'],
     unicode: '🛅',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['left_right_arrow'],
     unicode: '↔️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['left_speech_bubble'],
     unicode: '🗨️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['leftwards_arrow_with_hook'],
     unicode: '↩️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['leg'],
     unicode: '🦵',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['lemon'],
     unicode: '🍋',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['leo'],
     unicode: '♌️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['leopard'],
     unicode: '🐆',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['lesotho'],
     unicode: '🇱🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['level_slider'],
     unicode: '🎚',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['liberia'],
     unicode: '🇱🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['libra'],
     unicode: '♎️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['libya'],
     unicode: '🇱🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['liechtenstein'],
     unicode: '🇱🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['light_rail'],
     unicode: '🚈',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['link'],
     unicode: '🔗',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['lion'],
     unicode: '🦁',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['lips'],
     unicode: '👄',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['lipstick'],
     unicode: '💄',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lithuania'],
     unicode: '🇱🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['lizard'],
     unicode: '🦎',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['llama'],
     unicode: '🦙',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['lobster'],
     unicode: '🦞',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['lock'],
     unicode: '🔒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lock_with_ink_pen'],
     unicode: '🔏',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lollipop'],
     unicode: '🍭',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['long_drum'],
     unicode: '🪘',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['loop'],
     unicode: '➿',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lotion_bottle'],
     unicode: '🧴',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lotus_position'],
     unicode: '🧘',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['lotus_position_man'],
     unicode: '🧘‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['lotus_position_woman'],
     unicode: '🧘‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['loud_sound'],
     unicode: '🔊',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['loudspeaker'],
     unicode: '📢',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['love_hotel'],
     unicode: '🏩',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['love_letter'],
     unicode: '💌',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['love_you_gesture'],
     unicode: '🤟',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['low_brightness'],
     unicode: '🔅',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['luggage'],
     unicode: '🧳',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['lungs'],
     unicode: '🫁',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['luxembourg'],
     unicode: '🇱🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['lying_face'],
     unicode: '🤥',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['m'],
     unicode: 'Ⓜ️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['macau'],
     unicode: '🇲🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['macedonia'],
     unicode: '🇲🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['madagascar'],
     unicode: '🇲🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mag'],
     unicode: '🔍',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mag_right'],
     unicode: '🔎',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mage'],
     unicode: '🧙',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['mage_man'],
     unicode: '🧙‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['mage_woman'],
     unicode: '🧙‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['magic_wand'],
     unicode: '🪄',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['magnet'],
     unicode: '🧲',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mahjong'],
     unicode: '🀄️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mailbox'],
     unicode: '📫',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mailbox_closed'],
     unicode: '📪',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mailbox_with_mail'],
     unicode: '📬',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mailbox_with_no_mail'],
     unicode: '📭',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['malawi'],
     unicode: '🇲🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['malaysia'],
     unicode: '🇲🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['maldives'],
     unicode: '🇲🇻',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['male_detective', 'detective'],
     unicode: '🕵',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['male_sign'],
     unicode: '♂️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['mali'],
     unicode: '🇲🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['malta'],
     unicode: '🇲🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mammoth'],
     unicode: '🦣',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['man'],
     unicode: '👨',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_artist'],
     unicode: '👨‍🎨',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_astronaut'],
     unicode: '👨‍🚀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_beard'],
     unicode: '🧔‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_cartwheeling'],
     unicode: '🤸‍♂',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['man_cook'],
     unicode: '👨‍🍳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_dancing'],
     unicode: '🕺',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_facepalming'],
     unicode: '🤦‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_factory_worker'],
     unicode: '👨‍🏭',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_farmer'],
     unicode: '👨‍🌾',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_feeding_baby'],
     unicode: '👨‍🍼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_firefighter'],
     unicode: '👨‍🚒',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_health_worker'],
     unicode: '👨‍⚕',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_in_manual_wheelchair'],
     unicode: '👨‍🦽',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_in_motorized_wheelchair'],
     unicode: '👨‍🦼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_in_tuxedo'],
     unicode: '🤵',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_judge'],
     unicode: '👨‍⚖',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_juggling'],
     unicode: '🤹‍♂',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['man_mechanic'],
     unicode: '👨‍🔧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_office_worker'],
     unicode: '👨‍💼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_pilot'],
     unicode: '👨‍✈',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_playing_handball'],
     unicode: '🤾‍♂',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['man_playing_water_polo'],
     unicode: '🤽‍♂',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['man_scientist'],
     unicode: '👨‍🔬',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_shrugging'],
     unicode: '🤷‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_singer'],
     unicode: '👨‍🎤',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_student'],
     unicode: '👨‍🎓',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_teacher'],
     unicode: '👨‍🏫',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_technologist'],
     unicode: '👨‍💻',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_with_gua_pi_mao'],
     unicode: '👲',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_with_probing_cane'],
     unicode: '👨‍🦯',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_with_turban'],
     unicode: '👳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['man_with_veil'],
     unicode: '👰‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['mango'],
     unicode: '🥭',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['mantelpiece_clock'],
     unicode: '🕰',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['manual_wheelchair'],
     unicode: '🦽',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['maple_leaf'],
     unicode: '🍁',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['marshall_islands'],
     unicode: '🇲🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['martial_arts_uniform'],
     unicode: '🥋',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['martinique'],
     unicode: '🇲🇶',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mask'],
     unicode: '😷',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['massage_man'],
     unicode: '💆‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['massage_woman', 'massage'],
     unicode: '💆',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['mate'],
     unicode: '🧉',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['mauritania'],
     unicode: '🇲🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mauritius'],
     unicode: '🇲🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mayotte'],
     unicode: '🇾🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['meat_on_bone'],
     unicode: '🍖',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['mechanic'],
     unicode: '🧑‍🔧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['mechanical_arm'],
     unicode: '🦾',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mechanical_leg'],
     unicode: '🦿',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['medal_military'],
     unicode: '🎖',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['medal_sports'],
     unicode: '🏅',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['medical_symbol'],
     unicode: '⚕️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['mega'],
     unicode: '📣',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['melon'],
     unicode: '🍈',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['memo', 'pencil'],
     unicode: '📝',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['men_wrestling'],
     unicode: '🤼‍♂',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['mending_heart'],
     unicode: '❤️‍🩹',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['menorah'],
     unicode: '🕎',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['mens'],
     unicode: '🚹',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['mermaid'],
     unicode: '🧜‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['merman'],
     unicode: '🧜‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['merperson'],
     unicode: '🧜',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['metal'],
     unicode: '🤘',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['metro'],
     unicode: '🚇',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['mexico'],
     unicode: '🇲🇽',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['microbe'],
     unicode: '🦠',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['micronesia'],
     unicode: '🇫🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['microphone'],
     unicode: '🎤',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['microscope'],
     unicode: '🔬',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['middle_finger', 'fu'],
     unicode: '🖕',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['military_helmet'],
     unicode: '🪖',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['milk_glass'],
     unicode: '🥛',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['milky_way'],
     unicode: '🌌',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['minibus'],
     unicode: '🚐',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['minidisc'],
     unicode: '💽',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mirror'],
     unicode: '🪞',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mobile_phone_off'],
     unicode: '📴',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['moldova'],
     unicode: '🇲🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['monaco'],
     unicode: '🇲🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['money_mouth_face'],
     unicode: '🤑',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['money_with_wings'],
     unicode: '💸',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['moneybag'],
     unicode: '💰',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mongolia'],
     unicode: '🇲🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['monkey'],
     unicode: '🐒',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['monkey_face'],
     unicode: '🐵',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['monocle_face'],
     unicode: '🧐',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['monorail'],
     unicode: '🚝',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['montenegro'],
     unicode: '🇲🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['montserrat'],
     unicode: '🇲🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['moon', 'waxing_gibbous_moon'],
     unicode: '🌔',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['moon_cake'],
     unicode: '🥮',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['morocco'],
     unicode: '🇲🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mortar_board'],
     unicode: '🎓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['mosque'],
     unicode: '🕌',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mosquito'],
     unicode: '🦟',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['motor_boat'],
     unicode: '🛥',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['motor_scooter'],
     unicode: '🛵',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['motorcycle'],
     unicode: '🏍',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['motorized_wheelchair'],
     unicode: '🦼',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['motorway'],
     unicode: '🛣',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mount_fuji'],
     unicode: '🗻',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mountain'],
     unicode: '⛰',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mountain_biking_man', 'mountain_bicyclist'],
     unicode: '🚵',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['mountain_biking_woman'],
     unicode: '🚵‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['mountain_cableway'],
     unicode: '🚠',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mountain_railway'],
     unicode: '🚞',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mountain_snow'],
     unicode: '🏔',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mouse'],
     unicode: '🐭',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['mouse2'],
     unicode: '🐁',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['mouse_trap'],
     unicode: '🪤',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['movie_camera'],
     unicode: '🎥',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['moyai'],
     unicode: '🗿',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['mozambique'],
     unicode: '🇲🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['mrs_claus'],
     unicode: '🤶',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['muscle'],
     unicode: '💪',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['mushroom'],
     unicode: '🍄',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['musical_keyboard'],
     unicode: '🎹',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['musical_note'],
     unicode: '🎵',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['musical_score'],
     unicode: '🎼',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['mute'],
     unicode: '🔇',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['mx_claus'],
     unicode: '🧑‍🎄',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['myanmar'],
     unicode: '🇲🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['nail_care'],
     unicode: '💅',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['name_badge'],
     unicode: '📛',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['namibia'],
     unicode: '🇳🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['national_park'],
     unicode: '🏞',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['nauru'],
     unicode: '🇳🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['nauseated_face'],
     unicode: '🤢',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['nazar_amulet'],
     unicode: '🧿',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['neckbeard'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['necktie'],
     unicode: '👔',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['negative_squared_cross_mark'],
     unicode: '❎',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['nepal'],
     unicode: '🇳🇵',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['nerd_face'],
     unicode: '🤓',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['nesting_dolls'],
     unicode: '🪆',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['netherlands'],
     unicode: '🇳🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['neutral_face'],
     unicode: '😐',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['new'],
     unicode: '🆕',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['new_caledonia'],
     unicode: '🇳🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['new_moon'],
     unicode: '🌑',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['new_moon_with_face'],
     unicode: '🌚',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['new_zealand'],
     unicode: '🇳🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['newspaper'],
     unicode: '📰',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['newspaper_roll'],
     unicode: '🗞',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['next_track_button'],
     unicode: '⏭',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ng'],
     unicode: '🆖',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['nicaragua'],
     unicode: '🇳🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['niger'],
     unicode: '🇳🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['nigeria'],
     unicode: '🇳🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['night_with_stars'],
     unicode: '🌃',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['nine'],
     unicode: '9️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ninja'],
     unicode: '🥷',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['niue'],
     unicode: '🇳🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['no_bell'],
     unicode: '🔕',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['no_bicycles'],
     unicode: '🚳',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['no_entry'],
     unicode: '⛔️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['no_entry_sign'],
     unicode: '🚫',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['no_good_man', 'ng_man'],
     unicode: '🙅‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['no_good_woman', 'ng_woman', 'no_good'],
     unicode: '🙅',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['no_mobile_phones'],
     unicode: '📵',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['no_mouth'],
     unicode: '😶',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['no_pedestrians'],
     unicode: '🚷',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['no_smoking'],
     unicode: '🚭',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['non-potable_water'],
     unicode: '🚱',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['norfolk_island'],
     unicode: '🇳🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['north_korea'],
     unicode: '🇰🇵',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['northern_mariana_islands'],
     unicode: '🇲🇵',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['norway'],
     unicode: '🇳🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['nose'],
     unicode: '👃',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['notebook'],
     unicode: '📓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['notebook_with_decorative_cover'],
     unicode: '📔',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['notes'],
     unicode: '🎶',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['nut_and_bolt'],
     unicode: '🔩',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['o'],
     unicode: '⭕️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['o2'],
     unicode: '🅾️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ocean'],
     unicode: '🌊',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['octocat'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['octopus'],
     unicode: '🐙',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['oden'],
     unicode: '🍢',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['office'],
     unicode: '🏢',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['office_worker'],
     unicode: '🧑‍💼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['oil_drum'],
     unicode: '🛢',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['ok'],
     unicode: '🆗',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ok_hand'],
     unicode: '👌',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['ok_man'],
     unicode: '🙆‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['ok_person'],
     unicode: '🙆',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['ok_woman'],
     unicode: '🙆',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['old_key'],
     unicode: '🗝',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['older_adult'],
     unicode: '🧓',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['older_man'],
     unicode: '👴',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['older_woman'],
     unicode: '👵',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['olive'],
     unicode: '🫒',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['om'],
     unicode: '🕉',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['oman'],
     unicode: '🇴🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['on'],
     unicode: '🔛',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['oncoming_automobile'],
     unicode: '🚘',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['oncoming_bus'],
     unicode: '🚍',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['oncoming_police_car'],
     unicode: '🚔',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['oncoming_taxi'],
     unicode: '🚖',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['one'],
     unicode: '1️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['one_piece_swimsuit'],
     unicode: '🩱',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['onion'],
     unicode: '🧅',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['open_file_folder'],
     unicode: '📂',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['open_hands'],
     unicode: '👐',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['open_mouth'],
     unicode: '😮',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['open_umbrella'],
     unicode: '☂️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['ophiuchus'],
     unicode: '⛎',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['orange_book'],
     unicode: '📙',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['orange_circle'],
     unicode: '🟠',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['orange_heart'],
     unicode: '🧡',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['orange_square'],
     unicode: '🟧',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['orangutan'],
     unicode: '🦧',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['orthodox_cross'],
     unicode: '☦️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['otter'],
     unicode: '🦦',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['outbox_tray'],
     unicode: '📤',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['owl'],
     unicode: '🦉',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['ox'],
     unicode: '🐂',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['oyster'],
     unicode: '🦪',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['package'],
     unicode: '📦',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['page_facing_up'],
     unicode: '📄',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['page_with_curl'],
     unicode: '📃',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pager'],
     unicode: '📟',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['paintbrush'],
     unicode: '🖌',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pakistan'],
     unicode: '🇵🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['palau'],
     unicode: '🇵🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['palestinian_territories'],
     unicode: '🇵🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['palm_tree'],
     unicode: '🌴',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['palms_up_together'],
     unicode: '🤲',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['panama'],
     unicode: '🇵🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['pancakes'],
     unicode: '🥞',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['panda_face'],
     unicode: '🐼',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['paperclip'],
     unicode: '📎',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['paperclips'],
     unicode: '🖇',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['papua_new_guinea'],
     unicode: '🇵🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['parachute'],
     unicode: '🪂',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['paraguay'],
     unicode: '🇵🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['parasol_on_ground'],
     unicode: '⛱',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['parking'],
     unicode: '🅿️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['parrot'],
     unicode: '🦜',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['part_alternation_mark'],
     unicode: '〽️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['partly_sunny'],
     unicode: '⛅️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['partying_face'],
     unicode: '🥳',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['passenger_ship'],
     unicode: '🛳',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['passport_control'],
     unicode: '🛂',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['pause_button'],
     unicode: '⏸',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['peace_symbol'],
     unicode: '☮️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['peach'],
     unicode: '🍑',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['peacock'],
     unicode: '🦚',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['peanuts'],
     unicode: '🥜',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['pear'],
     unicode: '🍐',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['pen'],
     unicode: '🖊',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pencil2'],
     unicode: '✏️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['penguin'],
     unicode: '🐧',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['pensive'],
     unicode: '😔',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['people_holding_hands'],
     unicode: '🧑‍🤝‍🧑',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['people_hugging'],
     unicode: '🫂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['performing_arts'],
     unicode: '🎭',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['persevere'],
     unicode: '😣',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['person_bald'],
     unicode: '🧑‍🦲',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_curly_hair'],
     unicode: '🧑‍🦱',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_feeding_baby'],
     unicode: '🧑‍🍼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_fencing'],
     unicode: '🤺',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['person_in_manual_wheelchair'],
     unicode: '🧑‍🦽',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_in_motorized_wheelchair'],
     unicode: '🧑‍🦼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_in_tuxedo'],
     unicode: '🤵🏻',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_red_hair'],
     unicode: '🧑‍🦰',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_white_hair'],
     unicode: '🧑‍🦳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_with_probing_cane'],
     unicode: '🧑‍🦯',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_with_turban'],
     unicode: '👳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['person_with_veil'],
     unicode: '👰',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['peru'],
     unicode: '🇵🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['petri_dish'],
     unicode: '🧫',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['philippines'],
     unicode: '🇵🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['phone', 'telephone'],
     unicode: '☎️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pick'],
     unicode: '⛏',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pickup_truck'],
     unicode: '🛻',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['pie'],
     unicode: '🥧',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['pig'],
     unicode: '🐷',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['pig2'],
     unicode: '🐖',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['pig_nose'],
     unicode: '🐽',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['pill'],
     unicode: '💊',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pilot'],
     unicode: '🧑‍✈️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['pinata'],
     unicode: '🪅',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['pinched_fingers'],
     unicode: '🤌',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['pinching_hand'],
     unicode: '🤏',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['pineapple'],
     unicode: '🍍',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['ping_pong'],
     unicode: '🏓',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['pirate_flag'],
     unicode: '🏴‍☠️',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['pisces'],
     unicode: '♓️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['pitcairn_islands'],
     unicode: '🇵🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['pizza'],
     unicode: '🍕',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['placard'],
     unicode: '🪧',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['place_of_worship'],
     unicode: '🛐',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['plate_with_cutlery'],
     unicode: '🍽',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['play_or_pause_button'],
     unicode: '⏯',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['pleading_face'],
     unicode: '🥺',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['plunger'],
     unicode: '🪠',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['point_down'],
     unicode: '👇',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['point_left'],
     unicode: '👈',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['point_right'],
     unicode: '👉',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['point_up'],
     unicode: '☝️',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['point_up_2'],
     unicode: '👆',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['poland'],
     unicode: '🇵🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['polar_bear'],
     unicode: '🐻‍❄️',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['police_car'],
     unicode: '🚓',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['police_officer'],
     unicode: '👮',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['policeman', 'cop'],
     unicode: '👮',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['policewoman'],
     unicode: '👮‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['poodle'],
     unicode: '🐩',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['popcorn'],
     unicode: '🍿',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['portugal'],
     unicode: '🇵🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['post_office'],
     unicode: '🏣',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['postal_horn'],
     unicode: '📯',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['postbox'],
     unicode: '📮',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['potable_water'],
     unicode: '🚰',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['potato'],
     unicode: '🥔',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['potted_plant'],
     unicode: '🪴',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['pouch'],
     unicode: '👝',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['poultry_leg'],
     unicode: '🍗',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['pound'],
     unicode: '💷',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pouting_cat'],
     unicode: '😾',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['pouting_face'],
     unicode: '🙎',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['pouting_man'],
     unicode: '🙎‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['pouting_woman'],
     unicode: '🙎',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['pray'],
     unicode: '🙏',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['prayer_beads'],
     unicode: '📿',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pregnant_woman'],
     unicode: '🤰',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['pretzel'],
     unicode: '🥨',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['previous_track_button'],
     unicode: '⏮',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['prince'],
     unicode: '🤴',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['princess'],
     unicode: '👸',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['printer'],
     unicode: '🖨',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['probing_cane'],
     unicode: '🦯',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['puerto_rico'],
     unicode: '🇵🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['purple_circle'],
     unicode: '🟣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['purple_heart'],
     unicode: '💜',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['purple_square'],
     unicode: '🟪',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['purse'],
     unicode: '👛',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['pushpin'],
     unicode: '📌',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['put_litter_in_its_place'],
     unicode: '🚮',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['qatar'],
     unicode: '🇶🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['question'],
     unicode: '❓',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['rabbit'],
     unicode: '🐰',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['rabbit2'],
     unicode: '🐇',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['raccoon'],
     unicode: '🦝',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['racehorse'],
     unicode: '🐎',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['racing_car'],
     unicode: '🏎',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['radio'],
     unicode: '📻',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['radio_button'],
     unicode: '🔘',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['radioactive'],
     unicode: '☢️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['rage', 'pout'],
     unicode: '😡',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['rage1'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['rage2'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['rage3'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['rage4'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['railway_car'],
     unicode: '🚃',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['railway_track'],
     unicode: '🛤',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['rainbow'],
     unicode: '🌈',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['rainbow_flag'],
     unicode: '🏳️‍🌈',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['raised_back_of_hand'],
     unicode: '🤚',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['raised_eyebrow'],
     unicode: '🤨',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['raised_hand_with_fingers_splayed'],
     unicode: '🖐',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['raised_hands'],
     unicode: '🙌',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['raising_hand_man'],
     unicode: '🙋‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['raising_hand_woman', 'raising_hand'],
     unicode: '🙋',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['ram'],
     unicode: '🐏',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['ramen'],
     unicode: '🍜',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['rat'],
     unicode: '🐀',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['razor'],
     unicode: '🪒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['receipt'],
     unicode: '🧾',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['record_button'],
     unicode: '⏺',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['recycle'],
     unicode: '♻️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['red_circle'],
     unicode: '🔴',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['red_envelope'],
     unicode: '🧧',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['red_haired_man'],
     unicode: '👨‍🦰',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['red_haired_woman'],
     unicode: '👩‍🦰',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['red_square'],
     unicode: '🟥',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['registered'],
     unicode: '®️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['relaxed'],
     unicode: '☺️',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['relieved'],
     unicode: '😌',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['reminder_ribbon'],
     unicode: '🎗',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['repeat'],
     unicode: '🔁',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['repeat_one'],
     unicode: '🔂',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['rescue_worker_helmet'],
     unicode: '⛑',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['restroom'],
     unicode: '🚻',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['reunion'],
     unicode: '🇷🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['revolving_hearts'],
     unicode: '💞',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['rewind'],
     unicode: '⏪',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['rhinoceros'],
     unicode: '🦏',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['ribbon'],
     unicode: '🎀',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['rice'],
     unicode: '🍚',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['rice_ball'],
     unicode: '🍙',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['rice_cracker'],
     unicode: '🍘',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['rice_scene'],
     unicode: '🎑',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['right_anger_bubble'],
     unicode: '🗯',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ring'],
     unicode: '💍',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['ringed_planet'],
     unicode: '🪐',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['robot'],
     unicode: '🤖',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['rock'],
     unicode: '🪨',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['rocket'],
     unicode: '🚀',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['rofl'],
     unicode: '🤣',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['roll_eyes'],
     unicode: '🙄',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['roll_of_paper'],
     unicode: '🧻',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['roller_coaster'],
     unicode: '🎢',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['roller_skate'],
     unicode: '🛼',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['romania'],
     unicode: '🇷🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['rooster'],
     unicode: '🐓',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['rose'],
     unicode: '🌹',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['rosette'],
     unicode: '🏵',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['rotating_light'],
     unicode: '🚨',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['round_pushpin'],
     unicode: '📍',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['rowing_man', 'rowboat'],
     unicode: '🚣',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['rowing_woman'],
     unicode: '🚣‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['ru'],
     unicode: '🇷🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['rugby_football'],
     unicode: '🏉',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['running_man', 'runner', 'running'],
     unicode: '🏃',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['running_shirt_with_sash'],
     unicode: '🎽',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['running_woman'],
     unicode: '🏃‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['rwanda'],
     unicode: '🇷🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sa'],
     unicode: '🈂️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['safety_pin'],
     unicode: '🧷',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['safety_vest'],
     unicode: '🦺',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['sagittarius'],
     unicode: '♐️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['sake'],
     unicode: '🍶',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['salt'],
     unicode: '🧂',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['samoa'],
     unicode: '🇼🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['san_marino'],
     unicode: '🇸🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sandal'],
     unicode: '👡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['sandwich'],
     unicode: '🥪',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['santa'],
     unicode: '🎅',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['sao_tome_principe'],
     unicode: '🇸🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sari'],
     unicode: '🥻',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['satellite'],
     unicode: '📡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['saudi_arabia'],
     unicode: '🇸🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sauna_man'],
     unicode: '🧖‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['sauna_person'],
     unicode: '🧖',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['sauna_woman'],
     unicode: '🧖‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['sauropod'],
     unicode: '🦕',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['saxophone'],
     unicode: '🎷',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['scarf'],
     unicode: '🧣',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['school'],
     unicode: '🏫',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['school_satchel'],
     unicode: '🎒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['scientist'],
     unicode: '🧑‍🔬',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['scissors'],
     unicode: '✂️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['scorpion'],
     unicode: '🦂',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['scorpius'],
     unicode: '♏️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['scotland'],
     unicode: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['scream'],
     unicode: '😱',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['scream_cat'],
     unicode: '🙀',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['screwdriver'],
     unicode: '🪛',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['scroll'],
     unicode: '📜',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['seal'],
     unicode: '🦭',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['seat'],
     unicode: '💺',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['secret'],
     unicode: '㊙️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['see_no_evil'],
     unicode: '🙈',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['seedling'],
     unicode: '🌱',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['selfie'],
     unicode: '🤳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['senegal'],
     unicode: '🇸🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['serbia'],
     unicode: '🇷🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['service_dog'],
     unicode: '🐕‍🦺',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['seven'],
     unicode: '7️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['sewing_needle'],
     unicode: '🪡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['seychelles'],
     unicode: '🇸🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['shallow_pan_of_food'],
     unicode: '🥘',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['shamrock'],
     unicode: '☘️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['shark'],
     unicode: '🦈',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['shaved_ice'],
     unicode: '🍧',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['sheep'],
     unicode: '🐑',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['shell'],
     unicode: '🐚',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['shield'],
     unicode: '🛡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['shinto_shrine'],
     unicode: '⛩',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['ship'],
     unicode: '🚢',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['shipit'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['shirt', 'tshirt'],
     unicode: '👕',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['shoe', 'mans_shoe'],
     unicode: '👞',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['shopping'],
     unicode: '🛍',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['shopping_cart'],
     unicode: '🛒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['shorts'],
     unicode: '🩳',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['shower'],
     unicode: '🚿',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['shrimp'],
     unicode: '🦐',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['shrug'],
     unicode: '🤷',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['shushing_face'],
     unicode: '🤫',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['sierra_leone'],
     unicode: '🇸🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['signal_strength'],
     unicode: '📶',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['singapore'],
     unicode: '🇸🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['singer'],
     unicode: '🧑‍🎤',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['sint_maarten'],
     unicode: '🇸🇽',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['six'],
     unicode: '6️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['six_pointed_star'],
     unicode: '🔯',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['skateboard'],
     unicode: '🛹',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['ski'],
     unicode: '🎿',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['skier'],
     unicode: '⛷',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['skull'],
     unicode: '💀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['skull_and_crossbones'],
     unicode: '☠️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['skunk'],
     unicode: '🦨',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['sled'],
     unicode: '🛷',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['sleeping'],
     unicode: '😴',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['sleeping_bed'],
     unicode: '🛌',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['sleepy'],
     unicode: '😪',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['slightly_frowning_face'],
     unicode: '🙁',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['slightly_smiling_face'],
     unicode: '🙂',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['slot_machine'],
     unicode: '🎰',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['sloth'],
     unicode: '🦥',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['slovakia'],
     unicode: '🇸🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['slovenia'],
     unicode: '🇸🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['small_airplane'],
     unicode: '🛩',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['small_blue_diamond'],
     unicode: '🔹',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['small_orange_diamond'],
     unicode: '🔸',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['small_red_triangle'],
     unicode: '🔺',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['small_red_triangle_down'],
     unicode: '🔻',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['smile'],
     unicode: '😄',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smile_cat'],
     unicode: '😸',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smiley'],
     unicode: '😃',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smiley_cat'],
     unicode: '😺',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smiling_face_with_tear'],
     unicode: '🥲',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smiling_face_with_three_hearts'],
     unicode: '🥰',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smiling_imp'],
     unicode: '😈',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smirk'],
     unicode: '😏',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smirk_cat'],
     unicode: '😼',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['smoking'],
     unicode: '🚬',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['snail'],
     unicode: '🐌',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['snake'],
     unicode: '🐍',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['sneezing_face'],
     unicode: '🤧',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['snowboarder'],
     unicode: '🏂',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['snowflake'],
     unicode: '❄️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['snowman'],
     unicode: '⛄️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['snowman_with_snow'],
     unicode: '☃️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['soap'],
     unicode: '🧼',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['sob'],
     unicode: '😭',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['soccer'],
     unicode: '⚽️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['socks'],
     unicode: '🧦',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['softball'],
     unicode: '🥎',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['solomon_islands'],
     unicode: '🇸🇧',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['somalia'],
     unicode: '🇸🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['soon'],
     unicode: '🔜',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['sos'],
     unicode: '🆘',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['sound'],
     unicode: '🔉',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['south_africa'],
     unicode: '🇿🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['south_georgia_south_sandwich_islands'],
     unicode: '🇬🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['south_sudan'],
     unicode: '🇸🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['space_invader'],
     unicode: '👾',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['spades'],
     unicode: '♠️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['spaghetti'],
     unicode: '🍝',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['sparkle'],
     unicode: '❇️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['sparkler'],
     unicode: '🎇',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['sparkles'],
     unicode: '✨',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sparkling_heart'],
     unicode: '💖',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['speak_no_evil'],
     unicode: '🙊',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['speaker'],
     unicode: '🔈',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['speaking_head'],
     unicode: '🗣',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['speech_balloon'],
     unicode: '💬',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['speedboat'],
     unicode: '🚤',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['spider'],
     unicode: '🕷',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['spider_web'],
     unicode: '🕸',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['spiral_calendar'],
     unicode: '🗓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['spiral_notepad'],
     unicode: '🗒',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['sponge'],
     unicode: '🧽',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['spoon'],
     unicode: '🥄',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['squid'],
     unicode: '🦑',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['sri_lanka'],
     unicode: '🇱🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_barthelemy'],
     unicode: '🇧🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_helena'],
     unicode: '🇸🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_kitts_nevis'],
     unicode: '🇰🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_lucia'],
     unicode: '🇱🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_martin'],
     unicode: '🇲🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_pierre_miquelon'],
     unicode: '🇵🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['st_vincent_grenadines'],
     unicode: '🇻🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['stadium'],
     unicode: '🏟',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['standing_man'],
     unicode: '🧍‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['standing_person'],
     unicode: '🧍',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['standing_woman'],
     unicode: '🧍‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['star'],
     unicode: '⭐️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['star2'],
     unicode: '🌟',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['star_and_crescent'],
     unicode: '☪️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['star_of_david'],
     unicode: '✡️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['star_struck'],
     unicode: '🤩',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['stars'],
     unicode: '🌠',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['station'],
     unicode: '🚉',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['statue_of_liberty'],
     unicode: '🗽',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['steam_locomotive'],
     unicode: '🚂',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['stethoscope'],
     unicode: '🩺',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['stew'],
     unicode: '🍲',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['stop_button'],
     unicode: '⏹',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['stop_sign'],
     unicode: '🛑',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['stopwatch'],
     unicode: '⏱',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['straight_ruler'],
     unicode: '📏',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['strawberry'],
     unicode: '🍓',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['stuck_out_tongue'],
     unicode: '😛',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['stuck_out_tongue_closed_eyes'],
     unicode: '😝',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['stuck_out_tongue_winking_eye'],
     unicode: '😜',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['student'],
     unicode: '🧑‍🎓',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['studio_microphone'],
     unicode: '🎙',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['stuffed_flatbread'],
     unicode: '🥙',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['sudan'],
     unicode: '🇸🇩',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sun_behind_large_cloud'],
     unicode: '🌥',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sun_behind_rain_cloud'],
     unicode: '🌦',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sun_behind_small_cloud'],
     unicode: '🌤',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sun_with_face'],
     unicode: '🌞',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sunflower'],
     unicode: '🌻',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sunglasses'],
     unicode: '😎',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['sunny'],
     unicode: '☀️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sunrise'],
     unicode: '🌅',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['sunrise_over_mountains'],
     unicode: '🌄',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['superhero'],
     unicode: '🦸',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['superhero_man'],
     unicode: '🦸‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['superhero_woman'],
     unicode: '🦸‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['supervillain'],
     unicode: '🦹',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['supervillain_man'],
     unicode: '🦹‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['supervillain_woman'],
     unicode: '🦹‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['surfing_man', 'surfer'],
     unicode: '🏄',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['surfing_woman'],
     unicode: '🏄‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['suriname'],
     unicode: '🇸🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sushi'],
     unicode: '🍣',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['suspect'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['suspension_railway'],
     unicode: '🚟',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['svalbard_jan_mayen'],
     unicode: '🇸🇯',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['swan'],
     unicode: '🦢',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['swaziland'],
     unicode: '🇸🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sweat'],
     unicode: '😓',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['sweat_drops'],
     unicode: '💦',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['sweat_smile'],
     unicode: '😅',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['sweden'],
     unicode: '🇸🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['sweet_potato'],
     unicode: '🍠',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['swim_brief'],
     unicode: '🩲',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['swimming_man', 'swimmer'],
     unicode: '🏊',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['swimming_woman'],
     unicode: '🏊‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['switzerland'],
     unicode: '🇨🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['symbols'],
     unicode: '🔣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['synagogue'],
     unicode: '🕍',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['syria'],
     unicode: '🇸🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['syringe'],
     unicode: '💉',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['t-rex'],
     unicode: '🦖',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['taco'],
     unicode: '🌮',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tada'],
     unicode: '🎉',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['taiwan'],
     unicode: '🇹🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['tajikistan'],
     unicode: '🇹🇯',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['takeout_box'],
     unicode: '🥡',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tamale'],
     unicode: '🫔',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tanabata_tree'],
     unicode: '🎋',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['tangerine', 'mandarin', 'orange'],
     unicode: '🍊',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tanzania'],
     unicode: '🇹🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['taurus'],
     unicode: '♉️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['taxi'],
     unicode: '🚕',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['tea'],
     unicode: '🍵',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['teacher'],
     unicode: '🧑‍🏫',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['teapot'],
     unicode: '🫖',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['technologist'],
     unicode: '🧑‍💻',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['teddy_bear'],
     unicode: '🧸',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['telephone_receiver'],
     unicode: '📞',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['telescope'],
     unicode: '🔭',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['tennis'],
     unicode: '🎾',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['tent'],
     unicode: '⛺️',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['test_tube'],
     unicode: '🧪',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['thailand'],
     unicode: '🇹🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['thermometer'],
     unicode: '🌡',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['thinking'],
     unicode: '🤔',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['thong_sandal'],
     unicode: '🩴',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['thought_balloon'],
     unicode: '💭',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['thread'],
     unicode: '🧵',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['three'],
     unicode: '3️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['ticket'],
     unicode: '🎫',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['tickets'],
     unicode: '🎟',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['tiger'],
     unicode: '🐯',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['tiger2'],
     unicode: '🐅',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['timer_clock'],
     unicode: '⏲',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['timor_leste'],
     unicode: '🇹🇱',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['tipping_hand_man', 'sassy_man'],
     unicode: '💁‍♂',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['tipping_hand_person'],
     unicode: '💁',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['tipping_hand_woman', 'information_desk_person', 'sassy_woman'],
     unicode: '💁',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['tired_face'],
     unicode: '😫',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['tm'],
     unicode: '™️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['togo'],
     unicode: '🇹🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['toilet'],
     unicode: '🚽',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['tokelau'],
     unicode: '🇹🇰',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['tokyo_tower'],
     unicode: '🗼',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['tomato'],
     unicode: '🍅',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tonga'],
     unicode: '🇹🇴',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['tongue'],
     unicode: '👅',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['toolbox'],
     unicode: '🧰',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['tooth'],
     unicode: '🦷',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['toothbrush'],
     unicode: '🪥',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['top'],
     unicode: '🔝',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['tophat'],
     unicode: '🎩',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['tornado'],
     unicode: '🌪',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['tr'],
     unicode: '🇹🇷',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['trackball'],
     unicode: '🖲',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['tractor'],
     unicode: '🚜',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['traffic_light'],
     unicode: '🚥',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['train'],
     unicode: '🚋',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['train2'],
     unicode: '🚆',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['tram'],
     unicode: '🚊',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['transgender_flag'],
     unicode: '🏳️‍⚧️',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['transgender_symbol'],
     unicode: '⚧️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['triangular_flag_on_post'],
     unicode: '🚩',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['triangular_ruler'],
     unicode: '📐',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['trident'],
     unicode: '🔱',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['trinidad_tobago'],
     unicode: '🇹🇹',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['tristan_da_cunha'],
     unicode: '🇹🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['triumph'],
     unicode: '😤',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['trolleybus'],
     unicode: '🚎',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['trollface'],
     unicode: false,
-    category: 'Custom'
+    category: 'Custom',
   },
   {
     aliases: ['trophy'],
     unicode: '🏆',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['tropical_drink'],
     unicode: '🍹',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tropical_fish'],
     unicode: '🐠',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['truck'],
     unicode: '🚚',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['trumpet'],
     unicode: '🎺',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['tulip'],
     unicode: '🌷',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['tumbler_glass'],
     unicode: '🥃',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['tunisia'],
     unicode: '🇹🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['turkey'],
     unicode: '🦃',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['turkmenistan'],
     unicode: '🇹🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['turks_caicos_islands'],
     unicode: '🇹🇨',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['turtle'],
     unicode: '🐢',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['tuvalu'],
     unicode: '🇹🇻',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['tv'],
     unicode: '📺',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['twisted_rightwards_arrows'],
     unicode: '🔀',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['two'],
     unicode: '2️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['two_hearts'],
     unicode: '💕',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['two_men_holding_hands'],
     unicode: '👬',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['two_women_holding_hands'],
     unicode: '👭',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['u5272'],
     unicode: '🈹',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u5408'],
     unicode: '🈴',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u55b6'],
     unicode: '🈺',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u6307'],
     unicode: '🈯️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u6708'],
     unicode: '🈷️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u6709'],
     unicode: '🈶',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u6e80'],
     unicode: '🈵',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u7121'],
     unicode: '🈚️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u7533'],
     unicode: '🈸',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u7981'],
     unicode: '🈲',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['u7a7a'],
     unicode: '🈳',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['uganda'],
     unicode: '🇺🇬',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['ukraine'],
     unicode: '🇺🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['umbrella'],
     unicode: '☔️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['unamused'],
     unicode: '😒',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['underage'],
     unicode: '🔞',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['unicorn'],
     unicode: '🦄',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['united_arab_emirates'],
     unicode: '🇦🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['united_nations'],
     unicode: '🇺🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['unlock'],
     unicode: '🔓',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['up'],
     unicode: '🆙',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['upside_down_face'],
     unicode: '🙃',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['uruguay'],
     unicode: '🇺🇾',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['us'],
     unicode: '🇺🇸',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['us_outlying_islands'],
     unicode: '🇺🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['us_virgin_islands'],
     unicode: '🇻🇮',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['uzbekistan'],
     unicode: '🇺🇿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['v'],
     unicode: '✌️',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['vampire'],
     unicode: '🧛',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['vampire_man'],
     unicode: '🧛‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['vampire_woman'],
     unicode: '🧛‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['vanuatu'],
     unicode: '🇻🇺',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['vatican_city'],
     unicode: '🇻🇦',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['venezuela'],
     unicode: '🇻🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['vertical_traffic_light'],
     unicode: '🚦',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['vhs'],
     unicode: '📼',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['vibration_mode'],
     unicode: '📳',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['video_camera'],
     unicode: '📹',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['video_game'],
     unicode: '🎮',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['vietnam'],
     unicode: '🇻🇳',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['violin'],
     unicode: '🎻',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['virgo'],
     unicode: '♍️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['volcano'],
     unicode: '🌋',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['volleyball'],
     unicode: '🏐',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['vomiting_face'],
     unicode: '🤮',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['vs'],
     unicode: '🆚',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['vulcan_salute'],
     unicode: '🖖',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['waffle'],
     unicode: '🧇',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['wales'],
     unicode: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['walking_man', 'walking'],
     unicode: '🚶',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['walking_woman'],
     unicode: '🚶‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['wallis_futuna'],
     unicode: '🇼🇫',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['waning_crescent_moon'],
     unicode: '🌘',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['waning_gibbous_moon'],
     unicode: '🌖',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['warning'],
     unicode: '⚠️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['wastebasket'],
     unicode: '🗑',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['watch'],
     unicode: '⌚️',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['water_buffalo'],
     unicode: '🐃',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['water_polo'],
     unicode: '🤽',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['watermelon'],
     unicode: '🍉',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['wave'],
     unicode: '👋',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['wavy_dash'],
     unicode: '〰️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['waxing_crescent_moon'],
     unicode: '🌒',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['wc'],
     unicode: '🚾',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['weary'],
     unicode: '😩',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['wedding'],
     unicode: '💒',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['weight_lifting'],
     unicode: '🏋️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['weight_lifting_man'],
     unicode: '🏋',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['weight_lifting_woman'],
     unicode: '🏋️‍♀️',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['western_sahara'],
     unicode: '🇪🇭',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['whale'],
     unicode: '🐳',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['whale2'],
     unicode: '🐋',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['wheel_of_dharma'],
     unicode: '☸️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['wheelchair'],
     unicode: '♿️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_check_mark'],
     unicode: '✅',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_circle'],
     unicode: '⚪️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_flag'],
     unicode: '🏳️',
-    category: 'Flag'
+    category: 'Flag',
   },
   {
     aliases: ['white_flower'],
     unicode: '💮',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_haired_man'],
     unicode: '👨‍🦳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['white_haired_woman'],
     unicode: '👩‍🦳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['white_heart'],
     unicode: '🤍',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_large_square'],
     unicode: '⬜️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_medium_small_square'],
     unicode: '◽️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_medium_square'],
     unicode: '◻️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_small_square'],
     unicode: '▫️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['white_square_button'],
     unicode: '🔳',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['wilted_flower'],
     unicode: '🥀',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['wind_chime'],
     unicode: '🎐',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['wind_face'],
     unicode: '🌬',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['window'],
     unicode: '🪟',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['wine_glass'],
     unicode: '🍷',
-    category: 'Food'
+    category: 'Food',
   },
   {
     aliases: ['wink'],
     unicode: '😉',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['wolf'],
     unicode: '🐺',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['woman'],
     unicode: '👩',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_artist'],
     unicode: '👩‍🎨',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_astronaut'],
     unicode: '👩‍🚀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_beard'],
     unicode: '🧔‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_cartwheeling'],
     unicode: '🤸‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['woman_cook'],
     unicode: '👩‍🍳',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_dancing'],
     unicode: '💃',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_facepalming'],
     unicode: '🤦‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_factory_worker'],
     unicode: '👩‍🏭',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_farmer'],
     unicode: '👩‍🌾',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_feeding_baby'],
     unicode: '👩‍🍼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_firefighter'],
     unicode: '👩‍🚒',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_health_worker'],
     unicode: '👩‍⚕',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_in_manual_wheelchair'],
     unicode: '👩‍🦽',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_in_motorized_wheelchair'],
     unicode: '👩‍🦼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_in_tuxedo'],
     unicode: '🤵‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_judge'],
     unicode: '👩‍⚖',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_juggling'],
     unicode: '🤹‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['woman_mechanic'],
     unicode: '👩‍🔧',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_office_worker'],
     unicode: '👩‍💼',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_pilot'],
     unicode: '👩‍✈',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_playing_handball'],
     unicode: '🤾‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['woman_playing_water_polo'],
     unicode: '🤽‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['woman_scientist'],
     unicode: '👩‍🔬',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_shrugging'],
     unicode: '🤷‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_singer'],
     unicode: '👩‍🎤',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_student'],
     unicode: '👩‍🎓',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_teacher'],
     unicode: '👩‍🏫',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_technologist'],
     unicode: '👩‍💻',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_with_headscarf'],
     unicode: '🧕',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_with_probing_cane'],
     unicode: '👩‍🦯',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_with_turban'],
     unicode: '👳‍♀',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['woman_with_veil'],
     unicode: '👰‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['womans_clothes'],
     unicode: '👚',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['womans_hat'],
     unicode: '👒',
-    category: 'Clothing'
+    category: 'Clothing',
   },
   {
     aliases: ['women_wrestling'],
     unicode: '🤼‍♀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['womens'],
     unicode: '🚺',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['wood'],
     unicode: '🪵',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['woozy_face'],
     unicode: '🥴',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['world_map'],
     unicode: '🗺',
-    category: 'Travel'
+    category: 'Travel',
   },
   {
     aliases: ['worm'],
     unicode: '🪱',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['worried'],
     unicode: '😟',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['wrench'],
     unicode: '🔧',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['wrestling'],
     unicode: '🤼',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['writing_hand'],
     unicode: '✍️',
-    category: 'Gesture'
+    category: 'Gesture',
   },
   {
     aliases: ['x'],
     unicode: '❌',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['yarn'],
     unicode: '🧶',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['yawning_face'],
     unicode: '🥱',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['yellow_circle'],
     unicode: '🟡',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['yellow_heart'],
     unicode: '💛',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['yellow_square'],
     unicode: '🟨',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['yemen'],
     unicode: '🇾🇪',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['yen'],
     unicode: '💴',
-    category: 'Object'
+    category: 'Object',
   },
   {
     aliases: ['yin_yang'],
     unicode: '☯️',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['yo_yo'],
     unicode: '🪀',
-    category: 'Activity'
+    category: 'Activity',
   },
   {
     aliases: ['yum'],
     unicode: '😋',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['zambia'],
     unicode: '🇿🇲',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['zany_face'],
     unicode: '🤪',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['zap'],
     unicode: '⚡️',
-    category: 'Nature'
+    category: 'Nature',
   },
   {
     aliases: ['zebra'],
     unicode: '🦓',
-    category: 'Animal'
+    category: 'Animal',
   },
   {
     aliases: ['zero'],
     unicode: '0️⃣',
-    category: 'Symbol'
+    category: 'Symbol',
   },
   {
     aliases: ['zimbabwe'],
     unicode: '🇿🇼',
-    category: 'Country'
+    category: 'Country',
   },
   {
     aliases: ['zipper_mouth_face'],
     unicode: '🤐',
-    category: 'Smiley'
+    category: 'Smiley',
   },
   {
     aliases: ['zombie'],
     unicode: '🧟',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['zombie_man'],
     unicode: '🧟‍♂️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['zombie_woman'],
     unicode: '🧟‍♀️',
-    category: 'Person'
+    category: 'Person',
   },
   {
     aliases: ['zzz'],
     unicode: '💤',
-    category: 'Symbol'
-  }
+    category: 'Symbol',
+  },
 ] as const;

@@ -110,7 +110,7 @@ describe('Special Elements', () => {
     { type: 'tip', expected: 'TIP' },
     { type: 'warning', expected: 'WARNING' },
     { type: 'danger', expected: 'DANGER' },
-    { type: 'important', expected: 'IMPORTANT' }
+    { type: 'important', expected: 'IMPORTANT' },
   ].forEach(({ type, expected }) => {
     it(`should return a ${expected} alert`, () => {
       expect(md.alert('Hello World!', type)).toBe(
@@ -126,7 +126,7 @@ describe('Tables', () => {
       md.table([
         ['Name', 'Age'],
         ['John', '20'],
-        ['Jane', '19']
+        ['Jane', '19'],
       ])
     ).toBe(
       `

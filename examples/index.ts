@@ -13,7 +13,7 @@ import exampleTable from './lib/table';
 | Builds the example markdown files that demonstrate the usage of the Tempo.
 |
 | To run this file, run the following command:
-|   `npm run build:examples`
+|   `npm run generate:examples`
 |
 */
 (() => {
@@ -31,7 +31,7 @@ import exampleTable from './lib/table';
   Promise.all([
     fs.writeFile(basicFile, basicResult),
     fs.writeFile(codeFile, codeResult),
-    fs.writeFile(tableFile, tableResult)
+    fs.writeFile(tableFile, tableResult),
   ]);
 
   console.log('Examples built successfully.');

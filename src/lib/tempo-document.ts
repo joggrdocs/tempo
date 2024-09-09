@@ -1,11 +1,11 @@
 import * as md from './markdown/markdown';
 import {
-  computeNodes,
-  computeText,
   type PlainTextNode,
   type TempoTextInput,
-  type TempoTextNode
-} from './TempoText';
+  type TempoTextNode,
+  computeNodes,
+  computeText,
+} from './tempo-text';
 
 /*
 |==========================================================================
@@ -193,9 +193,9 @@ export class TempoDocument {
       type: 'heading',
       data: {
         level: 1,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.h1(computeText(text))
+      computed: md.h1(computeText(text)),
     });
     return this;
   }
@@ -219,9 +219,9 @@ export class TempoDocument {
       type: 'heading',
       data: {
         level: 2,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.h2(computeText(text))
+      computed: md.h2(computeText(text)),
     });
     return this;
   }
@@ -245,9 +245,9 @@ export class TempoDocument {
       type: 'heading',
       data: {
         level: 3,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.h3(computeText(text))
+      computed: md.h3(computeText(text)),
     });
     return this;
   }
@@ -271,9 +271,9 @@ export class TempoDocument {
       type: 'heading',
       data: {
         level: 4,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.h4(computeText(text))
+      computed: md.h4(computeText(text)),
     });
     return this;
   }
@@ -297,9 +297,9 @@ export class TempoDocument {
       type: 'heading',
       data: {
         level: 5,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.h5(computeText(text))
+      computed: md.h5(computeText(text)),
     });
     return this;
   }
@@ -323,9 +323,9 @@ export class TempoDocument {
       type: 'heading',
       data: {
         level: 6,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.h6(computeText(text))
+      computed: md.h6(computeText(text)),
     });
     return this;
   }
@@ -354,9 +354,9 @@ export class TempoDocument {
     this.nodes.push({
       type: 'paragraph',
       data: {
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.paragraph(computeText(text))
+      computed: md.paragraph(computeText(text)),
     });
     return this;
   }
@@ -399,21 +399,21 @@ export class TempoDocument {
             type: 'header',
             order: undefined,
             data: {
-              nodes: header.map(computeNodes)
+              nodes: header.map(computeNodes),
             },
-            computed: md.tableHeader(header.map(computeText))
+            computed: md.tableHeader(header.map(computeText)),
           },
           ...(rows.map((row, i) => ({
             type: 'row',
             order: i,
             data: {
-              nodes: row.map(computeNodes)
+              nodes: row.map(computeNodes),
             },
-            computed: md.tableRow(row.map(computeText))
-          })) satisfies Array<TableRow<'row'>>)
-        ]
+            computed: md.tableRow(row.map(computeText)),
+          })) satisfies Array<TableRow<'row'>>),
+        ],
       },
-      computed: md.table(tableDefinition.map(row => row.map(computeText)))
+      computed: md.table(tableDefinition.map((row) => row.map(computeText))),
     });
     return this;
   }
@@ -436,9 +436,9 @@ export class TempoDocument {
     this.nodes.push({
       type: 'html',
       data: {
-        nodes: computeNodes<'plaintext'>(html)
+        nodes: computeNodes<'plaintext'>(html),
       },
-      computed: html
+      computed: html,
     });
     return this;
   }
@@ -475,9 +475,9 @@ export class TempoDocument {
       data: {
         code,
         language,
-        nodes: computeNodes<'code'>(code)
+        nodes: computeNodes<'code'>(code),
       },
-      computed: md.codeBlock(code, language)
+      computed: md.codeBlock(code, language),
     });
     return this;
   }
@@ -500,9 +500,9 @@ export class TempoDocument {
     this.nodes.push({
       type: 'blockQuote',
       data: {
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.blockQuote(computeText(text))
+      computed: md.blockQuote(computeText(text)),
     });
     return this;
   }
@@ -528,9 +528,9 @@ export class TempoDocument {
       data: {
         alt: text,
         src,
-        nodes: []
+        nodes: [],
       },
-      computed: md.image(text, src)
+      computed: md.image(text, src),
     });
     return this;
   }
@@ -552,9 +552,9 @@ export class TempoDocument {
     this.nodes.push({
       type: 'break',
       data: {
-        nodes: []
+        nodes: [],
       },
-      computed: md.thematicBreak()
+      computed: md.thematicBreak(),
     });
     return this;
   }
@@ -594,12 +594,12 @@ export class TempoDocument {
           order: i,
           type: 'listItem',
           data: {
-            nodes: computeNodes(t)
+            nodes: computeNodes(t),
           },
-          computed: md.li(computeText(t), i)
-        }))
+          computed: md.li(computeText(t), i),
+        })),
       },
-      computed: md.ol(text.map(computeText))
+      computed: md.ol(text.map(computeText)),
     });
     return this;
   }
@@ -629,16 +629,16 @@ export class TempoDocument {
     this.nodes.push({
       type: 'bulletList',
       data: {
-        nodes: text.map(t => ({
+        nodes: text.map((t) => ({
           type: 'listItem',
           order: undefined,
           data: {
-            nodes: computeNodes(t)
+            nodes: computeNodes(t),
           },
-          computed: md.li(computeText(t))
-        }))
+          computed: md.li(computeText(t)),
+        })),
       },
-      computed: md.ul(text.map(computeText))
+      computed: md.ul(text.map(computeText)),
     });
     return this;
   }
@@ -666,9 +666,9 @@ export class TempoDocument {
       type: 'alert',
       data: {
         type,
-        nodes: computeNodes(text)
+        nodes: computeNodes(text),
       },
-      computed: md.alert(computeText(text), type)
+      computed: md.alert(computeText(text), type),
     });
     return this;
   }
@@ -698,7 +698,7 @@ export class TempoDocument {
    */
   public toString(): string {
     return this.nodes
-      .map(section => section.computed)
+      .map((section) => section.computed)
       .join('\n\n')
       .trim()
       .concat('\n');

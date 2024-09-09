@@ -2,9 +2,9 @@ import supportedEmojis from '../data/emojis';
 import * as emoji from '../emoji';
 
 describe('codeBlock', () => {
-  supportedEmojis.forEach(emo => {
+  supportedEmojis.forEach((emo) => {
     describe(`:${emo.aliases[0]}:`, () => {
-      emo.aliases.forEach(alias => {
+      emo.aliases.forEach((alias) => {
         it(`should not throw an error for ":${alias}:"`, () => {
           expect(() => emoji.assertSupportedEmoji(alias)).not.toThrow();
         });
