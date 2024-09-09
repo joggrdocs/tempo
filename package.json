@@ -47,8 +47,6 @@
     "@vitest/coverage-istanbul": "^2.0.5",
     "type-fest": "^4.26.1",
     "typescript": "^5.6.2",
-    "vite": "^5.4.3",
-    "vite-plugin-dts": "^4.2.1",
     "vitest": "^2.0.5"
   },
   "packageManager": "yarn@4.4.1"
