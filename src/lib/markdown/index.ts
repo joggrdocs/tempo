@@ -1,10 +1,10 @@
 export {
-  type CodeBlockLanguage as SupportedLanguage,
-  assertCodeBlockLanguage as assertSupportedLanguage,
+  type CodeBlockLanguage,
+  assertCodeBlockLanguage,
 } from './code-block';
 export {
   type EmojiAliases,
   type EmojiUnicode,
-  assertEmoji as assertSupportedEmoji,
+  assertEmoji,
 } from './emoji';
 export * as default from './markdown';
