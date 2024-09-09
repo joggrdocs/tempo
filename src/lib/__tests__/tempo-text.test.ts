@@ -118,11 +118,11 @@ describe('strikeThrough', () => {
 describe('link', () => {
   it('should call md.link with the provided value and href', () => {
     const spy = vi.spyOn(md, 'link');
-    const value = 'Joggr.io';
+    const title = 'Joggr.io';
     const href = 'https://joggr.io';
-    txt.link(value, href);
+    txt.link({ title, href });
 
-    expect(spy).toHaveBeenCalledWith(value, href);
+    expect(spy).toHaveBeenCalledWith(title, href);
   });
 });
 
@@ -152,11 +152,11 @@ describe('nested', () => {
   });
 
   it('should return the computed value', () => {
-    const value = 'Hello World';
+    const title = 'Hello World';
     const txt = createText();
-    txt.bold((t) => t.link(value, 'https://example.com'));
+    txt.bold((t) => t.link({ title, href: 'https://example.com'}));
 
-    expect(txt.toString()).toEqual(`**[${value}](https://example.com)**`);
+    expect(txt.toString()).toEqual(`**[${title}](https://example.com)**`);
   });
 });
 
@@ -188,7 +188,7 @@ describe('outputs', () => {
         .plainText('/')
         .italic(value)
         .strikeThrough(value)
-        .link(value, value);
+        .link({ title: value,  href: value });
 
       expect(txtReal.toString()).toEqual(
         `${value} ; **${value}** / _${value}_ ~~${value}~~ [${value}](${value})`
@@ -204,7 +204,7 @@ describe('outputs', () => {
         .bold(value)
         .italic(value)
         .strikeThrough(value)
-        .link(value, 'https://example.com');
+        .link({ title: value,  href: 'https://example.com' });
 
       expect(txtReal.toJSON()).toEqual([
         {

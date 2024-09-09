@@ -1,10 +1,10 @@
 import { describe , it, expect } from 'vitest';
 
-import { TempoDocument } from '../tempo-document';
-import tempo from '../tempo';
+import { TempoDoc } from '../tempo-doc';
+import { createTempo } from '../tempo';
 
 describe('tempo', () => {
-  it('should return a document', () => {
-    expect(tempo()).toBeInstanceOf(TempoDocument);
+  it('should return a doc', () => {
+    expect(createTempo()).toBeInstanceOf(TempoDoc);
   });
 });

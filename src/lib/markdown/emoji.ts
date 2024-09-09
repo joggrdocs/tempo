@@ -1,4 +1,4 @@
-import supportedEmojis from './data/emojis';
+import supportedEmojis from '../../@generated/emojis';
 
 /*
 |==========================================================================
@@ -25,20 +25,24 @@ export type EmojiUnicode = Exclude<
 >;
 
 /**
- * @param emoji A unicode emoji
+ * Check if the given emoji is a supported (unicode) emoji
+ *
+ * @param emoji A emoji
  * @returns indicates whether the given emoji is a supported unicode emoji
  */
-export function isSupportedUnicode(
+export function isEmoji(
   emoji: EmojiAlias | EmojiUnicode
 ): emoji is EmojiUnicode {
   return supportedEmojis.some(({ unicode }) => unicode === emoji);
 }
 
 /**
+ * Check if the given emoji is an alias for a supported emoji
+ *
  * @param emoji An alias for an emoji (without the colons)
  * @returns indicates whether the given emoji is an alias for a supported emoji
  */
-export function isSupportedAlias(
+export function isEmojiAlias(
   emoji: EmojiAlias | EmojiUnicode
 ): emoji is EmojiAlias {
   return supportedEmojis.some((supportedEmoji) => {
@@ -51,13 +55,10 @@ export function isSupportedAlias(
  *
  * @throws if the given emoji is not valid
  */
-export function assertSupportedEmoji(
+export function assertEmoji(
   emoji: EmojiAlias | EmojiUnicode
 ): asserts emoji is EmojiAlias | EmojiUnicode {
-  if (
-    !isSupportedAlias(emoji as EmojiAlias) &&
-    !isSupportedUnicode(emoji as EmojiUnicode)
-  ) {
+  if (!isEmojiAlias(emoji as EmojiAlias) && !isEmoji(emoji as EmojiUnicode)) {
     throw new Error(`Invalid emoji: ${emoji}`);
   }
 }

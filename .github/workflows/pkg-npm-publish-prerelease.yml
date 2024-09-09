@@ -1,5 +1,5 @@
 name: 'pkg: Publish to npm'
-run-name: 'Publish to npm Registry (${{ inputs.version }})'
+run-name: 'Publish prerelease to npm Registry (${{ inputs.version }})'
 
 on:
   workflow_dispatch:
@@ -9,9 +9,8 @@ on:
         required: true
         type: choice
         options:
-          - patch
-          - minor
-          - major
+          - alpha
+          - beta
 
 jobs:
   publish:
@@ -30,11 +29,17 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
 
+      - name: '🔁 Sync GitHub Linguist'
+        run: 'yarn sync:linguist'
+
+      - name: '🔁 Sync GitHub Emoji'
+        run: 'yarn sync:emoji'
+
       - name: '🏗️ Build'
         run: yarn build
 
       - name: '🔼 Increment Version'
-        run: yarn version ${{ inputs.version }}
+        run: yarn version prerelease --preid=${{ inputs.version }}
 
       - name: '#️⃣ Get Version'
         uses: actions/github-script@v7

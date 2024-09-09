@@ -10,12 +10,6 @@ import * as md from './markdown/markdown';
 |
 */
 
-/*
-|------------------
-| TextNode Types
-|------------------
-*/
-
 export type TempoTextNodeType =
   | 'plaintext'
   | 'code'
@@ -118,9 +112,7 @@ export type TempoTextNodes<T extends TempoTextNode> = T extends PlainTextNode
 
 export type TempoTextInput =
   | string
-  // eslint-disable-next-line no-use-before-define
   | TempoText
-  // eslint-disable-next-line no-use-before-define
   | ((text: TempoText) => TempoText | string);
 
 /*
@@ -132,14 +124,6 @@ export type TempoTextInput =
 | other base types.
 |
 */
-
-function formatTextNode(text: string): TempoTextNode {
-  return {
-    type: 'plaintext',
-    data: undefined,
-    computed: text,
-  };
-}
 
 export function computeNodes<T extends TempoTextNodeType>(
   tempoTextInput: TempoTextInput
@@ -326,23 +310,25 @@ export class TempoText {
    * @example
    * ```ts
    * const doc = new Text()
-   *   .link('Google', 'https://www.google.com')
+   *   .link({
+   *    title: 'Google',
+   *    href: 'https://www.google.com'
+   *   })
    *   .toString();
    * // Output: '[Google](https://www.google.com)'
    *
-   * @param value A plaintext string to append to the collection of TextNodes.
+   * @param title A plaintext string to append to the collection of TextNodes.
    * @param href The href for the link.
-   * @param alt An optional alt text for the link.
    * @returns A new instance of the Text class, with the appended link.
    */
-  public link(text: TempoTextInput, href: string, alt?: string): this {
+  public link(payload: { title: TempoTextInput; href: string }): this {
     this.nodes.push({
       type: 'link',
       data: {
-        href,
-        nodes: computeNodes<'link'>(text),
+        href: payload.href,
+        nodes: computeNodes<'link'>(payload.title),
       },
-      computed: md.link(computeText(text), href),
+      computed: md.link(computeText(payload.title), payload.href),
     });
     return this;
   }
@@ -424,4 +410,18 @@ export class TempoText {
 
     return output.trim();
   }
+}
+
+/*
+|------------------
+| Utils & Helpers
+|------------------
+*/
+
+function formatTextNode(text: string): TempoTextNode {
+  return {
+    type: 'plaintext',
+    data: undefined,
+    computed: text,
+  };
 }

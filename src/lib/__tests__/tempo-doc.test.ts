@@ -1,10 +1,10 @@
 import { describe , it, expect } from 'vitest';
 
-import { TempoDocument, type TempoDocumentNode } from '../tempo-document';
+import { TempoDoc, type TempoDocNode } from '../tempo-doc';
 
 describe('initialization', () => {
   it('should prebuild nodes based off input', () => {
-    const initJSON: TempoDocumentNode[] = [
+    const initJSON: TempoDocNode[] = [
       {
         type: 'heading',
         data: {
@@ -33,12 +33,12 @@ describe('initialization', () => {
         computed: 'Hello World!',
       },
     ];
-    const document = new TempoDocument(initJSON);
+    const document = new TempoDoc(initJSON);
     expect(document.toJSON()).toEqual(initJSON);
   });
 
   it('should return empty nodes if no input', () => {
-    const document = new TempoDocument();
+    const document = new TempoDoc();
     expect(document.toJSON()).toEqual([]);
   });
 });
@@ -64,39 +64,39 @@ describe('Headings', () => {
   };
 
   it('should add a h1 heading', () => {
-    const document = new TempoDocument().h1('Hello World!');
+    const document = new TempoDoc().h1('Hello World!');
     expect(document.toJSON()).toEqual(getResult(1, 'Hello World!'));
   });
 
   it('should add a h2 heading', () => {
-    const document = new TempoDocument().h2('Hello World!');
+    const document = new TempoDoc().h2('Hello World!');
     expect(document.toJSON()).toEqual(getResult(2, 'Hello World!'));
   });
 
   it('should add a h3 heading', () => {
-    const document = new TempoDocument().h3('Hello World!');
+    const document = new TempoDoc().h3('Hello World!');
     expect(document.toJSON()).toEqual(getResult(3, 'Hello World!'));
   });
 
   it('should add a h4 heading', () => {
-    const document = new TempoDocument().h4('Hello World!');
+    const document = new TempoDoc().h4('Hello World!');
     expect(document.toJSON()).toEqual(getResult(4, 'Hello World!'));
   });
 
   it('should add a h5 heading', () => {
-    const document = new TempoDocument().h5('Hello World!');
+    const document = new TempoDoc().h5('Hello World!');
     expect(document.toJSON()).toEqual(getResult(5, 'Hello World!'));
   });
 
   it('should add a h6 heading', () => {
-    const document = new TempoDocument().h6('Hello World!');
+    const document = new TempoDoc().h6('Hello World!');
     expect(document.toJSON()).toEqual(getResult(6, 'Hello World!'));
   });
 });
 
 describe('Text Elements', () => {
   it('should add a paragraph', () => {
-    const document = new TempoDocument().paragraph('Hello World!');
+    const document = new TempoDoc().paragraph('Hello World!');
     expect(document.toJSON()).toEqual([
       {
         type: 'paragraph',
@@ -117,10 +117,12 @@ describe('Text Elements', () => {
 
 describe('Special Elements', () => {
   it('should add a table', () => {
-    const document = new TempoDocument().table([
-      ['Hello World!', 'Hello 2 World!'],
-      ['Hello 3 World!', 'Hello 4 World!'],
-    ]);
+    const document = new TempoDoc().table({
+      header: ['Hello World!', 'Hello 2 World!'],
+      rows: [
+        ['Hello 3 World!', 'Hello 4 World!'],
+      ]
+    });
     expect(document.toJSON()).toEqual([
       {
         type: 'table',
@@ -187,7 +189,7 @@ describe('Special Elements', () => {
   });
 
   it('should add html', () => {
-    const document = new TempoDocument().html('<div>Hello World!</div>');
+    const document = new TempoDoc().html('<div>Hello World!</div>');
     expect(document.toJSON()).toEqual([
       {
         type: 'html',
@@ -205,14 +207,14 @@ describe('Special Elements', () => {
     ]);
   });
 
-  it('should add a codeBlock', () => {
-    const document = new TempoDocument().codeBlock(
+  it('should add a code-block', () => {
+    const document = new TempoDoc().codeBlock(
       'console.log("Hello World!");',
       'javascript'
     );
     expect(document.toJSON()).toEqual([
       {
-        type: 'codeBlock',
+        type: 'code-block',
         data: {
           language: 'javascript',
           code: 'console.log("Hello World!");',
@@ -232,10 +234,10 @@ describe('Special Elements', () => {
   });
 
   it('should add a blockquote', () => {
-    const document = new TempoDocument().blockQuote('Hello World!');
+    const document = new TempoDoc().blockQuote('Hello World!');
     expect(document.toJSON()).toEqual([
       {
-        type: 'blockQuote',
+        type: 'blockquote',
         data: {
           nodes: [
             {
@@ -251,26 +253,52 @@ describe('Special Elements', () => {
   });
 
   it('should add an image', () => {
-    const document = new TempoDocument().image(
-      'example',
-      'https://example.com/image.png'
-    );
+    const document = new TempoDoc().image({
+      alt: 'example',
+      src: 'https://example.com/image.png',
+    });
 
     expect(document.toJSON()).toEqual([
       {
         type: 'image',
         data: {
-          alt: 'example',
           src: 'https://example.com/image.png',
-          nodes: [],
+          nodes: [{
+            type: 'plaintext',
+            data: undefined,
+            computed: 'example',
+          }],
         },
         computed: '![example](https://example.com/image.png)',
       },
     ]);
   });
 
+  it('should add an image with a link', () => {
+    const document = new TempoDoc().image({
+      alt: 'example',
+      src: 'https://example.com/image.png',
+      href: 'https://example.com',
+    });
+
+    expect(document.toJSON()).toEqual([
+      {
+        type: 'image',
+        data: {
+          src: 'https://example.com/image.png',
+          nodes: [{
+            type: 'plaintext',
+            data: undefined,
+            computed: 'example',
+          }],
+        },
+        computed: '[![example](https://example.com/image.png)](https://example.com)',
+      },
+    ]);
+  });
+
   it('should add a horizontal rule (break)', () => {
-    const document = new TempoDocument().break();
+    const document = new TempoDoc().break();
     expect(document.toJSON()).toEqual([
       {
         type: 'break',
@@ -282,23 +310,37 @@ describe('Special Elements', () => {
     ]);
   });
 
+  it ('should proxy hr to break', () => {
+    const document = new TempoDoc().hr();
+    expect(document.toJSON()).toEqual([
+      {
+        type: 'break',
+        data: {
+          nodes: [],
+        },
+        computed: '---',
+      },
+    ]);
+  });
+
+
   (
     [
-      { type: 'note', expected: 'NOTE' },
-      { type: undefined, expected: 'NOTE' },
-      { type: 'tip', expected: 'TIP' },
-      { type: 'warning', expected: 'WARNING' },
-      { type: 'caution', expected: 'CAUTION' },
-      { type: 'important', expected: 'IMPORTANT' },
+      { severity: 'note', expected: 'NOTE' },
+      { severity: undefined, expected: 'NOTE' },
+      { severity: 'tip', expected: 'TIP' },
+      { severity: 'warning', expected: 'WARNING' },
+      { severity: 'caution', expected: 'CAUTION' },
+      { severity: 'important', expected: 'IMPORTANT' },
     ] as const
-  ).forEach(({ type, expected }) => {
+  ).forEach(({ severity, expected }) => {
     it(`should return a ${expected} alert`, () => {
-      const document = new TempoDocument().alert('Hello World!', type);
+      const document = new TempoDoc().alert('Hello World!', severity);
       expect(document.toJSON()).toEqual([
         {
           type: 'alert',
           data: {
-            type: type === undefined ? 'note' : type,
+            severity: severity === undefined ? 'note' : severity,
             nodes: [
               {
                 type: 'plaintext',
@@ -316,18 +358,18 @@ describe('Special Elements', () => {
 
 describe('Lists', () => {
   it('should add an bullet (unordered) list', () => {
-    const document = new TempoDocument().bulletList([
+    const document = new TempoDoc().bulletList([
       'Hello World!',
       'Hello 2 World!',
       (txt) => txt.bold('Hello 3 World!'),
     ]);
     expect(document.toJSON()).toEqual([
       {
-        type: 'bulletList',
+        type: 'list-bullet',
         data: {
           nodes: [
             {
-              type: 'listItem',
+              type: 'list-item',
               order: undefined,
               data: {
                 nodes: [
@@ -341,7 +383,7 @@ describe('Lists', () => {
               computed: '- Hello World!',
             },
             {
-              type: 'listItem',
+              type: 'list-item',
               order: undefined,
               data: {
                 nodes: [
@@ -355,7 +397,7 @@ describe('Lists', () => {
               computed: '- Hello 2 World!',
             },
             {
-              type: 'listItem',
+              type: 'list-item',
               order: undefined,
               data: {
                 nodes: [
@@ -384,17 +426,17 @@ describe('Lists', () => {
   });
 
   it('should add an number (ordered) list', () => {
-    const document = new TempoDocument().numberList([
+    const document = new TempoDoc().numberList([
       'Hello World!',
       'Hello 2 World!',
     ]);
     expect(document.toJSON()).toEqual([
       {
-        type: 'numberList',
+        type: 'list-number',
         data: {
           nodes: [
             {
-              type: 'listItem',
+              type: 'list-item',
               order: 0,
               data: {
                 nodes: [
@@ -408,7 +450,7 @@ describe('Lists', () => {
               computed: '1. Hello World!',
             },
             {
-              type: 'listItem',
+              type: 'list-item',
               order: 1,
               data: {
                 nodes: [
@@ -432,7 +474,7 @@ describe('Lists', () => {
 describe('Outputs', () => {
   describe('toString', () => {
     it('should return a string', () => {
-      const document = new TempoDocument()
+      const document = new TempoDoc()
         .h1('Hello World!')
         .paragraph('Hello there!');
       expect(document.toString()).toEqual(
@@ -448,7 +490,7 @@ Hello there!
   });
 
   describe('toJSON', () => {
-    const document = new TempoDocument()
+    const document = new TempoDoc()
       .h1('Hello World!')
       .paragraph('Hello there!');
     it('should return a JSON object', () => {

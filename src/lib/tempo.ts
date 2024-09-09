@@ -1,21 +1,21 @@
-import { TempoDocument, type TempoDocumentNode } from './tempo-document';
+import { TempoDoc, type TempoDocNode } from './tempo-doc';
 
 /*
 |----------------------------------
 | Public API
 |----------------------------------
 |
-| The public API for creating a document. It is a wrapper around the Document class
-| and provides a chaining API for building a document.
+| The public API for creating a TempoDoc. It is a wrapper around the TempoDoc class
+| and provides a chaining API for building a TempoDoc.
 |
 | NOTE:
-| We do export the Document class, types, and interfaces, as we want to allow
-| for custom implementations of the Document class.
+| We do export the TempoDoc class, types, and interfaces, as we want to allow
+| for custom implementations of the TempoDoc class.
 |
 */
 
 /**
- * Create a new Document instance and build, append, or modify the DocumentNodes.
+ * Create a new TempoDoc instance and build, append, or modify the DocumentNodes.
  *
  * @example
  * ```ts
@@ -24,7 +24,10 @@ import { TempoDocument, type TempoDocumentNode } from './tempo-document';
  *  .paragraph((text) => {
  *    return text
  *      .plainText('This is a paragraph with ')
- *      .link('a link', 'https://example.com')
+ *      .link({
+ *        href: 'https://example.com',
+ *        title: 'a link'
+ *      });
  *  })
  *  .bulletList([
  *    'Item 1',
@@ -34,11 +37,9 @@ import { TempoDocument, type TempoDocumentNode } from './tempo-document';
  *  .toString();
  * ```
  *
- * @param documentNodes A list of DocumentNodes to initialize the Document.
- * @returns A new Document instance.
+ * @param nodes A list of TempoDocNodes to initialize the TempoDoc.
+ * @returns A new TempoDoc instance.
  */
-const tempo = (documentNodes?: TempoDocumentNode[]): TempoDocument => {
-  return new TempoDocument(documentNodes);
+export const createTempo = (nodes?: TempoDocNode[]): TempoDoc => {
+  return new TempoDoc(nodes);
 };
-
-export default tempo;
