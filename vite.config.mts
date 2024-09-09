@@ -2,7 +2,6 @@ import path from 'node:path';
 
 import { defineConfig as defineViteConfig } from 'vite';
 import viteDts from 'vite-plugin-dts';
-import viteTsconfigPaths from 'vite-tsconfig-paths';
 
 /**
  * Vite config
@@ -12,14 +11,14 @@ import viteTsconfigPaths from 'vite-tsconfig-paths';
 export default defineViteConfig({
   base: '/',
   mode: 'production',
-  plugins: [viteDts({ rollupTypes: true }), viteTsconfigPaths()],
+  plugins: [viteDts({ rollupTypes: true })],
   build: {
     outDir: path.join(__dirname, 'dist'),
     lib: {
       entry: {
-        index: path.resolve(__dirname, 'src/index.ts')
+        index: path.resolve(__dirname, 'src/index.ts'),
       },
-      name: 'config'
-    }
-  }
+      name: 'config',
+    },
+  },
 });

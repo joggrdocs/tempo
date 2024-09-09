@@ -1,4 +1,4 @@
-import { TempoDocument, type TempoDocumentNode } from './TempoDocument';
+import { TempoDocument, type TempoDocumentNode } from './tempo-document';
 
 /*
 |----------------------------------

@@ -106,17 +106,17 @@ export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
   emo.assertSupportedEmoji(value);
   if (emo.isSupportedAlias(value)) {
     const foundEmojiDefinition = supportedEmojis.find(({ aliases }) =>
-      aliases.some(alias => alias === value)
+      aliases.some((alias) => alias === value)
     ) as unknown as (typeof supportedEmojis)[number];
 
     if (foundEmojiDefinition.unicode === false) {
       return `:${value}:`;
-    } else {
-      return foundEmojiDefinition.unicode;
     }
-  } else {
-    return value;
+
+    return foundEmojiDefinition.unicode;
   }
+
+  return value;
 }
 
 export function alert(value: string, type: string): string {
@@ -134,7 +134,7 @@ export function li(value: string, order?: number): string {
 }
 
 export function ul(value: string[]): string {
-  return value.map(txt => li(txt)).join('\n');
+  return value.map((txt) => li(txt)).join('\n');
 }
 
 export function ol(value: string[]): string {
@@ -150,7 +150,7 @@ export function ol(value: string[]): string {
 export function tableHeader(value: string[]): string {
   return [
     `| ${value.join(' | ')} |`,
-    `| ${value.map(headerItem => '-'.repeat(headerItem.length)).join(' | ')} |`
+    `| ${value.map((headerItem) => '-'.repeat(headerItem.length)).join(' | ')} |`,
   ].join('\n');
 }
 
@@ -160,7 +160,7 @@ export function tableRow(value: string[]): string {
 
 export function table(value: string[][]): string {
   const [header, ...rows] = value;
-  return [tableHeader(header), ...rows.map(row => tableRow(row))].join('\n');
+  return [tableHeader(header), ...rows.map((row) => tableRow(row))].join('\n');
 }
 
 /*
@@ -174,7 +174,7 @@ export function cleanText(text: string): string {
 
   if (matched === null) {
     return '';
-  } else {
-    return matched.join('');
   }
+
+  return matched.join('');
 }

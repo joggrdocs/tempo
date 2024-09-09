@@ -1,4 +1,6 @@
-import { TempoDocument, TempoDocumentNode } from '../TempoDocument';
+import { describe , it, expect } from 'vitest';
+
+import { TempoDocument, type TempoDocumentNode } from '../tempo-document';
 
 describe('initialization', () => {
   it('should prebuild nodes based off input', () => {
@@ -11,11 +13,11 @@ describe('initialization', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: 'Hello World!'
-            }
-          ]
+              computed: 'Hello World!',
+            },
+          ],
         },
-        computed: '# Hello World!'
+        computed: '# Hello World!',
       },
       {
         type: 'paragraph',
@@ -24,12 +26,12 @@ describe('initialization', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: 'Hello World!'
-            }
-          ]
+              computed: 'Hello World!',
+            },
+          ],
         },
-        computed: 'Hello World!'
-      }
+        computed: 'Hello World!',
+      },
     ];
     const document = new TempoDocument(initJSON);
     expect(document.toJSON()).toEqual(initJSON);
@@ -52,12 +54,12 @@ describe('Headings', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: text
-            }
-          ]
+              computed: text,
+            },
+          ],
         },
-        computed: `#`.repeat(level).concat(' ', text)
-      }
+        computed: `#`.repeat(level).concat(' ', text),
+      },
     ];
   };
 
@@ -103,12 +105,12 @@ describe('Text Elements', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: 'Hello World!'
-            }
-          ]
+              computed: 'Hello World!',
+            },
+          ],
         },
-        computed: 'Hello World!'
-      }
+        computed: 'Hello World!',
+      },
     ]);
   });
 });
@@ -117,7 +119,7 @@ describe('Special Elements', () => {
   it('should add a table', () => {
     const document = new TempoDocument().table([
       ['Hello World!', 'Hello 2 World!'],
-      ['Hello 3 World!', 'Hello 4 World!']
+      ['Hello 3 World!', 'Hello 4 World!'],
     ]);
     expect(document.toJSON()).toEqual([
       {
@@ -133,22 +135,22 @@ describe('Special Elements', () => {
                     {
                       type: 'plaintext',
                       data: undefined,
-                      computed: 'Hello World!'
-                    }
+                      computed: 'Hello World!',
+                    },
                   ],
                   [
                     {
                       type: 'plaintext',
                       data: undefined,
-                      computed: 'Hello 2 World!'
-                    }
-                  ]
-                ]
+                      computed: 'Hello 2 World!',
+                    },
+                  ],
+                ],
               },
               computed: [
                 '| Hello World! | Hello 2 World! |',
-                '| ------------ | -------------- |'
-              ].join('\n')
+                '| ------------ | -------------- |',
+              ].join('\n'),
             },
             {
               type: 'row',
@@ -159,28 +161,28 @@ describe('Special Elements', () => {
                     {
                       type: 'plaintext',
                       data: undefined,
-                      computed: 'Hello 3 World!'
-                    }
+                      computed: 'Hello 3 World!',
+                    },
                   ],
                   [
                     {
                       type: 'plaintext',
                       data: undefined,
-                      computed: 'Hello 4 World!'
-                    }
-                  ]
-                ]
+                      computed: 'Hello 4 World!',
+                    },
+                  ],
+                ],
               },
-              computed: '| Hello 3 World! | Hello 4 World! |'
-            }
-          ]
+              computed: '| Hello 3 World! | Hello 4 World! |',
+            },
+          ],
         },
         computed: [
           '| Hello World! | Hello 2 World! |',
           '| ------------ | -------------- |',
-          '| Hello 3 World! | Hello 4 World! |'
-        ].join('\n')
-      }
+          '| Hello 3 World! | Hello 4 World! |',
+        ].join('\n'),
+      },
     ]);
   });
 
@@ -194,12 +196,12 @@ describe('Special Elements', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: '<div>Hello World!</div>'
-            }
-          ]
+              computed: '<div>Hello World!</div>',
+            },
+          ],
         },
-        computed: '<div>Hello World!</div>'
-      }
+        computed: '<div>Hello World!</div>',
+      },
     ]);
   });
 
@@ -218,14 +220,14 @@ describe('Special Elements', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: 'console.log("Hello World!");'
-            }
-          ]
+              computed: 'console.log("Hello World!");',
+            },
+          ],
         },
         computed: ['```javascript', 'console.log("Hello World!");', '```'].join(
           '\n'
-        )
-      }
+        ),
+      },
     ]);
   });
 
@@ -239,12 +241,12 @@ describe('Special Elements', () => {
             {
               type: 'plaintext',
               data: undefined,
-              computed: 'Hello World!'
-            }
-          ]
+              computed: 'Hello World!',
+            },
+          ],
         },
-        computed: '> Hello World!'
-      }
+        computed: '> Hello World!',
+      },
     ]);
   });
 
@@ -260,10 +262,10 @@ describe('Special Elements', () => {
         data: {
           alt: 'example',
           src: 'https://example.com/image.png',
-          nodes: []
+          nodes: [],
         },
-        computed: '![example](https://example.com/image.png)'
-      }
+        computed: '![example](https://example.com/image.png)',
+      },
     ]);
   });
 
@@ -273,10 +275,10 @@ describe('Special Elements', () => {
       {
         type: 'break',
         data: {
-          nodes: []
+          nodes: [],
         },
-        computed: '---'
-      }
+        computed: '---',
+      },
     ]);
   });
 
@@ -287,7 +289,7 @@ describe('Special Elements', () => {
       { type: 'tip', expected: 'TIP' },
       { type: 'warning', expected: 'WARNING' },
       { type: 'caution', expected: 'CAUTION' },
-      { type: 'important', expected: 'IMPORTANT' }
+      { type: 'important', expected: 'IMPORTANT' },
     ] as const
   ).forEach(({ type, expected }) => {
     it(`should return a ${expected} alert`, () => {
@@ -301,12 +303,12 @@ describe('Special Elements', () => {
               {
                 type: 'plaintext',
                 data: undefined,
-                computed: 'Hello World!'
-              }
-            ]
+                computed: 'Hello World!',
+              },
+            ],
           },
-          computed: `> [!${expected}]\n> Hello World!`
-        }
+          computed: `> [!${expected}]\n> Hello World!`,
+        },
       ]);
     });
   });
@@ -317,7 +319,7 @@ describe('Lists', () => {
     const document = new TempoDocument().bulletList([
       'Hello World!',
       'Hello 2 World!',
-      txt => txt.bold('Hello 3 World!')
+      (txt) => txt.bold('Hello 3 World!'),
     ]);
     expect(document.toJSON()).toEqual([
       {
@@ -332,11 +334,11 @@ describe('Lists', () => {
                   {
                     type: 'plaintext',
                     data: undefined,
-                    computed: 'Hello World!'
-                  }
-                ]
+                    computed: 'Hello World!',
+                  },
+                ],
               },
-              computed: '- Hello World!'
+              computed: '- Hello World!',
             },
             {
               type: 'listItem',
@@ -346,11 +348,11 @@ describe('Lists', () => {
                   {
                     type: 'plaintext',
                     data: undefined,
-                    computed: 'Hello 2 World!'
-                  }
-                ]
+                    computed: 'Hello 2 World!',
+                  },
+                ],
               },
-              computed: '- Hello 2 World!'
+              computed: '- Hello 2 World!',
             },
             {
               type: 'listItem',
@@ -364,27 +366,27 @@ describe('Lists', () => {
                         {
                           type: 'plaintext',
                           data: undefined,
-                          computed: 'Hello 3 World!'
-                        }
-                      ]
+                          computed: 'Hello 3 World!',
+                        },
+                      ],
                     },
-                    computed: '**Hello 3 World!**'
-                  }
-                ]
+                    computed: '**Hello 3 World!**',
+                  },
+                ],
               },
-              computed: '- **Hello 3 World!**'
-            }
-          ]
+              computed: '- **Hello 3 World!**',
+            },
+          ],
         },
-        computed: '- Hello World!\n- Hello 2 World!\n- **Hello 3 World!**'
-      }
+        computed: '- Hello World!\n- Hello 2 World!\n- **Hello 3 World!**',
+      },
     ]);
   });
 
   it('should add an number (ordered) list', () => {
     const document = new TempoDocument().numberList([
       'Hello World!',
-      'Hello 2 World!'
+      'Hello 2 World!',
     ]);
     expect(document.toJSON()).toEqual([
       {
@@ -399,11 +401,11 @@ describe('Lists', () => {
                   {
                     type: 'plaintext',
                     data: undefined,
-                    computed: 'Hello World!'
-                  }
-                ]
+                    computed: 'Hello World!',
+                  },
+                ],
               },
-              computed: '1. Hello World!'
+              computed: '1. Hello World!',
             },
             {
               type: 'listItem',
@@ -413,16 +415,16 @@ describe('Lists', () => {
                   {
                     type: 'plaintext',
                     data: undefined,
-                    computed: 'Hello 2 World!'
-                  }
-                ]
+                    computed: 'Hello 2 World!',
+                  },
+                ],
               },
-              computed: '2. Hello 2 World!'
-            }
-          ]
+              computed: '2. Hello 2 World!',
+            },
+          ],
         },
-        computed: '1. Hello World!\n2. Hello 2 World!'
-      }
+        computed: '1. Hello World!\n2. Hello 2 World!',
+      },
     ]);
   });
 });
@@ -444,38 +446,41 @@ Hello there!
       );
     });
   });
+
   describe('toJSON', () => {
     const document = new TempoDocument()
       .h1('Hello World!')
       .paragraph('Hello there!');
-    expect(document.toJSON()).toEqual([
-      {
-        type: 'heading',
-        data: {
-          level: 1,
-          nodes: [
-            {
-              type: 'plaintext',
-              data: undefined,
-              computed: 'Hello World!'
-            }
-          ]
+    it('should return a JSON object', () => {
+      expect(document.toJSON()).toEqual([
+        {
+          type: 'heading',
+          data: {
+            level: 1,
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: 'Hello World!',
+              },
+            ],
+          },
+          computed: '# Hello World!',
         },
-        computed: '# Hello World!'
-      },
-      {
-        type: 'paragraph',
-        data: {
-          nodes: [
-            {
-              type: 'plaintext',
-              data: undefined,
-              computed: 'Hello there!'
-            }
-          ]
+        {
+          type: 'paragraph',
+          data: {
+            nodes: [
+              {
+                type: 'plaintext',
+                data: undefined,
+                computed: 'Hello there!',
+              },
+            ],
+          },
+          computed: 'Hello there!',
         },
-        computed: 'Hello there!'
-      }
-    ]);
+      ]);
+    });
   });
 });

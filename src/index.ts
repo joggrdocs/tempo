@@ -1,11 +1,11 @@
 export { default } from './lib/tempo';
-export { TempoDocument } from './lib/TempoDocument';
-export { TempoText } from './lib/TempoText';
+export { TempoDocument } from './lib/tempo-document';
+export { TempoText } from './lib/tempo-text';
 export {
   type SupportedLanguage,
   supportedLanguages,
   assertSupportedLanguage,
   type EmojiAliases,
   type EmojiUnicode,
-  assertSupportedEmoji
+  assertSupportedEmoji,
 } from './lib/markdown/index';

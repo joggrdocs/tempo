@@ -4,10 +4,14 @@ function run() {
   return tempo()
     .h1('Hello World')
     .paragraph('This is a paragraph')
-    .h2(text => text.plainText('This is a heading with ').bold('bold text'))
-    .paragraph(text => text.bold('This is bold text'))
-    .paragraph(text => `This is inline text ${text.italic('with italic text')}`)
-    .paragraph(text => text.plainText('Foobar is a thing').bold('that is bold'))
+    .h2((text) => text.plainText('This is a heading with ').bold('bold text'))
+    .paragraph((text) => text.bold('This is bold text'))
+    .paragraph(
+      (text) => `This is inline text ${text.italic('with italic text')}`
+    )
+    .paragraph((text) =>
+      text.plainText('Foobar is a thing').bold('that is bold')
+    )
     .h2('Lists')
     .alert('This is an alert', 'caution')
     .paragraph('This is a list')

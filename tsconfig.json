@@ -1,7 +1,4 @@
 {
-  "ts-node": {
-    "files": true
-  },
   "compilerOptions": {
     "incremental": true,
     "module": "commonjs",
@@ -20,10 +17,7 @@
     "removeComments": false,
     "lib": ["ES2022"],
     "outDir": "./dist",
-    "baseUrl": ".",
-    "paths": {
-      "@launchpad/*": ["src/*"]
-    }
+    "baseUrl": "."
   },
   "typeRoots": ["node_modules/@types", "types"],
   "include": ["types/**/*", "src/**/*"],

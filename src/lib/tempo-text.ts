@@ -137,7 +137,7 @@ function formatTextNode(text: string): TempoTextNode {
   return {
     type: 'plaintext',
     data: undefined,
-    computed: text
+    computed: text,
   };
 }
 
@@ -148,27 +148,35 @@ export function computeNodes<T extends TempoTextNodeType>(
     return [formatTextNode(tempoTextInput)] as TempoTextNodes<
       TempoTextNodeByType<T>
     >;
-  } else if (tempoTextInput instanceof TempoText) {
+  }
+
+  if (tempoTextInput instanceof TempoText) {
     return tempoTextInput.toJSON() as TempoTextNodes<TempoTextNodeByType<T>>;
-  } else if (typeof tempoTextInput === 'function') {
+  }
+
+  if (typeof tempoTextInput === 'function') {
     const result = tempoTextInput(new TempoText());
     return computeNodes<T>(result);
-  } else {
-    throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
   }
+
+  throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
 }
 
 export function computeText(tempoTextInput: TempoTextInput): string {
   if (typeof tempoTextInput === 'string') {
     return tempoTextInput;
-  } else if (tempoTextInput instanceof TempoText) {
+  }
+
+  if (tempoTextInput instanceof TempoText) {
     return tempoTextInput.toString();
-  } else if (typeof tempoTextInput === 'function') {
+  }
+
+  if (typeof tempoTextInput === 'function') {
     const result = tempoTextInput(new TempoText());
     return computeText(result);
-  } else {
-    throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
   }
+
+  throw new TypeError(`Invalid text type: ${typeof tempoTextInput}`);
 }
 
 /*
@@ -207,7 +215,7 @@ export class TempoText {
     this.nodes.push({
       type: 'plaintext',
       data: undefined,
-      computed: computeText(value)
+      computed: computeText(value),
     });
     return this;
   }
@@ -230,9 +238,9 @@ export class TempoText {
     this.nodes.push({
       type: 'code',
       data: {
-        nodes: computeNodes<'code'>(text)
+        nodes: computeNodes<'code'>(text),
       },
-      computed: md.code(computeText(text))
+      computed: md.code(computeText(text)),
     });
     return this;
   }
@@ -255,9 +263,9 @@ export class TempoText {
     this.nodes.push({
       type: 'bold',
       data: {
-        nodes: computeNodes<'bold'>(text)
+        nodes: computeNodes<'bold'>(text),
       },
-      computed: md.bold(computeText(text))
+      computed: md.bold(computeText(text)),
     });
     return this;
   }
@@ -280,9 +288,9 @@ export class TempoText {
     this.nodes.push({
       type: 'italic',
       data: {
-        nodes: computeNodes<'italic'>(text)
+        nodes: computeNodes<'italic'>(text),
       },
-      computed: md.italic(computeText(text))
+      computed: md.italic(computeText(text)),
     });
     return this;
   }
@@ -305,9 +313,9 @@ export class TempoText {
     this.nodes.push({
       type: 'strikeThrough',
       data: {
-        nodes: computeNodes<'strikeThrough'>(text)
+        nodes: computeNodes<'strikeThrough'>(text),
       },
-      computed: md.strikeThrough(computeText(text))
+      computed: md.strikeThrough(computeText(text)),
     });
     return this;
   }
@@ -332,9 +340,9 @@ export class TempoText {
       type: 'link',
       data: {
         href,
-        nodes: computeNodes<'link'>(text)
+        nodes: computeNodes<'link'>(text),
       },
-      computed: md.link(computeText(text), href)
+      computed: md.link(computeText(text), href),
     });
     return this;
   }
@@ -358,9 +366,9 @@ export class TempoText {
       type: 'emoji',
       data: {
         emoji,
-        nodes: computeNodes<'emoji'>(emoji)
+        nodes: computeNodes<'emoji'>(emoji),
       },
-      computed: md.emoji(emoji)
+      computed: md.emoji(emoji),
     });
     return this;
   }

@@ -1,16 +1,16 @@
-import { TempoText, computeNodes, computeText } from '../TempoText';
+import { describe , it, expect, beforeEach, afterEach, vi } from 'vitest';
+
+
+import { TempoText, computeNodes, computeText } from '../tempo-text';
 import md from '../markdown';
 
-jest.mock('../markdown/markdown');
-
 let txt: TempoText;
-
 beforeEach(() => {
   txt = new TempoText();
 });
 
 afterEach(() => {
-  jest.resetAllMocks();
+  vi.restoreAllMocks();
 });
 
 describe('computeText', () => {
@@ -25,7 +25,7 @@ describe('computeText', () => {
   });
 
   it('should compute text from `(Text) => Text | string`', () => {
-    expect(computeText(text => text.plainText('Hello World!'))).toEqual(
+    expect(computeText((text) => text.plainText('Hello World!'))).toEqual(
       'Hello World!'
     );
   });
@@ -43,8 +43,8 @@ describe('computeNodes', () => {
       {
         type: 'plaintext',
         data: undefined,
-        computed: 'Hello World!'
-      }
+        computed: 'Hello World!',
+      },
     ]);
   });
 
@@ -53,18 +53,18 @@ describe('computeNodes', () => {
       {
         type: 'plaintext',
         data: undefined,
-        computed: 'Hello World!'
-      }
+        computed: 'Hello World!',
+      },
     ]);
   });
 
   it('should compute nodes from `(Text) => Text | string`', () => {
-    expect(computeNodes(text => text.plainText('Hello World!'))).toEqual([
+    expect(computeNodes((text) => text.plainText('Hello World!'))).toEqual([
       {
         type: 'plaintext',
         data: undefined,
-        computed: 'Hello World!'
-      }
+        computed: 'Hello World!',
+      },
     ]);
   });
 
@@ -77,77 +77,84 @@ describe('computeNodes', () => {
 
 describe('code', () => {
   it('should call md.code with the provided value', () => {
+    const spy = vi.spyOn(md, 'code');
     const value = 'const foo = "bar";';
     txt.code(value);
 
-    expect(md.code).toHaveBeenCalledWith(value);
+    expect(spy).toHaveBeenCalledWith(value);
   });
 });
 
 describe('bold', () => {
   it('should call md.bold with the provided value', () => {
+    const spy = vi.spyOn(md, 'bold');
     const value = 'Hello';
     txt.bold(value);
 
-    expect(md.bold).toHaveBeenCalledWith(value);
+    expect(spy).toHaveBeenCalledWith(value);
   });
 });
 
 describe('italic', () => {
   it('should call md.italic with the provided value', () => {
+    const spy = vi.spyOn(md, 'italic');
     const value = 'World';
     txt.italic(value);
 
-    expect(md.italic).toHaveBeenCalledWith(value);
+    expect(spy).toHaveBeenCalledWith(value);
   });
 });
 
 describe('strikeThrough', () => {
   it('should call md.strikeThrough with the provided value', () => {
+    const spy = vi.spyOn(md, 'strikeThrough');
     const value = 'Strike';
     txt.strikeThrough(value);
 
-    expect(md.strikeThrough).toHaveBeenCalledWith(value);
+    expect(spy).toHaveBeenCalledWith(value);
   });
 });
 
 describe('link', () => {
   it('should call md.link with the provided value and href', () => {
+    const spy = vi.spyOn(md, 'link');
     const value = 'Joggr.io';
     const href = 'https://joggr.io';
     txt.link(value, href);
 
-    expect(md.link).toHaveBeenCalledWith(value, href);
+    expect(spy).toHaveBeenCalledWith(value, href);
   });
 });
 
 describe('emoji', () => {
   it('should push the provided emoji value to the text', () => {
+    const spy = vi.spyOn(md, 'emoji');
     const emoji = '👍';
     txt.emoji(emoji);
-    expect(md.emoji).toHaveBeenCalledWith(emoji);
+    expect(spy).toHaveBeenCalledWith(emoji);
   });
 
   it('should push the provided emoji alias to the text', () => {
+    const spy = vi.spyOn(md, 'emoji');
     const emoji = 'smile';
     txt.emoji(emoji);
-    expect(md.emoji).toHaveBeenCalledWith(emoji);
+    expect(spy).toHaveBeenCalledWith(emoji);
   });
 });
 
 describe('nested', () => {
   let createText: () => TempoText;
   beforeEach(async () => {
-    jest.unmock('../markdown/markdown');
-    jest.resetModules();
-    const textImport = await import('../TempoText');
+    vi.restoreAllMocks();
+    vi.resetModules();
+    const textImport = await import('../tempo-text');
     createText = () => new textImport.TempoText();
   });
 
   it('should return the computed value', () => {
     const value = 'Hello World';
     const txt = createText();
-    txt.bold(t => t.link(value, 'https://example.com'));
+    txt.bold((t) => t.link(value, 'https://example.com'));
 
     expect(txt.toString()).toEqual(`**[${value}](https://example.com)**`);
   });
@@ -165,9 +172,9 @@ describe('toString', () => {
 describe('outputs', () => {
   let createText: () => TempoText;
   beforeEach(async () => {
-    jest.unmock('../markdown/markdown');
-    jest.resetModules();
-    const textImport = await import('../TempoText');
+    vi.restoreAllMocks();
+    vi.resetModules();
+    const textImport = await import('../tempo-text');
     createText = () => new textImport.TempoText();
   });
 
@@ -203,7 +210,7 @@ describe('outputs', () => {
         {
           type: 'plaintext',
           data: undefined,
-          computed: value
+          computed: value,
         },
         {
           type: 'bold',
@@ -212,11 +219,11 @@ describe('outputs', () => {
               {
                 type: 'plaintext',
                 data: undefined,
-                computed: value
-              }
-            ]
+                computed: value,
+              },
+            ],
           },
-          computed: `**${value}**`
+          computed: `**${value}**`,
         },
         {
           type: 'italic',
@@ -225,11 +232,11 @@ describe('outputs', () => {
               {
                 type: 'plaintext',
                 data: undefined,
-                computed: value
-              }
-            ]
+                computed: value,
+              },
+            ],
           },
-          computed: `_${value}_`
+          computed: `_${value}_`,
         },
         {
           type: 'strikeThrough',
@@ -238,11 +245,11 @@ describe('outputs', () => {
               {
                 type: 'plaintext',
                 data: undefined,
-                computed: value
-              }
-            ]
+                computed: value,
+              },
+            ],
           },
-          computed: `~~${value}~~`
+          computed: `~~${value}~~`,
         },
         {
           type: 'link',
@@ -252,12 +259,12 @@ describe('outputs', () => {
               {
                 type: 'plaintext',
                 data: undefined,
-                computed: value
-              }
-            ]
+                computed: value,
+              },
+            ],
           },
-          computed: `[${value}](https://example.com)`
-        }
+          computed: `[${value}](https://example.com)`,
+        },
       ]);
     });
   });
