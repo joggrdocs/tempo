@@ -25,7 +25,7 @@ jobs:
       - name: '📦 Install Packages'
         run: yarn install
       - name: '🕵️ Code Linting & Formatting'
-        run: yarn turbo analyze:ci
+        run: yarn analyze:ci
       - name: '🟦 Typecheck'
         run: yarn analyze:types
       - name: '⚡️ Test'
