@@ -71,9 +71,8 @@ export type BlockQuoteNode = DocNode<'blockquote', TempoTextNode[]>;
 
 export type ImageNode = DocNode<
   'image',
-  [],
+  TempoTextNode[],
   {
-    alt: TempoTextNode[];
     src: string;
     href?: string;
   }
@@ -100,9 +99,18 @@ export type NumberListNode = DocNode<
   ListNodeItem<'list-number'>[]
 >;
 
-export type AlertType = 'note' | 'important' | 'warning' | 'tip' | 'caution';
+export type AlertSeverity =
+  | 'note'
+  | 'important'
+  | 'warning'
+  | 'tip'
+  | 'caution';
 
-export type AlertNode = DocNode<'alert', TempoTextNode[], { type: AlertType }>;
+export type AlertNode = DocNode<
+  'alert',
+  TempoTextNode[],
+  { severity: AlertSeverity }
+>;
 
 export type TempoDocNode =
   | HeadingNode
@@ -527,14 +535,13 @@ export class TempoDoc {
     this.nodes.push({
       type: 'image',
       data: {
-        alt: computeNodes(payload.alt),
+        nodes: computeNodes(payload.alt),
         src: payload.src,
-        nodes: [],
       },
       computed: payload.href
         ? md.link(md.image(computeText(payload.alt), payload.src), payload.href)
         : md.image(computeText(payload.alt), payload.src),
-    });
+    } satisfies ImageNode);
     return this;
   }
 
@@ -670,18 +677,18 @@ export class TempoDoc {
    * @see https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @param type the type of alert to render, defaults to 'note'
+   * @param severity the type of alert to render, defaults to 'note'
    * @returns The TempoDoc instance with the alert appended.
    */
-  public alert(text: TempoTextInput, type: AlertType = 'note'): this {
+  public alert(text: TempoTextInput, severity: AlertSeverity = 'note'): this {
     this.nodes.push({
       type: 'alert',
       data: {
-        type,
+        severity: severity,
         nodes: computeNodes(text),
       },
-      computed: md.alert(computeText(text), type),
-    });
+      computed: md.alert(computeText(text), severity),
+    } satisfies AlertNode);
     return this;
   }
 
