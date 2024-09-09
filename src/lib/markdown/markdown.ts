@@ -1,5 +1,5 @@
+import supportedEmojis from '../../@generated/emojis';
 import * as cb from './code-block';
-import supportedEmojis from './data/emojis';
 import * as emo from './emoji';
 
 /*
@@ -94,17 +94,17 @@ export function image(value: string, src: string): string {
 
 export function codeBlock(
   value: string,
-  language?: cb.SupportedLanguage
+  language?: cb.CodeBlockLanguage
 ): string {
   if (language !== undefined) {
-    cb.assertSupportedLanguage(language);
+    cb.assertCodeBlockLanguage(language);
   }
   return `\`\`\`${language ?? ''}\n${value}\n\`\`\``;
 }
 
 export function emoji(value: emo.EmojiAlias | emo.EmojiUnicode): string {
-  emo.assertSupportedEmoji(value);
-  if (emo.isSupportedAlias(value)) {
+  emo.assertEmoji(value);
+  if (emo.isEmojiAlias(value)) {
     const foundEmojiDefinition = supportedEmojis.find(({ aliases }) =>
       aliases.some((alias) => alias === value)
     ) as unknown as (typeof supportedEmojis)[number];

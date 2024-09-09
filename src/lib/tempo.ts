@@ -1,4 +1,4 @@
-import { TempoDocument, type TempoDocumentNode } from './tempo-document';
+import { TempoDoc, type TempoDocNode } from './tempo-doc';
 
 /*
 |----------------------------------
@@ -37,8 +37,8 @@ import { TempoDocument, type TempoDocumentNode } from './tempo-document';
  * @param documentNodes A list of DocumentNodes to initialize the Document.
  * @returns A new Document instance.
  */
-const tempo = (documentNodes?: TempoDocumentNode[]): TempoDocument => {
-  return new TempoDocument(documentNodes);
+const tempo = (documentNodes?: TempoDocNode[]): TempoDoc => {
+  return new TempoDoc(documentNodes);
 };
 
 export default tempo;

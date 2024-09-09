@@ -1,5 +1,5 @@
 export { default } from './lib/tempo';
-export { TempoDocument } from './lib/tempo-document';
+export { TempoDoc as TempoDocument } from './lib/tempo-doc';
 export { TempoText } from './lib/tempo-text';
 export {
   type SupportedLanguage,

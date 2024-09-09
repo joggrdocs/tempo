@@ -1,3 +1,5 @@
+import type * as TypeFest from 'type-fest';
+
 import * as md from './markdown/markdown';
 import {
   type PlainTextNode,
@@ -12,53 +14,35 @@ import {
 | Document
 |==========================================================================
 |
-| Wrapper around markdown functions to make it easier to build a document,
+| Wrapper around markdown functions to make it easier to build a TempoDoc,
 | using a chaining API.
 |
 */
 
-/*
-|------------------
-| DocumentNode Types
-|------------------
-*/
-
-export type DocumentNodeType =
+export type DocNodeType =
   | 'heading'
   | 'paragraph'
   | 'table'
   | 'html'
-  | 'codeBlock'
-  | 'blockQuote'
+  | 'code-block'
+  | 'blockquote'
   | 'image'
   | 'break'
-  | 'numberList'
-  | 'bulletList'
+  | 'list-number'
+  | 'list-bullet'
   | 'alert';
 
-interface BaseDocumentNode<N extends unknown[], D extends object = object> {
-  type: DocumentNodeType;
-  data: {
-    nodes: N;
-  } & D;
-  computed: string;
-}
+export type HeadingNode = DocNode<
+  'heading',
+  TempoTextNode[],
+  {
+    level: 1 | 2 | 3 | 4 | 5 | 6;
+  }
+>;
 
-export interface HeadingNode
-  extends BaseDocumentNode<
-    TempoTextNode[],
-    {
-      level: 1 | 2 | 3 | 4 | 5 | 6;
-    }
-  > {
-  type: 'heading';
-}
+export type ParagraphNode = DocNode<'paragraph', TempoTextNode[]>;
 
-export interface ParagraphNode extends BaseDocumentNode<TempoTextNode[]> {
-  type: 'paragraph';
-}
-
-interface TableRow<T extends 'row' | 'header'> {
+export interface TableNodeRow<T extends 'row' | 'header'> {
   type: T;
   order: T extends 'row' ? number : undefined;
   data: {
@@ -67,73 +51,60 @@ interface TableRow<T extends 'row' | 'header'> {
   computed: string;
 }
 
-export interface TableNode
-  extends BaseDocumentNode<[TableRow<'header'>, ...Array<TableRow<'row'>>]> {
-  type: 'table';
-}
+export type TableNode = DocNode<
+  'table',
+  [TableNodeRow<'header'>, ...Array<TableNodeRow<'row'>>]
+>;
 
-export interface HtmlNode extends BaseDocumentNode<PlainTextNode[]> {
-  type: 'html';
-}
+export type HtmlNode = DocNode<'html', PlainTextNode[]>;
 
-export interface CodeBlockNode
-  extends BaseDocumentNode<
-    PlainTextNode[],
-    {
-      code: string;
-      language?: md.SupportedLanguage;
-    }
-  > {
-  type: 'codeBlock';
-}
+export type CodeBlockNode = DocNode<
+  'code-block',
+  PlainTextNode[],
+  {
+    code: string;
+    language?: md.CodeBlockLanguage;
+  }
+>;
 
-export interface BlockQuoteNode extends BaseDocumentNode<TempoTextNode[]> {
-  type: 'blockQuote';
-}
+export type BlockQuoteNode = DocNode<'blockquote', TempoTextNode[]>;
 
-export interface ImageNode
-  extends BaseDocumentNode<
-    [],
-    {
-      alt: string;
-      src: string;
-    }
-  > {
-  type: 'image';
-  computed: string;
-}
+export type ImageNode = DocNode<
+  'image',
+  [],
+  {
+    alt: TempoTextNode[];
+    src: string;
+    href?: string;
+  }
+>;
 
-export interface BreakNode extends BaseDocumentNode<[]> {
-  type: 'break';
-}
+export type BreakNode = DocNode<'break', []>;
 
-interface ListItem<T extends 'numberList' | 'bulletList'> {
-  type: 'listItem';
-  order: T extends 'numberList' ? number : undefined;
+export interface ListNodeItem<T extends 'list-number' | 'list-bullet'> {
+  type: 'list-item';
+  order: T extends 'list-number' ? number : undefined;
   data: {
     nodes: TempoTextNode[];
   };
   computed: string;
 }
 
-export interface BulletListNode
-  extends BaseDocumentNode<Array<ListItem<'bulletList'>>> {
-  type: 'bulletList';
-}
+export type BulletListNode = DocNode<
+  'list-bullet',
+  ListNodeItem<'list-bullet'>[]
+>;
 
-export interface NumberListNode
-  extends BaseDocumentNode<Array<ListItem<'numberList'>>> {
-  type: 'numberList';
-}
+export type NumberListNode = DocNode<
+  'list-number',
+  ListNodeItem<'list-number'>[]
+>;
 
 export type AlertType = 'note' | 'important' | 'warning' | 'tip' | 'caution';
 
-export interface AlertNode
-  extends BaseDocumentNode<TempoTextNode[], { type: AlertType }> {
-  type: 'alert';
-}
+export type AlertNode = DocNode<'alert', TempoTextNode[], { type: AlertType }>;
 
-export type TempoDocumentNode =
+export type TempoDocNode =
   | HeadingNode
   | ParagraphNode
   | TableNode
@@ -148,24 +119,29 @@ export type TempoDocumentNode =
 
 /*
 |----------------------------------
-| TempoDocument Class
+| TempoDoc Class
 |----------------------------------
 |
-| The primary class for building a document. It is a wrapper around the
-| markdown functions, and provides a chaining API for building a document.
+| The primary class for building a TempoDoc. It is a wrapper around the
+| markdown functions, and provides a chaining API for building a TempoDoc.
 |
 */
 
 /**
- * TempoDocument class.
+ * TempoDoc class.
  *
- * A class for building a document, using a chaining API.
+ * A class for building a TempoDoc, using a chaining API.
  */
-export class TempoDocument {
-  private readonly nodes: TempoDocumentNode[];
+export class TempoDoc {
+  private readonly nodes: TempoDocNode[];
 
-  constructor(documentNodes?: TempoDocumentNode[]) {
-    this.nodes = documentNodes ?? [];
+  /**
+   * Create a new TempoDoc instance with the ability to pre-append nodes.
+   *
+   * @param nodes An array of TempoDocNode types.
+   */
+  constructor(nodes?: TempoDocNode[]) {
+    this.nodes = nodes ?? [];
   }
 
   /*
@@ -175,7 +151,7 @@ export class TempoDocument {
   */
 
   /**
-   * Append a heading (h1) to the document.
+   * Append a heading (h1) to the TempoDoc.
    *
    * @example
    * ```ts
@@ -186,7 +162,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the heading appended.
+   * @returns The TempoDoc instance with the heading appended.
    */
   public h1(text: TempoTextInput): this {
     this.nodes.push({
@@ -201,7 +177,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a heading (h2) to the document.
+   * Append a heading (h2) to the TempoDoc.
    *
    * @example
    * ```ts
@@ -212,7 +188,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the heading appended.
+   * @returns The TempoDoc instance with the heading appended.
    */
   public h2(text: TempoTextInput): this {
     this.nodes.push({
@@ -227,7 +203,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a heading (h3) to the document.
+   * Append a heading (h3) to the TempoDoc.
    *
    * @example
    * ```ts
@@ -238,7 +214,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the heading appended.
+   * @returns The TempoDoc instance with the heading appended.
    */
   public h3(text: TempoTextInput): this {
     this.nodes.push({
@@ -253,7 +229,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a heading (h4) to the document.
+   * Append a heading (h4) to the TempoDoc.
    *
    * @example
    * ```ts
@@ -264,7 +240,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the heading appended.
+   * @returns The TempoDoc instance with the heading appended.
    */
   public h4(text: TempoTextInput): this {
     this.nodes.push({
@@ -279,7 +255,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a heading (h5) to the document.
+   * Append a heading (h5) to the TempoDoc.
    *
    * @example
    * ```ts
@@ -290,7 +266,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the heading appended.
+   * @returns The TempoDoc instance with the heading appended.
    */
   public h5(text: TempoTextInput): this {
     this.nodes.push({
@@ -305,7 +281,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a heading (h6) to the document.
+   * Append a heading (h6) to the TempoDoc.
    *
    * @example
    * ```ts
@@ -316,7 +292,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the heading appended.
+   * @returns The TempoDoc instance with the heading appended.
    */
   public h6(text: TempoTextInput): this {
     this.nodes.push({
@@ -337,7 +313,7 @@ export class TempoDocument {
   */
 
   /**
-   * Append a paragraph to the document.
+   * Append a paragraph to the TempoDoc.
    *
    * @example
    * ```ts
@@ -348,7 +324,7 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the paragraph appended.
+   * @returns The TempoDoc instance with the paragraph appended.
    */
   public paragraph(text: TempoTextInput): this {
     this.nodes.push({
@@ -368,16 +344,18 @@ export class TempoDocument {
   */
 
   /**
-   * Append a table to the document.
+   * Append a table to the TempoDoc.
    *
    * @example
    * ```ts
    * const doc = tempo()
-   *  .table([
-   *    ['Name', 'email'],
-   *    ['John Doe', 'jdoe@gmail.com'],
-   *    ['Jane Doe', 'jane@gmail.com']
-   *  ])
+   *  .table({
+   *    header: ['Name', 'email'],
+   *    rows: [
+   *      ['John Doe', 'jdoe@gmail.com'],
+   *      ['Jane Doe', 'jane@gmail.com']
+   *    ]
+   *  })
    *  .toString();
    * // Output:
    * // | Name     | email          |
@@ -386,11 +364,16 @@ export class TempoDocument {
    * // | Jane Doe | jane@gmail.com |
    * ```
    *
-   * @param tableDefinition An array of arrays of the TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance. With the first array being the header row.
-   * @returns The TempoDocument instance with the table appended.
+   * @param payload The table payload.
+   * @param payload.headers An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param payload.rows An array of arrays of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @returns The TempoDoc instance with the table appended.
    */
-  public table(tableDefinition: TempoTextInput[][]): this {
-    const [header, ...rows] = tableDefinition;
+  public table(payload: {
+    header: TempoTextInput[];
+    rows: TempoTextInput[][];
+  }): this {
+    const { header, rows } = payload;
     this.nodes.push({
       type: 'table',
       data: {
@@ -402,7 +385,7 @@ export class TempoDocument {
               nodes: header.map(computeNodes),
             },
             computed: md.tableHeader(header.map(computeText)),
-          },
+          } satisfies TableNodeRow<'header'>,
           ...(rows.map((row, i) => ({
             type: 'row',
             order: i,
@@ -410,16 +393,16 @@ export class TempoDocument {
               nodes: row.map(computeNodes),
             },
             computed: md.tableRow(row.map(computeText)),
-          })) satisfies Array<TableRow<'row'>>),
+          })) satisfies Array<TableNodeRow<'row'>>),
         ],
       },
-      computed: md.table(tableDefinition.map((row) => row.map(computeText))),
+      computed: md.table([header, ...rows].map((row) => row.map(computeText))),
     });
     return this;
   }
 
   /**
-   * Append a raw HTML string to the document.
+   * Append a raw HTML string to the TempoDoc.
    *
    * @example
    * ```ts
@@ -430,7 +413,7 @@ export class TempoDocument {
    * ```
    *
    * @param html A string of raw HTML.
-   * @returns The TempoDocument instance with the HTML appended.
+   * @returns The TempoDoc instance with the HTML appended.
    */
   public html(html: string): this {
     this.nodes.push({
@@ -444,7 +427,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a code block to the document.
+   * Append a code block to the TempoDoc.
    *
    * @example
    * ```ts
@@ -467,11 +450,11 @@ export class TempoDocument {
    *
    * @param code A string of code.
    * @param language A supported language for the code block.
-   * @returns The TempoDocument instance with the code block appended.
+   * @returns The TempoDoc instance with the code block appended.
    */
-  public codeBlock(code: string, language?: md.SupportedLanguage): this {
+  public codeBlock(code: string, language?: md.CodeBlockLanguage): this {
     this.nodes.push({
-      type: 'codeBlock',
+      type: 'code-block',
       data: {
         code,
         language,
@@ -483,7 +466,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a block quote to the document.
+   * Append a block quote to the TempoDoc.
    *
    * @example
    * ```ts
@@ -494,11 +477,11 @@ export class TempoDocument {
    * ```
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the block quote appended.
+   * @returns The TempoDoc instance with the block quote appended.
    */
   public blockQuote(text: TempoTextInput): this {
     this.nodes.push({
-      type: 'blockQuote',
+      type: 'blockquote',
       data: {
         nodes: computeNodes(text),
       },
@@ -508,35 +491,55 @@ export class TempoDocument {
   }
 
   /**
-   * Append an image to the document.
+   * Append an image to the TempoDoc.
    *
    * @example
    * ```ts
    * const doc = tempo()
-   *   .image('Alt text', 'https://example.com/image.png')
+   *   .image({
+   *     alt: 'Alt text',
+   *     src: 'https://example.com/image.png',
+   *   })
    *   .toString();
    * // Output: ![Alt text](https://example.com/image.png)
+   *
+   * const docWithLink = tempo()
+   *   .image({
+   *     alt: 'Alt text',
+   *     src: 'https://example.com/image.png',
+   *     href: 'https://example.com',
+   *   })
+   *   .toString();
+   * // Output: [![Alt text](https://example.com/image.png)](https://example.com)
    * ```
    *
-   * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @param src A string of the image source.
-   * @returns The TempoDocument instance with the image appended.
+   * @param payload The image payload.
+   * @param payload.alt A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
+   * @param payload.src A string of the image source.
+   * @param payload.href An optional string of the image link, this will make the image a link.
+   * @returns The TempoDoc instance with the image appended.
    */
-  public image(text: string, src: string): this {
+  public image(payload: {
+    alt: TempoTextInput;
+    src: string;
+    href?: string;
+  }): this {
     this.nodes.push({
       type: 'image',
       data: {
-        alt: text,
-        src,
+        alt: computeNodes(payload.alt),
+        src: payload.src,
         nodes: [],
       },
-      computed: md.image(text, src),
+      computed: payload.href
+        ? md.link(md.image(computeText(payload.alt), payload.src), payload.href)
+        : md.image(computeText(payload.alt), payload.src),
     });
     return this;
   }
 
   /**
-   * Append a thematic break to the document.
+   * Append a thematic break to the TempoDoc.
    *
    * @example
    * ```ts
@@ -546,7 +549,7 @@ export class TempoDocument {
    * // Output: ---
    * ```
    *
-   * @returns The TempoDocument instance with the thematic break appended.
+   * @returns The TempoDoc instance with the thematic break appended.
    */
   public break(): this {
     this.nodes.push({
@@ -559,6 +562,15 @@ export class TempoDocument {
     return this;
   }
 
+  /**
+   * Alias to `break`, to append a thematic break to the TempoDoc.
+   *
+   * @returns The TempoDoc instance with the thematic break appended.
+   */
+  public hr(): this {
+    return this.break();
+  }
+
   /*
   |------------------
   | Lists
@@ -566,7 +578,7 @@ export class TempoDocument {
   */
 
   /**
-   * Append a number list to the document.
+   * Append a number list to the TempoDoc.
    *
    * @example
    * ```ts
@@ -584,15 +596,15 @@ export class TempoDocument {
    * ```
    *
    * @param text An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the number list appended.
+   * @returns The TempoDoc instance with the number list appended.
    */
   public numberList(text: TempoTextInput[]): this {
     this.nodes.push({
-      type: 'numberList',
+      type: 'list-number',
       data: {
         nodes: text.map((t, i) => ({
           order: i,
-          type: 'listItem',
+          type: 'list-item',
           data: {
             nodes: computeNodes(t),
           },
@@ -605,7 +617,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append a bullet list to the document.
+   * Append a bullet list to the TempoDoc.
    *
    * @example
    * ```ts
@@ -623,14 +635,14 @@ export class TempoDocument {
    * ```
    *
    * @param text An array of TempoTextInput types, which can be a string, Text instance, or a function that returns a string or Text instance.
-   * @returns The TempoDocument instance with the bullet list appended.
+   * @returns The TempoDoc instance with the bullet list appended.
    */
   public bulletList(text: TempoTextInput[]): this {
     this.nodes.push({
-      type: 'bulletList',
+      type: 'list-bullet',
       data: {
         nodes: text.map((t) => ({
-          type: 'listItem',
+          type: 'list-item',
           order: undefined,
           data: {
             nodes: computeNodes(t),
@@ -644,7 +656,7 @@ export class TempoDocument {
   }
 
   /**
-   * Append an [alert](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) to the document.
+   * Append an [alert](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) to the TempoDoc.
    *
    * @example
    *  ```ts
@@ -659,7 +671,7 @@ export class TempoDocument {
    *
    * @param text A TempoTextInput type, which can be a string, Text instance, or a function that returns a string or Text instance.
    * @param type the type of alert to render, defaults to 'note'
-   * @returns The TempoDocument instance with the alert appended.
+   * @returns The TempoDoc instance with the alert appended.
    */
   public alert(text: TempoTextInput, type: AlertType = 'note'): this {
     this.nodes.push({
@@ -680,7 +692,7 @@ export class TempoDocument {
   */
 
   /**
-   * Convert the document to string representation, that can be used for rendering.
+   * Convert the TempoDoc to string representation, that can be used for rendering.
    *
    * @example
    * ```ts
@@ -694,7 +706,7 @@ export class TempoDocument {
    * // This is a paragraph of text.
    * ```
    *
-   * @returns A string representation of the document, that can be used for rendering.
+   * @returns A string representation of the TempoDoc, that can be used for rendering.
    */
   public toString(): string {
     return this.nodes
@@ -705,7 +717,7 @@ export class TempoDocument {
   }
 
   /**
-   * Convert the document to a JSON representation, that can be used for serialization.
+   * Convert the TempoDoc to a JSON representation, that can be used for serialization.
    *
    * @warning This method is experimental and may change in the future.
    * @example
@@ -740,9 +752,25 @@ export class TempoDocument {
    * // ]
    * ```
    *
-   * @returns A JSON representation of the document, that can be used for serialization.
+   * @returns A JSON representation of the TempoDoc, that can be used for serialization.
    */
-  public toJSON(): TempoDocumentNode[] {
+  public toJSON(): TempoDocNode[] {
     return this.nodes;
   }
 }
+
+/*
+|------------------
+| Utils & Helpers
+|------------------
+*/
+
+type DocNode<
+  Type extends DocNodeType,
+  Nodes extends unknown[],
+  Data extends object = object,
+> = TypeFest.Simplify<{
+  type: Type;
+  data: TypeFest.Merge<Data, { nodes: Nodes }>;
+  computed: string;
+}>;

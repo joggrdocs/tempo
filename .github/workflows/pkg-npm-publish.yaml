@@ -30,6 +30,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
 
+      - name: '🔁 Sync GitHub Linguist'
+        run: 'yarn sync:linguist'
+
+      - name: '🔁 Sync GitHub Emoji'
+        run: 'yarn sync:emoji'
+
       - name: '🏗️ Build'
         run: yarn build
 
