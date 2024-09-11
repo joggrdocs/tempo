@@ -29,6 +29,9 @@ jobs:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
+      
+      - name: '📦 Install packages'
+        run: yarn install
 
       - name: '🏗️ Build'
         run: yarn build
