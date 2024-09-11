@@ -1,6 +1,6 @@
 {
   "name": "@joggr/tempo",
-  "version": "0.9.2",
+  "version": "0.10.0",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "exports": {
     ".": {
