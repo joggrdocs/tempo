@@ -1,7 +1,7 @@
-import { describe , it, expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 
 import { TempoDocument } from '../tempo-document';
-import tempo from '../tempo';
+import { tempo } from '../tempo';
 
 describe('tempo', () => {
   it('should return a document', () => {

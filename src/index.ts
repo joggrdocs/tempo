@@ -1,4 +1,4 @@
-export { default } from './lib/tempo';
+export { tempo, tempo as default } from './lib/tempo';
 export { TempoDocument } from './lib/tempo-document';
 export { TempoText } from './lib/tempo-text';
 export {
