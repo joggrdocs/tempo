@@ -955,11 +955,11 @@ __metadata:
   linkType: hard
 
 "@vitest/coverage-istanbul@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "@vitest/coverage-istanbul@npm:2.0.5"
+  version: 2.1.1
+  resolution: "@vitest/coverage-istanbul@npm:2.1.1"
   dependencies:
     "@istanbuljs/schema": "npm:^0.1.3"
-    debug: "npm:^4.3.5"
+    debug: "npm:^4.3.6"
     istanbul-lib-coverage: "npm:^3.2.2"
     istanbul-lib-instrument: "npm:^6.0.3"
     istanbul-lib-report: "npm:^3.0.1"
@@ -969,8 +969,8 @@ __metadata:
     test-exclude: "npm:^7.0.1"
     tinyrainbow: "npm:^1.2.0"
   peerDependencies:
-    vitest: 2.0.5
-  checksum: 10/a663fda28c83fcaeb80425af654462173e2c44996afd22b7e45c1f386f64d2ccc3e4d8f0409a96707ae41b5a0c39a22987623b2e1b86a11f137954d17478f865
+    vitest: 2.1.1
+  checksum: 10/f6c1f9b6bdcfecbe4ae74ea07c3881b25fef09046ce733f016479d20a77dc82807b915be27a115867f54d017d42ba973bbefd8b4d2398643b0ad247188fd58bc
   languageName: node
   linkType: hard
 
@@ -1385,7 +1385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.5":
+"debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.5, debug@npm:^4.3.6":
   version: 4.3.7
   resolution: "debug@npm:4.3.7"
   dependencies:
