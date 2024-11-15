@@ -2,28 +2,25 @@
   "name": "@joggr/tempo",
   "version": "0.10.0",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/umd/index.js",
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
-  "main": "./dist/umd/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "README.md",
-    "package.json",
-    "dist/**/*"
+    "dist"
   ],
   "scripts": {
     "test": "vitest --coverage",
-    "build": "yarn build:esm && yarn build:umd && yarn build:types",
-    "build:esm": "swc ./src -d ./dist/esm --strip-leading-paths --delete-dir-on-start -C module.type=es6",
-    "build:umd": "swc ./src -d ./dist/umd --strip-leading-paths --delete-dir-on-start -C module.type=umd",
-    "build:types": "tsc --emitDeclarationOnly --outDir ./dist/types",
-    "generate:examples": "ts-node examples/index.ts",
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "generate:examples": "tsx examples/index.ts",
     "analyze": "biome check",
     "analyze:ci": "biome ci --diagnostic-level=error",
     "analyze:types": "tsc --noEmit",
@@ -40,14 +37,14 @@
   },
   "homepage": "https://github.com/joggrdocs/tempo#readme",
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@swc/cli": "^0.4.0",
-    "@swc/core": "^1.7.24",
-    "@types/node": "^22.5.4",
-    "@vitest/coverage-istanbul": "^2.0.5",
+    "@biomejs/biome": "^1.9.4",
+    "@rslib/core": "^0.0.18",
+    "@types/node": "^22.9.0",
+    "@vitest/coverage-istanbul": "^2.1.5",
+    "tsx": "^4.19.2",
     "type-fest": "^4.26.1",
-    "typescript": "^5.6.2",
-    "vitest": "^2.0.5"
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
   },
   "packageManager": "yarn@4.4.1"
 }

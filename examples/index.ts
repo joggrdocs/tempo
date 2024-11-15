@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 import exampleBasic from './lib/basic';
 import exampleCode from './lib/code';
 import exampleTable from './lib/table';
