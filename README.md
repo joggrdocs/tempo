@@ -10,7 +10,7 @@
 
 <br>
 
-<p align="center">
+<div align="center">
   <a href="https://badge.fury.io/js/@joggr%2Ftempo">
     <img src="https://badge.fury.io/js/@joggr%2Ftempo.svg" alt="npm version">
   </a>
@@ -20,17 +20,14 @@
   <a href="https://github.com/joggrdocs/tempo/actions/workflows/pkg-npm-publish.yaml">
     <img alt="Publish to npm" src="https://github.com/joggrdocs/tempo/actions/workflows/pkg-npm-publish.yaml/badge.svg">
   </a>
+  <br />
   <a href="https://github.com/joggrdocs/tempo/actions/workflows/ci.yaml">
     <img alt="CI" src="https://github.com/joggrdocs/tempo/actions/workflows/ci.yaml/badge.svg">
   </a>
-  <br/>
-  <a href="https://github.com/standard/semistandard">
-    <img alt="JS Semi-standard Style" src="https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg">
+  <a href="https://biomejs.dev">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Formatted_with-Biome-60a5fa?style=flat&logo=biome">
   </a>
-  <a href="https://github.com/prettier/prettier">
-    <img alt="Prettier Style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
-  </a>
-</p>
+</div>
 
 ## Overview
 
