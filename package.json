@@ -38,7 +38,7 @@
   "homepage": "https://github.com/joggrdocs/tempo#readme",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@rslib/core": "^0.0.18",
+    "@rslib/core": "^0.1.0",
     "@types/node": "^22.9.0",
     "@vitest/coverage-istanbul": "^2.1.5",
     "tsx": "^4.19.2",
