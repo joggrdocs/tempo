@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "remoteCache": {
+    "enabled": true
+  },
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "outputs": ["dist"],
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "outputs": [],
+      "dependsOn": ["^build"]
+    },
+    "analyze:types": {
+      "outputs": [],
+      "dependsOn": ["^build"]
+    },
+    "//#analyze": {
+      "dependsOn": [],
+      "outputs": []
+    },
+    "//#analyze:ci": {
+      "dependsOn": [],
+      "outputs": []
+    },
+    "//#fix": {
+      "dependsOn": [],
+      "outputs": []
+    }
+  }
+}

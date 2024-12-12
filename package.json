@@ -1,29 +1,16 @@
 {
-  "name": "@joggr/tempo",
+  "name": "tempo-root",
   "version": "0.11.0",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
-    "test": "vitest --coverage",
-    "build": "rslib build",
-    "dev": "rslib build --watch",
-    "generate:examples": "tsx examples/index.ts",
     "analyze": "biome check",
+    "analyze:types": "turbo analyze:types",
     "analyze:ci": "biome ci --diagnostic-level=error",
-    "analyze:types": "tsc --noEmit",
+    "test": "turbo test",
     "fix": "biome check --fix"
   },
   "repository": {
@@ -32,19 +19,9 @@
   },
   "author": "Joggr Team <engineering@joggr.io>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joggrdocs/tempo/issues"
-  },
-  "homepage": "https://github.com/joggrdocs/tempo#readme",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@rslib/core": "^0.1.3",
-    "@types/node": "^22.10.2",
-    "@vitest/coverage-istanbul": "^2.1.8",
-    "tsx": "^4.19.2",
-    "type-fest": "^4.30.0",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "turbo": "^2.3.3"
   },
   "packageManager": "yarn@4.4.1"
 }
