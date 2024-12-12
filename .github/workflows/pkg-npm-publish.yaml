@@ -1,5 +1,5 @@
-name: 'pkgs: Publish to internal npm registry'
-run-name: 'Publish to GitHub npm Registry (${{ inputs.version }})'
+name: 'pkgs: Publish to npm registry'
+run-name: 'Publish to npm registry (${{ inputs.version }})'
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ on:
 
 jobs:
   publish:
-    name: 'Publish to GitHub npm Registry'
+    name: 'Publish to npm registry'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
