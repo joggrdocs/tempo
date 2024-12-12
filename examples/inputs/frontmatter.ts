@@ -1,7 +1,14 @@
-import tempo from '../../src';
+import tempo from '../../packages/tempo/src';
 
 function run() {
   return tempo()
+    .frontmatter({
+      title: 'Frontmatter Example',
+      description: 'This is an example of frontmatter',
+      tags: ['example', 'frontmatter'],
+      published: true,
+      version: 1,
+    })
     .h1('Hello World')
     .paragraph('This is a paragraph')
     .h2((text) => text.plainText('This is a heading with ').bold('bold text'))

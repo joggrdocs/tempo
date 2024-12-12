@@ -1,4 +1,4 @@
-import tempo from '../../src';
+import tempo from '../../packages/tempo/src';
 
 function run() {
   return tempo()

@@ -31,7 +31,6 @@
     "dev": "rslib build --watch",
     "build": "rslib build",
     "test": "vitest --coverage",
-    "generate:examples": "tsx examples/index.ts",
     "analyze:types": "tsc --noEmit"
   },
   "devDependencies": {
@@ -43,5 +42,8 @@
     "type-fest": "^4.30.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "yaml": "^2.6.1"
   }
 }
