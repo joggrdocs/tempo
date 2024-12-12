@@ -1,6 +1,6 @@
 <div>
     <p align="center">
-        <img src="./assets/tempo-logo.png" align="center"  />
+        <img src="../../assets/tempo-logo.png" align="center"  />
     </p>
     <hr>
     <blockquote align="center">
@@ -31,30 +31,88 @@
 
 ## Overview
 
-A set of libraries used to programmatically build markdown documents, with a heavy tilt toward [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/).
+A TypeScript package used to programmatically build markdown documents, with a heavy tilt toward [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/).
 
 - 🦄 Programmatically generate docs for `CI` or `commit-hooks` 
 - 📋 Create reusable templates for your projects
 - 🤖 Build templates for standardizing output from LLMs
 - 🐱 Use all the goodness of [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)
 
+## Getting Started
+
+Install the library and you can begin to use it in your application(s).
+
+_This is a GitHub Package and your application must support installing internal GitHub packages before you can use this package._
+
+**npm**
+
+```shell
+npm install @joggr/tempo
+```
+
+**yarn**
+
+```shell
+yarn add @joggr/tempo
+```
+
 ## Usage
 
 ```typescript
 import fs from 'node:fs/promises';
-import tempo from '@joggr/tempo';
+import tempo from '@joggrdocs/tempo';
 
-const doc = tempo()
-  .h1('Hello, World!')
-  .p('This is a test document.')
+const result = tempo()
+  .h1('Hello World')
+  .paragraph('Some things')
+  .paragraph((txt) => 
+    txt
+      .plainText('A sentence with')
+      .bold('bolded words')
+      .plainText('and')
+      .italic('italicized words')
+      .plainText('.')
+      .build()
+  )
+  .h2((txt) => 
+    txt 
+      .plainText('A')
+      .italic('table')
+  )
+  .table([
+    ['name', 'email'],
+    ['Zac', 'zac@acmecorp.com']
+  ])
   .toString();
 
-await fs.writeFile('test.md', doc);
+await fs.writeFile('myFile.md', result);
 ```
 
-## Libraries
+## Serialized Data (⚠️ Unstable API ⚠️)
 
-- 🏃 [`@joggr/tempo`](/packages/tempo): A TypeScript library used to programmatically build markdown documents
+Tempo creates a syntax tree that can be serialized and stored in a data base.
+
+```typescript
+import db from 'db/orm';
+import tempo from '@joggrdocs/tempo';
+
+const result = tempo()
+  .h1('Hello World')
+  .paragraph('Some things')
+  .paragraph((txt) => 
+    txt
+      .plainText('A sentence with')
+      .bold('bolded words')
+      .plainText('and')
+      .italic('italicized words')
+      .plainText('.')
+      .build()
+  )
+  .toJSON();
+
+// Example of storing a serializable data object to the DB
+await db.collection('tempoDoc').findAndSave(1, result);
+```
 
 ## License
 
