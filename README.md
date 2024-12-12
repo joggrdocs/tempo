@@ -1,6 +1,6 @@
 <div>
     <p align="center">
-        <img src="./logo.png" align="center" width="240" />
+        <img src="./assets/tempo-logo.png" align="center"  />
     </p>
     <hr>
     <blockquote align="center">
@@ -112,6 +112,20 @@ const result = tempo()
 await db.collection('tempoDoc').findAndSave(1, result);
 ```
 
-### Credits
+## License
 
-- Logo by [Time management icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/time-management)
+Licensed under MIT.
+
+<br>
+<hr>
+<h2 align="center">
+    Want to sign up for Joggr?
+</h2>
+<p align="center">
+    We'd love to have you join, but we are in closed beta. <br> You can join our waitlist below.
+</p>
+<p align="center">
+  <a href="https://www.joggr.io/waitlist?utm_source=github&utm_medium=org-readme&utm_campaign=static-docs">
+    <img src="https://cdn.joggr.io/assets/static/badges/joggr-waitlist.svg" width="250px" alt="Join the Waitlist" />
+  </a>
+</p>
