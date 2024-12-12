@@ -1,5 +1,5 @@
-name: 'pkg: Publish to npm'
-run-name: 'Publish to npm Registry (${{ inputs.version }})'
+name: 'pkgs: Publish to internal npm registry'
+run-name: 'Publish to GitHub npm Registry (${{ inputs.version }})'
 
 on:
   workflow_dispatch:
@@ -7,37 +7,43 @@ on:
       version:
         description: 'Semantic Version'
         required: true
+        default: 'prerelease'
         type: choice
         options:
           - patch
           - minor
           - major
+          - prerelease
 
 jobs:
   publish:
-    name: Publish to npm
-    runs-on: ubuntu-latest
+    name: 'Publish to GitHub npm Registry'
+    runs-on: ubuntu-latest-4-cores
+    timeout-minutes: 15
     steps:
       - name: '🛒 Checkout Code'
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_BOT_TOKEN }}
 
-      - name: '🟢 Use Node.js'
+      - name: "𝌤 Enable Corepack" 
+        run: corepack enable
+
+      - name: '🟢 Setup Node.js'
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://npm.pkg.github.com'
+          token: ${{ secrets.GH_BOT_TOKEN }}
+          scope: '@joggrdocs'
           cache: 'yarn'
-      
+
       - name: '📦 Install packages'
         run: yarn install
 
-      - name: '🏗️ Build'
-        run: yarn build
-
       - name: '🔼 Increment Version'
-        run: yarn version ${{ inputs.version }}
+        # We have to run with npm because yarn's update is based on "stableVersion" which is not what we want
+        run: yarn workspaces foreach --all exec npm version --no-git-tag-version --no-workspaces-update ${{ inputs.version }}
 
       - name: '#️⃣ Get Version'
         uses: actions/github-script@v7
@@ -48,31 +54,29 @@ jobs:
           script: |
             const fs = require('fs');
             const pj = JSON.parse(fs.readFileSync('${{ github.workspace }}/package.json'));
-            return pj.version;
+            return pj.version;   
+
+      - name: '🏗️ Build'
+        run: yarn turbo run build --filter="./packages/*"
+
+      - name: '🧶 Setup .yarnrc.yml'
+        run: 'yarn config set npmScopes.joggrdocs.npmAuthToken ${{ secrets.GH_BOT_TOKEN }}'
+
+      - name: '🚢 Publish'
+        run: yarn workspaces foreach -A --include "packages/*" npm publish --tolerate-republish --access restricted
 
       - name: '💾 Commit Incremented Version'
         run: |
           git config --local user.email "${{ secrets.GH_BOT_EMAIL }}"
           git config --local user.name "${{ secrets.GH_BOT_NAME }}"
-          git add package.json
-          git commit -am "[🤖 release]: ${{ steps.version.outputs.result }} (${{ inputs.version }})"
+          git add ./packages/*/package.json ./package.json
+          git commit -m "[🤖 npm-publish]: ${{ steps.version.outputs.result }} (${{ inputs.version }}) [skip-ci]"
           git push origin HEAD --force
 
-      - name: '📝 Generate Release Notes (user-input)'
-        uses: toolmantim/release-drafter@v6
+      - name: '📝 Publish Release Notes'
+        uses: release-drafter/release-drafter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           version: v${{ steps.version.outputs.result }}
           publish: true
-
-      - name: Setup .yarnrc.yml
-        run: |
-          yarn config set npmScopes.joggr.npmRegistryServer "https://registry.npmjs.org"
-          yarn config set npmScopes.joggr.npmAlwaysAuth true
-          yarn config set npmScopes.joggr.npmAuthToken $NPM_AUTH_TOKEN
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
-
-      - name: '🚢 Publish'
-        run: yarn npm publish --access public
