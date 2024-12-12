@@ -68,7 +68,7 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
 
       - name: '🚢 Publish'
-        run: yarn workspaces foreach -A --include "packages/*" npm publish --tolerate-republish
+        run: yarn workspaces foreach -A --include "packages/*" npm publish --tolerate-republish --access public
 
       - name: '💾 Commit Incremented Version'
         run: |
