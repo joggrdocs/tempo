@@ -146,6 +146,20 @@ export type TempoDocumentNode =
   | BulletListNode
   | AlertNode;
 
+export type TempoDocumentMetadata = md.Frontmatter | null;
+
+export interface TempoDocumentJSON {
+  /**
+   * The nodes of the document.
+   */
+  nodes: TempoDocumentNode[];
+
+  /**
+   * The metadata (frontmatter) of the document.
+   */
+  metadata: TempoDocumentMetadata;
+}
+
 /*
 |----------------------------------
 | TempoDocument Class
@@ -164,8 +178,33 @@ export type TempoDocumentNode =
 export class TempoDocument {
   private readonly nodes: TempoDocumentNode[];
 
+  private metadata: TempoDocumentMetadata = null;
+
   constructor(documentNodes?: TempoDocumentNode[]) {
     this.nodes = documentNodes ?? [];
+  }
+
+  /**
+   * Add frontmatter to the document.
+   *
+   * @example
+   * ```ts
+   * const doc = tempo()
+   *   .frontmatter({ title: 'Hello, World!' })
+   *   .h1('Hello, World!')
+   *   .toString();
+   * // Output:
+   * // ---
+   * // title: Hello, World!
+   * // ---
+   * // # Hello, World!
+   *
+   * @param value A JSON object to convert to YAML frontmatter.
+   * @returns The TempoDocument instance with the frontmatter appended to the document.
+   */
+  public frontmatter(value: TempoDocumentMetadata): this {
+    this.metadata = value;
+    return this;
   }
 
   /*
@@ -697,11 +736,17 @@ export class TempoDocument {
    * @returns A string representation of the document, that can be used for rendering.
    */
   public toString(): string {
-    return this.nodes
+    const result = this.nodes
       .map((section) => section.computed)
       .join('\n\n')
       .trim()
       .concat('\n');
+
+    if (this.metadata) {
+      return md.frontmatter(this.metadata).concat('\n', result);
+    }
+
+    return result;
   }
 
   /**
@@ -742,7 +787,10 @@ export class TempoDocument {
    *
    * @returns A JSON representation of the document, that can be used for serialization.
    */
-  public toJSON(): TempoDocumentNode[] {
-    return this.nodes;
+  public toJSON(): TempoDocumentJSON {
+    return {
+      nodes: this.nodes,
+      metadata: this.metadata,
+    };
   }
 }

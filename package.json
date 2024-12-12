@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "generate:examples": "tsx examples/index.ts",
     "analyze": "biome check",
     "analyze:types": "turbo analyze:types",
     "analyze:ci": "biome ci --diagnostic-level=error",

@@ -13,6 +13,7 @@ import * as emo from './emoji';
 
 export * from './code-block';
 export * from './emoji';
+export * from './frontmatter';
 
 /*
 |------------------
