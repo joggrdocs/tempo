@@ -1,6 +1,6 @@
 {
   "name": "tempo-root",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "type": "module",
   "workspaces": [
