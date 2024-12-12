@@ -18,6 +18,7 @@ import exampleTable from './lib/table';
 |   `npm run generate:examples`
 |
 */
+
 (() => {
   console.log('Building examples...');
 
