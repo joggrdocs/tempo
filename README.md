@@ -63,5 +63,5 @@ Licensed under MIT.
 <br>
 <hr>
 <h2 align="center">
-    Want to sign up for Joggr? Check us out at [Joggr](https://joggr.io)
+    Want to sign up for Joggr? Check us out at [Joggr](joggr.io)
 </h2>
