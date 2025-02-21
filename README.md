@@ -67,7 +67,8 @@ Licensed under MIT.
    ⚡️ Want to sign up for Joggr?
 </h2>
 <p align="center">
-    You can sign up for free at our website:  <a href="https://www.joggr.io/signup?utm_source=github&utm_medium=org-readme&utm_campaign=static-docs">https://joggr.io</a> (or click button below!)
+    You can sign up for free at our website:  <a href="https://www.joggr.io/signup?utm_source=github&utm_medium=org-readme&utm_campaign=static-docs">https://joggr.io</a><br>
+    (or click button below 👇)
 </p>
 <p align="center">
   <a href="https://www.joggr.io/signup?utm_source=github&utm_medium=org-readme&utm_campaign=static-docs">
