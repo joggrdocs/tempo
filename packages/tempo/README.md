@@ -1,6 +1,6 @@
 <div>
     <p align="center">
-        <img src="../../assets/tempo-logo.png" align="center"  />
+        <img src="https://github.com/joggrdocs/tempo/blob/main/assets/tempo-logo.png" align="center"  />
     </p>
     <hr>
     <blockquote align="center">
