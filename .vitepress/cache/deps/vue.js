@@ -167,8 +167,8 @@ import {
   withKeys,
   withMemo,
   withModifiers,
-  withScopeId
-} from "./chunk-VJWGEPT5.js";
+  withScopeId,
+} from './chunk-VJWGEPT5.js';
 export {
   BaseTransition,
   BaseTransitionPropsValidators,
@@ -338,5 +338,5 @@ export {
   withKeys,
   withMemo,
   withModifiers,
-  withScopeId
+  withScopeId,
 };
