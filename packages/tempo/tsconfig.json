@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["ES2021"],
+    "lib": [
+      "ES2021"
+    ],
     "module": "ESNext",
     "noEmit": true,
     "strict": true,
@@ -13,6 +15,19 @@
     "outDir": "./dist",
     "baseUrl": "."
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/**/*", "**/__tests__/**/*", "action.js"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    "**/__tests__/**/*",
+    "action.js"
+  ],
+  "typedocOptions": {
+    "entryPoints": [
+      "src/lib/tempo-document.ts",
+      "src/lib/tempo-text.ts",
+    ],
+    "out": "docs"
+  }
 }
