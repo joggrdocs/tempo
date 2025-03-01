@@ -9,6 +9,7 @@ export default defineConfig({
   description:
     'A set of libraries used to programmatically build markdown documents.',
   srcDir: 'content',
+  base: '/tempo/',
   themeConfig: {
     siteTitle: false,
     logo: {
