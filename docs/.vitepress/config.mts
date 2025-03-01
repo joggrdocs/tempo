@@ -12,13 +12,13 @@ export default defineConfig({
   srcDir: 'content',
   base: '/tempo/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/tempo/favicon.ico' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
     ['meta', { property: 'og:title', content: 'Tempo | Programmatically build markdown documents' }],
     ['meta', { property: 'og:site_name', content: 'Tempo' }],
-    ['meta', { property: 'og:image', content: 'https://joggrdocs.github.io/tempo-social.png' }],
-    ['meta', { property: 'og:url', content: 'https://joggrdocs.github.io/' }],
+    ['meta', { property: 'og:image', content: 'https://joggrdocs.github.io/tempo/tempo-social.png' }],
+    ['meta', { property: 'og:url', content: 'https://joggrdocs.github.io/tempo/' }],
   ],
   themeConfig: {
     siteTitle: false,
