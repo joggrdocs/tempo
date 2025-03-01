@@ -17,7 +17,7 @@ export default defineConfig({
     ['meta', { property: 'og:locale', content: 'en' }],
     ['meta', { property: 'og:title', content: 'Tempo | Programmatically build markdown documents' }],
     ['meta', { property: 'og:site_name', content: 'Tempo' }],
-    ['meta', { property: 'og:image', content: 'https://joggrdocs.github.io/tempo/tempo-social.png' }],
+    ['meta', { property: 'og:image', content: 'https://joggrdocs.github.io/tempo/images/tempo-social.png' }],
     ['meta', { property: 'og:url', content: 'https://joggrdocs.github.io/tempo/' }],
   ],
   themeConfig: {
