@@ -7,7 +7,9 @@
       "**/package.json",
       "**/__tests__/**/*",
       ".vscode/**/*",
-      ".yarn/**/*"
+      ".yarn/**/*",
+      "**/dist/**",
+      "**/.vitepress/**"
     ]
   },
   "formatter": {

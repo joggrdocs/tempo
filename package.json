@@ -4,10 +4,10 @@
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "type": "module",
   "workspaces": [
+    "docs",
     "packages/*"
   ],
   "scripts": {
-    "generate:examples": "tsx examples/index.ts",
     "analyze": "biome check",
     "analyze:types": "turbo analyze:types",
     "analyze:ci": "biome ci --diagnostic-level=error",
@@ -22,6 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "tsx": "^4.19.3",
     "turbo": "^2.4.4"
   },
   "packageManager": "yarn@4.4.1"

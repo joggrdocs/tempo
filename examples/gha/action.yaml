@@ -1,0 +1,31 @@
+name: "Example GitHub Action"
+description: "A simple demonstration GitHub Action"
+author: "Example User <example@example.com>"
+
+inputs:
+  message:
+    description: "The message to display"
+    required: true
+    default: "Hello, World!"
+  environment:
+    description: "The environment to run in"
+    required: false
+    default: "production"
+  debug:
+    description: "Enable debug mode"
+    required: false
+    default: "false"
+
+outputs:
+  status:
+    description: "The status of the action"
+  timestamp:
+    description: "The time when the action completed"
+
+runs:
+  using: "node20"
+  main: "index.js"
+
+branding:
+  icon: "check-circle"
+  color: "green"

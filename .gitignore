@@ -131,3 +131,7 @@ dist
 
 # Turbo
 .turbo
+
+# Vitepress
+.vitepress/dist
+.vitepress/cache

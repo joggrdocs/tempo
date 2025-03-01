@@ -14,5 +14,9 @@
     "baseUrl": "."
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules/**/*", "**/__tests__/**/*", "action.js"]
+  "exclude": ["node_modules/**/*", "**/__tests__/**/*", "action.js"],
+  "typedocOptions": {
+    "entryPoints": ["src/lib/tempo-document.ts", "src/lib/tempo-text.ts"],
+    "out": "docs"
+  }
 }
