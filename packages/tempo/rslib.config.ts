@@ -5,12 +5,26 @@ export default defineConfig({
     {
       format: 'esm',
       syntax: 'es2021',
-      dts: true,
+      dts: {
+        autoExtension: false,
+      },
+      output: {
+        distPath: {
+          root: 'dist/esm',
+        },
+      },
     },
     {
       format: 'cjs',
       syntax: 'es2021',
-      dts: false,
+      dts: {
+        autoExtension: false,
+      },
+      output: {
+        distPath: {
+          root: 'dist/cjs',
+        },
+      },
     },
   ],
 });
