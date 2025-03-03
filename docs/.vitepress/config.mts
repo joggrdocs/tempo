@@ -8,14 +8,14 @@ export default defineConfig({
   title: 'tempo',
   lang: 'en-US',
   description:
-    'A set of libraries used to programmatically build markdown documents.',
+    'A set of libraries used to programmatically build markdown documents with TypeScript.',
   srcDir: 'content',
   base: '/tempo/',
   head: [
     ['link', { rel: 'icon', href: '/tempo/favicon.ico' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'en' }],
-    ['meta', { property: 'og:title', content: 'Tempo | Programmatically build markdown documents' }],
+    ['meta', { property: 'og:title', content: 'Tempo | Programmatically build markdown documents with TypeScript' }],
     ['meta', { property: 'og:site_name', content: 'Tempo' }],
     ['meta', { property: 'og:image', content: 'https://joggrdocs.github.io/tempo/images/tempo-social.png' }],
     ['meta', { property: 'og:url', content: 'https://joggrdocs.github.io/tempo/' }],

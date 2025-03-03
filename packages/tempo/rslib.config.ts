@@ -10,6 +10,7 @@ export default defineConfig({
     {
       format: 'cjs',
       syntax: 'es2021',
+      dts: false,
     },
   ],
 });
