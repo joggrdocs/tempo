@@ -888,7 +888,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@joggr/tempo@workspace:packages/tempo"
   dependencies:
-    "@rslib/core": "npm:^0.5.2"
+    "@rslib/core": "npm:^0.5.3"
     "@types/node": "npm:^22.13.7"
     "@vitest/coverage-istanbul": "npm:^3.0.7"
     consola: "npm:^3.4.0"
@@ -1152,7 +1152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~1.2.10":
+"@rsbuild/core@npm:~1.2.13":
   version: 1.2.14
   resolution: "@rsbuild/core@npm:1.2.14"
   dependencies:
@@ -1167,12 +1167,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rslib/core@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "@rslib/core@npm:0.5.2"
+"@rslib/core@npm:^0.5.3":
+  version: 0.5.3
+  resolution: "@rslib/core@npm:0.5.3"
   dependencies:
-    "@rsbuild/core": "npm:~1.2.10"
-    rsbuild-plugin-dts: "npm:0.5.2"
+    "@rsbuild/core": "npm:~1.2.13"
+    rsbuild-plugin-dts: "npm:0.5.3"
     tinyglobby: "npm:^0.2.12"
   peerDependencies:
     "@microsoft/api-extractor": ^7
@@ -1184,7 +1184,7 @@ __metadata:
       optional: true
   bin:
     rslib: bin/rslib.js
-  checksum: 10/a08589236b9dba2881cf2e0b16874ff1d696bf8832eca7612357e8ac4f47f5af0075ac65063dc510d8fe7b80e8f99d4f1de6dc640c8e6994fb8aadbd4f4fcf90
+  checksum: 10/02493b7c205b2a425fd7a5f2306909595eff89d544186097324513c7b5679949fb5fe25dc0f7f28d4eaee8afa6913df2f0bc535a8e10f974d8a392b1d3e60489
   languageName: node
   linkType: hard
 
@@ -3339,9 +3339,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rsbuild-plugin-dts@npm:0.5.2":
-  version: 0.5.2
-  resolution: "rsbuild-plugin-dts@npm:0.5.2"
+"rsbuild-plugin-dts@npm:0.5.3":
+  version: 0.5.3
+  resolution: "rsbuild-plugin-dts@npm:0.5.3"
   dependencies:
     "@ast-grep/napi": "npm:^0.35.0"
     magic-string: "npm:^0.30.17"
@@ -3357,7 +3357,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10/49b61dfbe5370b1e694d7c9fffb6a28173fd7240d49b22ba45c69f921bef8c951863a5406f45acaa745d7a363e973283f9471856c1f726a355a6d1d7fd93bcc6
+  checksum: 10/0881f8abd7056bc8733feace9bd69c65049a96d99f22710984eb21ef11a4646e9bf82d2cc589aad2ee1df3663b14dc5c068c084b79c7b0ddbd7f70dd3c717981
   languageName: node
   linkType: hard
 
