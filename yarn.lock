@@ -890,7 +890,7 @@ __metadata:
   dependencies:
     "@rslib/core": "npm:^0.5.2"
     "@types/node": "npm:^22.13.7"
-    "@vitest/coverage-istanbul": "npm:^3.0.7"
+    "@vitest/coverage-istanbul": "npm:^3.0.8"
     consola: "npm:^3.4.0"
     tsx: "npm:^4.19.3"
     type-fest: "npm:^4.35.0"
@@ -1486,9 +1486,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/coverage-istanbul@npm:^3.0.7":
-  version: 3.0.7
-  resolution: "@vitest/coverage-istanbul@npm:3.0.7"
+"@vitest/coverage-istanbul@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "@vitest/coverage-istanbul@npm:3.0.8"
   dependencies:
     "@istanbuljs/schema": "npm:^0.1.3"
     debug: "npm:^4.4.0"
@@ -1501,8 +1501,8 @@ __metadata:
     test-exclude: "npm:^7.0.1"
     tinyrainbow: "npm:^2.0.0"
   peerDependencies:
-    vitest: 3.0.7
-  checksum: 10/fd744b0b6bed4704bbfe6111d7e032c118a9f81ff2ea82ff45a2a3df0447ce1263784368dd335b842317b5ae6fa06e966fec59f4e10ad7332e779c7df7df2a8c
+    vitest: 3.0.8
+  checksum: 10/f6764cc7482d593a54b87d6b833cc6ab6c980522c8a5559fd04cfc38fc001c4e1ee7ffa929e7cda73200aa16c953e8d23d725bc10461084c3daedd8721a9bc0d
   languageName: node
   linkType: hard
 
