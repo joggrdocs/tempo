@@ -9,15 +9,15 @@ You will need to add Tempo to your project. You can do this by running the follo
 ::: code-group
 
 ```bash [npm]
-$ npm install --dev @joggrdocs/tempo yaml
+$ npm install --dev @joggr/tempo yaml
 ```
 
 ```bash [Yarn]
-$ yarn add -D @joggrdocs/tempo yaml
+$ yarn add -D @joggr/tempo yaml
 ```
 
 ```bash [pnpm]
-$ pnpm install --dev @joggrdocs/tempo yaml
+$ pnpm install --dev @joggr/tempo yaml
 ```
 
 :::
@@ -32,7 +32,7 @@ Here is an example script that you can use:
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import yaml from 'yaml';
-import tempo from '@joggrdocs/tempo';
+import tempo from '@joggr/tempo';
 
 // if you are using CJS remove the following line
 const __dirname = path.dirname(new URL(import.meta.url).pathname);

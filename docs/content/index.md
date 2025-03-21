@@ -37,7 +37,7 @@ features:
 ::: code-group
 
 ```ts [basic.ts]
-import tempo from '@joggrdocs/tempo';
+import tempo from '@joggr/tempo';
 
 /**
  * This is a simple example of using tempo to generate markdown.
@@ -50,7 +50,7 @@ export default tempo()
 ```
 
 ```ts [template.ts]
-import tempo from '@joggrdocs/tempo';
+import tempo from '@joggr/tempo';
 
 /**
  * This is a simple example of using tempo to generate markdown as a function (template).

@@ -60,7 +60,7 @@ yarn add @joggr/tempo
 
 ```typescript
 import fs from 'node:fs/promises';
-import tempo from '@joggrdocs/tempo';
+import tempo from '@joggr/tempo';
 
 const result = tempo()
   .h1('Hello World')
@@ -94,7 +94,7 @@ Tempo creates a syntax tree that can be serialized and stored in a data base.
 
 ```typescript
 import db from 'db/orm';
-import tempo from '@joggrdocs/tempo';
+import tempo from '@joggr/tempo';
 
 const result = tempo()
   .h1('Hello World')

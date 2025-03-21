@@ -17,25 +17,25 @@ You can install Tempo using your favorite package manager.
 ::: code-group
 
 ```bash [npm]
-$ npm install @joggrdocs/tempo
+$ npm install @joggr/tempo
 ```
 
 ```bash [Yarn]
-$ yarn add @joggrdocs/tempo
+$ yarn add @joggr/tempo
 ```
 
 ```bash [pnpm]
-$ pnpm install @joggrdocs/tempo
+$ pnpm install @joggr/tempo
 ```
 
 :::
 
 ## Usage
 
-To use Tempo, you need to import the `tempo` function as the `default` import from the `@joggrdocs/tempo` package. 
+To use Tempo, you need to import the `tempo` function as the `default` import from the `@joggr/tempo` package. 
 
 ```typescript
-import tempo from '@joggrdocs/tempo';
+import tempo from '@joggr/tempo';
 ```
 
 You can then use the `tempo` function to create a `TempoDocument` object, and build your markdown content.
