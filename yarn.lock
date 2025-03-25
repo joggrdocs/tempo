@@ -893,7 +893,7 @@ __metadata:
     "@vitest/coverage-istanbul": "npm:^3.0.7"
     consola: "npm:^3.4.0"
     tsx: "npm:^4.19.3"
-    type-fest: "npm:^4.35.0"
+    type-fest: "npm:^4.38.0"
     typedoc: "npm:^0.27.9"
     typedoc-plugin-markdown: "npm:^4.4.2"
     typescript: "npm:^5.8.2"
@@ -3803,10 +3803,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^4.35.0":
-  version: 4.35.0
-  resolution: "type-fest@npm:4.35.0"
-  checksum: 10/43aada576d02f2f5230bd46c859e421a1307694312b3405088a48fcc67d65bee12eafbdcd182cffe0577dd72346595cb90a1ab5700626df35bc8935cf02c635b
+"type-fest@npm:^4.38.0":
+  version: 4.38.0
+  resolution: "type-fest@npm:4.38.0"
+  checksum: 10/7e29b678dca2dee071380ace370fecb7fa177faa557125134dd24ce784d90f84bf55ebf143092308f090d59e52a5b78653d63c8e5ad96e9f089e0029223e6221
   languageName: node
   linkType: hard
 
