@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import supportedEmojis from '../data/emojis';
 import * as emoji from '../emoji';
 
