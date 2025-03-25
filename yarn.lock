@@ -889,7 +889,7 @@ __metadata:
   resolution: "@joggr/tempo@workspace:packages/tempo"
   dependencies:
     "@rslib/core": "npm:^0.5.2"
-    "@types/node": "npm:^22.13.7"
+    "@types/node": "npm:^22.13.13"
     "@vitest/coverage-istanbul": "npm:^3.0.7"
     consola: "npm:^3.4.0"
     tsx: "npm:^4.19.3"
@@ -1446,12 +1446,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.13.7":
-  version: 22.13.8
-  resolution: "@types/node@npm:22.13.8"
+"@types/node@npm:^22.13.13":
+  version: 22.13.13
+  resolution: "@types/node@npm:22.13.13"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10/b69de3caab80336747bf41b5063478d23b196b9594c6f2eb819791380cc571676087dceb0fde9531ef7a1293f3eae12a9aaf79d8de349378c29a17c5e657bc78
+  checksum: 10/1750518a26fe070dcd4aacd9869d8c72c5b315e3b2fc643e3604fa02b3adac2817eae7808ae34c6bdd6ac96bb5d25acea59656c4ac155b1ee47469a65d32eba4
   languageName: node
   linkType: hard
 
