@@ -28,6 +28,7 @@ jobs:
           method: chat.postMessage
           token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
           payload: |
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
             text: ":package: Publishing to npm registry: tempo (${{ inputs.version }})"
 
       - name: '🛒 Checkout Code'
@@ -101,5 +102,6 @@ jobs:
           method: chat.postMessage
           token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
           payload: |
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
             thread_ts: "${{ steps.slack_start.outputs.ts }}"
             text: "Successfully published to npm"
