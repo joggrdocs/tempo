@@ -21,30 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: '🟪 Send Slack Notification - Start'
-        uses: slackapi/slack-github-action@v2.0.0
-        id: slack_start 
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          payload: |
-            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
-            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
-            blocks:
-              - type: header
-                text:
-                  type: plain_text
-                  text: "@joggr/tempo (${{ inputs.version }})"
-              - type: section
-                text:
-                  type: mrkdwn
-                  text: "Starting publish to npm registry (${{ inputs.version }}) workflow."
-              - type: divider
-              - type: context
-                elements:
-                  - type: mrkdwn
-                    text: '*STATUS*: Started'
-
       - name: '🛒 Checkout Code'
         uses: actions/checkout@v4
         with:
@@ -80,40 +56,6 @@ jobs:
             const pj = JSON.parse(fs.readFileSync('${{ github.workspace }}/package.json'));
             return pj.version;   
 
-      - name: '🟪 Send Slack Notification - Building (thread)'
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          payload: |
-            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
-            thread_ts: "${{ steps.slack_start.outputs.ts }}"
-            text: "Building & Publishing to npm"
-
-      - name: '🟪 Send Slack Notification - Building'
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          payload: |
-            ts: ${{ steps.slack_start.outputs.ts }}
-            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
-            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
-            blocks:
-              - type: header
-                text:
-                  type: plain_text
-                  text: "@joggr/tempo (${{ inputs.version }})"
-              - type: section
-                text:
-                  type: mrkdwn
-                  text: "Starting publish to npm registry (${{ inputs.version }}) workflow."
-              - type: divider
-              - type: context
-                elements:
-                  - type: mrkdwn
-                    text: '*STATUS*: 🏗️ Building'
-
       - name: '🏗️ Build'
         run: yarn turbo run build --filter="./packages/*"
 
@@ -144,16 +86,6 @@ jobs:
         with:
           version: v${{ steps.version.outputs.result }}
           publish: true
-
-      - name: '🟪 Send Slack Notification - Success (thread)'
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          payload: |
-            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
-            thread_ts: "${{ steps.slack_start.outputs.ts }}"
-            text: "Successfully published to npm"
       
       - name: '🟪 Send Slack Notification - Success'
         uses: slackapi/slack-github-action@v2.0.0
@@ -161,14 +93,13 @@ jobs:
           method: chat.postMessage
           token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
           payload: |
-            ts: ${{ steps.slack_start.outputs.ts }}
             channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
-            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
+            text: "📦 Published to npm: @joggr/tempo (${{ inputs.version }})"
             blocks:
               - type: header
                 text:
                   type: plain_text
-                  text: "@joggr/tempo (${{ inputs.version }})"
+                  text: "📦 @joggr/tempo (${{ inputs.version }})"
               - type: section
                 text:
                   type: mrkdwn
@@ -179,22 +110,6 @@ jobs:
                   - type: button
                     text: 'View Release'
                     url: ${{ steps.release_notes.outputs.html_url }}
-              - type: context
-                elements:
-                  - type: mrkdwn
-                    text: '*STATUS*: ✅ Success'
-
-
-      - name: '🟪 Send Slack Notification - Failure (thread)'
-        uses: slackapi/slack-github-action@v2.0.0
-        if: ${{ failure() }}
-        with:
-          method: chat.postMessage
-          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          payload: |
-            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
-            thread_ts: "${{ steps.slack_start.outputs.ts }}"
-            text: "Failed to publish to npm"
       
       - name: '🟪 Send Slack Notification - Failure'
         uses: slackapi/slack-github-action@v2.0.0
@@ -203,9 +118,8 @@ jobs:
           method: chat.postMessage
           token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
           payload: |
-            ts: ${{ steps.slack_start.outputs.ts }}
             channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
-            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
+            text: "❌ Failed to publish to npm: @joggr/tempo (${{ inputs.version }})"
             blocks:
               - type: header
                 text:
@@ -214,9 +128,10 @@ jobs:
               - type: section
                 text:
                   type: mrkdwn
-                  text: "Successfully published to npm registry (${{ inputs.version }}) workflow."
+                  text: "Failed to publish to npm"
               - type: divider
-              - type: context
+              - type: actions
                 elements:
-                  - type: mrkdwn
-                    text: '*STATUS*: ❌ Failed'
+                  - type: button
+                    text: 'View Workflow Logs'
+                    url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
