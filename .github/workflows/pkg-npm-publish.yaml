@@ -29,7 +29,21 @@ jobs:
           token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
           payload: |
             channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
-            text: ":package: Publishing to npm registry: tempo (${{ inputs.version }})"
+            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "@joggr/tempo (${{ inputs.version }})"
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "Starting publish to npm registry (${{ inputs.version }}) workflow."
+              - type: divider
+              - type: context
+                elements:
+                  - type: mrkdwn
+                    text: '*STATUS*: Started'
 
       - name: '🛒 Checkout Code'
         uses: actions/checkout@v4
@@ -66,6 +80,40 @@ jobs:
             const pj = JSON.parse(fs.readFileSync('${{ github.workspace }}/package.json'));
             return pj.version;   
 
+      - name: '🟪 Send Slack Notification - Building (thread)'
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
+            thread_ts: "${{ steps.slack_start.outputs.ts }}"
+            text: "Building & Publishing to npm"
+
+      - name: '🟪 Send Slack Notification - Building'
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            ts: ${{ steps.slack_start.outputs.ts }}
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
+            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "@joggr/tempo (${{ inputs.version }})"
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "Starting publish to npm registry (${{ inputs.version }}) workflow."
+              - type: divider
+              - type: context
+                elements:
+                  - type: mrkdwn
+                    text: '*STATUS*: 🏗️ Building'
+
       - name: '🏗️ Build'
         run: yarn turbo run build --filter="./packages/*"
 
@@ -90,13 +138,14 @@ jobs:
 
       - name: '📝 Publish Release Notes'
         uses: release-drafter/release-drafter@v6
+        id: release_notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           version: v${{ steps.version.outputs.result }}
           publish: true
 
-      - name: '🟪 Send Slack Notification - Success'
+      - name: '🟪 Send Slack Notification - Success (thread)'
         uses: slackapi/slack-github-action@v2.0.0
         with:
           method: chat.postMessage
@@ -105,3 +154,69 @@ jobs:
             channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
             thread_ts: "${{ steps.slack_start.outputs.ts }}"
             text: "Successfully published to npm"
+      
+      - name: '🟪 Send Slack Notification - Success'
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            ts: ${{ steps.slack_start.outputs.ts }}
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
+            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "@joggr/tempo (${{ inputs.version }})"
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "Successfully published to npm registry (${{ inputs.version }}) workflow."
+              - type: divider
+              - type: actions
+                elements:
+                  - type: button
+                    text: 'View Release'
+                    url: ${{ steps.release_notes.outputs.html_url }}
+              - type: context
+                elements:
+                  - type: mrkdwn
+                    text: '*STATUS*: ✅ Success'
+
+
+      - name: '🟪 Send Slack Notification - Failure (thread)'
+        uses: slackapi/slack-github-action@v2.0.0
+        if: ${{ failure() }}
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}            
+            thread_ts: "${{ steps.slack_start.outputs.ts }}"
+            text: "Failed to publish to npm"
+      
+      - name: '🟪 Send Slack Notification - Failure'
+        uses: slackapi/slack-github-action@v2.0.0
+        if: ${{ failure() }}
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            ts: ${{ steps.slack_start.outputs.ts }}
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
+            text: ":package: Publish to npm: @joggr/tempo (${{ inputs.version }})"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "@joggr/tempo (${{ inputs.version }})"
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "Successfully published to npm registry (${{ inputs.version }}) workflow."
+              - type: divider
+              - type: context
+                elements:
+                  - type: mrkdwn
+                    text: '*STATUS*: ❌ Failed'
