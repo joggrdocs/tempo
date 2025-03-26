@@ -22,11 +22,13 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: '🟪 Send Slack Notification - Start'
-        uses: joggrdocs/moonshot/.github/actions/notify@main
+        uses: slackapi/slack-github-action@v2.0.0
+        id: slack_start 
         with:
-          stage: 'start'
-          slack_token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          environment: 'package'
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            text: ":package: Publishing to npm registry: tempo (${{ inputs.version }})"
 
       - name: '🛒 Checkout Code'
         uses: actions/checkout@v4
@@ -63,13 +65,6 @@ jobs:
             const pj = JSON.parse(fs.readFileSync('${{ github.workspace }}/package.json'));
             return pj.version;   
 
-      - name: '🟪 Send Slack Notification - Start'
-        uses: joggrdocs/moonshot/.github/actions/notify@main
-        with:
-          stage: 'build'
-          slack_token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          environment: 'package'
-
       - name: '🏗️ Build'
         run: yarn turbo run build --filter="./packages/*"
 
@@ -80,13 +75,6 @@ jobs:
           yarn config set npmScopes.joggr.npmAuthToken $NPM_AUTH_TOKEN
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
-
-      - name: '🟪 Send Slack Notification - Start'
-        uses: joggrdocs/moonshot/.github/actions/notify@main
-        with:
-          stage: 'deploying'
-          slack_token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          environment: 'package'
 
       - name: '🚢 Publish'
         run: yarn workspaces foreach -A --include "packages/*" npm publish --tolerate-republish --access public
@@ -108,8 +96,10 @@ jobs:
           publish: true
 
       - name: '🟪 Send Slack Notification - Success'
-        uses: joggrdocs/moonshot/.github/actions/notify@main
+        uses: slackapi/slack-github-action@v2.0.0
         with:
-          stage: 'deployed'
-          slack_token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
-          environment: 'package'
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            thread_ts: "${{ steps.slack_start.outputs.ts }}"
+            text: "Successfully published to npm"
