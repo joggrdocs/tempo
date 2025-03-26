@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import * as codeBlock from '../code-block';
 import supportedLanguages from '../data/supported-languages';
 
