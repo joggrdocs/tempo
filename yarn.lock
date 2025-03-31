@@ -927,7 +927,7 @@ __metadata:
     tsx: "npm:^4.19.3"
     type-fest: "npm:^4.38.0"
     typedoc: "npm:^0.27.9"
-    typedoc-plugin-markdown: "npm:^4.4.2"
+    typedoc-plugin-markdown: "npm:^4.6.0"
     typescript: "npm:^5.8.2"
     vitest: "npm:^3.0.9"
     yaml: "npm:^2.7.0"
@@ -3849,12 +3849,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc-plugin-markdown@npm:^4.4.2":
-  version: 4.4.2
-  resolution: "typedoc-plugin-markdown@npm:4.4.2"
+"typedoc-plugin-markdown@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "typedoc-plugin-markdown@npm:4.6.0"
   peerDependencies:
-    typedoc: 0.27.x
-  checksum: 10/d6764c5341eeefb5f6c0c557477a3a782165816a18cf3417ba91131cd9d6f9522767e9122a01251fc2ba007a05f262093a35a90e2d2a109540ead87f20bae614
+    typedoc: 0.28.x
+  checksum: 10/db40d05d52f412eff7e66712aa63892bdf95819b0b885c7ab69ea41a0837c05fcc6c9180f8ced7ceb1c14da34a13b38c0dfa6a8b1e6748fc10d203b4e67f4e53
   languageName: node
   linkType: hard
 
