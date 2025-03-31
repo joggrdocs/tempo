@@ -3660,7 +3660,7 @@ __metadata:
   resolution: "tempo-docs@workspace:docs"
   dependencies:
     vitepress: "npm:2.0.0-alpha.3"
-    vitepress-plugin-group-icons: "npm:^1.3.6"
+    vitepress-plugin-group-icons: "npm:^1.3.8"
   languageName: unknown
   linkType: soft
 
@@ -4083,14 +4083,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitepress-plugin-group-icons@npm:^1.3.6":
-  version: 1.3.6
-  resolution: "vitepress-plugin-group-icons@npm:1.3.6"
+"vitepress-plugin-group-icons@npm:^1.3.8":
+  version: 1.3.8
+  resolution: "vitepress-plugin-group-icons@npm:1.3.8"
   dependencies:
     "@iconify-json/logos": "npm:^1.2.4"
     "@iconify-json/vscode-icons": "npm:^1.2.14"
     "@iconify/utils": "npm:^2.3.0"
-  checksum: 10/585136d6dd483fe60414f921574bd1bbdeed5f771193bfe998a2f5fca33f388cf3f9402a5a3279af17a4d88d90ac7a6062be2d269bfae85be10403bcd2b372f5
+  checksum: 10/97ef9db3e0cd0ea50d53fe961b887fc306b100a904d465c21e7f741275bf3a64cc3d5187a33efe1ac01ab34dd2fe1fe173e686795a93805930cac2b3123db27d
   languageName: node
   linkType: hard
 
