@@ -39,7 +39,7 @@
     "analyze:types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@rslib/core": "^0.5.5",
+    "@rslib/core": "^0.6.1",
     "@types/node": "^22.13.13",
     "@vitest/coverage-istanbul": "^3.0.9",
     "consola": "^3.4.0",
