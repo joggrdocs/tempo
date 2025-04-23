@@ -925,7 +925,7 @@ __metadata:
     "@rslib/core": "npm:^0.6.1"
     "@types/node": "npm:^22.13.13"
     "@vitest/coverage-istanbul": "npm:^3.0.9"
-    consola: "npm:^3.4.0"
+    consola: "npm:^3.4.2"
     tsx: "npm:^4.19.3"
     type-fest: "npm:^4.38.0"
     typedoc: "npm:^0.28.2"
@@ -2102,10 +2102,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "consola@npm:3.4.0"
-  checksum: 10/99d4a8131f4cc42ff6bb8e4fd8c9dbd428d6b949f3ec25d9d24892a7b0603b0aabeee8213e13ad74439b5078fdb204f9377bcdd401949c33fff672d91f05c4ec
+"consola@npm:^3.4.2":
+  version: 3.4.2
+  resolution: "consola@npm:3.4.2"
+  checksum: 10/32192c9f50d7cac27c5d7c4ecd3ff3679aea863e6bf5bd6a9cc2b05d1cd78addf5dae71df08c54330c142be8e7fbd46f051030129b57c6aacdd771efe409c4b2
   languageName: node
   linkType: hard
 
