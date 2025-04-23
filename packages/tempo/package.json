@@ -48,7 +48,7 @@
     "typedoc": "^0.28.2",
     "typedoc-plugin-markdown": "^4.4.2",
     "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "vitest": "^3.1.2"
   },
   "dependencies": {
     "yaml": "^2.7.0"
