@@ -1,5 +1,6 @@
 import supportedEmojis from '../data/emojis';
 import * as emoji from '../emoji';
+import { describe, it, expect } from 'vitest';
 
 describe('codeBlock', () => {
   supportedEmojis.forEach((emo) => {

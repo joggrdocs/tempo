@@ -2,7 +2,7 @@ import { describe , it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 
 import { TempoText, computeNodes, computeText } from '../tempo-text';
-import md from '../markdown';
+import * as md from '@joggr/tempo-md';
 
 let txt: TempoText;
 beforeEach(() => {

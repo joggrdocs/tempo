@@ -1,4 +1,4 @@
-import * as md from './markdown/markdown';
+import * as md from '@joggr/tempo-md';
 
 /*
 |==========================================================================
