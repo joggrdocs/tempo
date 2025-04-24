@@ -17,7 +17,14 @@ jobs:
       issues: write
       pull-requests: write
     steps:
+      - name: Extract branch name
+        id: extract-branch
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          
       - name: '🏷️ Validate Labels: Semver'
+        if: ${{ !startsWith(steps.extract-branch.outputs.branch_name, 'changeset-release/') }}
         uses: mheap/github-action-required-labels@v5
         with:
           mode: exactly
@@ -25,6 +32,7 @@ jobs:
           labels: "semver:.*"
           use_regex: true
       - name: '🏷️ Validate Labels: Type'
+        if: ${{ !startsWith(steps.extract-branch.outputs.branch_name, 'changeset-release/') }}
         uses: mheap/github-action-required-labels@v5
         with:
           mode: exactly
