@@ -925,7 +925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@joggr/tempo-md@npm:0.13.4, @joggr/tempo-md@workspace:packages/tempo-md":
+"@joggr/tempo-md@workspace:*, @joggr/tempo-md@workspace:packages/tempo-md":
   version: 0.0.0-use.local
   resolution: "@joggr/tempo-md@workspace:packages/tempo-md"
   dependencies:
@@ -948,7 +948,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@joggr/tempo@workspace:packages/tempo"
   dependencies:
-    "@joggr/tempo-md": "npm:0.13.4"
+    "@joggr/tempo-md": "workspace:*"
     "@rslib/core": "npm:^0.6.1"
     "@types/node": "npm:^22.13.13"
     "@vitest/coverage-istanbul": "npm:^3.0.9"
