@@ -17,6 +17,10 @@
       "outputs": [],
       "dependsOn": ["^build"]
     },
+    "release": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
     "//#check": {
       "dependsOn": [],
       "outputs": []
