@@ -8,9 +8,9 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "turbo biome check",
-    "ci": "turbo biome ci --diagnostic-level=error",
-    "types": "turbo analyze:types",
+    "check": "biome check",
+    "ci": "biome ci --diagnostic-level=error",
+    "types": "turbo types",
     "test": "turbo test",
     "fix": "biome check --fix"
   },
