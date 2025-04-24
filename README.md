@@ -37,6 +37,7 @@ A set of libraries used to programmatically build markdown documents, with a hea
 - 📋 Create reusable templates for your projects
 - 🤖 Build templates for standardizing output from LLMs
 - 🐱 Use all the goodness of [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)
+- 🚀 Simple and intuitive API for markdown generation
 
 ## Usage
 
