@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_BOT_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: yarn release
+          version: yarn version-packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH }}
+
+      - name: Send Slack notification (Success)
+        if: steps.changesets.outputs.published == 'true'
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
+          payload: |
+            channel: ${{ vars.SLACK_RELEASE_CHANNEL_ID }}
+            text: "📦 Published to npm: @joggr/tempo packages"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "📦 @joggr/tempo packages"
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "Successfully published new package versions to npm registry."
+              - type: divider
