@@ -1,4 +1,5 @@
 import * as md from '../markdown';
+import { describe, it, expect } from 'vitest';
 
 describe('Text Elements', () => {
   it('should return a paragraph', () => {

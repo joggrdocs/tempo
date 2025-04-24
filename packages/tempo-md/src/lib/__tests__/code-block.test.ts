@@ -1,5 +1,6 @@
 import * as codeBlock from '../code-block';
 import supportedLanguages from '../data/supported-languages';
+import { describe, it, expect } from 'vitest';
 
 describe('codeBlock', () => {
   supportedLanguages.forEach((language) => {

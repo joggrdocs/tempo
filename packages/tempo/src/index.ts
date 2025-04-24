@@ -8,4 +8,4 @@ export {
   type EmojiAliases,
   type EmojiUnicode,
   assertSupportedEmoji,
-} from './lib/markdown/index';
+} from '@joggr/tempo-md';
