@@ -1,6 +1,6 @@
 {
   "name": "@joggr/tempo",
-  "version": "0.13.3",
+  "version": "0.13.4",
   "description": "Library used to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "repository": {
     "type": "git",
@@ -39,16 +39,16 @@
     "analyze:types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@rslib/core": "^0.5.5",
+    "@rslib/core": "^0.6.1",
     "@types/node": "^22.13.13",
     "@vitest/coverage-istanbul": "^3.0.9",
-    "consola": "^3.4.0",
+    "consola": "^3.4.2",
     "tsx": "^4.19.3",
     "type-fest": "^4.38.0",
-    "typedoc": "^0.27.9",
-    "typedoc-plugin-markdown": "^4.4.2",
+    "typedoc": "^0.28.2",
+    "typedoc-plugin-markdown": "^4.6.3",
     "typescript": "^5.8.2",
-    "vitest": "^3.0.9"
+    "vitest": "^3.1.2"
   },
   "dependencies": {
     "yaml": "^2.7.0"
