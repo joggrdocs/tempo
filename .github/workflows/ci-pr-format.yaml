@@ -17,22 +17,14 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          
-      - name: Check for changeset files
-        id: check-changeset
+      - name: Extract branch name
+        id: extract-branch
         run: |
-          if [[ -n "$(git diff --name-only origin/main HEAD | grep -E '^\.changeset/')" ]]; then
-            echo "has_changeset=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_changeset=false" >> $GITHUB_OUTPUT
-          fi
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
           
       - name: '🏷️ Validate Labels: Semver'
-        if: steps.check-changeset.outputs.has_changeset != 'true'
+        if: ${{ !startsWith(steps.extract-branch.outputs.branch_name, 'changeset-release/') }}
         uses: mheap/github-action-required-labels@v5
         with:
           mode: exactly
@@ -40,7 +32,7 @@ jobs:
           labels: "semver:.*"
           use_regex: true
       - name: '🏷️ Validate Labels: Type'
-        if: steps.check-changeset.outputs.has_changeset != 'true'
+        if: ${{ !startsWith(steps.extract-branch.outputs.branch_name, 'changeset-release/') }}
         uses: mheap/github-action-required-labels@v5
         with:
           mode: exactly
