@@ -36,7 +36,7 @@
     "dev": "rslib build --watch",
     "build": "rslib build",
     "test": "vitest --coverage",
-    "analyze:types": "tsc --noEmit"
+    "types": "tsc --noEmit"
   },
   "devDependencies": {
     "@rslib/core": "^0.6.1",
