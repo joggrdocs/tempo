@@ -44,7 +44,7 @@
     "@vitest/coverage-istanbul": "^3.0.9",
     "consola": "^3.4.2",
     "tsx": "^4.19.3",
-    "type-fest": "^4.38.0",
+    "type-fest": "^4.40.1",
     "typedoc": "^0.28.2",
     "typedoc-plugin-markdown": "^4.6.3",
     "typescript": "^5.8.2",
