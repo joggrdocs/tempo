@@ -1183,7 +1183,7 @@ __metadata:
     typedoc-plugin-markdown: "npm:^4.6.3"
     typescript: "npm:^5.8.2"
     vitest: "npm:^3.1.2"
-    yaml: "npm:^2.7.0"
+    yaml: "npm:^2.7.1"
   languageName: unknown
   linkType: soft
 
@@ -1202,7 +1202,7 @@ __metadata:
     typedoc-plugin-markdown: "npm:^4.6.3"
     typescript: "npm:^5.8.2"
     vitest: "npm:^3.1.2"
-    yaml: "npm:^2.7.0"
+    yaml: "npm:^2.7.1"
   languageName: unknown
   linkType: soft
 
@@ -5232,15 +5232,6 @@ __metadata:
   version: 5.0.0
   resolution: "yallist@npm:5.0.0"
   checksum: 10/1884d272d485845ad04759a255c71775db0fac56308764b4c77ea56a20d56679fad340213054c8c9c9c26fcfd4c4b2a90df993b7e0aaf3cdb73c618d1d1a802a
-  languageName: node
-  linkType: hard
-
-"yaml@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "yaml@npm:2.7.0"
-  bin:
-    yaml: bin.mjs
-  checksum: 10/c8c314c62fbd49244a6a51b06482f6d495b37ab10fa685fcafa1bbaae7841b7233ee7d12cab087bcca5a0b28adc92868b6e437322276430c28d00f1c1732eeec
   languageName: node
   linkType: hard
 
