@@ -41,7 +41,7 @@
   "devDependencies": {
     "@rslib/core": "^0.6.1",
     "@types/node": "^22.13.13",
-    "@vitest/coverage-istanbul": "^3.0.9",
+    "@vitest/coverage-istanbul": "^3.1.2",
     "@vitest/coverage-v8": "^3.1.2",
     "consola": "^3.4.2",
     "tsx": "^4.19.3",
