@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@rslib/core": "^0.6.1",
-    "@types/node": "^22.13.13",
+    "@types/node": "^22.15.17",
     "@vitest/coverage-istanbul": "^3.0.9",
     "consola": "^3.4.2",
     "tsx": "^4.19.3",
