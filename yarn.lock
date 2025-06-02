@@ -1174,7 +1174,7 @@ __metadata:
   dependencies:
     "@rslib/core": "npm:^0.6.1"
     "@types/node": "npm:^22.13.13"
-    "@vitest/coverage-istanbul": "npm:^3.0.9"
+    "@vitest/coverage-istanbul": "npm:^3.2.0"
     "@vitest/coverage-v8": "npm:^3.1.2"
     consola: "npm:^3.4.2"
     tsx: "npm:^4.19.3"
@@ -1194,7 +1194,7 @@ __metadata:
     "@joggr/tempo-md": "workspace:*"
     "@rslib/core": "npm:^0.6.1"
     "@types/node": "npm:^22.13.13"
-    "@vitest/coverage-istanbul": "npm:^3.0.9"
+    "@vitest/coverage-istanbul": "npm:^3.2.0"
     consola: "npm:^3.4.2"
     tsx: "npm:^4.19.3"
     type-fest: "npm:^4.38.0"
@@ -1891,12 +1891,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/coverage-istanbul@npm:^3.0.9":
-  version: 3.0.9
-  resolution: "@vitest/coverage-istanbul@npm:3.0.9"
+"@vitest/coverage-istanbul@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@vitest/coverage-istanbul@npm:3.2.0"
   dependencies:
     "@istanbuljs/schema": "npm:^0.1.3"
-    debug: "npm:^4.4.0"
+    debug: "npm:^4.4.1"
     istanbul-lib-coverage: "npm:^3.2.2"
     istanbul-lib-instrument: "npm:^6.0.3"
     istanbul-lib-report: "npm:^3.0.1"
@@ -1906,8 +1906,8 @@ __metadata:
     test-exclude: "npm:^7.0.1"
     tinyrainbow: "npm:^2.0.0"
   peerDependencies:
-    vitest: 3.0.9
-  checksum: 10/e0e96db9a0c170322560185232d5be810cc15af8eee8f6b61b5c09558c2a597ec8a53e2c333a349413599a5ebc82661f3f32a0ccf16d06d8b1f6ef459f2964eb
+    vitest: 3.2.0
+  checksum: 10/8a60ccecfb5f1b5210045fbdccd7c93457f5bc9f0f6a807298ae6cc52719f82fe02c47c6e3fd12078a42c88d74381791fae2de012da9c43b6c3d72d6a2e56f1e
   languageName: node
   linkType: hard
 
@@ -2584,6 +2584,18 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10/1847944c2e3c2c732514b93d11886575625686056cd765336212dc15de2d2b29612b6cd80e1afba767bb8e1803b778caf9973e98169ef1a24a7a7009e1820367
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.4.1":
+  version: 4.4.1
+  resolution: "debug@npm:4.4.1"
+  dependencies:
+    ms: "npm:^2.1.3"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10/8e2709b2144f03c7950f8804d01ccb3786373df01e406a0f66928e47001cf2d336cbed9ee137261d4f90d68d8679468c755e3548ed83ddacdc82b194d2468afe
   languageName: node
   linkType: hard
 
