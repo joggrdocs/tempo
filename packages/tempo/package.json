@@ -39,19 +39,19 @@
     "types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@rslib/core": "^0.6.1",
-    "@types/node": "^22.13.13",
-    "@vitest/coverage-istanbul": "^3.0.9",
+    "@rslib/core": "^0.10.5",
+    "@types/node": "^24.0.13",
+    "@vitest/coverage-istanbul": "^3.2.4",
     "consola": "^3.4.2",
-    "tsx": "^4.19.3",
-    "type-fest": "^4.38.0",
-    "typedoc": "^0.28.2",
-    "typedoc-plugin-markdown": "^4.6.3",
-    "typescript": "^5.8.2",
-    "vitest": "^3.1.2"
+    "tsx": "^4.20.3",
+    "type-fest": "^4.41.0",
+    "typedoc": "^0.28.7",
+    "typedoc-plugin-markdown": "^4.7.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@joggr/tempo-md": "workspace:*",
-    "yaml": "^2.7.0"
+    "yaml": "^2.8.0"
   }
 }

@@ -24,9 +24,9 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@changesets/cli": "^2.29.2",
-    "tsx": "^4.19.3",
-    "turbo": "^2.5.0"
+    "@changesets/cli": "^2.29.5",
+    "tsx": "^4.20.3",
+    "turbo": "^2.5.4"
   },
   "packageManager": "yarn@4.4.1"
 }
