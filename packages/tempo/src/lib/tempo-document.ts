@@ -34,7 +34,8 @@ export type DocumentNodeType =
   | 'break'
   | 'numberList'
   | 'bulletList'
-  | 'alert';
+  | 'alert'
+  | 'details';
 
 interface BaseDocumentNode<N extends unknown[], D extends object = object> {
   type: DocumentNodeType;
@@ -56,6 +57,27 @@ export interface HeadingNode
 
 export interface ParagraphNode extends BaseDocumentNode<TempoTextNode[]> {
   type: 'paragraph';
+}
+
+interface DetailsSummaryNode {
+  type: 'details-summary';
+  data: {
+    nodes: TempoTextNode[];
+  };
+  computed: string;
+}
+
+interface DetailsContentNode {
+  type: 'details-content';
+  data: {
+    nodes: TempoDocumentNode[];
+  };
+  computed: string;
+}
+
+export interface DetailsNode
+  extends BaseDocumentNode<[DetailsSummaryNode, DetailsContentNode]> {
+  type: 'details';
 }
 
 interface TableRow<T extends 'row' | 'header'> {
@@ -144,7 +166,8 @@ export type TempoDocumentNode =
   | BreakNode
   | NumberListNode
   | BulletListNode
-  | AlertNode;
+  | AlertNode
+  | DetailsNode;
 
 export type TempoDocumentMetadata = md.Frontmatter | null;
 
@@ -405,6 +428,62 @@ export class TempoDocument {
   | Special Elements
   |------------------
   */
+
+  /**
+   * Append a details element to the document.
+   *
+   * @example
+   * ```ts
+   * const doc = tempo()
+   *  .details({
+   *    summary: 'Click me',
+   *    content: 'This is the content of the details element.'
+   *  })
+   *  .toString();
+   * // Output: <details>
+   * //   <summary>Click me</summary>
+   * //   This is the content of the details element.
+   * // </details>
+   * ```
+   *
+   * @param config - The configuration for the details element.
+   * @returns The TempoDocument instance with the details element appended.
+   */
+  public details({
+    summary,
+    content,
+  }: {
+    summary: TempoTextInput;
+    content: Array<TempoTextInput | TempoDocumentNode>;
+  }): this {
+    this.nodes.push({
+      type: 'details',
+      data: {
+        nodes: [
+          {
+            type: 'details-summary',
+            data: {
+              nodes: computeNodes(summary),
+            },
+            computed: md.paragraph(computeText(summary)),
+          },
+          {
+            type: 'details-content',
+            data: {
+              nodes: content.map(computeNodes),
+            },
+            computed: content.map((node) => node.computed).join('\n'),
+          },
+        ],
+      },
+      computed: md.details({
+        summary: md.paragraph(computeText(summary)),
+        content: transformToMarkdown(content),
+      }),
+    });
+
+    return this;
+  }
 
   /**
    * Append a table to the document.
@@ -736,11 +815,7 @@ export class TempoDocument {
    * @returns A string representation of the document, that can be used for rendering.
    */
   public toString(): string {
-    const result = this.nodes
-      .map((section) => section.computed)
-      .join('\n\n')
-      .trim()
-      .concat('\n');
+    const result = transformToMarkdown(this.nodes);
 
     if (this.metadata) {
       return md.frontmatter(this.metadata).concat('\n', result);
@@ -793,4 +868,12 @@ export class TempoDocument {
       metadata: this.metadata,
     };
   }
+}
+
+function transformToMarkdown(nodes: TempoDocumentNode[]): string {
+  return nodes
+    .map((section) => section.computed)
+    .join('\n\n')
+    .trim()
+    .concat('\n');
 }
