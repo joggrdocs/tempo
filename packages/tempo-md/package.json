@@ -1,6 +1,6 @@
 {
   "name": "@joggr/tempo-md",
-  "version": "0.13.4",
+  "version": "0.13.5",
   "description": "Markdown utilities for the Tempo library to programmatically build markdown documents, with a heavy tilt toward GitHub Flavored Markdown (GFM).",
   "repository": {
     "type": "git",
