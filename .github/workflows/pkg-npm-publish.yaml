@@ -88,7 +88,7 @@ jobs:
           publish: true
       
       - name: '🟪 Send Slack Notification - Success'
-        uses: slackapi/slack-github-action@v2.0.0
+        uses: slackapi/slack-github-action@v2.1.1
         with:
           method: chat.postMessage
           token: ${{ secrets.SLACK_RELEASE_BOT_TOKEN }}
@@ -112,7 +112,7 @@ jobs:
                     url: ${{ steps.release_notes.outputs.html_url }}
       
       - name: '🟪 Send Slack Notification - Failure'
-        uses: slackapi/slack-github-action@v2.0.0
+        uses: slackapi/slack-github-action@v2.1.1
         if: ${{ failure() }}
         with:
           method: chat.postMessage
