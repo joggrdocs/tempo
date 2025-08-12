@@ -7,7 +7,7 @@
     "preview": "vitepress preview ."
   },
   "dependencies": {
-    "vitepress": "2.0.0-alpha.8",
+    "vitepress": "2.0.0-alpha.10",
     "vitepress-plugin-group-icons": "^1.6.1"
   }
 }
