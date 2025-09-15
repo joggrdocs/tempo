@@ -1236,7 +1236,7 @@ __metadata:
   resolution: "@joggr/tempo-md@workspace:packages/tempo-md"
   dependencies:
     "@rslib/core": "npm:^0.10.5"
-    "@types/node": "npm:^24.0.13"
+    "@types/node": "npm:^24.5.0"
     "@vitest/coverage-istanbul": "npm:^3.2.4"
     "@vitest/coverage-v8": "npm:^3.2.4"
     consola: "npm:^3.4.2"
@@ -1256,7 +1256,7 @@ __metadata:
   dependencies:
     "@joggr/tempo-md": "workspace:*"
     "@rslib/core": "npm:^0.10.5"
-    "@types/node": "npm:^24.0.13"
+    "@types/node": "npm:^24.5.0"
     "@vitest/coverage-istanbul": "npm:^3.2.4"
     consola: "npm:^3.4.2"
     tsx: "npm:^4.20.3"
@@ -1927,12 +1927,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.0.13":
-  version: 24.0.13
-  resolution: "@types/node@npm:24.0.13"
+"@types/node@npm:^24.5.0":
+  version: 24.5.0
+  resolution: "@types/node@npm:24.5.0"
   dependencies:
-    undici-types: "npm:~7.8.0"
-  checksum: 10/e438734b2f1ec1cbb88ca47134389e074fc8392f747dd1a81b9432b7d0503113c07f4238ff98a512101d576652e6cddb5faf9bc9a79dd602ce2dfc36602a365b
+    undici-types: "npm:~7.12.0"
+  checksum: 10/d9fb6541d526a0f9e5f44866b9eed59a9621a506ff660ae6d52b49f0f3c007ce46384eed2f40ee03348e9e3dc848e296131adb94b85b9cf224d57acb3bd71268
   languageName: node
   linkType: hard
 
@@ -4967,10 +4967,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~7.8.0":
-  version: 7.8.0
-  resolution: "undici-types@npm:7.8.0"
-  checksum: 10/fcff3fbab234f067fbd69e374ee2c198ba74c364ceaf6d93db7ca267e784457b5518cd01d0d2329b075f412574205ea3172a9a675facb49b4c9efb7141cd80b7
+"undici-types@npm:~7.12.0":
+  version: 7.12.0
+  resolution: "undici-types@npm:7.12.0"
+  checksum: 10/4a0f927c98828f76fb0d64f356e36e5ac6e074ae4c7bec08d6de8bc36b7cf08ae27a3518fa8eb703f51c1a675241e2d07359bbce63f5575299148a270cea7e43
   languageName: node
   linkType: hard
 
