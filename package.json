@@ -23,7 +23,7 @@
   "author": "Joggr Team <engineering@joggr.io>",
   "license": "MIT",
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.2.4",
     "@changesets/cli": "^2.29.5",
     "tsx": "^4.20.3",
     "turbo": "^2.5.4"
