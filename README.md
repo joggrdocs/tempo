@@ -1,4 +1,10 @@
-<div>
+> [!CAUTION]
+> **Joggr is shut down.** This repository is archived and unmaintained.
+> Do not depend on it for production use.
+>
+> The published npm package remains available but will receive no further updates.
+
+---<div>
     <p align="center">
         <img src="https://github.com/joggrdocs/tempo/blob/main/assets/tempo-logo.png" align="center"  />
     </p>
