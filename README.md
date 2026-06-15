@@ -4,7 +4,9 @@
 >
 > The published npm package remains available but will receive no further updates.
 
----<div>
+---
+
+<div>
     <p align="center">
         <img src="https://github.com/joggrdocs/tempo/blob/main/assets/tempo-logo.png" align="center"  />
     </p>
