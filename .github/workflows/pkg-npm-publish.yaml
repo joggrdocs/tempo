@@ -46,7 +46,7 @@ jobs:
         run: yarn workspaces foreach --all exec npm version --no-git-tag-version --no-workspaces-update ${{ inputs.version }}
 
       - name: '#️⃣ Get Version'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         id: version
         with:
           result-encoding: string
