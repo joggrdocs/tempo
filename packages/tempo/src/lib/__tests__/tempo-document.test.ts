@@ -116,6 +116,15 @@ describe('Text Elements', () => {
 });
 
 describe('Special Elements', () => {
+
+  it('should add a details element', () => {
+    const document = new TempoDocument().details({
+      summary: 'Hello World!',
+      content: ['Hello 2 World!', 'Hello 3 World!'],
+    });
+    expect(document.toJSON().nodes).toEqual([]);
+  }); 
+
   it('should add a table', () => {
     const document = new TempoDocument().table([
       ['Hello World!', 'Hello 2 World!'],

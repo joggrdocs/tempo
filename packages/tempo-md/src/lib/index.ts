@@ -6,4 +6,5 @@ export {
 } from './emoji';
 export { default as supportedLanguages } from './data/supported-languages';
 export { default as supportedEmojis } from './data/emojis';
+export { details, type DetailsConfig } from './details';
 export * as default from './markdown';
